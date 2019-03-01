@@ -1,0 +1,37 @@
+﻿<div class="page-bar">
+<div class="page-bar-item" style="float:left">
+<span>
+记录数:{{pagination.totalCount}}
+每页记录数:{{pagination.pageSize}}
+当前页:{{pagination.pageNumber}}
+总页数:{{pagination.pageCount}}
+</span>
+</div>
+
+<div class="page-bar-group" style="float:right;" >
+<div class="page-bar-item">
+<a href="#" xf-trigger='first' ms-attr-disabled='pagination.pageNumber==1' class='page-btn page-first'></a>
+<a href="#" xf-trigger='prev' ms-attr-disabled='pagination.pageNumber==1' class='page-btn page-prev'></a>
+</div>
+<div class="page-bar-item" style="padding:3px 0px 5px 0px">
+<input type="text"  ms-duplex="pagination.pageNumber" class='xf-scopeInput' style="width:38px" xf-trigger="go" />
+<input type="hidden" ms-duplex="pagination.pageCount"/>
+</div>
+<div class="page-bar-item">
+<span>/{{pagination.pageCount}}页</span>
+</div>
+<div class="page-bar-item">
+<a href="#" xf-trigger='go' class='page-btn page-go'></a>
+<a href="#" xf-trigger='next' ms-attr-disabled='pagination.pageNumber==(pagination.pageCount)' class='page-btn page-next'></a>
+<a href="#" xf-trigger='last' ms-attr-disabled='pagination.pageNumber==(pagination.pageCount)' class='page-btn page-last'></a>
+</div>
+<div class="page-bar-item" style="padding:4px 5px 5px 0px">
+<select ms-duplex="pagination.pageSize" xf-trigger="pageSize">
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+</div>
+</div><!-- right -->
+</div><!-- pagebar -->

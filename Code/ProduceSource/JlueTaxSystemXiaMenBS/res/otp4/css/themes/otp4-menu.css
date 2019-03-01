@@ -1,0 +1,42 @@
+.xf-menu-bar{
+	height:32px;
+	line-height:32px;
+	vertical-align:middle;
+	font-size: 14px;
+	background:#eee;
+	color: #333333;	
+	/*border:1px solid #3e3;*/
+}
+
+.xf-menu-bar a,
+.xf-popup-menu a
+{
+	text-decoration: none;
+	font-weight: normal;
+	color: #333333;	
+}
+
+
+.xf-popup-menu{
+	color: #333333;
+	background-color: #ffffff;
+	border: 1px solid #ccc;
+}
+
+.xf-menu-bar > ul >li:hover,
+.xf-popup-menu > .xf-menu-hover{
+	background-color: #0081c2;
+	color: #ffffff;
+}
+
+
+.xf-menu-bar .xf-menu-hover,
+.xf-popup-menu-ie6  .xf-menu-hover{
+	background-color: #0081c2;
+	color: #ffffff;
+}
+
+.xf-menu-bar > ul >li:hover >a,
+.xf-popup-menu > .xf-menu-hover > a{
+	color: #ffffff;
+}

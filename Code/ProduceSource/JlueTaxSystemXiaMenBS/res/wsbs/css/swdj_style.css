@@ -1,0 +1,121 @@
+.companyName {
+	FONT-WEIGHT: bold; COLOR: #0000FF; FONT-FAMILY: "宋体", "Times New Roman", "Times", "serif"; text-align: right
+}
+.pageTitle {
+	FONT-WEIGHT: bold; FONT-SIZE: 20px; COLOR: #000000; FONT-FAMILY: "宋体", "Times New Roman", "Times", "serif"
+}
+tr.tableHead {
+  text-align: center; BACKGROUND-COLOR: #bbbbbb
+}
+.title {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000099; FONT-FAMILY: "宋体", "Times New Roman", "Times", "serif", "宋体"
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: "Times New Roman", "Times", "serif", "宋体"
+}
+.table1 {
+	COLOR: #000000; BACKGROUND-COLOR: #ffffcc
+}
+.table2 {
+	COLOR: #000000; BACKGROUND-COLOR: #ffccff
+}
+.table3 {
+	COLOR: #000000; BACKGROUND-COLOR: #99ccff
+}
+.table4 {
+	COLOR: #000000; BACKGROUND-COLOR: #ccccff
+}
+.table5 {
+	COLOR: #000000; BACKGROUND-COLOR: #ccffff
+}
+.table6 {
+	COLOR: #000000; BACKGROUND-COLOR: #ceff9d
+}
+.thbg1h {
+	COLOR: #0000ff; BACKGROUND-COLOR: #ffff84
+}
+.thbg2ql {
+	COLOR: #000000; BACKGROUND-COLOR: #ffccff
+}
+.thbg3f {
+	COLOR: #000000; BACKGROUND-COLOR: #99ccff
+}
+.thbg4sl {
+	COLOR: #000000; BACKGROUND-COLOR: #ccccff
+}
+.thbg5q {
+	COLOR: #000000; BACKGROUND-COLOR: #79ffff
+}
+.thbg6l {
+	COLOR: #000000; BACKGROUND-COLOR: #99ff33
+}
+.trbg1h {
+	COLOR: #0000ff; BACKGROUND-COLOR: #ffffcc
+}
+.trbg2ql {
+	COLOR: #000000; BACKGROUND-COLOR: #ffeeff
+}
+.trbg3f {
+	COLOR: #000000; BACKGROUND-COLOR: #d2e9ff
+}
+.trbg4sl {
+	COLOR: #000000; BACKGROUND-COLOR: #ddddff
+}
+.trbg5q {
+	COLOR: #000000; BACKGROUND-COLOR: #ccffff
+}
+.trbg6l {
+	COLOR: #000000; BACKGROUND-COLOR: #ceff9d
+}
+.th_gray {
+	FONT-WEIGHT: bold; COLOR: #000000; HEIGHT: 23px; BACKGROUND-COLOR: #d2e9ff; TEXT-ALIGN: center
+}
+.th_grid_head {
+	COLOR: #000000; WHITE-SPACE: nowrap; HEIGHT: 23px; BACKGROUND-COLOR: #cccccc; TEXT-ALIGN: center
+}
+.tr_gray {
+	COLOR: #000000; HEIGHT: 23px; BACKGROUND-COLOR: #ceff9d
+}
+.td_gray {
+	COLOR: #000000; HEIGHT: 23px; BACKGROUND-COLOR: #eeeeee
+}
+.tab-on {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 120px; CURSOR: pointer; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px; BACKGROUND-COLOR: #d2e9ff
+}
+.tab-off {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 120px; CURSOR: pointer; COLOR: #666666; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #f6f6f6
+}
+.tab-none {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.tab-content {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: top; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.td_heading {
+	BORDER-RIGHT: #aaaaaa 1px; PADDING-RIGHT: 3px; BORDER-TOP: #cccccc 1px; PADDING-LEFT: 10px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cccccc 1px; COLOR: #999999; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px dashed
+}
+.hide-table {
+	DISPLAY: none
+}
+.show-table {
+	DISPLAY: block
+}
+.errorinput {
+	COLOR: #ff0000; HEIGHT: 23px; BACKGROUND-COLOR: #eeeeee
+}
+.errorinputwhite {
+	COLOR: #ff0000; HEIGHT: 23px; BACKGROUND-COLOR: #ffffff
+}
+.normalinputwhite {
+	COLOR: #000000; HEIGHT: 23px; BACKGROUND-COLOR: #ffffff
+}
+.oldbg {
+border:0;border-style:none;BACKGROUND-COLOR: #ffffcc
+}
+.oldbg1 {
+border:0;border-style:none;BACKGROUND-COLOR: #d2e9ff
+}
+.oldbg2 {
+border:0;border-style:none;BACKGROUND-COLOR: #eeeeee
+}
+

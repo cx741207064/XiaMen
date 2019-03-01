@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {margin:0; padding:0;}
+a { text-decoration:none;}
+li {list-style:none;}
+img {border:none;}
+.clear {clear:both;}
+
+body {font-family:"微软雅黑","宋体",Verdana, Geneva, sans-serif; font-size:12px; }
+#top {height:44px; background:#186fb8; width:100%;background-color: rgb(8,118,203);font-size: 14px;height: 45px; }
+#welcome {float:left; padding-left:30px; line-height:44px; color:#fff;}
+#time {float:right; padding-right:30px; line-height:44px;color:#fff;}
+#time  a {color:#fff;}
+#time  a:hover {text-decoration:underline;}
+#logon {width:100%; background:#fff url(../images/logo.jpg) no-repeat; height:80px}
+
+#nav {background:#f2f5f7; width:100%}
+.nav-one {}
+.navone-text a { background:#d9e1e7 url(../images/navxl.png) no-repeat; background-position:90% 50%; display:block; color:#242424; font-size:14; font-weight:bold; line-height:30px; padding-left:10px;cursor:pointer}
+.navone-text a:hover{background:#318ecc  url(../images/navxlb.png) no-repeat;background-position:90% 50%; color:#fff}
+ .n1t a {background:#318ecc  url(../images/navxlb.png) no-repeat;background-position:90% 50%; color:#fff}
+.nav-tow {overflow:auto;}
+.navtow-text a{ color:#666b6f; display:block; padding-left:20px; line-height:25px; cursor:pointer;white-space:nowrap;}
+.navtow-text a:hover {color:#318ecc;}
+.n2t a { color:#318ecc;}
+.navthree-text a{ color:#666b6f; display:block; padding-left:30px; line-height:25px; cursor:pointer;white-space:nowrap;}
+.navthree-text a:hover {color:#318ecc;}
+.n3t a { color:#318ecc;}
+.nav-tow li a { color:#666; line-height:28px; padding-left:45px;cursor:pointer;font-weight:bolder;}
+.nav-tow li a:hover {color:#333;}
+.displaynone {display:none;}
+.savestate {color:red;font-weight:bold;}
+
+
+.secondChild{background:#d9e1e7 url(../images/navxl.png) no-repeat;background-position:90% 50%;display:block; color:#242424; font-size:14;line-height:30px; padding-left:10px;cursor:pointer}
+#nsrxx {width:80%; margin:15px auto; text-align:center; border:1px solid #d7d3d2; padding:10px 30px;}
+#nsrxx td {margin:5px; line-height:14px; text-align:left}

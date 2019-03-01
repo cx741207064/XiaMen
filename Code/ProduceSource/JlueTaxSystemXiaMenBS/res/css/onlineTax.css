@@ -1,0 +1,1300 @@
+@charset "utf-8";
+/* CSS Document */
+body {	
+    width:100%;
+	margin: 0px;
+	padding: 0px;
+	background:#FFFFFF;
+	font-family:"",Arial,Tahoma, Helvetica, "\5b8b\4f53"; 
+	font-size:12px;
+	line-height:24px;
+	font-weight:200;
+}
+ul,li{
+	padding:0;
+	margin:0;
+	list-style:none;
+	}
+#bsfwdtHead{
+	height:45px;
+	background:#0876cb;	
+	}	
+#bsfwdtTop{
+	width:1200px;;
+	height:45px;
+	background:#0876cb;
+	font-size:14px;
+	font-family:"微软雅黑";
+	color:#d1e9ff;
+	margin:0 auto;
+	position:relative;	
+	}
+.bsfwdtTop_left{
+	width:1200px;
+	float:left;
+	position:absolute;
+	top:10px;
+	}
+.bsfwdtTop_left li{
+	float:left;
+	padding-left:10px;
+	}
+.bsfwdtTop_right{
+	float:right;
+	}	
+.bsfwdtTop_right li{
+	float:left;
+	}
+.bsfwdtTop_right{
+	width:210px;
+	right:0px;
+	position:absolute;
+	}
+	
+	
+/*导航链接*/	
+#bsfwdtIcon{
+	width:1200px;
+	margin:0 auto;
+	background:#FFFFFF;
+	margin-bottom:2px;/*导航空白间隙*/
+}
+#bsfwdtNav li{
+	display:inline;
+	color:#000;
+	font-family:"微软雅黑";
+	font-size:16px;
+	text-align:center;	
+	padding: 6px 20px;
+	
+}
+	
+#bsfwdtNav li:hover{
+	cursor:pointer;
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	background:#067dcd;
+	color:#fff;
+}
+	
+.bsfwdtNavActive{		
+	border-top-left-radius:20px;
+	border-top-right-radius:20px;
+	background:#067dcd;
+	color:#fff;
+}
+#bsfwdtNav .bsfwdtNavActive{
+	color:#fff;
+}
+/*图标导航*/
+#iconNavBg{
+	width:1200px;
+	height:150px;
+	background-color:#067dcd;
+	margin:-1px auto;
+}
+
+*+html #iconNavBg{
+	*margin-top:-2px;
+}
+
+	
+#iconBg{
+	/*width:1200px;*/
+	margin:0 auto;
+	margin-left: 30px;
+}
+.normalFunc{
+	font-size:14px;
+	color:#FFFFFF;
+	padding: 10px;
+	height:20px;
+	font-family:"宋体";
+}	
+#iconPicBg{
+	color:#FFFFFF;
+	font-family:"宋体";
+	font-size:14px;
+}
+#iconPicBg li{
+	width:84px;
+	float:left;
+	margin-right:27px;
+	margin-top:30px;
+	text-align:center;
+	position:relative;
+}
+	
+#iconPicBg li:hover{
+	cursor:pointer;
+}
+	
+#iconPicBg li:hover img{
+	width:65px;
+	height:65px;
+}
+.pic_bg{
+	position:absolute;
+	left:12px;
+	top:0px;
+}
+.icon_font{
+	padding-bottom:6px;
+}	
+/*切换*/
+.bsfwContent{
+	width:1200px;
+	margin:0 auto;
+	}
+/*管理员信息*/	
+.bsfwManagerMsg{
+	width:1150px;
+	height:30px;
+	margin:0 auto;
+	padding-bottom:10px;
+	}	
+#managerMsg{
+	height:34px;
+	padding-top:10px;
+	}
+#managerMsg li{
+	float:left;
+	font-family:"宋体";
+	font-size:12px;
+	}
+.managerImg{
+	padding-left:27px;
+	padding-right:10px;
+	}	
+#bsfwTd{
+	width:1200px; 
+	height:40px; 
+	border-top:#009 solid 1px;
+	border-left:#009 solid 1px;
+	border-right:#009 solid 1px;
+	border-color: #dddddd;
+	}
+#bsfwTd li{
+	float:left;
+	font-size:14px;
+	font-family:"宋体";
+	padding-top:8px;
+	padding-right:10px;
+	padding-left:10px;
+	line-height: 30px;
+	}	
+.bsfwBigTd{
+	width:1200px;
+	border:#dddddd solid 1px;
+	margin:0 auto;
+	}	
+.TableTitle{
+	font-size:16px;
+	font-family:"微软雅黑";
+	padding-left:25px;
+	padding-top:6px;
+    }
+/*三级栏目左*/
+.bsfwTdLeft{
+	width:212px;
+	margin-top:16px;    
+	margin-bottom: 16px;
+	}
+.tableLeftLi{
+	width:190px;
+	height:34px;
+	border:#009 solid 1px;
+	margin-left:11px;
+	margin-top:11px;
+	margin-bottom: 11px;
+	font-size:14px;
+	font-family:"宋体";  
+	background-color: #fbfbfb;
+	border-color: #dddddd;
+	line-height: 34px;
+	}
+.tableLeftLi img{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.tableLeftLi_on{
+	width:190px;
+	height:34px;
+	border:#009 solid 1px;
+	margin-left:11px;
+	margin-top:11px;
+	margin-bottom: 11px;
+	font-size:14px;
+	font-family:"宋体";  
+	background-color: #1693f0;
+	border-color: #0776cb;
+	line-height: 34px;
+	color:#FFF;
+}
+.tableLeftLi_on img{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+.tableRightList{
+	width: 100%;
+	min-width:840px;
+	_width:840px;
+}
+.clearTrl:after{
+	content:"";
+	display:block;
+	clear:both;	
+}
+.tableRightList ul{
+	width:100%;
+	position:absolute;
+	right:0px;
+	}	
+.tableRightList li{
+	height:32px;
+	line-height:32px;
+	background: url('../images/bsfwhall/bsfw_line.jpg') repeat-x;
+	background-position-y: bottom;
+	margin: 0 50px;
+	font-size:14px;
+	font-family: "宋体";
+}
+.tableRightList li img{
+	margin-right: 5px;
+}
+/*底部*/
+.bsfwButtomLine{
+	width:100%;
+	height:110px;
+	background:#0876CB;
+	position:relative;
+	}
+.bsfwdt_buttom{
+	height:68px;
+	margin-left:300px;
+	color:#FFFFFF;
+	position:absolute;
+	}		
+.bsfwdt_buttom_left{
+	position:absolute;
+	margin-top:30px;
+	}
+.bsfw_address{
+	width:400px;
+	margin-left:50px;
+	margin-top:30px;
+	font-size:14px;
+	position:absolute;
+	}	
+.bsfwdt_buttom_right{
+	margin-left:700px;
+	margin-top:14px;
+	position:absolute;
+	color:#FFFFFF;	
+	}
+.xmgsCode{	
+    margin-left:30px;
+}
+.buttomPic{
+	text-align:center;
+	padding-left:2px;
+	padding-top:3px;
+	}
+.xmgsCode li{
+	float:left;
+	padding-left:50px;
+	}		
+	
+/*查询条件页*/
+.searchTable{
+	height:200px;
+	margin-top:35px;
+	padding-left:190px;
+	font-family:"宋体";
+	font-size:14px;
+	line-height:28px;
+}
+.tableTotal tr{
+	margin-bottom:10px;
+	
+	}		
+.subbtn{
+	background:url(../images/bsfwhall/query_btn.png);
+	width:80px;
+	height:26px;
+	color:#FFFFFF;
+	border:0px;
+	margin-top:5px;
+	margin-bottom:5px;
+	}
+.exitbtn{
+	background:url(../images/bsfwhall/exit_btn.png);
+	width:80px;
+	height:26px;
+	color:#666666;
+	border:0px;
+	margin-top:5px;
+	margin-left:7px;
+	margin-bottom:5px;
+	}
+.selectInput{
+	width:103px;
+	height:25px;
+	border:#dddddd solid 1px;
+	margin-left:5px;
+	line-height:28px;
+	/*appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;*/
+	}		
+.bsfwYearInput{
+	width:100px;
+	height:21px;
+	border:#dddddd solid 1px;
+	margin-left:5px;
+	line-height:25px;
+	}
+.bsfwMonthInput{
+	width:40px;
+	height:21px;
+	border:#dddddd solid 1px;
+	line-height:25px;
+	}
+.searchMsg{
+	width:700px;
+	height:200px;
+	margin-top:20px;
+	padding-left:80px;
+	font-family:"宋体";
+	font-size:14px;
+	}
+.tdButtomLeft{
+	height:32px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	border-top:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;
+	background:#fbfbfb;
+	}
+.tdLeft{
+	height:32px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	border-top:#dddddd solid 1px;
+	background:#fbfbfb;
+	}	
+.tdRight{
+	height:32px;
+	border-right:#dddddd solid 1px;
+	border-top:#dddddd solid 1px;
+	}
+.tdButtomRight{
+	height:32px;
+	border-right:#dddddd solid 1px;
+	border-top:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;
+		}	
+/*查询结果列表*/
+.searchresult{
+	width:100%;
+	height:400px;
+	margin-top:10px;
+	padding-left:20px;
+	font-family:"宋体";
+	font-size:14px;
+	border:#00F solid 1px;
+	
+	}
+/*查询结果列表*/
+.searchResult{
+	height:500px;
+	margin-top:10px;
+	margin-left:25px;
+	margin-right:25px;
+	font-family:"宋体";
+	font-size:14px;
+	}
+.reaultTd{
+	border-top:#dddddd solid 1px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;
+	}
+.reaultTdTitle{
+	border-top:#dddddd solid 1px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	background:#fbfbfb;
+	height:31px;
+	color:#666666; 
+	font-weight:bold;
+	padding-left:15px;
+	}
+.reaultTdTitle2{
+	border-top:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	background:#efefef;
+	height:31px;
+	color:#666666; 
+	font-weight:bold;
+	padding-left:15px;
+	}	
+.searchResult2{
+	border-left:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;
+	}
+.searchResult2 td{
+	border-right:#dddddd solid 1px;
+	border-top:#dddddd solid 1px;
+	border-collapse:collapse;
+	}
+.buttom_btn{
+	background-color:#1079e2;
+	border:#0776cb solid 1px;
+	color:#FFFFFF;
+	width:50px;
+	height:20px;
+	font-size:12px;
+	}
+.page_buttom{
+	font-size:14px;
+	padding-top:3px;
+	padding-bottom:3px;
+	font-size:12px;
+	}
+/*左边列表*/
+.leftMenu{
+	border-top:#dddddd solid 1px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	height:300px;
+	border-collapse: collapse; 
+	border-spacing: 0;
+	}
+/*办税服务首页*/
+#indexLeftMenu{
+	width:226px;
+	height:518px;
+	border:#dddddd solid 1px;
+	margin-top:8px;
+	margin-bottom:8px;
+	}
+#bsfwDate{
+	padding-top:12px;
+	padding-left:12px;
+	padding-right:12px;
+	position:relative;
+	}
+#bsfwDateBtn{
+	wdith:200px;
+	height:23px;	
+	}	
+#bsfwDateTip{
+	width:200px;
+	height:54px;
+	background:#cce2f9;	
+	margin-left:12px;
+	margin-right:12px;
+	font-size:12px;
+	font-family:"宋体";
+	padding-top:5px;
+	}
+#bsfwDateTip li{
+	padding-left:18px;
+	}
+.bsfwDateTipDot{
+	padding-right:6px;
+	}
+.bsfwDateTipDay{
+	color:#F00;	
+	}	
+#bsfwDateBtn{
+	width:200px;
+	position:absolute;
+	top:25px;
+	}	
+.dateLeftBtn{
+	background:url(../images/bsfwhall/index_left_arrow.png);
+	width:23px;
+	height:23px;
+	border:0px;
+	margin-left:10px;
+	margin-right:130px;
+	}
+.dateRightBtn{
+	background:url(../images/bsfwhall/index_right_arrow.png);
+	width:23px;
+	height:23px;
+	border:0px;
+	}
+.bsyyTitle{
+	width:200px;
+	height:32px;
+	background:#dcedfd;
+	margin-top:8px;
+	margin-left:11px;
+	border:#dddddd solid 1px;
+	}
+.bsyyTitle img{
+	padding-left:53px;
+	padding-top:4px;
+	}
+.bsyyContent{
+	width:200px;
+	height:74px;
+	margin-left:11px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;	
+	}
+.bsyyContent li{
+	padding-left:23px;
+	}
+.bsyyWaiting{
+	padding-left:50px;	
+	}	
+.nszxTitle{
+	margin-left:12px;
+	margin-top:8px;
+	margin-bottom:8px;		
+	}
+/*办税服务首页右列表*/
+#indexRightContent{
+	width:960px;
+	height:518px;
+	margin-left:14px;
+	margin-top:8px;
+	}
+#indexManagerMsg{
+	height:32px;
+	border-top:#dddddd solid 1px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	}
+#indexDeclarationMsg{
+	height:80px;
+	background:#fbfbfb;
+	border-top:#dddddd solid 1px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;
+	}	
+.dbsxTitle{
+	width:40px;
+	color:#0577CD;
+	font-family:"微软雅黑";
+	font-size:16px;
+	padding-left:40px;
+	padding-top:15px;
+	padding-bottom:15px;
+	float:left;
+	}
+.dbsxIcon{
+	width:40px;
+	color:#0577CD;
+	font-family:"微软雅黑";
+	font-size:16px;
+	padding-top:18px;
+	padding-left:10px;
+	float:left;
+	}
+.dbsxNumber1{
+	 color:red; 
+	 padding-left:9px;
+	 font-size:18px;
+	}
+.dbsxNumber2{
+	 color:red; 
+	 padding-left:18px;
+	 font-size:18px;
+	}	
+.dbsxFont1{
+	width:50px;
+	color:#0577CD;
+	font-family:"微软雅黑";
+	font-size:16px;
+	padding-top:15px;
+	padding-left:8px;
+	padding-bottom:15px;
+	float:left;
+	}
+.dbsxFont2{
+	width:50px;
+	color:#0577CD;
+	font-family:"微软雅黑";
+	font-size:16px;
+	padding-top:15px;
+	padding-left:8px;
+	padding-bottom:15px;
+	float:left;
+	}		
+#bsfwManagerMsg{
+	height:32px;
+	margin-top:4px;
+	}
+#bsfwManagerMsg li{
+	/*float:left;*/
+	font-family:"宋体";
+	font-size:12px;
+	}
+.bsfwManagerImg{
+	padding-left:20px;
+	padding-right:10px;
+	border:0px;
+	}
+#declarationMsg{
+	height:82px;
+	}
+.dbsxDeclaration{
+	width:100px;
+	margin-top:17px;
+	}
+#indexNews{
+	/*测试高度*/
+	width:958px;
+	height:405px;
+	border-left:#dddddd solid 1px;
+	border-right:#dddddd solid 1px;
+	border-bottom:#dddddd solid 1px;
+	position:absolute;
+	}
+#sbxxMsg{
+	width:427px;
+	height:185px;
+	margin-left:30px;
+	margin-top:25px;
+	margin-right:40px;
+	float:left;	
+	}
+.sbxxMsgTitleHead{
+	float:left;
+	padding-left:15px;
+	padding-right:15px;
+	line-height:32px;
+	border-bottom:#1693f0 solid 2px;
+	}
+.tzMsgTitleHead{
+	float:left;
+	padding-left:15px;
+	padding-right:15px;
+	line-height:32px;
+
+	}	
+.sbxxDbTitle{
+	border-bottom:#dddddd solid 1px;
+	height:33px;
+	
+	}	
+.sbxxDbTitle li{
+	float:left;
+	font-size:14px;
+	padding-top:5px;
+	}
+.sbxxDbTitle1{
+	padding-left:15px;
+	}
+.sbxxDbTitle2{
+	padding-left:110px;
+	}
+.sbxxDbTitle3{
+	padding-left:115px;
+	}
+.sbxxDbList{
+	width:425px;
+	overflow:hidden;
+	position:relative;/*测试*/
+	}
+.sbxxDbList li{
+	float:left;
+	font-size:14px;
+	font-family:"宋体";
+	}
+.sbxxDbList1{
+	width:100px;
+	text-align:left;
+	padding-left:20px;
+	line-height:30px;
+	}
+.sbxxDbList2{
+	width:100px;
+	padding-left:60px;
+	line-height:30px;
+	}
+.sbxxDbList3{
+	width:80px;
+	padding-left:60px;
+	text-align:center;
+	margin-top:5px;
+	}
+.spjgDbTitle3{
+	padding-left:38px;
+	}
+/*审批结果*/	
+.spjgDbTitle2{
+	padding-left:210px;
+	
+	}	
+.spjgDbList1{
+	width:240px;
+	text-align:left;
+	padding-left:15px;
+	line-height:30px;
+	}	
+.spjgDbList2{
+	padding-left:20px;
+	line-height:30px;
+	}	
+.spjgDbList3{
+	padding-left:25px;	
+	line-height:30px;
+	}
+/*未读邮件*/
+.wdyjDbList1{
+	position:absolute;
+	line-height:20px;
+	}
+.wdyjDbList2{
+	text-align:left;
+	width:350px;
+	padding-left:15px;
+	line-height:30px;
+	}	
+.wdyjDbList3{
+	width:50px;
+	text-align:center;	
+	line-height:30px;
+	}		
+.ssxxMore{
+	padding-left:290px;
+	line-height:34px;
+}
+.ssxxMore a{
+	text-decoration:none;
+	color:#000;	
+	padding-right:2px;
+	}
+#spjgMsg{
+	width:427px;
+	height:185px;
+	float:right;
+	margin-top:25px;
+	margin-right:30px;
+	}
+#tzMsg{
+	width:427px;
+	height:150px;
+	margin-top:25px;
+	margin-left:30px;
+	margin-right:40px;
+	float:left;
+	}
+#wdyjMsg{
+	width:427px;
+	height:150px;
+	float:right;
+	margin-top:25px;
+	margin-right:30px;
+	}
+.tzMore{
+	padding-left:260px;	
+	line-height:34px;
+	}
+.tzMore a{
+	text-decoration:none;
+	color:#000;	
+	padding-right:2px;
+	} 
+.sbBtn{	
+	background-color:#3395ec;
+	border:#2185dd solid 1px;
+	color:#FFFFFF;
+	width:70px;
+	height:24px;
+	font-size:12px;
+	text-align:center;
+}	
+/*短信定制*/
+.shortMsg{
+	border:#dddddd solid 1px; 
+	height:300px;
+	width:700px;
+	margin-left:250px;
+	margin-top:25px;
+	margin-bottom:50px;">	
+	}
+.shortMsgTd{
+	width:170px;
+	height:30px;
+	}
+/*税企邮箱*/
+#emailHead{
+	width:100%;
+	height:68px;
+	background:#5f89d3;
+	border-bottom:#3969be solid 1px;
+	}
+#emailHead div{
+	float:left;
+}
+.emailHeadTitle{
+	width:200px;
+	height:60px;
+	color:#FFFFFF;
+	font-family:"微软雅黑";
+	padding-left:8px;
+	}
+.emailTitle1{
+	width:200px;
+	font-size:20px;
+	padding-top:14px;
+	}	
+.emailTitle2{
+	width:70px;
+	font-size:12px;
+	}
+.emailTitle3{
+	width:100px;
+	font-size:12px;
+	}	
+#emailContent{
+	width:100%;
+	height:440px;/*测试*/
+	border-bottom:#dddddd solid 1px;
+	}
+#emailLeftMenu{
+	width:190px;
+	height:440px;
+	float:left;
+	border-right:#dddddd solid 1px;
+	background:#fbfbfb;
+}
+#emailRow1{
+	height:40px;
+	position:relative;
+	border-bottom:#dddddd solid 1px;
+	}
+#emailRow1 li{
+	width:94px;
+	height:40px;
+	float:left;
+	}
+#emailIcon{
+	width:94px;
+	font-size:14px;
+	color:#6089d4;
+	font-family:"宋体";
+	font-weight:bold;
+	padding-left:17px;
+	}
+.Row1Font{
+	padding-left:30px;	
+	}	
+#emailIcon li{
+	width:30px;
+	float:left;
+	position:absolute;
+	top:10px;
+	height:20px;
+	}
+#emailRow2{
+	height:145px;
+	border-bottom:#dddddd solid 1px;
+	font-size:14px;
+	font-family:"宋体";
+	}
+#emailRow2 li{
+	height:30px;
+	padding-left:40px;
+	padding-right:40px;
+	padding-bottom:5px;
+	}
+.emailList{
+	float:left;
+	padding-top:3px;
+	padding-right:17px;
+    }
+#emailRightContent{
+	right:0px;
+	position:absolute;
+	width:85%;
+	height:300px;
+	background:#FFFFFF;
+	}
+.emailTips{
+	height:35px;
+	border-bottom:#dddddd solid 1px;
+	background:#fbfbfb;
+	font-size:12px;
+	font-family:"宋体";
+	color:#666666;
+	}
+.tipsFont{
+	padding-left:20px;
+	padding-top:9px;	
+	}
+.emailInbox{
+	height:33px;
+	background:#fbfbfb;
+	font-size:14px;
+	font-family:"宋体";
+	color:#6089d4;	
+	}
+.emailInbox div{
+	float:left;
+	}	
+.InboxFont1{
+	padding-left:20px;
+	padding-top:9px;
+	font-weight:bold;	
+	}
+.InboxFont2{
+	width:80px;
+	padding-left:10px;
+	padding-top:9px;
+	color:#000;
+	}
+.InboxFont2 span{
+	padding-left:5px;
+	padding-right:5px;	
+	}
+.emailDelBg{
+	height:27px;
+	background:#b6caed;
+	font-size:14px;
+	font-family:"宋体";
+	padding-top:3px;
+	padding-left:24px;
+	margin-bottom:1px;/*空白间隙*/
+	}		
+.emailDelBtn{
+	background:url(../images/bsfwhall/emailDelBtn.png);
+	width:50px;
+	height:24px;
+	color:#000000;
+	border:0px;
+	font-size:14px;
+	}
+.emailTh{
+	height:26px;
+	font-size:14px;
+	background:#F3F4F6;
+	border-bottom:#dddddd solid 1px;
+	}
+.emailTh li{
+	float:left;
+	padding-left:10px;
+	}
+.emailThCheckbox{
+	margin-top:2px;
+	border:0px;
+	}
+.emailTd{
+	height:26px;
+	font-size:14px;
+	background:#FFFFFF;
+	border-bottom:#f3f4f8 solid 1px;
+	}
+.emailTd li{
+	float:left;
+	margin-left:10px;
+	font-size:12px;
+	}
+.emailTdFont{
+	font-weight:bold;	
+	}		
+.emailBottom{
+	height:36px;
+	font-size:12px;
+	background:#cecece;
+	border-bottom:#f3f4f8 solid 1px;
+	margin-bottom:4px;
+	}
+.emailBottom li{
+	margin-top:5px;
+	float:left;
+	}	
+/*税企邮箱*/
+.emailButtomLine{
+	width:100%;
+	height:70px;
+	background:#FFFFFF;
+	position:relative;
+	color:#666666;
+	font-size:12px;
+	}
+.email_buttom{
+	height:68px;
+	margin-left:500px;
+	position:absolute;
+	}		
+.email_buttom_left{
+	position:absolute;
+	margin-top:10px;
+	}
+.email_address{
+	width:400px;
+	margin-left:50px;
+	margin-top:10px;
+	position:absolute;
+	}	
+.email_buttom_right{
+	margin-left:700px;
+	margin-top:14px;
+	position:absolute;
+	color:#FFFFFF;	
+	}	
+/*办税服务大厅登录页*/
+#bsfwLoginHead{
+	width:100%;
+	height:80px;
+	}
+#bsfwLoginHead img{
+	padding-left:150px;
+	padding-top:5px;	
+	}
+#bsfwLoginContent{
+	width:100%; 
+	height:500px;
+	position:relative;
+	}
+#loginMode{
+	width:310px;
+	height:320px;
+	background:#FFFFFF;
+	top:60px;
+	left:780px;
+	position:absolute;
+	}
+	
+#loginMode a{
+	text-decoration:none;
+	color:#0876cb;
+	font-size:14px;
+	font-family:"微软雅黑";
+	padding-left:22px;
+	}	
+.userLoginTitle{
+	height:60px;
+	font-size:18px;
+	font-weight:400;
+	font-family:"微软雅黑";
+	}
+.userLoginTitle div{
+	padding-top:24px;
+	text-align:center;
+	}			
+.bsfwdtLoginId{
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#b7b7b7;
+	width: 224px;
+	height:38px;
+	border:#dddddd solid 1px;
+	margin-bottom:14px;
+	margin-left:22px;
+	background: url('../images/bsfwhall/bsfwdtLoginId.png') no-repeat;
+	background-position: 15px 10px;
+	padding-left:40px;
+	}
+.bsfwdtPassword{
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#b7b7b7;
+	width: 224px;
+	height:38px;
+	border:#dddddd solid 1px;
+	margin-bottom:14px;
+	margin-left:22px;
+	background: url('../images/bsfwhall/bsfwdtLoginPassword.png') no-repeat;
+	background-position: 15px 10px;
+	padding-left:40px;
+	}
+.bsfwdtCheckCode{
+	font-family:"微软雅黑";
+	font-size:14px;
+	color:#b7b7b7;
+	width:116px;
+	height:38px;
+	border:#dddddd solid 1px;
+	margin-left:22px;
+	padding-left:15px;
+	}
+.bsfwdtLoginBtn{
+	background-color:#0876cb;
+	border:0;
+	color:#FFFFFF;
+	width:268px;
+	height:42px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	margin-top:14px;
+	margin-bottom:10px;
+	margin-left:22px;
+	}
+.bsfwdt_login_buttom{
+	height:68px;
+	margin-left:450px;
+	top:400px;
+	color:#FFFFFF;
+	position:absolute;
+	}
+.bsfwdtRow3 li{
+	float:left;	
+	}					
+					
+/*税企邮箱登录页*/	
+#emailLoginContent{
+	width:100%; 
+	height:430px;
+	position:relative;
+	border-bottom:#dddddd solid 1px;
+	}
+#emailLoginBottom{
+	height:70px;
+	color:#666666;
+	background:#FFFFFF;
+	margin-left:465px;
+	position:absolute;
+	top:485px;
+	}
+#emailLoginMode{
+	width:310px;
+	height:280px;
+	background:#FFFFFF;
+	top:75px;
+	left:780px;
+	position:absolute;
+	border:#dddddd solid 1px;
+	}
+#emailLoginMode a{
+	text-decoration:none;
+	color:#0876cb;
+	font-size:14px;
+	font-family:"微软雅黑";
+	padding-left:22px;
+	}	
+.userEmailLoginTitle{
+	height:60px;
+	font-size:22px;
+	font-weight:400;
+	font-family:"微软雅黑";
+	}
+.userEmailLoginTitle div{
+	padding-top:24px;
+	text-align:center;
+	color:#4473c9;
+	background:#f0f7ff;
+	border-bottom:#dddddd solid 1px;
+	padding-bottom:10px;
+	}	
+.emailLoginBtn{
+	background-color:#6299eb;
+	border:0;
+	color:#FFFFFF;
+	width:268px;
+	height:42px;
+	font-family:"微软雅黑";
+	font-size:16px;
+	margin-top:14px;
+	margin-bottom:10px;
+	margin-left:22px;
+	}
+	
+	
+	
+/* 投资者情*/
+#zcznxx{
+	margin-top:10px;
+}
+/*注册资本信息  */
+.ds_TableHeard{
+	background-color:#0876CB;
+	height: 34px;
+    line-height: 34px;
+    color: white;
+}
+.ds_Table{
+	width:878px;
+	/* display: inline-flex; */
+	display: table-row;
+}
+.ds_Table1{
+	width:878px;
+	display: inline-flex;
+	background: #fbfbfb;
+}
+.ds_xTableHeard{
+	width: 439px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #dddddd;
+}
+/* 投资者情况 */
+.ds_xxTableHeard1{
+	background: #fbfbfb;
+	width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #dddddd;
+    text-align: right;
+}
+.ds_xxTableHeard2{
+	width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #dddddd;
+}
+.ds_xxTableHeard3{
+	width: 378px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #dddddd;
+}
+/*开户银行情况  */
+#yhxx{
+	font-size:12px;	
+	margin-top:10px;
+}
+.ds_xxxTableHeard1{
+	width: 250px;
+	height: 68px;
+    line-height:  68px;
+    text-align: center;
+	border: 1px solid #dddddd;
+}
+.ds_xxxTableHeard2{
+	width: 100px;
+	height:  68px;
+    line-height:  68px;
+    text-align: center;
+	border: 1px solid #dddddd;
+}
+.ds_xxxTableHeard3{
+	width: 70px;
+	height:  68px;
+    line-height:  68px;
+    text-align: center;
+	border: 1px solid #dddddd;
+}
+.ds_xxxTableHeard4{
+	width: 150px;
+	height:  68px;
+    line-height:  68px;
+    text-align: center;
+	border: 1px solid #dddddd;
+}
+.ds_xxxTableHeard5{
+	width: 85px;
+	height:  68px;
+    line-height:  34px;
+    text-align: center;
+	border: 1px solid #dddddd;
+}
+.ds_xxxTableHeard55{
+	width: 70px;
+	height:  68px;
+    line-height:  68px;
+    text-align: center;
+	border: 1px solid #dddddd;
+}
+	

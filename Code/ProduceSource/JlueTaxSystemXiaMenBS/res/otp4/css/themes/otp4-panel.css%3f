@@ -1,0 +1,13 @@
+.xf-panel{
+  background-color: #fff;
+}
+.xf-panel-default{
+	border: 1px solid #ddd;
+}
+.xf-panel-default > .xf-panel-heading,
+.xf-panel-default > .xf-panel-footer
+ {
+  color: #333;
+  background-color: #f5f5f5;
+  border-color: #ddd;
+}

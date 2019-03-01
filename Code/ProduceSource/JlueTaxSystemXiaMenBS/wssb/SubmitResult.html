@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link rel="stylesheet" href="/wssb/wssb/public/style/link.css" type="text/css">
+
+    <script type="text/javascript" src="wssb/public/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="wssb/public/js/changeMenu.js"></script>
+
+    <script type="text/javascript">
+        var table_action = "submit"
+        var rtnCgbz = "000"
+
+        var result = GetQueryString("Msg")
+
+        if (result == null || result == "") {
+        }
+        else {
+            table_action = ""
+        }
+
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+            //if (r != null) return unescape(r[2]);
+            if (r != null) return decodeURI(r[2]);
+            return null;
+        }
+
+        $(function () {
+            if (result == null || result == "") {
+                alert("申报成功")
+            }
+            else {
+                $("#t_login").hide()
+                alert(result)
+            }
+            location.href = "MainServlet_INFORMATION.aspx"
+        })
+
+    </script>
+</head>
+<body>
+    <form name="frm_login" method="POST">
+                    <table id="t_login" width="552px" height="350px" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center">
+                                <table width="96%" border="0" cellpadding="0" cellspacing="0" bgcolor="#4E9492">
+                                    <tr>
+                                        <td width="203" align="center" class="title">
+                                            <p style="width: 120px">返回结果</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <table width="96%" border="0" cellspacing="0" cellpadding="0" style="background-color: #FFF">
+                                    <tr>
+                                        <td width="100%" align="center" bgcolor="#EEEEEE">
+                                            <br />
+                                            <table width="400px" height="230px" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                <tr height="145px">
+                                                    <td align="left" style="font-size: 11pt; color: blue; line-height: 2; word-wrap: break-word; word-break: break-all;">提&nbsp;&nbsp;示：&nbsp;
+                        正式申报成功！
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" valign="top"></a>
+	                      	<a href="./MainServlet?NSRSBH=91350200MA2Y10EC4K&TABLE_NAME=INFORMATION&TABLE_ACTION=display">
+                                  &nbsp;&nbsp;&nbsp;&nbsp;
+                                  <a href="./MainServlet_INFORMATION.aspx?TABLE_NAME=INFORMATION&TABLE_ACTION=display&NSRSBH=91350200MA2Y10EC4K" class="btnclass">退&nbsp;&nbsp;出</a></td>
+
+                                                </tr>
+                                            </table>
+                                            <br>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+</body>
+</html>

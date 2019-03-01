@@ -1,0 +1,279 @@
+/* CSS Document */
+body {
+	font-family: "", Arial, Tahoma, Helvetica, "\5b8b\4f53";
+	font-size: 12px;
+	line-height: 24px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+	line-height: auto;
+}
+
+/*logo*/
+.top_bg_color {
+	background-color: #1a70c1;
+}
+
+.nav_bg_color {
+	background-color: #1a70c1;
+}
+
+.up_blue_bg_color {
+	background-color: #81acd8;
+}
+
+.h12_blue_gongsi {
+	font-size: 12px;
+	color: #dcf2ff;
+	line-height: 24px;
+}
+
+.h12_w_caidan {
+	font-size: 12px;
+	color: #fff;
+	line-height: 24px;
+}
+
+.riqi {
+	font-size: 20px;
+	color: #1a70c1;
+	line-height: 24px;
+}
+
+/*流程*/
+.gray_bg_color {
+	background-color: #fafafa;
+}
+
+.liucheng_02 {
+	background-image: url(/res/images/liucheng_02.png);
+	background-repeat: no-repeat;
+	height: 24;
+	width: 120px;
+}
+
+.liucheng_03 {
+	background-image: url(/res/images/liucheng_03.png);
+	background-repeat: no-repeat;
+	height: 24;
+	width: 120px;
+}
+
+.h1_14w {
+	font-size: 12px;
+	color: #fff;
+}
+
+.h1_14b {
+	font-size: 12px;
+	color: #000;
+}
+
+.liucheng_gray_bg_color {
+	background-color: #dadada;
+	height: 1px;
+}
+
+.border_rl {
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-right-color: #dadada;
+	border-left-color: #dadada;
+}
+
+/*表格部分*/
+.h16_bold {
+	font-size: 14px;
+	color: #000;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.h12_bold {
+	font-size: 12px;
+	color: #000;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.h12_b {
+	font-size: 12px;
+	color: #000;
+	line-height: 26px;
+}
+
+.h12_gray {
+	font-size: 12px;
+	color: #ff0000;
+	line-height: 26px;
+}
+
+.border {
+	border: 1px solid #e7e7e7;
+}
+
+/*左侧菜单*/
+.caidan_01 {
+	background-image: url(/res/images/caidan_01.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 170px;
+	background-position: center;
+	padding-left: 10px;
+	cursor: pointer;
+	overflow: hidden
+}
+
+.caidan_01:hover,.caidan_02 {
+	background-image: url(/res/images/caidan_02.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 170px;
+	background-position: center;
+	overflow: hidden
+}
+
+.caidan_03 {
+	background-image: url(/res/images/caidan_03.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 170px;
+	background-position: center;
+	font-size: 12px;
+	color: #1a70c1;
+	line-height: 24px;
+	padding-left: 10px;
+}
+
+.caidan_05 {
+	background-image: url(/res/images/caidan_05.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 170px;
+	background-position: center;
+	font-size: 12px;
+	color: #1a70c1;
+	line-height: 24px;
+	padding-left: 10px;
+}
+
+.caidan_04 {
+	background-image: url(/res/images/caidan_04.png);
+	background-repeat: no-repeat;
+	height: 28px;
+	width: 206px;
+	background-position: right;
+}
+
+.caidan_h12 {
+	height: 24px;
+	width: 170px;
+	overflow: hidden;
+}
+
+.caidan_h12:hover {
+	background-image: url(/res/images/caidan_02.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 170px;
+	background-position: center;
+	overflow: hidden;
+}
+
+.caidan_h12_blue {
+	font-size: 12px;
+	color: #1a70c1;
+	line-height: 24px;
+}
+
+.caidan_h12_blue:hover,.caidan_h12_w {
+	font-size: 12px;
+	color: #fff;
+	line-height: 24px;
+}
+
+.caidan_h12_blue_bold {
+	font-size: 12px;
+	color: #1a70c1;
+	line-height: 24px;
+	font-weight: bold;
+}
+
+.caidan_h12_blue_bold:hover,.caidan_h12_w {
+	font-size: 12px;
+	color: #fff;
+	line-height: 24px;
+}
+
+/*回执单表格*/
+.huizhi_bg {
+	background-color: #ecf3f9;
+}
+
+.tijiao {
+	background-image: url(/res/images/tijiao.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 80px;
+}
+
+.quxiao {
+	background-image: url(/res/images/quxiao.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	width: 80px;
+}
+
+.tiqu {
+	background-image: url(tiqu.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 90px;
+	background-position: center center;
+}
+
+.tijiao {
+	background-image: url(/res/images/tijiao.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 80px;
+	background-position: center center;
+}
+
+.quxiao {
+	background-image: url(/res/images/quxiao.png);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 80px;
+	background-position: center center;
+}
+
+/*说明*/
+.shuoming_border {
+	border: 1px solid #aae0fb;
+}
+
+/*bottom*/
+.bottom_hengxian {
+	background-color: #1a70c1;
+	height: 3px;
+}
+
+.bottom_bg {
+	background-color: #fafafa;
+}
+
+.hintsB {
+	background-color: #B1D4F6;
+	border:1px solid #FFFFFF;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius:5px;
+}
+.loading{
+    background: white url('/res/images/bigloading.gif') no-repeat center 40%;
+    height: 450px;
+    position: absolute;
+}

@@ -1,0 +1,132 @@
+﻿table {font-size: 9pt; color:#000000;}
+BODY {
+	SCROLLBAR-FACE-COLOR: #dee3e7; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #efefef; FONT-FAMILY: 宋体; SCROLLBAR-DARKSHADOW-COLOR: #98aab1; BACKGROUND-COLOR: #DFE4E8
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: 宋体
+}
+a {text-decoration:none;font-size: 9pt;color:#990033}
+A:LINK {
+	 COLOR: #990033; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #990033; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #990033; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #4455aa; TEXT-DECORATION: underline
+}
+A.menu:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:hover {
+	COLOR: yellow; TEXT-DECORATION: underline
+}
+.glow { FILTER: Glow(Color=black, Strength=1) }
+.input1 {BORDER-BOTTOM: #0000ff 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #0000ff 1px solid;}
+.type1 {  line-height: 18px; font-variant: normal; font-family: "Arial", "Helvetica", "sans-serif"; font-style: normal; font-weight: lighter; color: #0033FF; text-decoration: blink}
+INPUT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,宋体; width:100%;
+}
+SELECT {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,宋体
+}
+TEXTAREA {
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,宋体
+}
+
+TABLE.SBB{background-color:#E8ECE8}
+TABLE.CXSBB{background-color:#D8DBD8}
+TD.td_idx {background-color:#D8DBD8}
+TD.HEAD {background-color:#D8DBD8}
+TD.LEFT {background-color:#D8DBD8}
+TR.HEAD{background-color:#D8DBD8}
+
+INPUT.input_number{text-align:right; ime-mode:disabled}
+INPUT.input_number_left{text-align:left; ime-mode:disabled}
+INPUT.input_text{text-align:left}
+INPUT.input_noborder{
+	border-top: thin none #FFFFFF;
+	border-right: thin none #FFFFFF;
+	border-bottom: thin none #FFFFFF;
+	border-left: thin none #FFFFFF;
+	}
+
+INPUT.input_num_readonly{
+	text-align:right;
+	background-color:#E8ECE8;
+	border-top: thin none #E8ECE8;
+	border-right: thin none #E8ECE8;
+	border-bottom: thin none #E8ECE8;
+	border-left: thin none #E8ECE8;
+}
+
+INPUT.input_integer_readonly{
+	text-align:right;
+	background-color:#E8ECE8;
+	border-top: thin none #E8ECE8;
+	border-right: thin none #E8ECE8;
+	border-bottom: thin none #E8ECE8;
+	border-left: thin none #E8ECE8;
+}
+
+INPUT.input_head_readonly{
+	text-align:right;
+	background-color:#D8DBD8;
+	border-top: thin none #D8DBD8;
+	border-right: thin none #D8DBD8;
+	border-bottom: thin none #D8DBD8;
+	border-left: thin none #D8DBD8;
+}
+
+.input_readonly{
+	background-color:#E8ECE8;
+	border-top: thin none #E8ECE8;
+	border-right: thin none #E8ECE8;
+	border-bottom: thin none #E8ECE8;
+	border-left: thin none #E8ECE8
+}
+A.mainmenu:link{COLOR: #ffffff; TEXT-DECORATION: none}
+A.mainmenu:visited{COLOR: #ffffff; TEXT-DECORATION: none}
+A.mainmenu:active{COLOR: #ffffff; TEXT-DECORATION: none}
+A.mainmenu:hover{COLOR: #ffffff; TEXT-DECORATION: none}
+.a{benc:expression(this.onmouseover=_mouseover)}
+
+td.mainmenu {height:25; color:#FFFFFF; text-align: right; font-size:9pt; cursor:hand;}
+
+
+INPUT.input_cxnum_readonly{
+	color:#00007f;
+	font-size: 8pt;
+	text-align:right;
+	background-color:#E8ECE8;
+	border-top: thin none #E8ECE8;
+	border-right: thin none #E8ECE8;
+	border-bottom: thin none #E8ECE8;
+	border-left: thin none #E8ECE8;
+}
+
+.title {width:80%; min-width:498px; height:36px; border:1px solid #4d8fbc; background:#5dace0;text-align: center;color: #FFFFFF}
+.btnclass {width:148px;height:25px;display:block;display:inline;display:inline-block;align:center;color:#FFF;line-height:25px;background:#fff url(../../layout/images/bt.jpg);cursor：pointer;}
+a.btnclass:link{COLOR: #ffffff; TEXT-DECORATION: none}
+a.btnclass:visited{COLOR: #ffffff; TEXT-DECORATION: none}
+a.btnclass:active{COLOR: #ffffff; TEXT-DECORATION: none}
+a.btnclass:hover{COLOR: #ffffff; TEXT-DECORATION: none}
+
+/*行次单元格样式*/
+.HcInputReadonly {
+	width: 100%;
+	text-align: center; 
+	border: 0px; 
+	background-color: transparent;
+}
+/*lhgdialog input的css与该里面的css有冲突，这里修改下lhgdialg的input样式  20180323 cyueyun*/
+.ui_buttons INPUT{width:auto;}

@@ -1,0 +1,15 @@
+<option value="101110101" selected>购销合同</option>	0.0003
+<option value="101110102">加工承揽合同</option>0.0005
+<option value="101110103">建设工程勘察设计合同</option>0.0005
+<option value="101110104">建筑安装工程承包合同</option>0.0003
+<option value="101110105">财产租赁合同</option>0.001
+<option value="101110106">货物运输合同(按运输费用万分之五贴花)</option>0.0005
+<option value="101110107">仓储保管合同</option>0.001
+<option value="101110108">借款合同</option>0.00005
+<option value="101110109">财产保险合同</option>0.001
+<option value="101110110">技术合同</option>0.0003
+<option value="101110200">产权转移书据</option>0.0005
+<option value="101110400">权利、许可证照</option>5
+<option value="101110501">资金账簿</option>0.0005
+<option value="101110599">其他营业账簿</option>5
+<option value="101119800">其他凭证</option>0.1

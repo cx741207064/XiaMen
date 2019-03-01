@@ -1,0 +1,136 @@
+.xf-menu-bar
+{
+	-moz-user-select:none;
+	margin:0;
+}
+.xf-menu-bar a,
+.xf-popup-menu a
+{
+	text-decoration: none;
+}
+
+.xf-menu-bar > ul
+{
+	-moz-user-select:none;
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+
+.xf-menu-bar-ie6 ul
+{
+	-moz-user-select:none;
+	list-style: none;
+	padding:0px;
+	margin:0px;
+}
+
+
+.xf-menu-bar > ul >li{
+	-moz-user-select:none;
+	float:left;
+	padding:0px 12px;
+	position:relative;
+}
+
+.xf-menu-bar-ie6 ul li{
+	-moz-user-select:none;
+	float:left;
+	list-style: none;
+	padding:0px 12px;
+	/*position:relative;*/
+}
+
+
+
+
+.xf-popup-menu{
+	left:-4px;
+	position:absolute;
+	display:none;
+	list-style: none;
+	margin:0;
+	z-index:1001;
+	padding:0px;
+	border-radius: 6px; 
+  	border-top-left-radius: 0px;
+  	border-top-right-radius: 0px;	
+	*border-right-width: 2px; 
+	*border-bottom-width: 2px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	
+	-webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);	
+}
+
+.xf-popup-menu> li{
+	position:relative;
+	line-height:24px;
+	min-width:100px;
+	width:auto;
+	white-space: nowrap;
+	white-space: nowrap;
+	padding:5px 30px 5px 10px;
+}
+
+.xf-popup-menu-ie6 li{
+	position:relative;
+	line-height:24px;
+	min-width:80px;
+	width:auto;
+	white-space: nowrap;
+	white-space: nowrap;
+	padding:5px 30px 5px 10px;
+}
+
+.xf-menu-icon{
+	width:12px;
+	height:12px;
+	outline: none;
+	border:none;
+	display:inline-block;
+	_zoom:1;
+	*display:inline; 
+	/*padding:5px 5px 5px 5px;*/
+}
+.xf-popup-menu-ie6 li{
+	padding-right:65px;
+}
+
+.xf-popup-menu > li > a{
+	display:inline-block;
+	_zoom:1;
+	*display:inline; 
+	padding-left:8px;
+}
+
+.xf-popup-menu-ie6 li a{
+	display:inline-block;
+	_zoom:1;
+	*display:inline; 
+	padding-left:8px;
+}
+
+.xf-right-arrow{
+	position:absolute;
+	display:inline-block;
+	_zoom:1;
+	*display:inline;
+	width: 0px;
+	height: 0px;
+	margin-left: 10px;
+	margin-right: 0px;
+	vertical-align: middle;
+	border-left: 4px dashed;
+	border-left: 4px solid \9;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+	border-width: 5px;
+	border-right-width: 0;	
+	top:13px;	  
+	right:5px;
+
+}
+
