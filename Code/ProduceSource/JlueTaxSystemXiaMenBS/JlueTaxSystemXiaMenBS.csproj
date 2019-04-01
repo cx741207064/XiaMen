@@ -72,6 +72,8 @@
     <Content Include="css\H-ui.css" />
     <Content Include="css\ksindex.css" />
     <Content Include="css\style.css" />
+    <Content Include="cxzx\sbxxcx\manager.html" />
+    <Content Include="dzswj\css\style-gsdzsw.css" />
     <Content Include="Error\401.html" />
     <Content Include="Error\403.html" />
     <Content Include="Error\404.html" />
@@ -82,6 +84,7 @@
     <Content Include="Error\501.html" />
     <Content Include="Error\502.html" />
     <Content Include="favicon.ico" />
+    <Content Include="images\required.png" />
     <Content Include="image\kxrzd.png" />
     <Content Include="image\logo.png" />
     <Content Include="image\zdyjb.png" />
@@ -119,6 +122,8 @@
     <Content Include="nsfwHome\index.aspx" />
     <Content Include="nsfwHome\index_dzsb.aspx" />
     <Content Include="jsdzsb\fjssb\城建税附加税减免.json" />
+    <None Include="cxzx\sbxxcx\query.json" />
+    <Content Include="cxzx\sbxxcx\query.ashx" />
     <None Include="packages\jQuery.3.3.1\Content\Scripts\jquery-3.3.1-vsdoc.js" />
     <Content Include="packages\jQuery.3.3.1\Content\Scripts\jquery-3.3.1.js" />
     <Content Include="packages\jQuery.3.3.1\Content\Scripts\jquery-3.3.1.min.js" />
@@ -624,6 +629,9 @@
     <Compile Include="common\jyrq.ashx.cs">
       <DependentUpon>jyrq.ashx</DependentUpon>
     </Compile>
+    <Compile Include="cxzx\sbxxcx\query.ashx.cs">
+      <DependentUpon>query.ashx</DependentUpon>
+    </Compile>
     <Compile Include="initinfo.ashx.cs">
       <DependentUpon>initinfo.ashx</DependentUpon>
     </Compile>
@@ -954,6 +962,8 @@
     <Content Include="tnsfwHome\queryCurLocal.bszx_030101.json" />
     <Content Include="tnsfwHome\queryCurLocal.bszx_030405.json" />
     <Content Include="tnsfwHome\queryCurLocal.bszx_030409.json" />
+    <Content Include="tnsfwHome\queryCurLocal.cxzx_17.json" />
+    <Content Include="tnsfwHome\nologin\getTzgg.do" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

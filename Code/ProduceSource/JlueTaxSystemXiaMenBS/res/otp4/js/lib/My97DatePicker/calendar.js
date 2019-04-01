@@ -27,7 +27,7 @@ function My97DP() {
     this.QS = [];
     $d = document.createElement("div");
     $d.className = "WdateDiv";
-    $d.innerHTML = "<div id=dpTitle><div class=\"navImg NavImgll\"><a></a></div><div class=\"navImg NavImgl\"><a></a></div><div style=\"float:left\"><div class=\"menuSel MMenu\"></div><input class=yminput></div><div style=\"float:left\"><div class=\"menuSel YMenu\"></div><input class=yminput></div><div class=\"navImg NavImgrr\"><a></a></div><div class=\"navImg NavImgr\"><a></a></div><div style=\"float:right\"></div></div><div style=\"position:absolute;overflow:hidden\"></div><div></div><div id=dpTime><div class=\"menuSel hhMenu\"></div><div class=\"menuSel mmMenu\"></div><div class=\"menuSel ssMenu\"></div><table cellspacing=0 cellpadding=0 border=0><tr><td rowspan=2><span id=dpTimeStr></span>&nbsp;<input class=tB maxlength=2><input value=\":\" class=tm readonly><input class=tE maxlength=2><input value=\":\" class=tm readonly><input class=tE maxlength=2></td><td><button id=dpTimeUp></button></td></tr><tr><td><button id=dpTimeDown></button></td></tr></table></div><div id=dpQS></div><div id=dpControl><input class=dpButton id=dpClearInput type=button><input class=dpButton id=dpTodayInput type=button><input class=dpButton id=dpOkInput type=button></div>";
+    $d.innerHTML = "<div id=dpTitle><div class=\"navImg NavImgll\"><a></a></div><div class=\"navImg NavImgl\"><a></a></div><div style=\"float:left\"><div class=\"menuSel YMenu\"></div><input class=yminput>\u5e74</div><div style=\"float:left\"><div class=\"menuSel MMenu\"></div><input class=yminput></div><div class=\"navImg NavImgrr\"><a></a></div><div class=\"navImg NavImgr\"><a></a></div><div style=\"float:right\"></div></div><div style=\"position:absolute;overflow:hidden\"></div><div></div><div id=dpTime><div class=\"menuSel hhMenu\"></div><div class=\"menuSel mmMenu\"></div><div class=\"menuSel ssMenu\"></div><table cellspacing=0 cellpadding=0 border=0><tr><td rowspan=2><span id=dpTimeStr></span>&nbsp;<input class=tB maxlength=2><input value=\":\" class=tm readonly><input class=tE maxlength=2><input value=\":\" class=tm readonly><input class=tE maxlength=2></td><td><button id=dpTimeUp></button></td></tr><tr><td><button id=dpTimeDown></button></td></tr></table></div><div id=dpQS></div><div id=dpControl><input class=dpButton id=dpClearInput type=button><input class=dpButton id=dpTodayInput type=button><input class=dpButton id=dpOkInput type=button></div>";
     attachTabEvent($d,
     function() {
         hideSel()
@@ -66,8 +66,8 @@ function My97DP() {
         $d.rightImg = _[3];
         $d.navRightImg = _[2];
         $d.rMD = divs[9];
-        $d.MI = ipts[0];
-        $d.yI = ipts[1];
+        $d.MI = ipts[1];
+        $d.yI = ipts[0];
         $d.titleDiv = divs[0];
         $d.MD = divs[4];
         $d.yD = divs[6];

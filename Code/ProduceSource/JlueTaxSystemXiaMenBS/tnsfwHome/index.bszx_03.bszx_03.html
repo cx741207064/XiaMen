@@ -1,4 +1,4 @@
-﻿
+
 
 
 
@@ -39,7 +39,7 @@
 		<meta name="Keywords" content="税务,厦门市税务局,网上报税系统"> 
 		
 
-<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 		<script src="/res/js/jquery-1.10.2.js"></script>		
         <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
@@ -51,8 +51,8 @@
     padding:0;/* 清除内外边距 */
 }
 body{
-	font-family : 微软雅黑,宋体;
-	color : #black;
+	font-family : Microsoft YaHei;
+	color : black;
 	background-color: #f6f6f6;
 }
 dl, dt, dd, ul, ol, li {
@@ -141,7 +141,7 @@ dl, dt, dd, ul, ol, li {
 	font-size: 16px;
 }
 .main .main_left .menu .menuDiv{
-	background-color:#168ee8;
+	background-color:#74b1ee;
 	vertical-align:middle;
 	height: 40px;
 }
@@ -195,7 +195,7 @@ dl, dt, dd, ul, ol, li {
 	color:	#ffffff;
 }
 .main .main_left .menu .menuUL li.selectMenuLi {	
-	background-color: #0088cc;
+	background-color: #309ef2;
 }
 .menuimg{
 	vertical-align: top;
@@ -247,11 +247,11 @@ dl, dt, dd, ul, ol, li {
 	 
 }
 .curlocal{  
-    font-family: 微软雅黑,宋体;
+    font-family: Microsoft YaHei;
 	font-size: 15px;
 }
 .curlocal a{  
-    font-family: 微软雅黑,宋体;
+    font-family: Microsoft YaHei;
 	font-size: 15px;
 	color:#168ee8;
 }
@@ -266,6 +266,15 @@ span[name="ulscj"]{
 span[id="qxdz"]{
 	display:none;
 }
+.main_middle{ 
+	position: absolute;
+    margin-left: 337px;
+    margin-top: 343px;
+}
+.main_middle a img{ 
+	border-style: none;
+}
+
 </style>
 <script type="text/javascript">
 var for_id = '';
@@ -273,7 +282,25 @@ var sf_bz = "Y" ;
 var aim_memu_item_id = '';
 var aim_menu_id = 'SEC';
 var dz_flag="N";
+var userTypeChar = 'NSR' ;
+//显示或隐藏左侧菜单方法
+function showOrDisable(num){  
+   if(num == "1"){ 
+	    $(".main_left").css("display","none");
+		$(".yincang").css("display","none");
+		$(".tanchu").css("display","");
+        $(".main_right").css("margin-left","10px");
+		$(".main_middle").css("margin-left","10px");
+   }
+   if(num == "2"){ 
+	   $(".main_left").css("display","");
+	   $(".yincang").css("display","");
+	   $(".tanchu").css("display","none");
+       $(".main_right").css("margin-left","370px");
+	   $(".main_middle").css("margin-left","337px");
+   }
 
+}
 function showDz(flag){
 	if(flag==1){
 		$("#dz").hide();
@@ -286,17 +313,21 @@ function showDz(flag){
 		$("#dz").show();
 		$("span[name='ulscj']").hide();
 		$("span[name='ulpng']").show();
-		document.getElementById("table_right_content").contentWindow.dzScjClick(0);
-		
+		document.getElementById("table_right_content").contentWindow.dzScjClick(0);		
 	}
 }	   
 
 function  showContent(memu_item_id,parent_id,url,wydkfs_dm,yz_bz,gds_bz){ 
-
-	if(memu_item_id!=="bszx_030101"&&memu_item_id!=="bszx_030405"&&memu_item_id!=="bszx_030409"&&memu_item_id!=="bszx_0301"&&memu_item_id!=="bszx_0304"){
-		return false;
+	//先判断是否sessions是否已经超时，超时返回未登录首页 ----暂时只做税务人端的判断
+	if(userTypeChar == 'SWGB') { 
+         if('NSR' == null || 'NSR' == undefined || 'NSR' == "")  
+		    window.parent.showMain2("https://wsbsfwt2.xmtax.gov.cn/tlogin/index.do");
 	}
-
+	
+	if(memu_item_id == "bszx_0606"){  
+        window.open("http://wzh.xmtax.gov.cn:9558/adp/xmsatProcessNoLogin?wsbq=wsbs&workId=252741173");
+		return false ;
+	}
 	if(gds_bz == "gs"  && 'N' == 'Y'){
         window.parent.gdsTrip(url);
 		return false ;
@@ -305,7 +336,7 @@ function  showContent(memu_item_id,parent_id,url,wydkfs_dm,yz_bz,gds_bz){
 	var timestamp= "" ;
 	var nsrsbh= "" ;
     if(memu_item_id=="tsyw_04"||memu_item_id=="bszx_020401"||memu_item_id=="bszx_0202" ||memu_item_id=="cxzx_10" ){
-        timestamp="15432195768625";
+        timestamp="K1551676883460";
         nsrsbh='91350200MA2Y10EC4K';
         if(memu_item_id !="cxzx_10")
            url =url+"?id="+nsrsbh+"&timestamp="+timestamp;
@@ -335,8 +366,8 @@ function  showContent(memu_item_id,parent_id,url,wydkfs_dm,yz_bz,gds_bz){
 	        	if(data.jg=='false')
 	        		alert(data.message);
 	        	if(data.jg=='true'){
-                    layer.alert(data.message,function(index){
-                        layer.close(index);		
+                   // layer.alert(data.message,function(index){
+                   //     layer.close(index);		
                         if(data.type=="ds"){
                             if(gds_bz == "wzh"){
                                 window.parent.showMain(data.url);
@@ -347,7 +378,7 @@ function  showContent(memu_item_id,parent_id,url,wydkfs_dm,yz_bz,gds_bz){
                         }			     
                         if(data.type=="gs")
                             window.open (data.url);
-                    });
+                  // });
                     
                 }	        	
 	        }	        
@@ -396,7 +427,7 @@ function  showContent2(memu_item_id,parent_id,url,wydkfs_dm,yz_bz){
 						//$("#firstMenuName").attr("href",data.o.top_url);
 						$("#firstMenuName").addClass(""+data.o.top_id);
 					}
-					if(data.o.sec_name != "" && data.o.sec_name != undefined){ 
+					if(data.o.sec_name != "" && data.o.sec_name != undefined && data.o.sec_name != data.o.thr_name ){ 
 						$("#senMenuName").html(">"+data.o.sec_name);
 						//$("#senMenuName").attr("href",data.o.sec_url);
 						//$("#senMenuName").addClass(""+data.o.sec_id);
@@ -407,13 +438,14 @@ function  showContent2(memu_item_id,parent_id,url,wydkfs_dm,yz_bz){
 						$("#thirdMenuName").html(">"+data.o.thr_name);
 						$("#thirdMenuName").attr("href",data.o.thr_url);
 						//$("#thirdMenuName").addClass(""+data.o.thr_id);
-					}				
+					}	
+					if(data.o.sec_name == data.o.thr_name) $("#senMenuName").html("");				
 				}
 			},
 			error : function(data) {
 			}
 		});
-		if($("#senMenuName").html() == $("#thirdMenuName").html()) $("#senMenuName").html("");
+		//if($("#senMenuName").html() == $("#thirdMenuName").html()) $("#senMenuName").html("");
     } 
   function showWz2(obj){ 
      $("#"+ obj.className).find(".menutitle").click();
@@ -422,11 +454,6 @@ function  showContent2(memu_item_id,parent_id,url,wydkfs_dm,yz_bz){
 	   location.href = "/views/login_v2/shouye.jsp" ;
    }
 $(function(){	
-	//社保户时候 只能停留当前界面
-	var sb_bz = '';
-	
-	if(sb_bz == "Y") $(".toShouYe").css("display","none"); 
-
 	//点击左侧菜单栏
 	$(".menuUL li").click(function(){
 		$(".menuUL li").removeClass("selectMenuLi");
@@ -553,15 +580,10 @@ function showPage(url,menu_name){
 		
 	<div class="main">
 	    <input type="hidden" id="wsbs-home_hidden_login_id" value="91350200MA2Y10EC4K"/>
-        <input type="hidden" id="wsbs-home_hidden_djxh" value="10123502010000057149"/>
+        <input type="hidden" id="wsbs-home_hidden_djxh" value="10113502010000054370"/>
 		 <div class="main_left">				
 			
 					
-			
-	    
-					
-				
-				
 				
 				
 				
@@ -571,6 +593,13 @@ function showPage(url,menu_name){
 					
 				
 				
+				
+				
+				
+				
+			
+	    
+					
 				
 				
 				
@@ -602,7 +631,7 @@ function showPage(url,menu_name){
 					
 					<div class="menuDiv">
 						<img src="/res/images/login_main/feature.png"><span>税费申报及缴纳 </span>
-						<span class="dzSpan" id="dz" onclick="return false;showDz(1)">定制</span>
+						<span class="dzSpan" id="dz" onclick="showDz(1)">定制</span>
 						<span class="dzSpan" id="qxdz" onclick="showDz(0)">保存</span>
 					</div>
 					<ul class="menuUL">				  
@@ -651,7 +680,7 @@ function showPage(url,menu_name){
 												         		
 														</span>
 													 </div>
-											         <div class="menutitle" onclick="showContent('bszx_0302','bszx_03','http://wssb.xm-n-tax.gov.cn:7001/wssb/wssb/public/jsp/wssb.jsp','2','Y','')">
+											         <div class="menutitle" onclick="showContent('bszx_0302','bszx_03','http://wssb.xm-n-tax.gov.cn:7001/wssb/wssb/public/jsp/wssb.jsp?sblx=XFS','2','Y','')">
 														 消费税及附加税费申报
 											        </div>	
 												</li>
@@ -668,23 +697,22 @@ function showPage(url,menu_name){
 						        
 									<!-- 有效 -->
 									    
-											
-											
-												<li  id="bszx_0303"  class="neiqian"     >
+											<!-- 后期改为国地税标志 -->
+												<li id="bszx_0303"  class="neiqian"     >
 													<div class="menuimg">
-													    <span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
+														<span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
 														<span name="ulscj" class="menuUL_log">
-																 
-																
-																	<a href="#" name='bszx_0303' onclick="addScj('bszx_0303','bszx_03','N','Y')"><img name="bszx_0303" src="/res/images/menu_v2/wsc.png"></a>
-												         		
-														</span>
-													 </div>
-											         <div class="menutitle" onclick="showContent('bszx_0303','bszx_03','https://wsbsfwt2.xmtax.gov.cn/tnsfwHome/index.do?menuid=bszx_03&menu_item_id=bszx_0303','1','Y','qysds')">
+															 
+															
+																<a href="#" name='bszx_0303' onclick="addScj('bszx_0303','bszx_03','N','Y')"><img name="bszx_0303" src="/res/images/menu_v2/wsc.png"></a>
+															
+												        </span>
+													</div>
+											         <div  class="menutitle" onclick="showContent('bszx_0303','bszx_03','/views/jsdzsb/dzsbsy/qysds.jsp','1','Y','ds')">
 														 企业所得税申报
-											        </div>	
-												</li>
-																													
+													</div>
+												</li>																	
+											
 											
 												
 													
@@ -709,7 +737,7 @@ function showPage(url,menu_name){
 												         		
 														</span>
 													 </div>
-											         <div class="menutitle" onclick="showContent('bszx_0304','bszx_03','/tnsfwHome/index.ashx?menuid=bszx_03&menu_item_id=bszx_0304','1','N','')">
+											         <div class="menutitle" onclick="showContent('bszx_0304','bszx_03','/tnsfwHome/index.do?menuid=bszx_03&menu_item_id=bszx_0304','1','N','')">
 														 其他申报
 											        </div>	
 												</li>
@@ -844,17 +872,17 @@ function showPage(url,menu_name){
 									    
 											
 											
-												<li  id="bszx_0309"     class="tiaozhuan" >
+												<li  id="bszx_0309"  class="neiqian"     >
 													<div class="menuimg">
 													    <span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
 														<span name="ulscj" class="menuUL_log">
 																 
 																
-																	<a href="#" name='bszx_0309' onclick="addScj('bszx_0309','bszx_03','N','Y')"><img name="bszx_0309" src="/res/images/menu_v2/wsc.png"></a>
+																	<a href="#" name='bszx_0309' onclick="addScj('bszx_0309','bszx_03','N','N')"><img name="bszx_0309" src="/res/images/menu_v2/wsc.png"></a>
 												         		
 														</span>
 													 </div>
-											         <div class="menutitle" onclick="showContent('bszx_0309','bszx_03','http://wssb.xm-n-tax.gov.cn:7001/wssb/wssb/public/jsp/wssb.jsp','2','Y','')">
+											         <div class="menutitle" onclick="showContent('bszx_0309','bszx_03','/tnsfwHome/index.do?menuid=bszx_03&menu_item_id=bszx_0309','1','N','')">
 														 财务报表数据转换
 											        </div>	
 												</li>
@@ -885,6 +913,63 @@ function showPage(url,menu_name){
 													 </div>
 											         <div class="menutitle" onclick="showContent('bszx_0310','bszx_03','/tnsfwHome/index.do?menuid=bszx_03&menu_item_id=bszx_0310','1','N','')">
 														 税费缴纳
+											        </div>	
+												</li>
+																													
+											
+												
+													
+										  
+									
+									
+									
+								 
+						
+						        
+									<!-- 有效 -->
+									    
+											<!-- 后期改为国地税标志 -->
+												<li id="bszx_030506"  class="neiqian"     >
+													<div class="menuimg">
+														<span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
+														<span name="ulscj" class="menuUL_log">
+															 
+															
+																<a href="#" name='bszx_030506' onclick="addScj('bszx_030506','bszx_03','N','Y')"><img name="bszx_030506" src="/res/images/menu_v2/wsc.png"></a>
+															
+												        </span>
+													</div>
+											         <div  class="menutitle" onclick="showContent('bszx_030506','bszx_03','/views/jsdzsb/dzsbsy/sssbsy.jsp','1','Y','ds')">
+														 更正申报
+													</div>
+												</li>																	
+											
+											
+												
+													
+										  
+									
+									
+									
+								 
+						
+						        
+									<!-- 有效 -->
+									    
+											
+											
+												<li  id="bszx_0312"     class="tiaozhuan" >
+													<div class="menuimg">
+													    <span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
+														<span name="ulscj" class="menuUL_log">
+																 
+																
+																	<a href="#" name='bszx_0312' onclick="addScj('bszx_0312','bszx_03','N','Y')"><img name="bszx_0312" src="/res/images/menu_v2/wsc.png"></a>
+												         		
+														</span>
+													 </div>
+											         <div class="menutitle" onclick="showContent('bszx_0312','bszx_03','http://wssb.xm-n-tax.gov.cn:7001/wssb/wssb/public/jsp/wssb.jsp?sblx=SSSRYBB','2','Y','')">
+														 税收收入预报
 											        </div>	
 												</li>
 																													
@@ -996,6 +1081,10 @@ function showPage(url,menu_name){
 				
 			
 	    				
+	 </div>
+	 <div class="main_middle">
+		 <a href="#" class="yincang" title="点击隐藏左侧菜单" onclick="showOrDisable('1')"><img src="/res/images/login_v2/yincang.png" /></a>
+		 <a  style="display:none" title="点击恢复左侧菜单" class="tanchu" href="#" onclick="showOrDisable('2')"><img src="/res/images/login_v2/tanchu.png" /></a>
 	 </div>
 		<div class="main_right">
 			    <div class="main_right_content">

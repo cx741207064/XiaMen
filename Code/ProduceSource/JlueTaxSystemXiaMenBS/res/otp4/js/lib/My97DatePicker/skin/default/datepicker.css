@@ -117,7 +117,7 @@
  }
 
 .WdateDiv .MTitle{
-	background-color:#BDEBEE;
+	background-color:white;
 }
 .WdateDiv .WdayTable2{
 	border-collapse:collapse;
@@ -137,6 +137,7 @@
 
 .WdateDiv .Wday{
 	cursor:pointer;
+	color:#666;
 }
 
 .WdateDiv .WdayOn{
@@ -146,7 +147,7 @@
 
 .WdateDiv .Wwday{
 	cursor:pointer;
-	color:#FF2F2F;
+	color:#666;
 }
 
 .WdateDiv .WwdayOn{
@@ -156,10 +157,12 @@
 }
 .WdateDiv .Wtoday{
 	cursor:pointer;
-	color:blue;
+	color:#666;
 }
 .WdateDiv .Wselday{
-	background-color:#A9E4E9;
+	background-color:#0994dc;
+	border-radius:25px;
+	color:white;
 }
 .WdateDiv .WspecialDay{
 	background-color:#66F4DF;
@@ -167,7 +170,7 @@
 
 .WdateDiv .WotherDay{ 
 	cursor:pointer;
-	color:#6A6AFF;	
+	color:#d2d2d2;	
 }
 
 .WdateDiv .WotherDayOn{ 
@@ -235,7 +238,7 @@
 	cursor:pointer;
  }
 .WdateDiv #dpControl {
-	text-align:right;	
+	text-align:center;	
 }
 .WdateDiv .dpButton{ 
 	height:20px;
@@ -243,4 +246,20 @@
 	border:#ccc 1px solid;
 	margin-top:2px;
 	margin-right:1px;
+}
+
+#dpQS{
+	display:none;
+}
+#dpClearInput{
+	background-color: white;
+    border: 0px;
+}
+#dpTodayInput{
+	background-color: white;
+    border: 0px;
+}
+#dpOkInput{
+	background-color: white;
+    border: 0px;
 }

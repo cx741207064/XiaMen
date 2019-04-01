@@ -1078,7 +1078,7 @@ function JsYsqbChecker(skssqq,skssqz,zsxmdm,zspmdm,nsqxdm,sbqxdm) {
     		success:function(data) {
     			if (data.success) {
     			  var xjrq=data.o.xjrq;
-    			  var yqrq=data.o.yqrq;
+    			  var yqsb=data.o.yqsb;
     			  dqrq=data.o.dqrq;
     			  if((skssqq=='2017-03-01' && skssqz=='2017-03-31')  || (skssqz=='2016-03-31' && zsxmdm=='10106')){
     				  if("2017-04-19"<dqrq){
@@ -1089,21 +1089,20 @@ function JsYsqbChecker(skssqq,skssqz,zsxmdm,zspmdm,nsqxdm,sbqxdm) {
     					  flag = true;
     				  }
     			  }else{
-    				  if(xjrq<dqrq) {
-    				        alert(_yqsbMsg);
-    				        //alert(_yqsbMsg + "\r\n(ZSXM_DM:" + zsxmdm + ", ZSPM_DM:" + zspmdm + ",SKSSQS:" + skssqq + ",SKSSQZ:" +skssqz + ",DQSJ:" +dqrq + ")");
-    				        flag= false;
-    	    				return flag;
-    				      } else {
-    				    	flag = true;
-    				      }
-    				  if(yqrq<dqrq) {
-    				        alert(_yqsbMsg);
-    				        flag= false;
-    	    				return flag;
-    				      } else {
-    				    	flag = true;
-    				      }
+    				  if(yqsb){
+    					  if(confirm('您当前正在进行逾期申报，将缴纳滞纳金，静确认是否继续？')){
+        					  flag = true;
+    					  }
+    				  }else{
+	    				  if(xjrq<dqrq) {
+	    				        alert(_yqsbMsg);
+	    				        //alert(_yqsbMsg + "\r\n(ZSXM_DM:" + zsxmdm + ", ZSPM_DM:" + zspmdm + ",SKSSQS:" + skssqq + ",SKSSQZ:" +skssqz + ",DQSJ:" +dqrq + ")");
+	    				        flag= false;
+	    	    				return flag;
+	    				      } else {
+	    				    	flag = true;
+	    				      }
+    				  }
     			  }
     			  
     			} else {

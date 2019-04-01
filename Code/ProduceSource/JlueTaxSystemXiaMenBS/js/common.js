@@ -86,7 +86,10 @@ function setCookie(c_name, value, expiredays) {
 function getQueryString(name) {
     var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
     var r = window.location.search.substr(1).match(reg);
-    if (r != null) return unescape(r[2]); return null;
+    if (r != null)
+    //return unescape(r[2]);
+    return decodeURI(r[2]);
+    return null;
 }
 
 var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串

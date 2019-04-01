@@ -16,7 +16,7 @@
     <script type="text/javascript" src="js/dump_src.js"></script>
 
     <link href="css/ksindex.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/QMstyle.css" rel="stylesheet" />
 
     <script src="/VideoManage/js/mask.js"></script>
     <link href="/VideoManage/css/QuestionMain.css" rel="stylesheet" />

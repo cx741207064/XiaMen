@@ -237,8 +237,7 @@ ul,li{
 }
 .tableRightList{
 	width: 100%;
-	min-width:840px;
-	_width:840px;
+
 }
 .clearTrl:after{
 	content:"";
@@ -246,7 +245,7 @@ ul,li{
 	clear:both;	
 }
 .tableRightList ul{
-	width:100%;
+	width:100% !important;
 	position:absolute;
 	right:0px;
 	}	
@@ -396,13 +395,12 @@ ul,li{
 		}	
 /*查询结果列表*/
 .searchresult{
-	width:100%;
+	width:80%;
 	height:400px;
 	margin-top:10px;
 	padding-left:20px;
 	font-family:"宋体";
 	font-size:14px;
-	border:#00F solid 1px;
 	
 	}
 /*查询结果列表*/
@@ -1297,4 +1295,107 @@ ul,li{
     text-align: center;
 	border: 1px solid #dddddd;
 }
+
+
+.reaultTdTitle{
+    border-left: 1px solid #999 !important ;
+    border-top: 1px solid #999 !important ;
+    border-right: 1px solid #999 !important ;
+}
+.reaultTdTitle1 {
+    border-left: 1px solid #999;
+}
+.reaultTd {
+    border-top: 1px solid #999;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: none;
+}
+.subbtn {
+    background: url(../images/hdzx/query_btn.png);
+}
+.subbtn1 {
+    background: url(../images/hdzx/query_btn_pass.png);
+    width: 80px;
+    height: 26px;
+    color: #FFFFFF;
+    border: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.searchResult2 tr {
+    color: #666;
+}
+
+.searchResult2 td {
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+.tdLeft {
+    height: 31px;
+    color: #666;
+    background: none;
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    border-top:1px solid #999;
+    border-bottom:none;
+}
+.tdRight {
+    height: 31px;
+    color: #333;
+    border-right: 1px solid #999;
+    border-left:none;
+    border-top:1px solid #999;
+    border-bottom:none;
+}
+.tdButtomLeft {
+    height: 30px;
+    color: #666;
+    background: none;
+    border-right: 1px solid #999;
+    border-left: 1px solid #999;
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+}
+.tdButtomRight {
+    height: 30px;
+    color: #333;
+    border-right: 1px solid #999;
+    border-left: none;
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+}
 	
+.tableRightList li{
+	display: none;
+}
+
+select{
+	padding-left: 8px;	
+}
+
+.searchresult{
+	margin: 0px;
+}
+.searchResult{
+	margin: 0px;
+	width: 90% !important;
+}
+.searchResult > table{
+    width: 90% !important;
+    margin: 0px auto;
+}
+
+.searchResult form > table{
+    width: 90% !important;
+    margin: 0px auto;
+}
+
+.searchResult div > table{
+    width: 90% !important;
+    margin: 0px auto;
+}
+.exitbtn{
+	background: url(../images/hdzx/query_btn.png);
+}

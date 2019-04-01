@@ -59,8 +59,15 @@
 				var NSRTTXXGRID=data['NSRTTXXGRID'];
 				var yqwsb = JSON.parse(NSRTTXXGRID); 	
 				var ybnsrrdList=data['ybnsrrdList'];
-
-				var html="<tr class='oddLineCss' style='color: #666666;'><td style='width: 40%;padding-left: 40px;'>事项名称</td><td style='width: 20%;'>截止日期</td><td style='width: 20%;'>状态</td><td>操作</td></tr>";
+				var wdMailNumber=data['wdMailNumber'];
+				var html="";
+				if(wdMailNumber!=""&&wdMailNumber!="0"&&wdMailNumber!=null){
+					html+="<tr style='color: #666666;'><td colspan=4 style='padding-left: 40px;'>您有"+wdMailNumber+"封未读邮件！</td></tr>"
+					html+="<tr style='color: #666666;'><td style='width: 50%;padding-left: 40px;'>事项名称</td><td style='width: 20%;'>截止日期</td><td style='width: 20%;'>状态</td><td>操作</td></tr>";
+					m++;
+				}else{
+					html+="<tr class='oddLineCss' style='color: #666666;'><td style='width: 50%;padding-left: 40px;'>事项名称</td><td style='width: 20%;'>截止日期</td><td style='width: 20%;'>状态</td><td>操作</td></tr>";
+				}
 				if(gswsbxx!=null){
 					for(var i=0;i<gswsbxx.length;i++){//国税未申报
 						m++;
@@ -93,24 +100,24 @@
 								parent_id=yzlist[j].parent_id;
 								url=qz_url+menu_item_url;
 								if(m%2==0){
-									html+="<tr class='oddLineCss'><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+									html+="<tr class='oddLineCss'><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 									html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";								
 					            }else{
-									html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+									html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 									html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";								
 					            }
 								break;
 							}
 						} 
-						if(m==4){
+						if(m==5){
 							break;
 						}
 					}
 				}
-				if(dswsbxx!=null&&m<4){
+				if(dswsbxx!=null&&m<5){
 					 for(var i=0;i<dswsbxx.length;i++){//地税未申报
 					 	m++;
-					 	if(m>4){
+					 	if(m>5){
 							break;
 						}
 					 	var ckeckmenu;
@@ -143,10 +150,10 @@
 								parent_id=yzlist[j].parent_id;
 								url=qz_url+menu_item_url;
 								if(m%2==0){
-									html+="<tr class='oddLineCss'><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+									html+="<tr class='oddLineCss'><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 									html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 					            }else{
-					            	html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+					            	html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 									html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 					            }				
 								break;
@@ -154,10 +161,10 @@
 						} 
 					}
 				}
-				if(yqwsb!=null&&m<4){
+				if(yqwsb!=null&&m<5){
 				 	for(var i=0;i<yqwsb.length;i++){//逾期未申报
 				 		m++;
-				 		if(m>4){
+				 		if(m>5){
 							break;
 						}
 				 		var ckeckmenu;
@@ -190,11 +197,11 @@
 								parent_id=yzlist[j].parent_id;
 								url=qz_url+menu_item_url;
 								if(m%2==0){
-									html+="<tr class='oddLineCss'><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>逾期未申报</td><td>";
+									html+="<tr class='oddLineCss'><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>逾期未申报</td><td>";
 									html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 									
 					            }else{
-					            	html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>逾期未申报</td><td>";
+					            	html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>逾期未申报</td><td>";
 									html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 					            }
 								break;
@@ -205,11 +212,11 @@
 				  
 				//for(var i=0;i<ybnsrrdList.length;i++){//一般纳税人认定
 				//	var ybnsrrd=ybnsrrdList[i];
-					if(ybnsrrdList!=null&&ybnsrrdList.length!=0&&m<4){
+					if(ybnsrrdList!=null&&ybnsrrdList.length!=0&&m<5){
 						if(m%2==0){
-							html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: red;'>未认定</td><td></td></tr>";	
+							html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: #ff8939;'>未认定</td><td></td></tr>";	
 			            }else{
-							html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: red;'>未认定</td><td></td></tr>";			
+							html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: #ff8939;'>未认定</td><td></td></tr>";			
 			            }
 					}
 				//} 
@@ -237,27 +244,27 @@
 				parent.parent.fwtx_wait=false;
 				parent.parent.fwtxdate=data['fwtxVO'];//全局变量
 	            layer.close(fwtx_layer);
-				var html="<tr class='oddLineCss' style='color: #666666;'><td style='width: 30%;'>申请事项编码</td><td style='width: 30%;'>申请事项名称</td><td style='width: 20%;'>办理状态</td><td>申请日期</td></tr>";
+				var html="<tr class='oddLineCss' style='color: #666666;'><td style='width: 30%;padding-left: 60px;'>申请事项编码</td><td style='width: 30%;'>申请事项名称</td><td style='width: 20%;'>办理状态</td><td>申请日期</td></tr>";
 				//通知公告  
 				if(data['fwtxVO']!=null){
 					var fwtxVOlist=data['fwtxVO'];
 					//var fwtxVOlist=$.parseJSON(fwtxVO);
-					var number=4;
+					var number=5;
 					if(fwtxVOlist.length<number){
 						number=fwtxVOlist.length;
 					}
 					for(var i=0;i<number;i++){
-			            var SQRQ=fwtxVOlist[i]["SQRQ"];
+						var SQRQ=fwtxVOlist[i]["sqrq"];
 			            SQRQ=SQRQ.substr(0,10);
-			            var DQZT=fwtxVOlist[i]["DQZT"];
+			            var DQZT=fwtxVOlist[i]["dqzt"];
 			            if(DQZT=="1"){
 			            	DQZT="已完成";
 			            }else if(DQZT=="2"){
 			            	DQZT="已终止";
 			            }
-			            var SQBH=fwtxVOlist[i]["SQBH"];
-			            var SQMC=fwtxVOlist[i]["SQMC"];
-			            var SXMC=fwtxVOlist[i]["SXMC"];
+			            var SQBH=fwtxVOlist[i]["sqbh"];
+			            var SQMC=fwtxVOlist[i]["sqmc"];
+			            var SXMC=fwtxVOlist[i]["sxmc"];
 			            if(SXMC==""){
 			            	SXMC=findSqsxmc(SQBH);
 			            }
@@ -265,9 +272,9 @@
 			            	SXMC=cutstr(SXMC,35);
 				        }
 			            if(i%2==1){
-			                html+="<tr class='oddLineCss'><td style='width: 30%;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
+			                html+="<tr class='oddLineCss'><td style='width: 30%;padding-left: 60px;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
 			            }else{
-			                html+="<tr><td style='width: 30%;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
+			                html+="<tr><td style='width: 30%;padding-left: 60px;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
 			            }
 		            }  
 		            $('#tzgglb').html(html);
@@ -375,6 +382,9 @@
 					}else if("Fwtx"==jzList[i].name){
 						fwtx_syxx_time=jzList[i].redistime;
 						fwtx_sxlx=jzList[i].type;
+					}else if("Tzgg"==jzList[i].name){
+						tzgg_syxx_time=jzList[i].redistime;
+						tzgg_sxlx=jzList[i].type;
 					}
 				}
 			}	
@@ -398,8 +408,15 @@
 			var NSRTTXXGRID=data['NSRTTXXGRID'];
 			var yqwsb = JSON.parse(NSRTTXXGRID); 	
 			var ybnsrrdList=data['ybnsrrdList'];
-
-			var html="<tr class='oddLineCss' style='color: #666666;'><td style='width: 40%;padding-left: 40px;'>事项名称</td><td style='width: 20%;'>截止日期</td><td style='width: 20%;'>状态</td><td>操作</td></tr>";
+			var wdMailNumber=data['wdMailNumber'];
+			var html="";
+			if(wdMailNumber!=""&&wdMailNumber!="0"&&wdMailNumber!=null){
+				html+="<tr style='color: #666666;'><td colspan=4 style='padding-left: 40px;'>您有"+wdMailNumber+"封未读邮件！</td></tr>"
+				html+="<tr style='color: #666666;'><td style='width: 50%;padding-left: 40px;'>事项名称</td><td style='width: 20%;'>截止日期</td><td style='width: 20%;'>状态</td><td>操作</td></tr>";
+				m++;
+			}else{
+				html+="<tr class='oddLineCss' style='color: #666666;'><td style='width: 50%;padding-left: 40px;'>事项名称</td><td style='width: 20%;'>截止日期</td><td style='width: 20%;'>状态</td><td>操作</td></tr>";
+			}
 			if(gswsbxx!=null){
 				for(var i=0;i<gswsbxx.length;i++){//国税未申报
 					m++;
@@ -432,24 +449,24 @@
 							parent_id=yzlist[j].parent_id;
 							url=qz_url+menu_item_url;
 							if(m%2==0){
-								html+="<tr class='oddLineCss'><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+								html+="<tr class='oddLineCss'><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 								html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";								
 				            }else{
-								html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+								html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 								html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";								
 				            }
 							break;
 						}
 					} 
-					if(m==4){
+					if(m==5){
 						break;
 					}
 				}
 			}
-			if(dswsbxx!=null&&m<4){
+			if(dswsbxx!=null&&m<5){
 				 for(var i=0;i<dswsbxx.length;i++){//地税未申报
 				 	m++;
-				 	if(m>4){
+				 	if(m>5){
 						break;
 					}
 				 	var ckeckmenu;
@@ -482,10 +499,10 @@
 							parent_id=yzlist[j].parent_id;
 							url=qz_url+menu_item_url;
 							if(m%2==0){
-								html+="<tr class='oddLineCss'><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+								html+="<tr class='oddLineCss'><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 								html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 				            }else{
-				            	html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>未申报</td><td>";
+				            	html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>未申报</td><td>";
 								html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 				            }
 							break;
@@ -493,10 +510,10 @@
 					} 
 				}
 			}
-			if(yqwsb!=null&&m<4){
+			if(yqwsb!=null&&m<5){
 			 	for(var i=0;i<yqwsb.length;i++){//逾期未申报
 			 		m++;
-			 		if(m>4){
+			 		if(m>5){
 						break;
 					}
 			 		var ckeckmenu;
@@ -529,11 +546,11 @@
 							parent_id=yzlist[j].parent_id;
 							url=qz_url+menu_item_url;
 							if(m%2==0){
-								html+="<tr class='oddLineCss'><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>逾期未申报</td><td>";
+								html+="<tr class='oddLineCss'><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>逾期未申报</td><td>";
 								html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 								
 				            }else{
-				            	html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: red;'>逾期未申报</td><td>";
+				            	html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>"+ZSXMMC+"</td><td style='width: 20%;'>"+SKSSQ+"</td><td style='width: 20%;color: #ff8939;'>逾期未申报</td><td>";
 								html+="<div class='blButton' onclick=\"showContent(\'"+url+"\',\'"+wydkfs_dm+"\',\'"+gds_bz+"\');\">办理</div></td></tr>";					
 				            }
 							break;
@@ -545,11 +562,11 @@
 			//for(var i=0;i<ybnsrrdList.length;i++){//一般纳税人认定
 			//	var ybnsrrd=ybnsrrdList[i];
 
-				if(ybnsrrdList!=null&&ybnsrrdList.length!=0&&m<4){
+				if(ybnsrrdList!=null&&ybnsrrdList.length!=0&&m<5){
 					if(m%2==0){
-						html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: red;'>未认定</td><td></td></tr>";	
+						html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: #ff8939;'>未认定</td><td></td></tr>";	
 		            }else{
-						html+="<tr><td class='bg_one' style='width: 40%;padding-left: 40px;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: red;'>未认定</td><td></td></tr>";			
+						html+="<tr><td class='bg_one' style='width: 50%;padding-left: 40px;color:#333333;'>一般纳税人认定</td><td style='width: 20%;'></td><td style='width: 20%;color: #ff8939;'>未认定</td><td></td></tr>";			
 		            }
 				}
 			$('#undertable').html(html);
@@ -559,24 +576,24 @@
 	  }
 	  var fwtxdate=parent.parent.fwtxdate;
  	 if(fwtxdate!=null){
- 	 	var html="<tr class='oddLineCss' style='color: #666666;'><td style='width: 30%;'>申请事项编码</td><td style='width: 30%;'>申请事项名称</td><td style='width: 20%;'>办理状态</td><td>申请日期</td></tr>";
+			var html="<tr class='oddLineCss' style='color: #666666;'><td style='width: 30%;padding-left: 60px;'>申请事项编码</td><td style='width: 30%;'>申请事项名称</td><td style='width: 20%;'>办理状态</td><td>申请日期</td></tr>";
 				var fwtxVOlist=fwtxdate;
-				var number=4;
+				var number=5;
 				if(fwtxVOlist.length<number){
 					number=fwtxVOlist.length;
 				}
 				for(var i=0;i<number;i++){
-		            var SQRQ=fwtxVOlist[i]["SQRQ"];
+					var SQRQ=fwtxVOlist[i]["sqrq"];
 		            SQRQ=SQRQ.substr(0,10);
-		            var DQZT=fwtxVOlist[i]["DQZT"];
+		            var DQZT=fwtxVOlist[i]["dqzt"];
 		            if(DQZT=="1"){
 		            	DQZT="已完成";
 		            }else if(DQZT=="2"){
 		            	DQZT="已终止";
 		            }
-		            var SQBH=fwtxVOlist[i]["SQBH"];
-		            var SQMC=fwtxVOlist[i]["SQMC"];
-		            var SXMC=fwtxVOlist[i]["SXMC"];
+		            var SQBH=fwtxVOlist[i]["sqbh"];
+		            var SQMC=fwtxVOlist[i]["sqmc"];
+		            var SXMC=fwtxVOlist[i]["sxmc"];
 		            if(SXMC==""){
 		            	SXMC=findSqsxmc(SQBH);
 		            }
@@ -584,13 +601,41 @@
 		            	SXMC=cutstr(SXMC,35);
 			        }
 		            if(i%2==1){
-		                html+="<tr class='oddLineCss'><td style='width: 30%;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
+		                html+="<tr class='oddLineCss'><td style='width: 30%;padding-left: 60px;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
 		            }else{
-		                html+="<tr><td style='width: 30%;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
+		                html+="<tr><td style='width: 30%;padding-left: 60px;'>"+SQBH+"</td><td style='width: 30%;'>"+SXMC+"</td><td class='tzrq' style='width: 20%;'>"+DQZT+"</td><td class='tzrq'>"+SQRQ+"</td></tr>";
 		            }
 		        }  
 	            $('#tzgglb').html(html);
  	 }
+ 	 var tzggdate=parent.parent.tzggdate;
+ 	 if(tzggdate!=null){
+	 	var html="<tr class='oddLineCss' onclick='findqsgg();'><td style='width: 78%;text-align: left;padding-left: 50px;'>【欠税公告】国家税务总局厦门市税务局关于纳税人欠缴税款情况的公告</td><td class='tzrq'>2018-11-25</td></tr>";
+  		var number=5;
+  		var gs_TZGGVOlist=$.parseJSON(tzggdate);
+ 		if(gs_TZGGVOlist.length<number){
+ 			number=gs_TZGGVOlistlist.length;
+ 		}
+ 		for(var i=0;i<number;i++){
+             var TITLE=gs_TZGGVOlist[i]["TITLE"];
+             var CMS_DEST_PATH=gs_TZGGVOlist[i]["CMS_DEST_PATH"];
+             if(GetLength(TITLE)>60){
+                TITLE=cutstr(TITLE,60);
+             }
+             var UPDATE_TIME=gs_TZGGVOlist[i]["UPDATE_TIME"];
+ 			var arr = UPDATE_TIME.split(" ");
+ 			var url=TzgglbURL+CMS_DEST_PATH;
+ 			if(i==0){
+ 				TITLE="【政策法规通知公告】"+TITLE;
+ 			}
+ 			if(i%2==0){
+				html+="<tr onclick='window.open(\""+url+"\");'><td style='width: 78%;text-align: left;padding-left: 50px;'>"+TITLE+"</td><td class='tzrq'>"+arr[0]+"</td></tr>";
+            }else{
+            	html+="<tr  class='oddLineCss' onclick='window.open(\""+url+"\");'><td style='width: 78%;text-align: left;padding-left: 50px;'>"+TITLE+"</td><td class='tzrq'>"+arr[0]+"</td></tr>";
+            }
+         }  
+         $('#tzgg').html(html);
+  	 }
 	});	
   
   function findSqsxmc(SQBH){
@@ -608,3 +653,60 @@
 	  }
 	  return sqmc;
   }
+  
+  /*通知公告  */
+	 function getnewTzgg(redistime,type){
+	 	var tzgg_layer=layer.load(1);
+		$.ajax({
+			type : "GET",
+			url : "/tnsfwHome/nologin/getTzgg.do",
+			data : {
+				method: "checkJsGs",
+				syxx_time:redistime,
+				sxlx:type
+			},
+			dataType : "json",
+			success : function(data) {
+				parent.parent.tzgg_wait=false;
+				parent.parent.tzggdate=data['gs_TZGGVO'];//全局变量
+			 	layer.close(tzgg_layer);
+			 	var html="<tr class='oddLineCss' onclick='findqsgg();'><td style='width: 78%;text-align: left;padding-left: 50px;'>【欠税公告】国家税务总局厦门市税务局关于纳税人欠缴税款情况的公告</td><td class='tzrq'>2018-11-25</td></tr>";
+			 	var TzgglbURL=data['TzgglbURL'];
+				//通知公告  
+				if(data['gs_TZGGVO']!=null){
+					var gs_TZGGVO=data['gs_TZGGVO'];
+					var gs_TZGGVOlist=$.parseJSON(gs_TZGGVO);
+					var number=5;
+					if(gs_TZGGVOlist.length<number){
+						number=gs_TZGGVOlistlist.length;
+					}
+					for(var i=0;i<number;i++){
+			            var TITLE=gs_TZGGVOlist[i]["TITLE"];
+			            var CMS_DEST_PATH=gs_TZGGVOlist[i]["CMS_DEST_PATH"];
+			            if(GetLength(TITLE)>60){
+			               TITLE=cutstr(TITLE,60);
+			            }
+			            var UPDATE_TIME=gs_TZGGVOlist[i]["UPDATE_TIME"];
+						var arr = UPDATE_TIME.split(" ");
+						var url=TzgglbURL+CMS_DEST_PATH;
+						if(i==0){
+							TITLE="【政策法规通知公告】"+TITLE;
+						}
+						if(i%2==0){
+							html+="<tr onclick='window.open(\""+url+"\");'><td style='width: 78%;text-align: left;padding-left: 50px;'>"+TITLE+"</td><td class='tzrq'>"+arr[0]+"</td></tr>";
+			            }else{
+			            	html+="<tr  class='oddLineCss' onclick='window.open(\""+url+"\");'><td style='width: 78%;text-align: left;padding-left: 50px;'>"+TITLE+"</td><td class='tzrq'>"+arr[0]+"</td></tr>";
+			            }
+		            }  
+		            $('#tzgg').html(html);
+				}
+
+			}	
+		});  
+}  
+	 
+	 function findqsgg(){
+	    	var url="/tnsfwHome/index.do?menuid=tzgg&menu_item_id=tzgg_04";
+	    	//window.open(url,'_blank'); //在新的空白页面打开
+			window.parent.parent.showMain(url); //覆盖当前页面打开
+	 }
