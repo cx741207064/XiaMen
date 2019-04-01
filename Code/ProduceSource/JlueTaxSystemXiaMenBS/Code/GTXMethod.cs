@@ -1,5 +1,4 @@
-﻿using JlueTaxSystemXiaMenBS.Code.Model;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -220,109 +219,6 @@ namespace JlueTaxSystemXiaMenBS.Code
             return JsonConvert.DeserializeObject<GTXResult>(json);
         }
 
-        public static string getCompanyinfo(string json)
-        {
-            StringBuilder jsonstr = new StringBuilder(json);
-            GTXResult resultCompany = GTXMethod.GetCompany();
-            if (resultCompany.IsSuccess)
-            {
-                JObject company = (JObject)JsonConvert.DeserializeObject(resultCompany.Data.ToString());
-                if (company.HasValues)
-                {
-                    jsonstr.Replace("@@ZCDZ", (company["ZCDZ"] == null ? "" : company["ZCDZ"].ToString()))
-                        .Replace("@@JYFW", (company["JYFW"] == null ? "" : company["JYFW"].ToString()))
-                        .Replace("@@GBHY", (company["GBHY"] == null ? "" : company["GBHY"].ToString()))
-                        .Replace("@@SCJYDZ", (company["SCJYDZ"] == null ? "" : company["SCJYDZ"].ToString()))
-                        .Replace("@@ZGDSSWJFJMC", (company["ZGDSSWJFJMC"] == null ? "" : company["ZGDSSWJFJMC"].ToString()))
-                        .Replace("@@DJZCLX", (company["DJZCLX"] == null ? "" : company["DJZCLX"].ToString()))
-                        .Replace("@@LXDH", (company["LXDH"] == null ? "" : company["LXDH"].ToString()))
-                        .Replace("@@NSRSBH", (company["NSRSBH"] == null ? "" : company["NSRSBH"].ToString()))
-                        .Replace("@@NSRMC", (company["NSRMC"] == null ? "" : company["NSRMC"].ToString()));
-                }
-            }
-
-            GTXResult resultCompanyPerson = GTXMethod.GetCompanyPerson();
-            if (resultCompanyPerson.IsSuccess)
-            {
-                JArray jrperson = (JArray)JsonConvert.DeserializeObject(resultCompanyPerson.Data.ToString());
-                if (jrperson.Count > 0)
-                {
-                    for (int i = 0; i < jrperson.Count; i++)
-                    {
-                        JObject joperson = JObject.Parse(jrperson[i].ToString());
-                        if (joperson["PersonType"] != null && joperson["PersonType"].ToString() == "0")
-                        {
-                            jsonstr.Replace("@@FDDB", (joperson["Name"] == null ? "" : joperson["Name"].ToString()))
-                                    .Replace("@@FDID", (joperson["IDCardNum"] == null ? "" : joperson["IDCardNum"].ToString()))
-                                    .Replace("@@FDSJ", (joperson["MobilePhone"] == null ? "" : joperson["MobilePhone"].ToString()));
-                        }
-                        if (joperson["PersonType"] != null && joperson["PersonType"].ToString() == "2")
-                        {
-                            jsonstr.Replace("@@BSR", (joperson["Name"] == null ? "" : joperson["Name"].ToString()))
-                                    .Replace("@@BSID", (joperson["IDCardNum"] == null ? "" : joperson["IDCardNum"].ToString()))
-                                    .Replace("@@BSSJ", (joperson["MobilePhone"] == null ? "" : joperson["MobilePhone"].ToString()));
-                        }
-                    }
-                }
-            }
-            return jsonstr.ToString();
-        }
-
-
-        public static Company getCompanyinfo()
-        {
-            GTXResult resultCompany = GTXMethod.GetCompany();
-            Company co = new Company();
-            if (resultCompany.IsSuccess)
-            {
-                JObject company = (JObject)JsonConvert.DeserializeObject(resultCompany.Data.ToString());
-                if (company.HasValues)
-                {
-                    co.NSRMC = (company["NSRMC"] == null ? "" : company["NSRMC"].ToString());
-                    co.NSRSBH = (company["NSRSBH"] == null ? "" : company["NSRSBH"].ToString());
-                    co.LXDH = (company["LXDH"] == null ? "" : company["LXDH"].ToString());
-                    co.DJZCLX = (company["DJZCLX"] == null ? "" : company["DJZCLX"].ToString());
-                    co.ZGDSSWJFJMC = (company["ZGDSSWJFJMC"] == null ? "" : company["ZGDSSWJFJMC"].ToString());
-                    co.SCJYDZ = (company["SCJYDZ"] == null ? "" : company["SCJYDZ"].ToString());
-                    co.GBHY = (company["GBHY"] == null ? "" : company["GBHY"].ToString());
-                    co.JYFW = (company["JYFW"] == null ? "" : company["JYFW"].ToString());
-                    co.ZCDZ = (company["ZCDZ"] == null ? "" : company["ZCDZ"].ToString());
-                }
-            }
-
-            GTXResult resultCompanyPerson = GTXMethod.GetCompanyPerson();
-            if (resultCompanyPerson.IsSuccess)
-            {
-                JArray jrperson = (JArray)JsonConvert.DeserializeObject(resultCompanyPerson.Data.ToString());
-                if (jrperson.Count > 0)
-                {
-                    for (int i = 0; i < jrperson.Count; i++)
-                    {
-                        JObject joperson = JObject.Parse(jrperson[i].ToString());
-                        if (joperson["PersonType"] != null && joperson["PersonType"].ToString() == "0")
-                        {
-                            co.FDDB = (joperson["Name"] == null ? "" : joperson["Name"].ToString());
-                            co.FDID = (joperson["IDCardNum"] == null ? "" : joperson["IDCardNum"].ToString());
-                            co.FDSJ = (joperson["MobilePhone"] == null ? "" : joperson["MobilePhone"].ToString());
-                        }
-                        else if (joperson["PersonType"] != null && joperson["PersonType"].ToString() == "1")
-                        {
-                            co.CWFZR = (joperson["Name"] == null ? "" : joperson["Name"].ToString());
-                            co.CWFZID = (joperson["IDCardNum"] == null ? "" : joperson["IDCardNum"].ToString());
-                            co.CWFZSJ = (joperson["MobilePhone"] == null ? "" : joperson["MobilePhone"].ToString());
-                        }
-                        else
-                        {
-                            co.BSR = (joperson["Name"] == null ? "" : joperson["Name"].ToString());
-                            co.BSID = (joperson["IDCardNum"] == null ? "" : joperson["IDCardNum"].ToString());
-                            co.BSSJ = (joperson["MobilePhone"] == null ? "" : joperson["MobilePhone"].ToString());
-                        }
-                    }
-                }
-            }
-            return co;
-        }
-
         public static string myConvert(object str)
         {
             string ReturnStr;
@@ -334,58 +230,6 @@ namespace JlueTaxSystemXiaMenBS.Code
             //ReturnStr = Math.Round(double.Parse(str.ToString()),2).ToString();
             return ReturnStr;
         }
-
-        public static string getZzsData(string table_name)
-        {
-            string return_json = "{}";
-            string Zsxm = "增值税";
-            string id = "";
-            GTXResult resultq = GTXMethod.GetXiaMenYSBQC();
-            if (resultq.IsSuccess)
-            {
-                List<GDTXXiaMenUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQC>>(resultq.Data.ToString());
-                if (ysbqclist.Count > 0)
-                {
-                    foreach (GDTXXiaMenUserYSBQC item in ysbqclist)
-                    {
-                        if (item.ZSXM == Zsxm)
-                        {
-                            id = item.Id.ToString();
-                        }
-                    }
-                }
-            }
-
-            GTXResult gr = GTXMethod.GetUserReportData(id, table_name);
-            if (gr.IsSuccess == true)
-            {
-                JArray jarr = new JArray();
-                jarr = JsonConvert.DeserializeObject<JArray>(gr.Data.ToString());
-
-                if (jarr.Count > 0)
-                {
-                    byte[] bytes = Convert.FromBase64String(jarr[0]["dataValue"].ToString());
-                    string dataValue = Encoding.UTF8.GetString(bytes);
-                    JObject jo = new JObject();
-                    jo = JsonConvert.DeserializeObject<JObject>(dataValue);
-
-                    return_json = jo.ToString();
-                }
-            }
-            return return_json;
-        }
-
-        public static GTXResult UpdateTBQK(string Id, string tbqk)
-        {
-            string classid = CurrentUser.GetInstance().GetCurrentClassId;
-
-            string path = System.Configuration.ConfigurationManager.AppSettings["tikupath"];
-            publicmethod p = new publicmethod();
-            string fullpath = path + "/GTX/GDTXXiaMenUserYSBQC/Updatetbqk?Id=" + Id + "&classid=" + classid + "&tbqk=" + tbqk;
-            string json = p.Get(fullpath);
-            return JsonConvert.DeserializeObject<GTXResult>(json);
-        }
-
 
     }
 }

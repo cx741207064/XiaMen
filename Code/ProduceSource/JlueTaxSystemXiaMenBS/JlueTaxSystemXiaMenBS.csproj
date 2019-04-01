@@ -122,6 +122,7 @@
     <Content Include="css\styleedit.css" />
     <Content Include="css\stylenew.css" />
     <Content Include="cxzx\sbxxcx\manager.html" />
+    <Content Include="dzswj\css\style-gsdzsw.css" />
     <Content Include="Error\401.html" />
     <Content Include="Error\403.html" />
     <Content Include="Error\404.html" />
@@ -138,8 +139,6 @@
     <Content Include="image\zdyjb.png" />
     <Content Include="industry.xml" />
     <Content Include="Instruction.html" />
-    <Content Include="jsdzsb\yhssb\lb.html" />
-    <Content Include="jsdzsb\yhssb\submitSbb.html" />
     <Content Include="js\common.js" />
     <Content Include="js\custom-select.js" />
     <Content Include="js\database.js" />
@@ -516,7 +515,9 @@
     <Content Include="res\wsbs\css\xmdswz.css" />
     <Content Include="res\wsbs\css\xmdswz_print.css" />
     <Content Include="res\wsbs\js\bsfwzxmenu.js" />
-    <Content Include="tnsfwHome\index.aspx" />
+    <Content Include="tnsfwHome\index.bszx_03.bszx_03.html" />
+    <Content Include="tnsfwHome\index.bszx_03.bszx_0301.html" />
+    <Content Include="tnsfwHome\index.bszx_03.bszx_0304.html" />
     <Content Include="VideoManage\css\QuestionMain.css" />
     <Content Include="VideoManage\css\VideoIndex.css" />
     <Content Include="VideoManage\image\bc.png" />
@@ -557,6 +558,62 @@
     <Content Include="common\jyrq.json" />
     <Content Include="cxzx\sbxxcx\query.json" />
     <Content Include="otp4query\query.json" />
+    <Content Include="swxxtx\getFwtx.json" />
+    <Content Include="swxxtx\getSyjzpz.json" />
+    <Content Include="swxxtx\getWddb.json" />
+    <Content Include="tnsfwHome\nologin\getTzgg.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_0301.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_030101.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_0304.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_030405.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_030409.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_030414.json" />
+    <Content Include="tnsfwHome\queryCurLocal.cxzx_17.json" />
+    <Content Include="wssb\wssb\layout\center.jsp" />
+    <Content Include="wssb\wssb\layout\css\css.css" />
+    <Content Include="wssb\wssb\layout\css\overlay.css" />
+    <Content Include="wssb\wssb\layout\images\bg1.png" />
+    <Content Include="wssb\wssb\layout\images\bgtop.png" />
+    <Content Include="wssb\wssb\layout\images\bt.jpg" />
+    <Content Include="wssb\wssb\layout\images\fh1.jpg" />
+    <Content Include="wssb\wssb\layout\images\icon1.png" />
+    <Content Include="wssb\wssb\layout\images\logo.jpg" />
+    <Content Include="wssb\wssb\layout\images\navxl.png" />
+    <Content Include="wssb\wssb\layout\images\navxlb.png" />
+    <Content Include="wssb\wssb\layout\images\yin.jpg" />
+    <Content Include="wssb\wssb\layout\images\yinbt.jpg" />
+    <Content Include="wssb\wssb\layout\images\yinbtb.jpg" />
+    <Content Include="wssb\wssb\layout\js\menu.js" />
+    <Content Include="wssb\wssb\layout\js\overlay.js" />
+    <Content Include="wssb\wssb\layout\left.html" />
+    <Content Include="wssb\wssb\layout\left.nodeDatas.json" />
+    <Content Include="wssb\wssb\layout\top.jsp" />
+    <Content Include="wssb\wssb\public\images\line4.gif" />
+    <Content Include="wssb\wssb\public\images\spacer.gif" />
+    <Content Include="wssb\wssb\public\jsp\clearNsrSession.html" />
+    <Content Include="wssb\wssb\public\jsp\wssb.html" />
+    <Content Include="wssb\wssb\public\js\changeMenu.js" />
+    <Content Include="wssb\wssb\public\js\commonNew.js" />
+    <Content Include="wssb\wssb\public\js\configstyle.js" />
+    <Content Include="wssb\wssb\public\js\fixWidthForSelect.js" />
+    <Content Include="wssb\wssb\public\js\jquery-1.7.2.min.js" />
+    <Content Include="wssb\wssb\public\js\lhgdialog.js" />
+    <Content Include="wssb\wssb\public\js\lhgdialog.min.js" />
+    <Content Include="wssb\wssb\public\js\master.js" />
+    <Content Include="wssb\wssb\public\js\nov.js" />
+    <Content Include="wssb\wssb\public\js\pub.js" />
+    <Content Include="wssb\wssb\public\js\skins\default.css" />
+    <Content Include="wssb\wssb\public\js\skins\icons\loading.gif" />
+    <Content Include="wssb\wssb\public\js\text.js" />
+    <Content Include="wssb\wssb\public\js\wssbCommon.js" />
+    <Content Include="wssb\wssb\public\style\link.css" />
+    <Content Include="wssb\wssb\public\style\style.css" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB2.js" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB3.js" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB4.js" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FLZL5.js" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_JMSSBMXB.js" />
+    <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <None Include="Views\wssb\MainServlet_DZBS_QUERY.cshtml" />
     <Content Include="Views\wssb\MainServlet_DZBS_SBCX.cshtml" />
     <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_ButtonPartial.cshtml" />
@@ -570,24 +627,14 @@
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="wssb\MainServlet.INFORMATION.display.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR.initial.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB1.initial.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB2.initial.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB3.initial.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB4.initial.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FLZL5.initial.html" />
-    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_JMSSBMXB.initial.html" />
-    <Content Include="wssb\wssb\layout\left.html" />
-    <Content Include="wssb\wssb\public\jsp\wssb.html" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR.js" />
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB1.js" />
     <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Message.cshtml" />
-    <Content Include="wssb\wssb\layout\center.jsp" />
     <Content Include="Views\wssb_wssb_layout\left.cshtml" />
-    <Content Include="wssb\wssb\layout\left.nodeDatas.json" />
     <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.commerce.xml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.industry.xml" />
+    <Content Include="wssb\wssb\public\jsp\etaxErrPage.jsp" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacMVCConfig.cs" />
@@ -608,7 +655,6 @@
     <Compile Include="Code\GTXNameValue.cs" />
     <Compile Include="Code\GTXResult.cs" />
     <Compile Include="Code\IYsbqcSetting.cs" />
-    <Compile Include="Code\Model\Company.cs" />
     <Compile Include="Code\YsbqcSetting.cs" />
     <Compile Include="Controllers\commonController.cs" />
     <Compile Include="Controllers\cxzxController.cs" />
@@ -643,13 +689,6 @@
     <Compile Include="QuestionMain.aspx.designer.cs">
       <DependentUpon>QuestionMain.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tnsfwHome\index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="tnsfwHome\index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="VideoManage\GetVideo.ashx.cs">
       <DependentUpon>GetVideo.ashx</DependentUpon>
     </Compile>
@@ -681,8 +720,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\dzsb\" />
-    <Folder Include="Views\tnsfwHome\" />
+    <Folder Include="jsdzsb\fjssb\" />
+    <Folder Include="jsdzsb\yhssb\" />
+    <Folder Include="jsdzsb\zfsbjl\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChuShiHua.ashx" />
@@ -694,9 +734,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="VideoManage\GetVideo.ashx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="wssb\wssb\layout\top.jsp" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\yhssb\index.cshtml" />
