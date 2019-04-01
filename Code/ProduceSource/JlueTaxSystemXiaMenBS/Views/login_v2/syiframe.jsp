@@ -1,22 +1,10 @@
 
 
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <title>iframe</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 <script src="/res/js/jquery-1.10.2.js"></script>
 <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>

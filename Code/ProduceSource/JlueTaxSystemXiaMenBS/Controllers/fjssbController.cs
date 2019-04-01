@@ -56,25 +56,19 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         [Route("tjsbjl.do")]
         public System.Web.Mvc.ActionResult tjsbjl(string errorMsg)
         {
-            string path = "";
             if (errorMsg != null)
             {
                 ViewBag.errorMsg = errorMsg;
-                path = "tjsbjl.errorMsg.html";
             }
             else
             {
-                path = "tjsbjl.html";
             }
-            string str = System.IO.File.ReadAllText(Server.MapPath(path));
-            Response.ContentType = "text/html;charset=UTF-8";
             return View();
         }
 
         [Route("txsbb.do")]
         public System.Web.Mvc.ActionResult txsbb(FjsData fd)
         {
-            string str = "";
             string zspmDm = Request["sbbVo['zspmDm']"];
             string zzsxselx_dm = Request["sbbVo['zzsxselx_dm']"];
             JObject data_json = (JObject)set.getUserYSBQCReportData(qc.Id, qc.BDDM);
@@ -86,12 +80,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             else
             {
                 ViewBag.zzsxselx_dm = zzsxselx_dm;
-                str = System.IO.File.ReadAllText(Server.MapPath("txsbb." + zspmDm + "." + zzsxselx_dm + ".html"));
             }
-
-            Response.ContentType = "text/html;charset=UTF-8";
             return View(fd);
-            //return str;
         }
 
         [Route("submitSbb.do")]
@@ -103,8 +93,6 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             JObject in_jo = JObject.Parse(JsonConvert.SerializeObject(fd));
             set.saveUserYSBQCReportData(in_jo, qc.Id.ToString(), qc.BDDM);
 
-            string str = System.IO.File.ReadAllText(Server.MapPath("submitSbb." + zspmDm + "." + zzsxselx_dm + ".html"));
-            Response.ContentType = "text/html;charset=UTF-8";
             return View();
         }
 

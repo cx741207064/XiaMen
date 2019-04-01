@@ -76,17 +76,30 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                     GTXMethod.UpdateYSBQC(qc.Id.ToString(), set.ysbzt);
                     return View("MainServlet_" + TABLE_NAME + "_" + TABLE_ACTION);
                 case "display":
-                    if (TABLE_NAME == "DZBS_QUERY" || TABLE_NAME == "DZBS_SBCX")
+                    if (TABLE_NAME == "DZBS_QUERY" )
                     {
                         DZBS_QUERY re_dq = new DZBS_QUERY();
                         re_dq.GDTXDate = set.getGDTXDate(this.BDDM);
+                        return View("MainServlet_" + TABLE_NAME, re_dq);
+                    }
+                    else if (TABLE_NAME == "DZBS_SBCX")
+                    {
+                        DZBS_QUERY re_dq = new DZBS_QUERY();
+                        if (qc.SBZT == set.wsbzt)
+                        {
+                            return View("MainServlet_SBB_ZZS_YGZ_YBNSR_Message", new ZzsYgzYbnsrPublic { msg = "无符合要求的数据。", TABLE_ACTION = "dispaly" });
+                        }
+                        re_dq.GDTXDate = set.getGDTXDate(this.BDDM);
                         re_dq.Nsrxx = set.getNsrxx();
                         JObject data_jo = (JObject)set.getUserYSBQCReportData(qc.Id, qc.BDDM, qc.BDDM);
-                        DBData = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(data_jo));
-                        JObject data_json = JsonConvert.DeserializeObject<JObject>(JsonConvert.DeserializeObject<JValue>(DBData.json).Value<string>());
-                        re_dq.XSE = data_json["YBBYS_1"].ToString();
-                        re_dq.YNSE = data_json["YBBYS_24"].ToString();
-                        re_dq.YBTSE = data_json["YBBYS_34"].ToString();
+                        if (data_jo.HasValues)
+                        {
+                            DBData = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(data_jo));
+                            JObject data_json = JsonConvert.DeserializeObject<JObject>(JsonConvert.DeserializeObject<JValue>(DBData.json).Value<string>());
+                            re_dq.XSE = data_json["YBBYS_1"].ToString();
+                            re_dq.YNSE = data_json["YBBYS_24"].ToString();
+                            re_dq.YBTSE = data_json["YBBYS_34"].ToString();
+                        }
                         return View("MainServlet_" + TABLE_NAME, re_dq);
                     }
                     re_zd.ZBData = new ZzsYgzYbnsrZBData();
@@ -151,9 +164,13 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                 string value = form[key];
                 in_jo.Add(key, value);
             }
-            zbd.YBBYS_1 = in_jo["YBBYS_1"].ToString();
-            zbd.YBBYS_19 = in_jo["YBBYS_19"].ToString();
-            zbd.YBBYS_34 = in_jo["YBBYS_34"].ToString();
+
+            if (TABLE_NAME == this.BDDM)
+            {
+                zbd.YBBYS_1 = in_jo["YBBYS_1"].ToString();
+                zbd.YBBYS_19 = in_jo["YBBYS_19"].ToString();
+                zbd.YBBYS_34 = in_jo["YBBYS_34"].ToString();
+            }
             in_zd.ZBData = zbd;
             in_zd.json = JsonConvert.SerializeObject(new JValue(JsonConvert.SerializeObject(in_jo)));
             in_zd.TABLE_ACTION = TABLE_ACTION;

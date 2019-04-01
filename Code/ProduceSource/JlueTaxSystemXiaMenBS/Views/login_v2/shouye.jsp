@@ -38,9 +38,6 @@
 		<meta name="Description" content="厦门市税务局网上报税系统">
 		<meta name="Keywords" content="税务,厦门市税务局,网上报税系统">
 		
-
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
 		<script src="/res/js/jquery-1.10.2.js"></script>		
         <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
         <link type="text/css" rel="styleSheet"  href="/res/css/layerV2.css" /> 	

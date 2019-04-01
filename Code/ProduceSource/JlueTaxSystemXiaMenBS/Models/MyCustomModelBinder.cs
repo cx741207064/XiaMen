@@ -57,6 +57,7 @@ namespace JlueTaxSystemXiaMenBS.Models
 
                     string zzsxselx_dm = form["sbbVo['zzsxselx_dm']"];
                     string hj = form["sbbVo['hj']"] == null ? form["sbbList[0]['hj']"] : form["sbbVo['hj']"];
+                    hj = hj == null || hj == "" ? "0" : hj;
 
                     decimal bqynse1 = decimal.Parse(hj) * new decimal(.03);
                     decimal jme1 = 0;

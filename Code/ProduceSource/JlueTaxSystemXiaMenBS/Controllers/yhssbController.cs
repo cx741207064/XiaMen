@@ -77,8 +77,6 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         public System.Web.Mvc.ActionResult tjsbjl()
         {
             ViewBag.tzlx = "yhstjsbjl";
-            string str = System.IO.File.ReadAllText(Server.MapPath("tjsbjl.html"));
-            Response.ContentType = "text/html;charset=UTF-8";
             return View();
         }
 

@@ -515,6 +515,7 @@
     <Content Include="res\wsbs\css\xmdswz.css" />
     <Content Include="res\wsbs\css\xmdswz_print.css" />
     <Content Include="res\wsbs\js\bsfwzxmenu.js" />
+    <Content Include="tnsfwHome\index.aspx" />
     <Content Include="tnsfwHome\index.bszx_03.bszx_03.html" />
     <Content Include="tnsfwHome\index.bszx_03.bszx_0301.html" />
     <Content Include="tnsfwHome\index.bszx_03.bszx_0304.html" />
@@ -548,8 +549,6 @@
     <Content Include="Video\js\jquery-1.12.4.min.js" />
     <Content Include="Video\js\video.js" />
     <Content Include="Video\Video.aspx" />
-    <Content Include="Views\otp4query\List.cshtml" />
-    <Content Include="Views\cxzx\manager.cshtml" />
     <Content Include="common\checktjts.json" />
     <Content Include="common\codelist.JS_DZBZDSZL_DM.json" />
     <Content Include="common\codelist.NEW_ZSPM_DM.json" />
@@ -569,6 +568,58 @@
     <Content Include="tnsfwHome\queryCurLocal.bszx_030409.json" />
     <Content Include="tnsfwHome\queryCurLocal.bszx_030414.json" />
     <Content Include="tnsfwHome\queryCurLocal.cxzx_17.json" />
+    <Content Include="Views\cxzx\manager.cshtml" />
+    <Content Include="Views\fjssb\index.cshtml" />
+    <Content Include="Views\fjssb\showData_Partial.cshtml" />
+    <Content Include="Views\fjssb\submitSbb.cshtml" />
+    <Content Include="Views\fjssb\tjsbjl.cshtml" />
+    <Content Include="Views\fjssb\tjsbjl_Partial.cshtml" />
+    <Content Include="Views\fjssb\tjsblb.cshtml" />
+    <Content Include="Views\fjssb\txsbb.cshtml" />
+    <Content Include="Views\fjssb\txsbb_Partial.cshtml" />
+    <Content Include="Views\fjssb\_Layout.cshtml" />
+    <Content Include="Views\jsdzsb\dzsbsy\sbzf.jsp" />
+    <Content Include="Views\login_v2\menuiframe.jsp" />
+    <Content Include="Views\login_v2\shouye.jsp" />
+    <Content Include="Views\login_v2\syiframe.jsp" />
+    <Content Include="Views\otp4query\List.cshtml" />
+    <Content Include="Views\Shared\CFSB.cshtml" />
+    <Content Include="Views\Shared\FunctionNotOpen.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\web.config" />
+    <Content Include="Views\wssb\MainServlet_DZBS_QUERY.cshtml" />
+    <Content Include="Views\wssb\MainServlet_DZBS_SBCX.cshtml" />
+    <Content Include="Views\wssb\MainServlet_INFORMATION.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_ButtonPartial.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB1.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB2.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB3.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB4.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FLZL5.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_HeadPartial.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_JMSSBMXB.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Layout.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Message.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Partial.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
+    <Content Include="Views\wssb_wssb_layout\left.cshtml" />
+    <Content Include="Views\wssb_wssb_public_jsp\wssb.cshtml" />
+    <Content Include="Views\yhssb\buttonGroup_Partial.cshtml" />
+    <Content Include="Views\yhssb\index.cshtml" />
+    <Content Include="Views\yhssb\lb.cshtml" />
+    <Content Include="Views\yhssb\lb_Layout.cshtml" />
+    <Content Include="Views\yhssb\modify.cshtml" />
+    <Content Include="Views\yhssb\showData_Partial.cshtml" />
+    <Content Include="Views\yhssb\submitSbb.cshtml" />
+    <Content Include="Views\yhssb\tjsbjl.cshtml" />
+    <Content Include="Views\yhssb\tjsblbsb.cshtml" />
+    <Content Include="Views\yhssb\txsbb.cshtml" />
+    <Content Include="Views\yhssb\txsbb_Layout.cshtml" />
+    <Content Include="Views\yhssb\txsbb_Partial.cshtml" />
+    <Content Include="Views\yhssb\yhstjsbjl_Partial.cshtml" />
+    <Content Include="Views\yhssb\Yhs_Head_Nsrxx_Partial.cshtml" />
     <Content Include="wssb\wssb\layout\center.jsp" />
     <Content Include="wssb\wssb\layout\css\css.css" />
     <Content Include="wssb\wssb\layout\css\overlay.css" />
@@ -614,27 +665,18 @@
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FLZL5.js" />
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_JMSSBMXB.js" />
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
-    <None Include="Views\wssb\MainServlet_DZBS_QUERY.cshtml" />
-    <Content Include="Views\wssb\MainServlet_DZBS_SBCX.cshtml" />
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_ButtonPartial.cshtml" />
-    <Content Include="Views\wssb_wssb_public_jsp\wssb.cshtml" />
-    <None Include="Views\zfsbjl\start.cshtml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.Message.xml">
       <SubType>Designer</SubType>
     </Content>
-    <None Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR.cshtml" />
-    <None Include="Views\wssb\MainServlet_INFORMATION.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR.js" />
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB1.js" />
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Message.cshtml" />
-    <Content Include="Views\wssb_wssb_layout\left.cshtml" />
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.commerce.xml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.industry.xml" />
     <Content Include="wssb\wssb\public\jsp\etaxErrPage.jsp" />
+    <Content Include="Views\zfsbjl\start.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacMVCConfig.cs" />
@@ -689,6 +731,13 @@
     <Compile Include="QuestionMain.aspx.designer.cs">
       <DependentUpon>QuestionMain.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tnsfwHome\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tnsfwHome\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="VideoManage\GetVideo.ashx.cs">
       <DependentUpon>GetVideo.ashx</DependentUpon>
     </Compile>
@@ -715,7 +764,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -723,83 +771,13 @@
     <Folder Include="jsdzsb\fjssb\" />
     <Folder Include="jsdzsb\yhssb\" />
     <Folder Include="jsdzsb\zfsbjl\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChuShiHua.ashx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\login_v2\menuiframe.jsp" />
-    <Content Include="Views\login_v2\shouye.jsp" />
-    <Content Include="Views\login_v2\syiframe.jsp" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="VideoManage\GetVideo.ashx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\lb_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\lb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\Yhs_Head_Nsrxx_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\yhstjsbjl_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\tjsbjl.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\txsbb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\txsbb_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\submitSbb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\showData_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\modify.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\txsbb_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\buttonGroup_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\yhssb\tjsblbsb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\CFSB.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\Shared\FunctionNotOpen.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\index.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\tjsbjl.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\tjsbjl_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\txsbb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\txsbb_Partial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="js\libs\bootstrap-select\dist\js\bootstrap-select.js.map" />
@@ -821,42 +799,6 @@
     <Content Include="res\otp4\css\themes\otp4-menu.css%253f" />
     <Content Include="res\otp4\css\themes\otp4-panel.css%253f" />
     <Content Include="res\otp4\css\themes\otp4-table.css%253f" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\showData_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\submitSbb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\fjssb\tjsblb.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Layout.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB1.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB2.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB3.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB4.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Partial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_HeadPartial.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FLZL5.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_JMSSBMXB.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
