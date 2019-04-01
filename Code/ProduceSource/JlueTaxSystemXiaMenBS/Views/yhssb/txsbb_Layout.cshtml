@@ -1,0 +1,2344 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--允许搜索机器人搜索站内所有链接-->
+    <meta content="all" name="robots">
+    <meta name="Copyright" content="厦门税务版权所有 ">
+    <meta name="Description" content="厦门税务网上报税系统">
+    <meta name="Keywords" content="税务,厦门税务,网上报税系统">
+
+    <title>
+        厦门税务
+    </title>
+    <script src="/res/js/jquery-1.10.2.js"></script>
+    <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+    <link type="text/css" rel="styleSheet" href="/res/css/layerV2.css" />
+    <script src="/res/js/common.js" type="text/javascript"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?v1"></script>
+    <link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+
+
+    <meta charset="UTF-8">
+    <meta name="decorator" content="blank" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+    <c:set var="resV" value="v1" />
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+    <link href="/res/otp4/js/lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-base.css?" rel="stylesheet" />
+    <link href="/res/otp4/css/otp4-form.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-panel.css?" rel="stylesheet" type="text/css" />
+
+    <link href="/res/otp4/css/otp4-page.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-menu.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-menu.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-form.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-panel.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-table.css?" rel="stylesheet" type="text/css" />
+
+    <!--
+    <script src="/res/otp4/js/lib/shiv/html5shiv.min.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/shiv/respond.min.js" type="text/javascript"></script>
+     -->
+    <script src="/res/otp4/js/lib/jquery-ct.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/jquery.fix.clone.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/jquery.json.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/ztree/jquery.ztree.all-3.5.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-base.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-utils.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-core.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-route.js?" type="text/javascript"></script>
+
+    <script src="/res/otp4/js/lib/avalon.js?" type="text/javascript"></script>
+    <!--  script src="/res/otp4/js/lib/avalon.shim.js" type="text/javascript"></script-->
+    <script src="/res/otp4/js/otp4-iehack.js?" type="text/javascript"></script>
+
+    <script src="/res/otp4/js/otp4-selmodel.js?" type="text/javascript"></script>
+
+    <script src="/res/otp4/js/lib/My97DatePicker/WdatePicker.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-expression.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-controls.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-upload.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-validate.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-validate-ext.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-idcode.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-froute.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-filters.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-menu.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-menu-ie6.js?" type="text/javascript"></script>
+    <script src="/res/js/otp4-app-config.js?" type="text/javascript"></script>
+    <script src="/res/js/otp4-input-ext.js?" type="text/javascript"></script>
+
+    <script src="/res/wsbs/js/bsfwzxmenu.js" type="text/javascript"></script>
+
+    <link href="/res/wsbs/css/step.css" type="text/css" rel="stylesheet">
+    <link href="/res/wsbs/css/global.css?" type="text/css" rel="stylesheet" id="mycss">
+    <link href="/res/wsbs/css/xmdswz.css" type="text/css" rel="stylesheet">
+    <link href="/res/wsbs/css/xmdswz_print.css" type="text/css" rel="stylesheet">
+    <link href="/res/wsbs/css/swdj_style.css" type="text/css" rel="stylesheet">
+
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/core.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/collections.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/system.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/ajaxrequest.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/Behaviour.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/floatlayer.js?"></script>
+
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?"></script>
+    <script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_common.js?v=3"></script>
+    <script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_nssb.js?"></script>
+    <script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_qysds.js"></script>
+    <script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_grsds.js"></script>
+    <link href="/res/jsdzsb/css.css" rel="stylesheet" type="text/css" />
+    <script src="/res/jsdzsb/jsdzsb_common.js" type="text/javascript"></script>
+    <link href="/res/css/css.css" rel="stylesheet" type="text/css" />
+    <script src="/res/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="/res/js/common.js" type="text/javascript"></script>
+    <link href="/res/jsdzsb/css.css" rel="stylesheet" type="text/css" />
+    <link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" charset="UTF-8">
+
+        /**
+        $(document).ready(function() {
+
+            $(document).ajaxError(function(){ function(e,xhr,opt){
+                    alert("登录超时,请重新登录！");
+                    window.top.location.href="<c:url value="/login/index.do" />";}
+            );
+
+        });
+        **/
+
+    </script>
+    <!--[if lt IE 9]>
+      <script type="text/javascript" src="/res/PIE-1.0.0/PIE.js"></script>
+      <script type="text/javascript">
+        $(function() {
+           if (window.PIE) {
+             $('.rad').each(function() {
+               PIE.attach(this);
+              });
+             }
+           });
+      </script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <script type="text/javascript">
+<!--
+function getObj(objName) {
+	  var obj = document.getElementById(objName);
+	  if(obj == null || obj == undefined)
+		  obj = document.getElementsByName(objName)[0];
+	  return obj;
+	}
+
+
+   $(function(){
+	 var divs=["yhssblb","yhstjsbjl","yhstxsbb",];
+	 var tzlx="yhstxsbb";
+	 for(var i=0;i<divs.length;i++){
+
+	  if(divs[i]==tzlx){
+		  $("#"+divs[i]).show();
+	  }else{
+		  $("#"+divs[i]).hide();
+	  }
+	 }
+	 if(tzlx=="yhssblb"){
+		  var sjyzeNo = 0;
+		  var sjyze = 0.00;
+		  if (getObj("tmp_count")) {
+		  	sjyzeNo = getObj("tmp_count").value;
+		  }
+		  for (var i = 0 ; i < sjyzeNo ; i ++) {
+		  	sjyze = sjyze + parseFloat(getoff_Qfw(getObj("sbbList[" + i + "]['SJYZE']").value));
+		  }
+
+		  if(sjyze=='0'){
+			$("#_skhj").text("0");
+		  }else{
+		    $("#_skhj").text(add_Qfw(toFixedNum(sjyze,2)));
+			  }
+	 }
+	 if(tzlx=='yhstxsbb'){
+
+
+		 //szChange();
+        var hdlx="1";
+        //getObj("sbbVo['hdzshdde']").value="";
+        if(hdlx=='1'){
+        	getObj("sbbVo['hdzshdbl']").readOnly = true;
+     	    getObj("sbbVo['hdzshdbl']").style.backgroundColor="#D0D0D0";
+     	    getObj("sbbVo['hdzshdde']").readOnly = true;
+    	    getObj("sbbVo['hdzshdde']").style.backgroundColor="#D0D0D0";
+        }else
+            /*
+        	 if(hdlx=='2'){
+        	getObj("sbbVo['hdzshdbl']").readOnly = true;
+     	    getObj("sbbVo['hdzshdbl']").style.backgroundColor="#D0D0D0";
+     	    getObj("sbbVo['jsje']").readOnly = true;
+    	    getObj("sbbVo['jsje']").style.backgroundColor="#D0D0D0";
+    	    getObj("sbbVo['hdzshdde']").readOnly = true;
+        }else
+            */
+
+            {
+        	getObj("sbbVo['jsje']").readOnly = true;
+     	    getObj("sbbVo['jsje']").style.backgroundColor="#D0D0D0";
+        	getObj("sbbVo['hdzshdde']").readOnly = false;
+     	    getObj("sbbVo['hdzshdde']").style.backgroundColor="";
+
+
+        }
+        window.setTimeout(ys,0);
+      }
+     //删除减征的代码
+     $("#ssjmxzdm option[value='0009049901']").remove();
+
+   });
+
+   function ys(){
+       var skssqq="2019-02-01";
+		 var zspmdm="101110101";
+		 if(skssqq>="2018-05-01"&&zspmdm=="101110599")
+		 alert("自2018年5月1日起，对按件贴花五元的其他账簿免征印花税。请符合条件的纳税人选择减免性质——其他账簿免征印花税");
+		 if(skssqq>="2018-05-01"&&zspmdm=="101110501")
+			 alert("自2018年5月1日起，对按万分之五税率贴花的资金账簿减半征收印花税。请符合条件的纳税人选择减免性质——资金账簿减半征收印花税");
+   }
+
+   function tjsbjl(){
+
+	  $("#myForm1").attr("action","/jsdzsb/yhssb/tjsbjl.do");
+	  $("#myForm1").submit();
+   }
+   function tjsbb(){
+
+		  $("#myForm1").attr("action","/jsdzsb/yhssb/tjsblb.do");
+		  $("#myForm1").submit();
+		  layer.alert("保存成功！");
+	   }
+   function tjsbbsb(){
+	   var gosb_bz="";
+	   if(gosb_bz!="gosb"){//没有保存操作
+		   layer.alert("申报前需进行保存");
+	   }else{
+		  var sfzhm=getObj("sbbVo['sfzhm']").value;
+		  /*if(sfzhm=='' || sfzhm==null){
+			  alert("身份证号码必须填写！");
+			  return false;
+		  }*/
+		  var _confMsg = "请确认是否提交申报。提交申报后，可通过“申报记录查询或作废”菜单项查询申报结果。";
+		  var xgbz=document.getElementById("xgbz").value;
+		  if (confirm(_confMsg)) {
+		  if(xgbz=="yes"){
+			  $("#myForm1").attr("action","/jsdzsb/yhssb/xgtjsblbsb.do");
+		  }
+		  else
+		  $("#myForm1").attr("action","/jsdzsb/yhssb/tjsblbsb.do");
+		  $("#myForm1").submit();
+		  }
+   		}
+	  }
+   function qxbcsb(){
+	   var xgbz=document.getElementById("xgbz").value;
+	   if(confirm("是否确定取消本次申报？")){
+		   if(xgbz=='yes')
+			   location.href="/jsdzsb/yhssb/index.do?xgbz=yes";
+			if(xgbz=='no')
+		   location.href="/jsdzsb/yhssb/index.do";
+	   }
+   }
+
+   function changeTs(e){
+	   var tab_num=$("#frm_dfsf").find("tr").length;
+	   if(tab_num>1){
+		   alert("修改适用增值税小规模纳税人减征选项，需删除表中已填写的列");
+		   document.getElementById(e).checked='checked';
+	   }
+   }
+
+   function changeNo(e){
+	   document.getElementById(e).checked='checked';
+   }
+
+   function txsbb(){
+	   var sfzhm=getObj("sbbVo['zspmdm']").value;
+
+		  if(sfzhm=='' || sfzhm==null){
+			  alert("应征凭证名称必须填写！");
+			  return false;
+		  }
+		   var zsxmdm=getObj("sbbVo['zsxmdm']").value;
+		   var skssqq=getObj("sbbVo['skssqq']").value;
+		   var skssqz=getObj("sbbVo['skssqz']").value;
+		 // if(!JsYsqbChecker(skssqq,skssqz,zsxmdm,sfzhm,'','')){
+		    //     return false;
+			  //  }
+		 var xgbz=document.getElementById("xgbz").value;
+		 if(xgbz=="yes"){
+			 $.ajax({
+			       	url:"/jsdzsb/yhssb/pd.do",
+			       data:$("#myForm2").serialize(),
+			     		method:"POST",
+			     		async : false,
+			     		success:function(data) {
+			     			if(data.res=="false"){
+			     				alert(data.message);
+			     			}
+			     			if(data.res=="true"){
+			     				 $("#myForm2").attr("action","/jsdzsb/yhssb/xgsbb.do");
+			     				$("#myForm2").submit();
+			     			}
+			     		}
+			         });
+		 }
+		 else{
+		  $("#myForm2").attr("action","/jsdzsb/yhssb/txsbb.do");
+		  $("#myForm2").submit();
+		 }
+   }
+ //增加记录时检测是否为空
+   var notNullObj = new Array("sbbVo['bqynse']", "sbbVo['bqybtse']");
+   var notNullObjName = new Array("本期应纳税额","本期应补（退）税额");
+   function qrtj(flag){
+
+
+
+	   for(ii=0; ii<notNullObj.length; ii++) {
+		    var obj = getObj(notNullObj[ii]);
+		    if(isEmpty(obj.value)) {
+		      alert(notNullObjName[ii] + "必须输入！");
+		      obj.focus();
+		      return false;
+		    }
+		  }
+		  var smObj = $("#zspmdm")[0];
+		  var hdlx='1';
+		  if(hdlx=='1' ){
+			    var jsjeObj = getObj("sbbVo['jsje']");
+			    var JSJE = getoff_Qfw(jsjeObj.value);
+			    if(isEmpty(JSJE)) {
+			      reject(jsjeObj, "计税金额或件数必须输入！");
+			      return false;
+			    }
+			}else {
+				    var hdzshddeObj = getObj("sbbVo['hdzshdde']");
+				    var hdzshdde = getoff_Qfw(hdzshddeObj.value);
+				    if(isEmpty(hdzshdde)) {
+				      reject(hdzshddeObj, "核定依据必须输入！");
+				      return false;
+				    }
+				}
+		  if(!(smObj.value =="101110400" || smObj.value == "101110599" || smObj.value == "101119800") ) {
+			  var obj = getObj("sbbVo['hdzshdde']");
+			    if(false&&isEmpty(obj.value)) {
+			      alert("核定依据必须输入！");
+			      obj.focus();
+			      return false;
+			    }
+		  }
+		  /*
+
+		  if((smObj.value == "101110400") || (smObj.value == "101110599") || (smObj.value == "101119800")) {
+			  var jsjeObj = getObj("sbbVo['jsje']");
+			    var JSJE = getoff_Qfw(jsjeObj.value);
+			    if(isEmpty(JSJE)) {
+			      reject(jsjeObj, "计税金额或件数必须输入！");
+			      return false;
+			    }
+		  } else {
+		    var yyeObj = getObj("sbbVo['hdzshdde']");
+		    var YYE = getoff_Qfw(yyeObj.value);
+		    if(false&&isEmpty(YYE)) {
+		      reject(yyeObj, "核定依据必须输入！");
+		      return false;
+		    }
+		    var yyeNum = new Number(YYE);
+		    if(yyeNum.lessThan(0)) {
+		      alert("核定依据不能为负数！");
+		      yyeObj.focus();
+		      return false;
+		    }
+
+		    var hdblObj = getObj("sbbVo['hdzshdbl']");
+		    if(false&&isEmpty(hdblObj.value)) {
+		      reject(hdblObj, "核定比例必须输入！");
+		      return false;
+		    }
+		    var jsjeObj = getObj("sbbVo['jsje']");
+		    var JSJE = getoff_Qfw(jsjeObj.value);
+		    if(isEmpty(JSJE)) {
+		      reject(jsjeObj, "计税金额或件数必须输入！");
+		      return false;
+		    }
+
+
+		  }
+		  */
+
+
+
+		  var ynseObj = getObj("sbbVo['bqynse']");
+		  var YNSE = getoff_Qfw(ynseObj.value);
+		  var ynseNum = new Number(YNSE);
+		  if(ynseNum.lessThan(0)) {
+		    alert("应纳税（费）额不能为负数！");
+		    ynseObj.focus();
+		    return false;
+		  }
+
+		//对于印花税征收品目为其他营业账簿时应补(退)税额>0时，进行监控提醒，提醒纳税人填报减免金额。bbVo['bqybtse']
+	         var bqybtse = toFloat(getoff_Qfw(getObj("sbbVo['bqybtse']").value));
+	         if(smObj.value == "101110599"&&bqybtse>0&&jmse==0){
+	             alert("请填报减免金额!");
+	             return false;
+	         }
+
+		  //检测减免额是否大于应纳税额
+		  var ynseVal = toFloat(getoff_Qfw(getObj("sbbVo['bqynse']").value));
+		  var dkeVal = toFloat(getoff_Qfw(getObj("sbbVo['bqyjse1']").value));
+		  var jmse = toFloat(getoff_Qfw(getObj("sbbVo['jmse']").value));
+		  if(ynseVal < dkeVal+jmse) {
+		    alert("(本期减免税额+本期已缴税额)不能大于应纳税额。")
+		    getObj("sbbVo['jmse']").focus();
+			getObj("sbbVo['jmse']").style.backgroundColor="red";
+
+		    return false;
+		  }
+		//  return true;
+		  /**逾期申报检测*/
+		//  var ret = checkYqsb();
+		//  return !ret;
+
+       var ssjmxzdm=getObj("sbbVo['ssjmxzdm']").value;
+       var ynse=getObj("sbbVo['bqynse']").value;
+	   var sfjm=getObj("sbbVo['sfjm']").value;
+       var jme=getObj("sbbVo['jmse']").value;
+       if(ssjmxzdm!=''&&ynse!=0){
+          if(jme=='' ||jme =='0'){
+        	  alert("您已选择减免性质，请输入减免额！");
+        	  return false;
+           }
+         }else{
+             sfjm="N";
+         }
+
+       if(sfjm=="N" && ssjmxzdm!=''){
+          if(confirm("选择的减免性质未做备案或审批,是否继续？")){
+              if(flag=='modify'){
+            	  $("#myForm3").attr("action","/jsdzsb/yhssb/lb.do?modifysave=ture");
+                  $("#myForm3").submit();
+               }else{
+            	   $("#myForm3").attr("action","/jsdzsb/yhssb/submitSbb.do");
+                   $("#myForm3").submit();
+
+                   }
+
+            }
+         }else{
+        	 if(flag=='modify'){
+           	  $("#myForm3").attr("action","/jsdzsb/yhssb/lb.do?modifysave=ture");
+                 $("#myForm3").submit();
+              }else{
+           	   $("#myForm3").attr("action","/jsdzsb/yhssb/submitSbb.do");
+                  $("#myForm3").submit();
+
+                  }
+            }
+
+
+
+   }
+--></script>
+
+    <div id='yhssblb'>
+        <form action="/jsdzsb/yhssb/lb.do" method="post" id="myForm1" enctype="multipart/form-data">
+            <input type="hidden" id="xgbz" value="no" name="xgbz">
+            <input type="hidden" name="errAction" value="/jsdzsb/yhssb/lb.do" />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="left" class="liucheng_01"> </td>
+                    <td align="left">
+                        <table width="750" border="0" align="left" cellpadding="0" cellspacing="0">
+
+                            <tr>
+                                <td class="width0">&nbsp;</td>
+                                <td align="center" class="liucheng_02 v2_h1_14w ">初始化</td>
+                                <td align="center"><img src="/res/jsdzsb/bsdt/images/over_arrow.png" width="7" height="12" /></td>
+                                <td align="center" class="liucheng_02 v2_h1_14w">填写申报表</td>
+
+
+
+                                <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="7" height="12" /></td>
+                                <td align="center" class="liucheng_03 v2_h1_14b">确认申报</td>
+
+
+
+                                <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="7" height="12" /></td>
+                                <td align="center" class="liucheng_03 v2_h1_14b">查看回执</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table></td>
+            </tr>
+            <tr>
+                <td class="gray3_bg_color"> </td>
+            </tr>
+            <tr>
+                <td>
+                    <div ms-controller="print">
+                        <script type="text/javascript">
+                            !function(){
+                                var vm=avalon.define({
+                                    $id: "print"
+                                });
+                            }();
+                        </script>
+                        <div class="xf-print-area">
+                            <div class="xf-print">
+                                <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+                                    <tr>
+                                        <td align="center" class="v2_title"><strong>印花税纳税申报(报告)表</strong></td>
+                                    </tr>
+                                    <td>
+                                        <table id="frm_dfsf_head " class="v2table" width="100%" border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
+                                            <tr>
+                                                <td height="21" width="15%" nowrap="nowrap">税款所属期限：</td>
+                                                <td>
+                                                    2019-02-01至2019-02-28
+                                                    <input type="hidden" name="sbbVo['skssqq']" value="2019-02-01" />
+                                                    <input type="hidden" name="sbbVo['skssqz']" value="2019-02-28" />
+                                                    <input type="hidden" name="sbbVo['zsxmdm']" value="10111" />
+                                                </td>
+                                                <td width="15%" nowrap="nowrap">填表日期：</td>
+                                                <td>
+                                                    2019-03-04
+                                                    <input type="hidden" name="sbbVo['tbrq']" value="2019-03-04" />
+                                                </td>
+                                                <td>金额单位：元至角分</td>
+                                            </tr>
+                                            <tr>
+                                                <td>纳税人识别号</td>
+                                                <td colspan="4">91350200MA2Y10EC4K</td>
+                                            </tr>
+                                        </table>
+                                        <table id="frm_dfsf_head " class="v2table" width="100%" border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
+                                            <tr>
+                                                <td height="21" width="15%" nowrap="nowrap">名称</td>
+                                                <td width="35%">威纳仕（厦门）酒业有限公司</td>
+                                                <td nowrap="nowrap" colspan="2">
+                                                    <input type="checkbox" name="sbbVo['nsrlx']" value="0" checked="checked" />
+                                                    单位
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <input type="checkbox" name="sbbVo['nsrlx']" value="1" disabled="disabled" />
+                                                    个人
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap">登记注册类型</td>
+                                                <td nowrap="nowrap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    其他有限责任公司
+                                                    &nbsp;
+                                                </td>
+                                                <td nowrap="nowrap">所属行业</td>
+                                                <td nowrap="nowrap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                    酒、饮料及茶叶批发
+                                                    &nbsp;
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap">联系方式</td>
+                                                <td nowrap="nowrap">18559796088&nbsp;</td>
+                                                <td nowrap="nowrap">身份证号码</td>
+                                                <td nowrap="nowrap">
+                                                    <input type="text" name="sbbVo['sfzhm']" size="32" maxlength="32" onerrclear="false" required="false" requiredmsg="该项目必须填写" value="" class="line in rad" title="身份证号码" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td nowrap="nowrap">本期是否适用增值税小规模纳税人减征政策</td>
+                                                <td nowrap="nowrap"></td>
+                                                <td nowrap="nowrap">减征比例</td>
+
+                                                <td nowrap="nowrap">
+                                                    0.5
+                                                    <input type="hidden" name="sbbVo['jzbl']" value="0.5">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+            </tr>
+            <tr>
+                <div align="left">
+                    <td>
+                        <table id="frm_dfsf" class="v2table" width="100%" border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
+                            <tr class="head tit">
+                                <td nowrap="nowrap">操作</td>
+                                <td nowrap="nowrap">税（费）种 </td>
+                                <td nowrap="nowrap" width="100">应税项目</td>
+                                <td nowrap="nowrap" width="80">
+                                    税（费）<br />
+                                    所属期始
+                                </td>
+                                <td nowrap="nowrap" width="80">
+                                    税（费）<br />
+                                    所属期止
+                                </td>
+                                <td nowrap="nowrap" style="color:Maroon">应入库税（费）额 </td>
+                                <td nowrap="nowrap">计税依据 </td>
+                                <td nowrap="nowrap">核定比例</td>
+                                <td nowrap="nowrap">计税金额</td>
+                                <td nowrap="nowrap">税（费）率</td>
+                                <td nowrap="nowrap">
+                                    应纳<br />
+                                    税（费）额
+                                </td>
+                                <td nowrap="nowrap">备案减免税（费）额</td>
+                                <td nowrap="nowrap">备案事项名称</td>
+                                <td nowrap="nowrap">本期已缴税额</td>
+                                <td nowrap="nowrap">本期增值税小规模纳税人减征额</td>
+                            </tr>
+                            <tbody>
+
+
+
+                                <tr>
+                                    <td align="center" nowrap>
+                                        <a href="#" onclick="modify('481e0a567f00000140a76f1ec41809a1')">修改</a>&nbsp;&nbsp;
+
+                                        <a href="#" onclick="del('481e0a567f00000140a76f1ec41809a1')">删除</a>&nbsp;&nbsp;
+
+                                    </td>
+                                    <td align="center" nowrap>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        印花税&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        印花税-
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        购销合同&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        2019-02-01&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        2019-02-28&nbsp;
+                                    </td>
+                                    <td align="center" nowrap style="color:Maroon">
+                                        3&nbsp;
+                                        <input type="hidden" name="sbbList[0]['SJYZE']" value="3" />
+                                    </td>
+                                    <td align="center" nowrap>
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        10,000&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        0.0003&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        3&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        0&nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        &nbsp;
+                                    </td>
+                                    <td align="center" nowrap>
+                                        0&nbsp;
+                                    </td>
+                                </tr>
+
+
+
+                                <input type="hidden" name="tmp_count" value="1" />
+                            </tbody>
+                        </table>
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="size14">应入库税（费）额合计：<span style="color:red;" id="_skhj">0.00</span></td>
+                            </tr>
+                        </table>
+                    </td>
+            </tr>
+            </table>
+    </div>
+    </div>
+    <table width="1200" cellpadding="0" cellspacing="0">
+        <tr>
+            <td>
+                <p align="left">
+
+                    <div align="center" style="margin-bottom:10px;">
+                        <span style="line-height:1.5;color:red">
+
+
+                            <input name="yhssbExcel" type="file" />
+                            <input type="button" onclick="yhssb_import()" value="导入" class="bottBlue rad" />
+                            <input type="button" onclick="layer.alert('申报成功后才能导出申报表！');" value="导出" class="bottBlue rad" />
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div align="center">
+                    <input type="button" onclick="tjsbjl()" value="添加申报记录" class="bottBlue rad" />
+
+                    <input class="bottBlue rad" type="button" value="暂存" id="submitList"
+                           onclick="layer.alert('暂存成功！');" />
+                    <input class="bottBlue rad" type="button" value="保存" id="submitList"
+                           onclick="tjsbb();" />
+                    <input class="bottBlue" type="button" xf-print value="打印" />
+                    <input class="bottBlue" type="button" value="申报" id="submitList"
+                           onclick="tjsbbsb();" />
+                    <input class="bottBlue" type="button" value="作废" id="submitList" onclick="layer.alert('申报成功后才能进行作废');" />
+
+                    <input type="button" onclick="qxbcsb()" value="取消本次申报" align="right" class="bottBlue rad">
+                    </span>
+                </div>
+                </p>
+            </td>
+            <p>&nbsp;</p>
+            </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+    <table width="1200" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+        <tr>
+            <td class="size14" valign="top" style="line-height:1.5;color:red">
+                <p>
+                    <font>说明：如有多笔印花税需要申报的，请逐条添加申报记录后再一起提交申报。</font><br />
+
+                    <br />
+                </p>
+            </td>
+        </tr>
+    </table>
+    </td>
+    </tr>
+    </table>
+    </form>
+    </div>
+    <div id="yhstjsbjl">
+        <form action="/jsdzsb/yhssb/lb.do" method="post" id="myForm2">
+            <input type="hidden" name="errAction" value="/jsdzsb/yhssb/tjsbjl.do" />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="gray_bg_color">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:8px; margin-top:8px;">
+                            <tr>
+                                <td align="left" class="liucheng_01"> </td>
+                                <td align="left">
+                                    <table width="750" border="0" align="left" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="center" class="liucheng_02 v2_h1_14w ">初始化</td>
+                                            <td align="center"><img src="/res/jsdzsb/bsdt/images/over_arrow.png" width="9" height="16" /></td>
+                                            <td align="center" class="liucheng_02 v2_h1_14w">填写申报表</td>
+                                            <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9" height="16" /></td>
+                                            <td align="center" class="liucheng_03 v2_h1_14b">确认申报</td>
+                                            <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9" height="16" /></td>
+                                            <td align="center" class="liucheng_03 v2_h1_14b">查看回执</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray3_bg_color"> </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+                            <tr>
+                                <td align="left" class="STYLE2">
+                                    <strong>请添加申报记录：</strong>
+                                </td>
+                            </tr>
+                            <td>
+                                <table width="100%" border="0" class="v2_border h12_b v2_table" style="margin-top:10px;">
+                                    <tr>
+                                        <td width="183" class="hintText"><div align="right"><span class="STYLE1 STYLE4">*</span>税款所属期起：</div></td>
+                                        <td width="28">&nbsp;</td>
+                                        <td width="412">2019-02-01</td>
+                                        <input type="hidden" name="sbbVo['skssqq']" value="2019-02-01" />
+                                        <td width="357">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hintText"><div align="right"><span class="STYLE1 STYLE4">*</span>税款所属期止：</div></td>
+                                        <td>&nbsp;</td>
+                                        <td>2019-02-28</td>
+                                        <input type="hidden" name="sbbVo['skssqz']" value="2019-02-28" />
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <tr></tr>
+                            <td>
+                                <table width="100%" border="0" class="v2_border h12_b v2_table" style="margin-top:10px;">
+                                    <tr>
+                                        <td width="19%">
+                                            <div align="right" class="hintText">
+                                                <div align="right"><span class="STYLE1 STYLE4">*</span>征收项目：</div>
+                                            </div>
+                                        </td>
+                                        <td width="3%">&nbsp;</td>
+                                        <td width="42%">
+                                            <label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                印花税
+                                            </label>
+                                            <input type="hidden" name="sbbVo['zsxmdm']" value="10111" id="sbbVo['zsxmdm']" />
+                                            <input type="hidden" name="sbbVo['jzbz']" value="N">
+                                        </td>
+                                        <td width="36%">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="hintText"><div align="right"><span class="STYLE1 STYLE4">*</span>应征凭证名称：</div></td>
+                                        <td>&nbsp;</td>
+                                        <td>
+                                            <label>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                <script language=javascript type=text/javascript>
+<!--
+Array.prototype.remove=function(param){
+  var index=0;
+
+  if(isNaN(param)){
+    index=this.indexOf(param);
+  }
+  else {
+    index=param;
+  }
+  var buffer = this;
+
+  if(index>=0 && index<this.length){
+    for(var i=index;i<this.length-1;i++)
+      buffer[i]=buffer[i+1];
+    this.length-=1;
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+function relationSelect() {
+  this.$ = function(id) {
+    return document.getElementById(id);
+  }
+
+  this.$$ = function(id, idx) {
+    var objs = document.getElementsByName(id);
+    if(objs[idx])
+      return objs[idx];
+    else
+      throw new Error("$$("+id+","+idx+"): 对象不存在或下标超出范围");
+  }
+
+  //给列表增加一个空选项
+  this.addOptionItem = function (obj, itemVal, itemText, selected) {
+    var no = new Option();
+    no.value = itemVal ;
+    no.text =  itemText ;
+    if($(obj).attr("showdefaulttittle"))	no.title =  itemText ;
+    obj.options[obj.options.length] = no;
+    if(selected)
+      obj.options[obj.options.length - 1].selected = true;
+  }
+
+  //删除指定Select控件的所有下拉选项的JS
+  this.clearSelectObj = function ( obj ) {
+    for(var i=0; i<obj.options.length; i++);
+      obj.options[i] == null;
+    obj.options.length = 0;
+  }
+
+  //生成下拉列表
+  this.renderSelectObj = function (obj, parentValue) {
+    if(obj.getAttribute("blankOption")) {
+      var bOpts = obj.getAttribute("blankOption").split(",");
+      if(bOpts.length>1)
+        this.addOptionItem( obj, bOpts[0],  bOpts[1]);
+    }
+    var parentObjID = obj.getAttribute("parentObjID");
+    if(parentObjID==null) parentObjID = "";
+    if(parentObjID!="")
+      var parentObj = this.$(parentObjID);
+
+    var defaultValue = obj.getAttribute("defaultID");
+
+    var dataArray = new Array();
+    if(obj.getAttribute("dataArray")) dataArray = this.cleanDataArray(obj);
+    if(parentValue==null) parentValue = "";
+
+    var datalen = dataArray.length;
+
+    for(var ii=0; ii<datalen; ii++) {
+      //如果数组中的父代码不等于要显示的父代码，则跳过
+      if(parentObj && dataArray[ii][2] != parentValue) continue;
+      if ( dataArray[ii][0]==defaultValue)
+        this.addOptionItem( obj, dataArray[ii][0], dataArray[ii][1], true);
+      else
+        this.addOptionItem( obj, dataArray[ii][0], dataArray[ii][1]);
+    }
+  }
+
+  //取得代码数组并根据显示或隐藏列表进行清理
+  this.cleanDataArray = function(obj) {
+    var dataArray = new Array();
+    if(obj.getAttribute("dataArray")) dataArray = eval(obj.getAttribute("dataArray"));
+
+    if(obj.getAttribute("showList")) {
+      var showVals = obj.getAttribute("showList").split(",");
+      for(ii=0; ii<dataArray.length; ii++) {
+        var bFound = false;
+        for(jj=0; jj<showVals.length; jj++) {
+          if(showVals[jj]==dataArray[ii][0]) {
+            bFound = true;
+            break;
+          }
+        }
+        if(!bFound) {
+          dataArray.remove(ii--);
+        }
+      }
+    }else if(obj.getAttribute("hiddenList")) {
+      var hiddenVals = obj.getAttribute("hiddenList").split(",");
+      for(ii=0; ii<dataArray.length; ii++) {
+        for(jj=0; jj<hiddenVals.length; jj++) {
+          if(hiddenVals[jj]==dataArray[ii][0]) {
+            dataArray.remove(ii--);
+            break;
+          }
+        }
+      }
+    }
+    return dataArray;
+  }
+
+  //父对象OnChange事件处理JS函数
+  this.selectChanged = function ( obj ) {
+    var childObjID = obj.getAttribute("childObjID");
+    var childObj = this.$(childObjID);
+    if(childObj) {
+      this.clearSelectObj(childObj, obj.value);
+      this.renderSelectObj(childObj, obj.value);
+      //触发子控件的onChange事件
+      this.selectChanged(childObj);
+    }
+  }
+}
+
+var relSelect = new relationSelect();
+//-->
+
+                                                </script>
+
+                                                <select onchange="if(relSelect) {relSelect.selectChanged(this);}" id="sbbVo['zspmdm']" name="sbbVo['zspmdm']" parentobjid="sbbVo['zsxmdm']" dataarray="JS_ZSPM_DM" defaultid="101110101">
+                                                    <script type="text/javascript" language="javascript">
+                                                        //字段名： DM, DMZW_MC, SJDM, DM_MC
+                                                        var JS_ZSPM_DM = new Array(
+                                                        new Array("101010101", "卷烟", "10101", "101010101"),
+                                                        new Array("101010102", "雪茄烟", "10101", "101010102"),
+                                                        new Array("101010103", "烟丝", "10101", "101010103"),
+                                                        new Array("101010104", "烟叶", "10101", "101010104"),
+                                                        new Array("101010199", "其他烟草加工业", "10101", "101010199"),
+                                                        new Array("101010201", "白酒", "10101", "101010201"),
+                                                        new Array("101010202", "黄酒", "10101", "101010202"),
+                                                        new Array("101010203", "啤酒", "10101", "101010203"),
+                                                        new Array("101010204", "其他酒", "10101", "101010204"),
+                                                        new Array("101010205", "酒精", "10101", "101010205"),
+                                                        new Array("101010206", "饮料", "10101", "101010206"),
+                                                        new Array("101010207", "茶（17%、16%）", "10101", "101010207"),
+                                                        new Array("101010208", "茶（11%、10%）", "10101", "101010208"),
+                                                        new Array("101010301", "粮食、饲料", "10101", "101010301"),
+                                                        new Array("101010302", "食用植物油", "10101", "101010302"),
+                                                        new Array("101010303", "糖", "10101", "101010303"),
+                                                        new Array("101010398", "其他食品加工制造业（17%、16%）", "10101", "101010398"),
+                                                        new Array("101010399", "其他食品加工制造业（11%、10%）", "10101", "101010399"),
+                                                        new Array("101010401", "棉纺织品", "10101", "101010401"),
+                                                        new Array("101010402", "毛纺织品", "10101", "101010402"),
+                                                        new Array("101010403", "丝织品", "10101", "101010403"),
+                                                        new Array("101010404", "针织品", "10101", "101010404"),
+                                                        new Array("101010405", "化纤织品", "10101", "101010405"),
+                                                        new Array("101010499", "其他纺织业", "10101", "101010499"),
+                                                        new Array("101010501", "机制纸", "10101", "101010501"),
+                                                        new Array("101010502", "纸板", "10101", "101010502"),
+                                                        new Array("101010599", "其他造纸及纸制品业", "10101", "101010599"),
+                                                        new Array("101010601", "服装", "10101", "101010601"),
+                                                        new Array("101010602", "皮革、毛皮", "10101", "101010602"),
+                                                        new Array("101010699", "其他服装及其他制品业", "10101", "101010699"),
+                                                        new Array("101010701", "成品油", "10101", "101010701"),
+                                                        new Array("101010799", "其他石油加工及炼焦业", "10101", "101010799"),
+                                                        new Array("101010801", "化学化工产品", "10101", "101010801"),
+                                                        new Array("101010802", "化肥", "10101", "101010802"),
+                                                        new Array("101010803", "农药", "10101", "101010803"),
+                                                        new Array("101010804", "化妆品", "10101", "101010804"),
+                                                        new Array("101010805", "护肤护发品", "10101", "101010805"),
+                                                        new Array("101010899", "其他化学原料及化学制品业", "10101", "101010899"),
+                                                        new Array("101010901", "汽车轮胎", "10101", "101010901"),
+                                                        new Array("101010999", "其他橡胶制品业", "10101", "101010999"),
+                                                        new Array("101011001", "水泥", "10101", "101011001"),
+                                                        new Array("101011002", "水泥制品", "10101", "101011002"),
+                                                        new Array("101011003", "平板玻璃", "10101", "101011003"),
+                                                        new Array("101011004", "陶瓷制品", "10101", "101011004"),
+                                                        new Array("101011099", "其他非金属矿物制品业", "10101", "101011099"),
+                                                        new Array("101011101", "生铁", "10101", "101011101"),
+                                                        new Array("101011102", "钢坯", "10101", "101011102"),
+                                                        new Array("101011103", "钢材", "10101", "101011103"),
+                                                        new Array("101011199", "其他黑色金属冶炼及压延加工业", "10101", "101011199"),
+                                                        new Array("101011201", "常用金属", "10101", "101011201"),
+                                                        new Array("101011202", "贵金属", "10101", "101011202"),
+                                                        new Array("101011299", "稀有稀土金属", "10101", "101011299"),
+                                                        new Array("101011301", "汽车", "10101", "101011301"),
+                                                        new Array("101011302", "摩托车", "10101", "101011302"),
+                                                        new Array("101011303", "飞机", "10101", "101011303"),
+                                                        new Array("101011304", "机动船舶", "10101", "101011304"),
+                                                        new Array("101011305", "自行车", "10101", "101011305"),
+                                                        new Array("101011306", "通用设备", "10101", "101011306"),
+                                                        new Array("101011307", "专用设备（17%、16%）", "10101", "101011307"),
+                                                        new Array("101011308", "专用设备（11%、10%）", "10101", "101011308"),
+                                                        new Array("101011398", "其他交通运输工具（17%、16%）", "10101", "101011398"),
+                                                        new Array("101011399", "其他交通运输工具（11%、10%）", "10101", "101011399"),
+                                                        new Array("101011401", "家用电器", "10101", "101011401"),
+                                                        new Array("101011402", "电机", "10101", "101011402"),
+                                                        new Array("101011403", "电线电缆", "10101", "101011403"),
+                                                        new Array("101011499", "其他电气机械及器材制造业", "10101", "101011499"),
+                                                        new Array("101011501", "通信设备", "10101", "101011501"),
+                                                        new Array("101011502", "电子计算机", "10101", "101011502"),
+                                                        new Array("101011503", "家用视听设备", "10101", "101011503"),
+                                                        new Array("101011599", "其他电子通信设备制造业", "10101", "101011599"),
+                                                        new Array("101011600", "家具制造业", "10101", "101011600"),
+                                                        new Array("101011701", "中药原药制造业", "10101", "101011701"),
+                                                        new Array("101011799", "其他医药制造业", "10101", "101011799"),
+                                                        new Array("101011801", "贵重首饰", "10101", "101011801"),
+                                                        new Array("101011898", "其他制造业（17%、16%）", "10101", "101011898"),
+                                                        new Array("101011899", "其他制造业（11%、10%）", "10101", "101011899"),
+                                                        new Array("101012100", "原煤", "10101", "101012100"),
+                                                        new Array("101012200", "洗煤", "10101", "101012200"),
+                                                        new Array("101012301", "工业盐", "10101", "101012301"),
+                                                        new Array("101012302", "食用盐", "10101", "101012302"),
+                                                        new Array("101012400", "原油", "10101", "101012400"),
+                                                        new Array("101012500", "天然气", "10101", "101012500"),
+                                                        new Array("101012600", "黑色金属矿产品", "10101", "101012600"),
+                                                        new Array("101012700", "有色金属矿产品", "10101", "101012700"),
+                                                        new Array("101012800", "非金属矿产品", "10101", "101012800"),
+                                                        new Array("101012900", "其他采矿业", "10101", "101012900"),
+                                                        new Array("101013100", "发电", "10101", "101013100"),
+                                                        new Array("101013200", "供电", "10101", "101013200"),
+                                                        new Array("101013300", "煤气", "10101", "101013300"),
+                                                        new Array("101013400", "燃气", "10101", "101013400"),
+                                                        new Array("101013500", "自来水", "10101", "101013500"),
+                                                        new Array("101013600", "暖气、热水、冷气等的生产和供应", "10101", "101013600"),
+                                                        new Array("101013901", "其他电力煤气及水的生产和供应业（17%、16%）", "10101", "101013901"),
+                                                        new Array("101013902", "其他电力煤气及水的生产和供应业（13%）", "10101", "101013902"),
+                                                        new Array("101014001", "商业(17%、16%)", "10101", "101014001"),
+                                                        new Array("101014002", "商业（11%、10%）", "10101", "101014002"),
+                                                        new Array("101014003", "商业(6%)", "10101", "101014003"),
+                                                        new Array("101014004", "商业(4%)", "10101", "101014004"),
+                                                        new Array("101014006", "商业(3%)", "10101", "101014006"),
+                                                        new Array("101015000", "软件、集成电路", "10101", "101015000"),
+                                                        new Array("101016101", "陆路货物运输服务", "10101", "101016101"),
+                                                        new Array("101016102", "水路运输服务", "10101", "101016102"),
+                                                        new Array("101016103", "航空运输服务", "10101", "101016103"),
+                                                        new Array("101016104", "管道运输服务", "10101", "101016104"),
+                                                        new Array("101016105", "铁路运输服务", "10101", "101016105"),
+                                                        new Array("101016106", "陆路旅客运输服务", "10101", "101016106"),
+                                                        new Array("101016201", "研发服务", "10101", "101016201"),
+                                                        new Array("101016204", "合同能源管理服务", "10101", "101016204"),
+                                                        new Array("101016205", "工程勘察勘探服务", "10101", "101016205"),
+                                                        new Array("101016206", "专业技术服务", "10101", "101016206"),
+                                                        new Array("101016301", "软件服务", "10101", "101016301"),
+                                                        new Array("101016302", "电路设计及测试服务", "10101", "101016302"),
+                                                        new Array("101016303", "信息系统服务", "10101", "101016303"),
+                                                        new Array("101016304", "业务流程管理服务", "10101", "101016304"),
+                                                        new Array("101016305", "信息系统增值服务", "10101", "101016305"),
+                                                        new Array("101016401", "设计服务", "10101", "101016401"),
+                                                        new Array("101016403", "知识产权服务", "10101", "101016403"),
+                                                        new Array("101016404", "广告服务", "10101", "101016404"),
+                                                        new Array("101016405", "会议展览服务", "10101", "101016405"),
+                                                        new Array("101016502", "航空服务", "10101", "101016502"),
+                                                        new Array("101016503", "港口码头服务", "10101", "101016503"),
+                                                        new Array("101016504", "货运客运场站服务", "10101", "101016504"),
+                                                        new Array("101016505", "打捞救助服务", "10101", "101016505"),
+                                                        new Array("101016508", "仓储服务", "10101", "101016508"),
+                                                        new Array("101016509", "装卸搬运服务", "10101", "101016509"),
+                                                        new Array("101016510", "收派服务", "10101", "101016510"),
+                                                        new Array("101016601", "有形动产融资租赁", "10101", "101016601"),
+                                                        new Array("101016602", "有形动产经营租赁", "10101", "101016602"),
+                                                        new Array("101016603", "不动产融资租赁（11%、10%、3%）", "10101", "101016603"),
+                                                        new Array("101016604", "不动产融资租赁（11%、10%、5%）", "10101", "101016604"),
+                                                        new Array("101016605", "不动产经营租赁（11%、10%、3%）", "10101", "101016605"),
+                                                        new Array("101016606", "不动产经营租赁（11%、10%、5%）", "10101", "101016606"),
+                                                        new Array("101016701", "认证服务", "10101", "101016701"),
+                                                        new Array("101016702", "鉴证服务", "10101", "101016702"),
+                                                        new Array("101016703", "咨询服务", "10101", "101016703"),
+                                                        new Array("101016801", "广播影视节目（作品）制作服务", "10101", "101016801"),
+                                                        new Array("101016802", "广播影视节目（作品）发行服务", "10101", "101016802"),
+                                                        new Array("101016803", "广播影视节目（作品）播映服务", "10101", "101016803"),
+                                                        new Array("101016901", "邮政普遍服务", "10101", "101016901"),
+                                                        new Array("101016902", "邮政特殊服务", "10101", "101016902"),
+                                                        new Array("101016903", "其他邮政服务", "10101", "101016903"),
+                                                        new Array("101017001", "基础电信服务", "10101", "101017001"),
+                                                        new Array("101017002", "增值电信服务", "10101", "101017002"),
+                                                        new Array("101017101", "工程服务", "10101", "101017101"),
+                                                        new Array("101017102", "安装服务", "10101", "101017102"),
+                                                        new Array("101017103", "修缮服务", "10101", "101017103"),
+                                                        new Array("101017104", "装饰服务", "10101", "101017104"),
+                                                        new Array("101017190", "其他建筑服务", "10101", "101017190"),
+                                                        new Array("101017201", "贷款服务", "10101", "101017201"),
+                                                        new Array("101017202", "直接收费金融服务", "10101", "101017202"),
+                                                        new Array("101017203", "人身保险服务", "10101", "101017203"),
+                                                        new Array("101017204", "财产保险服务", "10101", "101017204"),
+                                                        new Array("101017205", "金融商品转让", "10101", "101017205"),
+                                                        new Array("101017301", "企业管理服务", "10101", "101017301"),
+                                                        new Array("101017302", "经纪代理服务（6%、3%）", "10101", "101017302"),
+                                                        new Array("101017303", "人力资源服务（6%、3%）", "10101", "101017303"),
+                                                        new Array("101017304", "安全保护服务（3%）", "10101", "101017304"),
+                                                        new Array("101017305", "人力资源服务（6%、5%）", "10101", "101017305"),
+                                                        new Array("101017306", "经纪代理服务（6%、5%）", "10101", "101017306"),
+                                                        new Array("101017307", "安全保护服务（5%）", "10101", "101017307"),
+                                                        new Array("101017490", "其他现代服务", "10101", "101017490"),
+                                                        new Array("101017510", "文化服务", "10101", "101017510"),
+                                                        new Array("101017520", "体育服务", "10101", "101017520"),
+                                                        new Array("101017530", "教育服务", "10101", "101017530"),
+                                                        new Array("101017540", "医疗服务", "10101", "101017540"),
+                                                        new Array("101017550", "旅游服务", "10101", "101017550"),
+                                                        new Array("101017560", "娱乐服务", "10101", "101017560"),
+                                                        new Array("101017570", "餐饮服务", "10101", "101017570"),
+                                                        new Array("101017580", "住宿服务", "10101", "101017580"),
+                                                        new Array("101017590", "居民日常服务", "10101", "101017590"),
+                                                        new Array("101017599", "其他生活服务", "10101", "101017599"),
+                                                        new Array("101017601", "专利或非专利技术", "10101", "101017601"),
+                                                        new Array("101017602", "商标和著作权", "10101", "101017602"),
+                                                        new Array("101017603", "土地使用权（11%、10%、3%）", "10101", "101017603"),
+                                                        new Array("101017604", "土地使用权（11%、10%、5%）", "10101", "101017604"),
+                                                        new Array("101017680", "其他自然资源使用权", "10101", "101017680"),
+                                                        new Array("101017690", "其他权益性无形资产", "10101", "101017690"),
+                                                        new Array("101017711", "建筑物（11%、10%、3%）-增量房", "10101", "101017711"),
+                                                        new Array("101017712", "建筑物（11%、10%、3%）-二手房", "10101", "101017712"),
+                                                        new Array("101017713", "建筑物（11%、10%、5%）-增量房", "10101", "101017713"),
+                                                        new Array("101017714", "建筑物（11%、10%、5%）-二手房", "10101", "101017714"),
+                                                        new Array("101017721", "构筑物（11%、10%、3%）-增量房", "10101", "101017721"),
+                                                        new Array("101017722", "构筑物（11%、10%、3%）-二手房", "10101", "101017722"),
+                                                        new Array("101017723", "构筑物（11%、10%、5%）-增量房", "10101", "101017723"),
+                                                        new Array("101017724", "构筑物（11%、10%、5%）-二手房", "10101", "101017724"),
+                                                        new Array("101017801", "铁路建设基金（中央）", "10101", "101017801"),
+                                                        new Array("101019001", "其他行业（17%、16%）", "10101", "101019001"),
+                                                        new Array("101019002", "其他行业（11%、10%）", "10101", "101019002"),
+                                                        new Array("101019901", "滞纳金", "10101", "101019901"),
+                                                        new Array("101019902", "罚款", "10101", "101019902"),
+                                                        new Array("101020101", "卷烟（调拨价70元（不含增值税）/条以上（含70元），从价计算）", "10102", "101020101"),
+                                                        new Array("101020102", "卷烟（调拨价70元（不含增值税）/条以下，从价计算）", "10102", "101020102"),
+                                                        new Array("101020104", "卷烟（调拨价70元（不含增值税）/条以上（含70元），从量计算）", "10102", "101020104"),
+                                                        new Array("101020105", "卷烟（调拨价70元（不含增值税）/条以下，从量计算）", "10102", "101020105"),
+                                                        new Array("101020106", "卷烟（商业批发，从价计算）", "10102", "101020106"),
+                                                        new Array("101020107", "雪茄烟", "10102", "101020107"),
+                                                        new Array("101020108", "烟丝", "10102", "101020108"),
+                                                        new Array("101020109", "卷烟（商业批发，从量计算）", "10102", "101020109"),
+                                                        new Array("101020201", "粮食白酒（从价计算）", "10102", "101020201"),
+                                                        new Array("101020202", "粮食白酒（从量计算）", "10102", "101020202"),
+                                                        new Array("101020203", "薯类白酒（从价计算）", "10102", "101020203"),
+                                                        new Array("101020204", "薯类白酒（从量计算）", "10102", "101020204"),
+                                                        new Array("101020205", "黄酒", "10102", "101020205"),
+                                                        new Array("101020206", "啤酒（3000元/吨以上）", "10102", "101020206"),
+                                                        new Array("101020207", "啤酒（3000元/吨以下）", "10102", "101020207"),
+                                                        new Array("101020299", "其他酒", "10102", "101020299"),
+                                                        new Array("101020300", "化妆品", "10102", "101020300"),
+                                                        new Array("101020401", "金银首饰（铂金首饰、钻石及钻石饰品）", "10102", "101020401"),
+                                                        new Array("101020499", "其他金银首饰及珠宝玉石", "10102", "101020499"),
+                                                        new Array("101020500", "鞭炮、焰火", "10102", "101020500"),
+                                                        new Array("101020603", "柴油", "10102", "101020603"),
+                                                        new Array("101020604", "航空煤油", "10102", "101020604"),
+                                                        new Array("101020605", "石脑油", "10102", "101020605"),
+                                                        new Array("101020606", "溶剂油", "10102", "101020606"),
+                                                        new Array("101020607", "润滑油", "10102", "101020607"),
+                                                        new Array("101020608", "燃料油", "10102", "101020608"),
+                                                        new Array("101020609", "汽油", "10102", "101020609"),
+                                                        new Array("101020801", "250毫升（含）以下的摩托车", "10102", "101020801"),
+                                                        new Array("101020802", "250毫升（不含）以上摩托车", "10102", "101020802"),
+                                                        new Array("101020803", "250毫升摩托车", "10102", "101020803"),
+                                                        new Array("101020901", "1.0升（含）以下的乘用车", "10102", "101020901"),
+                                                        new Array("101020902", "1.0升以上至1.5升(含)的乘用车", "10102", "101020902"),
+                                                        new Array("101020903", "1.5升以上至2.0升(含)的乘用车", "10102", "101020903"),
+                                                        new Array("101020904", "2.0升以上至2.5升(含)的乘用车", "10102", "101020904"),
+                                                        new Array("101020905", "2.5升以上至3.0升(含)的乘用车", "10102", "101020905"),
+                                                        new Array("101020906", "3.0升以上至4.0升(含)的乘用车", "10102", "101020906"),
+                                                        new Array("101020907", "4.0升以上的乘用车", "10102", "101020907"),
+                                                        new Array("101021000", "中轻型商用客车", "10102", "101021000"),
+                                                        new Array("101021100", "高尔夫球及球具", "10102", "101021100"),
+                                                        new Array("101021200", "高档手表", "10102", "101021200"),
+                                                        new Array("101021300", "游艇", "10102", "101021300"),
+                                                        new Array("101021400", "木制一次性筷子", "10102", "101021400"),
+                                                        new Array("101021500", "实木地板", "10102", "101021500"),
+                                                        new Array("101021601", "电池（不含铅蓄电池）", "10102", "101021601"),
+                                                        new Array("101021699", "铅蓄电池", "10102", "101021699"),
+                                                        new Array("101021700", "涂料", "10102", "101021700"),
+                                                        new Array("101021800", "高档化妆品", "10102", "101021800"),
+                                                        new Array("101021901", "超豪华乘用车", "10102", "101021901"),
+                                                        new Array("101021902", "超豪华中轻型商用客车", "10102", "101021902"),
+                                                        new Array("101029901", "滞纳金", "10102", "101029901"),
+                                                        new Array("101029902", "罚款", "10102", "101029902"),
+                                                        new Array("101030101", "陆路运输", "10103", "101030101"),
+                                                        new Array("101030102", "水路运输", "10103", "101030102"),
+                                                        new Array("101030103", "航空运输", "10103", "101030103"),
+                                                        new Array("101030104", "管道运输", "10103", "101030104"),
+                                                        new Array("101030105", "装卸搬运", "10103", "101030105"),
+                                                        new Array("101030201", "建筑", "10103", "101030201"),
+                                                        new Array("101030202", "安装", "10103", "101030202"),
+                                                        new Array("101030203", "修缮", "10103", "101030203"),
+                                                        new Array("101030204", "装饰", "10103", "101030204"),
+                                                        new Array("101030299", "其他工程作业", "10103", "101030299"),
+                                                        new Array("101030301", "金融", "10103", "101030301"),
+                                                        new Array("101030302", "保险", "10103", "101030302"),
+                                                        new Array("101030303", "证券", "10103", "101030303"),
+                                                        new Array("101030401", "邮政", "10103", "101030401"),
+                                                        new Array("101030402", "电信", "10103", "101030402"),
+                                                        new Array("101030501", "文化业", "10103", "101030501"),
+                                                        new Array("101030502", "体育业", "10103", "101030502"),
+                                                        new Array("101030601", "音乐茶座", "10103", "101030601"),
+                                                        new Array("101030602", "台球", "10103", "101030602"),
+                                                        new Array("101030603", "高尔夫球", "10103", "101030603"),
+                                                        new Array("101030604", "保龄球", "10103", "101030604"),
+                                                        new Array("101030605", "游艺厅", "10103", "101030605"),
+                                                        new Array("101030606", "网吧", "10103", "101030606"),
+                                                        new Array("101030607", "舞厅", "10103", "101030607"),
+                                                        new Array("101030608", "歌厅", "10103", "101030608"),
+                                                        new Array("101030609", "卡拉OK舞厅", "10103", "101030609"),
+                                                        new Array("101030699", "其他娱乐业", "10103", "101030699"),
+                                                        new Array("101030701", "代理业", "10103", "101030701"),
+                                                        new Array("101030702", "旅店业", "10103", "101030702"),
+                                                        new Array("101030703", "饮食业", "10103", "101030703"),
+                                                        new Array("101030704", "旅游业", "10103", "101030704"),
+                                                        new Array("101030705", "仓储业", "10103", "101030705"),
+                                                        new Array("101030706", "租赁业", "10103", "101030706"),
+                                                        new Array("101030707", "房屋租赁", "10103", "101030707"),
+                                                        new Array("101030708", "广告业", "10103", "101030708"),
+                                                        new Array("101030799", "其他服务业", "10103", "101030799"),
+                                                        new Array("101030801", "转让土地使用权", "10103", "101030801"),
+                                                        new Array("101030802", "转让商标权", "10103", "101030802"),
+                                                        new Array("101030803", "转让专利权", "10103", "101030803"),
+                                                        new Array("101030804", "转让非专利权", "10103", "101030804"),
+                                                        new Array("101030805", "转让著作权", "10103", "101030805"),
+                                                        new Array("101030806", "转让商誉", "10103", "101030806"),
+                                                        new Array("101030807", "转让动漫版权", "10103", "101030807"),
+                                                        new Array("101030808", "转让自然资源使用权", "10103", "101030808"),
+                                                        new Array("101030899", "其他转让无形资产", "10103", "101030899"),
+                                                        new Array("101030901", "销售建筑物或构筑物", "10103", "101030901"),
+                                                        new Array("101030902", "销售其他土地附着物", "10103", "101030902"),
+                                                        new Array("101030999", "其他销售不动产", "10103", "101030999"),
+                                                        new Array("101039901", "滞纳金", "10103", "101039901"),
+                                                        new Array("101039902", "罚款", "10103", "101039902"),
+                                                        new Array("101040001", "应纳税所得额", "10104", "101040001"),
+                                                        new Array("101049901", "滞纳金", "10104", "101049901"),
+                                                        new Array("101049902", "罚款", "10104", "101049902"),
+                                                        new Array("101049903", "利息收入", "10104", "101049903"),
+                                                        new Array("101050000", "企业所得税退税", "10105", "101050000"),
+                                                        new Array("101060100", "工资薪金所得", "10106", "101060100"),
+                                                        new Array("101060200", "经营所得", "10106", "101060200"),
+                                                        new Array("101060400", "劳务报酬所得", "10106", "101060400"),
+                                                        new Array("101060500", "稿酬所得", "10106", "101060500"),
+                                                        new Array("101060600", "特许权使用费所得", "10106", "101060600"),
+                                                        new Array("101060701", "储蓄存款利息所得", "10106", "101060701"),
+                                                        new Array("101060799", "其他利息、股息、红利所得", "10106", "101060799"),
+                                                        new Array("101060801", "个人房屋出租所得", "10106", "101060801"),
+                                                        new Array("101060899", "其他财产租赁所得", "10106", "101060899"),
+                                                        new Array("101060901", "限售股转让所得", "10106", "101060901"),
+                                                        new Array("101060902", "个人房屋转让所得", "10106", "101060902"),
+                                                        new Array("101060903", "财产拍卖所得及回流文物拍卖所得", "10106", "101060903"),
+                                                        new Array("101060999", "其他转让所得", "10106", "101060999"),
+                                                        new Array("101061000", "偶然所得", "10106", "101061000"),
+                                                        new Array("101061100", "其他所得", "10106", "101061100"),
+                                                        new Array("101069901", "滞纳金", "10106", "101069901"),
+                                                        new Array("101069902", "罚款", "10106", "101069902"),
+                                                        new Array("101070423", "高岭土（瓷土）", "10107", "101070423"),
+                                                        new Array("101070439", "石灰石", "10107", "101070439"),
+                                                        new Array("101070499", "其他未列名非金属矿原矿", "10107", "101070499"),
+                                                        new Array("101071201", "地热", "10107", "101071201"),
+                                                        new Array("101073103", "高岭土", "10107", "101073103"),
+                                                        new Array("101073105", "石灰石", "10107", "101073105"),
+                                                        new Array("101073110", "粘土", "10107", "101073110"),
+                                                        new Array("101073111", "砂石", "10107", "101073111"),
+                                                        new Array("101073114", "海盐", "10107", "101073114"),
+                                                        new Array("101073201", "矿泉水", "10107", "101073201"),
+                                                        new Array("101073202", "大理岩", "10107", "101073202"),
+                                                        new Array("101073203", "花岗岩", "10107", "101073203"),
+                                                        new Array("101073299", "其他未列名非金属矿", "10107", "101073299"),
+                                                        new Array("101079901", "滞纳金", "10107", "101079901"),
+                                                        new Array("101079902", "罚款", "10107", "101079902"),
+                                                        new Array("101090101", "市区（增值税附征）", "10109", "101090101"),
+                                                        new Array("101090102", "市区（营业税附征）", "10109", "101090102"),
+                                                        new Array("101090103", "市区（消费税附征）", "10109", "101090103"),
+                                                        new Array("101090201", "县城、镇（增值税附征）", "10109", "101090201"),
+                                                        new Array("101090202", "县城、镇（营业税附征）", "10109", "101090202"),
+                                                        new Array("101090203", "县城、镇（消费税附征）", "10109", "101090203"),
+                                                        new Array("101090301", "非市区、县城、镇（增值税附征）", "10109", "101090301"),
+                                                        new Array("101090302", "非市区、县城、镇（营业税附征）", "10109", "101090302"),
+                                                        new Array("101090303", "非市区、县城、镇（消费税附征）", "10109", "101090303"),
+                                                        new Array("101099901", "滞纳金", "10109", "101099901"),
+                                                        new Array("101099902", "罚款", "10109", "101099902"),
+                                                        new Array("101100700", "从价计征", "10110", "101100700"),
+                                                        new Array("101100800", "从租计征", "10110", "101100800"),
+                                                        new Array("101100900", "个人出租住房", "10110", "101100900"),
+                                                        new Array("101109901", "滞纳金", "10110", "101109901"),
+                                                        new Array("101109902", "罚款", "10110", "101109902"),
+                                                        new Array("101110101", "购销合同", "10111", "101110101"),
+                                                        new Array("101110102", "加工承揽合同", "10111", "101110102"),
+                                                        new Array("101110103", "建设工程勘察设计合同", "10111", "101110103"),
+                                                        new Array("101110104", "建筑安装工程承包合同", "10111", "101110104"),
+                                                        new Array("101110105", "财产租赁合同", "10111", "101110105"),
+                                                        new Array("101110106", "货物运输合同(按运输费用万分之五贴花)", "10111", "101110106"),
+                                                        new Array("101110107", "仓储保管合同", "10111", "101110107"),
+                                                        new Array("101110108", "借款合同", "10111", "101110108"),
+                                                        new Array("101110109", "财产保险合同", "10111", "101110109"),
+                                                        new Array("101110110", "技术合同", "10111", "101110110"),
+                                                        new Array("101110200", "产权转移书据", "10111", "101110200"),
+                                                        new Array("101110301", "A种股票", "10111", "101110301"),
+                                                        new Array("101110302", "B种股票", "10111", "101110302"),
+                                                        new Array("101110303", "非交易转让股票A种股票", "10111", "101110303"),
+                                                        new Array("101110304", "非交易转让股票B种股票", "10111", "101110304"),
+                                                        new Array("101110305", "无偿划拨国有股权的股数", "10111", "101110305"),
+                                                        new Array("101110400", "权利、许可证照", "10111", "101110400"),
+                                                        new Array("101110501", "资金账簿", "10111", "101110501"),
+                                                        new Array("101110599", "其他营业账簿", "10111", "101110599"),
+                                                        new Array("101119800", "其他凭证", "10111", "101119800"),
+                                                        new Array("101120101", "城市土地使用税等级1", "10112", "101120101"),
+                                                        new Array("101120102", "城市土地使用税等级2", "10112", "101120102"),
+                                                        new Array("101120103", "城市土地使用税等级3", "10112", "101120103"),
+                                                        new Array("101120104", "城市土地使用税等级4", "10112", "101120104"),
+                                                        new Array("101120105", "城市土地使用税等级5", "10112", "101120105"),
+                                                        new Array("101120110", "城市土地使用税等级10", "10112", "101120110"),
+                                                        new Array("101120111", "城市土地使用税等级11", "10112", "101120111"),
+                                                        new Array("101120112", "城市土地使用税等级12", "10112", "101120112"),
+                                                        new Array("101120113", "城市土地使用税等级13", "10112", "101120113"),
+                                                        new Array("101120114", "城市土地使用税等级14", "10112", "101120114"),
+                                                        new Array("101120115", "城市土地使用税等级15", "10112", "101120115"),
+                                                        new Array("101129901", "滞纳金", "10112", "101129901"),
+                                                        new Array("101129902", "罚款", "10112", "101129902"),
+                                                        new Array("101130501", "普通住宅（预征）", "10113", "101130501"),
+                                                        new Array("101130502", "非普通住宅（预征）", "10113", "101130502"),
+                                                        new Array("101130503", "其他类型房地产（预征）", "10113", "101130503"),
+                                                        new Array("101130601", "普通住宅（清算）", "10113", "101130601"),
+                                                        new Array("101130602", "非普通住宅（清算）", "10113", "101130602"),
+                                                        new Array("101130603", "其他类型房地产（清算）", "10113", "101130603"),
+                                                        new Array("101130700", "旧房转让（非核定方式）", "10113", "101130700"),
+                                                        new Array("101130801", "普通住宅（尾盘）", "10113", "101130801"),
+                                                        new Array("101130802", "非普通住宅（尾盘）", "10113", "101130802"),
+                                                        new Array("101130803", "其他类型房地产（尾盘）", "10113", "101130803"),
+                                                        new Array("101130901", "普通住宅（核定）", "10113", "101130901"),
+                                                        new Array("101130902", "非普通住宅（核定）", "10113", "101130902"),
+                                                        new Array("101130903", "其他类型房地产（核定）", "10113", "101130903"),
+                                                        new Array("101131000", "整体转让在建工程", "10113", "101131000"),
+                                                        new Array("101131100", "旧房转让（核定方式）", "10113", "101131100"),
+                                                        new Array("101139901", "滞纳金", "10113", "101139901"),
+                                                        new Array("101139902", "罚款", "10113", "101139902"),
+                                                        new Array("101140101", "1.0升（含）以下的乘用车", "10114", "101140101"),
+                                                        new Array("101140102", "1.0升以上至1.6升(含)的乘用车", "10114", "101140102"),
+                                                        new Array("101140103", "1.6升以上至2.0升(含)的乘用车", "10114", "101140103"),
+                                                        new Array("101140104", "2.0升以上至2.5升(含)的乘用车", "10114", "101140104"),
+                                                        new Array("101140105", "2.5升以上至3.0升(含)的乘用车", "10114", "101140105"),
+                                                        new Array("101140106", "3.0升以上至4.0升(含)的乘用车", "10114", "101140106"),
+                                                        new Array("101140107", "4.0升以上的乘用车", "10114", "101140107"),
+                                                        new Array("101140211", "核定载客人数20人以下客车", "10114", "101140211"),
+                                                        new Array("101140212", "核定载客人数20人（含）以上客车", "10114", "101140212"),
+                                                        new Array("101140220", "货车", "10114", "101140220"),
+                                                        new Array("101140300", "挂车", "10114", "101140300"),
+                                                        new Array("101140400", "摩托车", "10114", "101140400"),
+                                                        new Array("101140501", "专用作业车", "10114", "101140501"),
+                                                        new Array("101140502", "轮式专用机械车", "10114", "101140502"),
+                                                        new Array("101140610", "机动船舶", "10114", "101140610"),
+                                                        new Array("101140611", "净吨位小于或者等于200吨的机动船舶", "10114", "101140611"),
+                                                        new Array("101140612", "净吨位201吨至2000吨的机动船舶", "10114", "101140612"),
+                                                        new Array("101140613", "净吨位2001吨至10000吨的机动船舶", "10114", "101140613"),
+                                                        new Array("101140614", "净吨位10001吨及以上的机动船舶", "10114", "101140614"),
+                                                        new Array("101140620", "拖船、非机动驳船", "10114", "101140620"),
+                                                        new Array("101140621", "净吨位不超过200吨的拖船、非机动驳船", "10114", "101140621"),
+                                                        new Array("101140622", "净吨位超过200吨但不超过2000吨的拖船、非机动驳船", "10114", "101140622"),
+                                                        new Array("101140623", "净吨位超过2000吨但不超过10000吨的拖船、非机动驳船", "10114", "101140623"),
+                                                        new Array("101140624", "净吨位超过10000吨的拖船、非机动驳船", "10114", "101140624"),
+                                                        new Array("101140630", "游艇", "10114", "101140630"),
+                                                        new Array("101140631", "艇身长度不超过10米的游艇", "10114", "101140631"),
+                                                        new Array("101140632", "艇身长度超过10米但不超过18米的游艇", "10114", "101140632"),
+                                                        new Array("101140633", "艇身长度超过18米但不超过30米的游艇", "10114", "101140633"),
+                                                        new Array("101140634", "艇身长度超过30米的游艇", "10114", "101140634"),
+                                                        new Array("101140635", "辅助动力帆艇", "10114", "101140635"),
+                                                        new Array("101149901", "滞纳金", "10114", "101149901"),
+                                                        new Array("101149902", "罚款", "10114", "101149902"),
+                                                        new Array("101159901", "滞纳金", "10115", "101159901"),
+                                                        new Array("101159902", "罚款", "10115", "101159902"),
+                                                        new Array("101160000", "车辆购置税", "10116", "101160000"),
+                                                        new Array("101169901", "滞纳金", "10116", "101169901"),
+                                                        new Array("101169902", "罚款", "10116", "101169902"),
+                                                        new Array("101180101", "耕地（基本农田）", "10118", "101180101"),
+                                                        new Array("101180102", "耕地（非基本农田）", "10118", "101180102"),
+                                                        new Array("101180200", "林地", "10118", "101180200"),
+                                                        new Array("101180300", "牧草地", "10118", "101180300"),
+                                                        new Array("101180400", "农田水利用地", "10118", "101180400"),
+                                                        new Array("101180501", "养殖水面", "10118", "101180501"),
+                                                        new Array("101180502", "渔业水域滩涂", "10118", "101180502"),
+                                                        new Array("101180600", "园地", "10118", "101180600"),
+                                                        new Array("101180700", "草地", "10118", "101180700"),
+                                                        new Array("101180800", "苇田", "10118", "101180800"),
+                                                        new Array("101189800", "其他农业用地", "10118", "101189800"),
+                                                        new Array("101190102", "居住用地", "10119", "101190102"),
+                                                        new Array("101190103", "商业用地", "10119", "101190103"),
+                                                        new Array("101190104", "工业用地", "10119", "101190104"),
+                                                        new Array("101190105", "综合用地", "10119", "101190105"),
+                                                        new Array("101190190", "其他用地", "10119", "101190190"),
+                                                        new Array("101190211", "土地使用权出售（居住用地）", "10119", "101190211"),
+                                                        new Array("101190212", "土地使用权出售（商业用地）", "10119", "101190212"),
+                                                        new Array("101190213", "土地使用权出售（工业用地）", "10119", "101190213"),
+                                                        new Array("101190214", "土地使用权出售（综合用地）", "10119", "101190214"),
+                                                        new Array("101190219", "土地使用权出售（其他用地）", "10119", "101190219"),
+                                                        new Array("101190221", "土地使用权赠与（居住用地）", "10119", "101190221"),
+                                                        new Array("101190222", "土地使用权赠与（商业用地）", "10119", "101190222"),
+                                                        new Array("101190223", "土地使用权赠与（工业用地）", "10119", "101190223"),
+                                                        new Array("101190224", "土地使用权赠与（综合用地）", "10119", "101190224"),
+                                                        new Array("101190229", "土地使用权赠与（其他用地）", "10119", "101190229"),
+                                                        new Array("101190231", "土地使用权交换（居住用地）", "10119", "101190231"),
+                                                        new Array("101190232", "土地使用权交换（商业用地）", "10119", "101190232"),
+                                                        new Array("101190233", "土地使用权交换（工业用地）", "10119", "101190233"),
+                                                        new Array("101190234", "土地使用权交换（综合用地）", "10119", "101190234"),
+                                                        new Array("101190239", "土地使用权交换（其他用地）", "10119", "101190239"),
+                                                        new Array("101190241", "土地使用权作价投资、入股（居住用地）", "10119", "101190241"),
+                                                        new Array("101190242", "土地使用权作价投资、入股（商业用地）", "10119", "101190242"),
+                                                        new Array("101190243", "土地使用权作价投资、入股（工业用地）", "10119", "101190243"),
+                                                        new Array("101190244", "土地使用权作价投资、入股（综合用地）", "10119", "101190244"),
+                                                        new Array("101190249", "土地使用权作价投资、入股（其他用地）", "10119", "101190249"),
+                                                        new Array("101191111", "增量房（商品住房买卖）", "10119", "101191111"),
+                                                        new Array("101191112", "增量房（保障性住房买卖）", "10119", "101191112"),
+                                                        new Array("101191119", "增量房（其他住房买卖）", "10119", "101191119"),
+                                                        new Array("101191121", "增量房非住房买卖（商业）", "10119", "101191121"),
+                                                        new Array("101191122", "增量房非住房买卖（办公）", "10119", "101191122"),
+                                                        new Array("101191123", "增量房非住房买卖（商住）", "10119", "101191123"),
+                                                        new Array("101191124", "增量房非住房买卖（附属建筑）", "10119", "101191124"),
+                                                        new Array("101191125", "增量房非住房买卖（工业）", "10119", "101191125"),
+                                                        new Array("101191129", "增量房非住房买卖（其他）", "10119", "101191129"),
+                                                        new Array("101191211", "存量房（商品住房买卖）", "10119", "101191211"),
+                                                        new Array("101191212", "存量房（保障性住房买卖）", "10119", "101191212"),
+                                                        new Array("101191219", "存量房（其他住房买卖）", "10119", "101191219"),
+                                                        new Array("101191221", "存量房非住房买卖（商业）", "10119", "101191221"),
+                                                        new Array("101191222", "存量房非住房买卖（办公）", "10119", "101191222"),
+                                                        new Array("101191223", "存量房非住房买卖（商住）", "10119", "101191223"),
+                                                        new Array("101191224", "存量房非住房买卖（附属建筑）", "10119", "101191224"),
+                                                        new Array("101191225", "存量房非住房买卖（工业）", "10119", "101191225"),
+                                                        new Array("101191229", "存量房非住房买卖（其他）", "10119", "101191229"),
+                                                        new Array("101192111", "增量房（商品住房赠与）", "10119", "101192111"),
+                                                        new Array("101192112", "增量房（保障性住房赠与）", "10119", "101192112"),
+                                                        new Array("101192119", "增量房（其他住房赠与）", "10119", "101192119"),
+                                                        new Array("101192121", "增量房非住房赠与（商业）", "10119", "101192121"),
+                                                        new Array("101192122", "增量房非住房赠与（办公）", "10119", "101192122"),
+                                                        new Array("101192123", "增量房非住房赠与（商住）", "10119", "101192123"),
+                                                        new Array("101192124", "增量房非住房赠与（附属建筑）", "10119", "101192124"),
+                                                        new Array("101192125", "增量房非住房赠与（工业）", "10119", "101192125"),
+                                                        new Array("101192129", "增量房非住房赠与（其他）", "10119", "101192129"),
+                                                        new Array("101192211", "存量房（商品住房赠与）", "10119", "101192211"),
+                                                        new Array("101192212", "存量房（保障性住房赠与）", "10119", "101192212"),
+                                                        new Array("101192219", "存量房（其他住房赠与）", "10119", "101192219"),
+                                                        new Array("101192221", "存量房非住房赠与（商业）", "10119", "101192221"),
+                                                        new Array("101192222", "存量房非住房赠与（办公）", "10119", "101192222"),
+                                                        new Array("101192223", "存量房非住房赠与（商住）", "10119", "101192223"),
+                                                        new Array("101192224", "存量房非住房赠与（附属建筑）", "10119", "101192224"),
+                                                        new Array("101192225", "存量房非住房赠与（工业）", "10119", "101192225"),
+                                                        new Array("101192229", "存量房非住房赠与（其他）", "10119", "101192229"),
+                                                        new Array("101193000", "房屋交换", "10119", "101193000"),
+                                                        new Array("101194100", "住房作价入股", "10119", "101194100"),
+                                                        new Array("101194201", "非住房作价入股（商业）", "10119", "101194201"),
+                                                        new Array("101194202", "非住房作价入股（办公）", "10119", "101194202"),
+                                                        new Array("101194203", "非住房作价入股（商住）", "10119", "101194203"),
+                                                        new Array("101194204", "非住房作价入股（附属建筑）", "10119", "101194204"),
+                                                        new Array("101194205", "非住房作价入股（工业）", "10119", "101194205"),
+                                                        new Array("101194290", "非住房作价入股（其他）", "10119", "101194290"),
+                                                        new Array("101195000", "房屋其他权属转移方式", "10119", "101195000"),
+                                                        new Array("101199902", "罚款", "10119", "101199902"),
+                                                        new Array("101200100", "晾晒烟叶", "10120", "101200100"),
+                                                        new Array("101200200", "烤烟叶", "10120", "101200200"),
+                                                        new Array("101209901", "滞纳金", "10120", "101209901"),
+                                                        new Array("101209902", "罚款", "10120", "101209902"),
+                                                        new Array("101211101", "二氧化硫（气）", "10121", "101211101"),
+                                                        new Array("101211102", "氮氧化物（气）", "10121", "101211102"),
+                                                        new Array("101211103", "一氧化碳（气）", "10121", "101211103"),
+                                                        new Array("101211104", "氯气（气）", "10121", "101211104"),
+                                                        new Array("101211105", "氯化氢（气）", "10121", "101211105"),
+                                                        new Array("101211106", "氟化物（气）", "10121", "101211106"),
+                                                        new Array("101211107", "氰化氢（气）", "10121", "101211107"),
+                                                        new Array("101211108", "硫酸雾（气）", "10121", "101211108"),
+                                                        new Array("101211109", "铬酸雾（气）", "10121", "101211109"),
+                                                        new Array("101211110", "汞及其化合物（气）", "10121", "101211110"),
+                                                        new Array("101211111", "一般性粉尘（气）", "10121", "101211111"),
+                                                        new Array("101211112", "石棉尘（气）", "10121", "101211112"),
+                                                        new Array("101211113", "玻璃棉尘（气）", "10121", "101211113"),
+                                                        new Array("101211114", "碳黑尘（气）", "10121", "101211114"),
+                                                        new Array("101211115", "铅及其化合物（气）", "10121", "101211115"),
+                                                        new Array("101211116", "镉及其化合物（气）", "10121", "101211116"),
+                                                        new Array("101211117", "铍及其化合物（气）", "10121", "101211117"),
+                                                        new Array("101211118", "镍及其化合物（气）", "10121", "101211118"),
+                                                        new Array("101211119", "锡及其化合物（气）", "10121", "101211119"),
+                                                        new Array("101211120", "烟尘（气）", "10121", "101211120"),
+                                                        new Array("101211121", "苯（气）", "10121", "101211121"),
+                                                        new Array("101211122", "甲苯（气）", "10121", "101211122"),
+                                                        new Array("101211123", "二甲苯（气）", "10121", "101211123"),
+                                                        new Array("101211124", "苯并(a)芘（气）", "10121", "101211124"),
+                                                        new Array("101211125", "甲醛（气）", "10121", "101211125"),
+                                                        new Array("101211126", "乙醛（气）", "10121", "101211126"),
+                                                        new Array("101211127", "丙烯醛（气）", "10121", "101211127"),
+                                                        new Array("101211128", "甲醇（气）", "10121", "101211128"),
+                                                        new Array("101211129", "酚类（气）", "10121", "101211129"),
+                                                        new Array("101211130", "沥青烟（气）", "10121", "101211130"),
+                                                        new Array("101211131", "苯胺类（气）", "10121", "101211131"),
+                                                        new Array("101211132", "氯苯类（气）", "10121", "101211132"),
+                                                        new Array("101211133", "硝基苯（气）", "10121", "101211133"),
+                                                        new Array("101211134", "丙烯腈（气）", "10121", "101211134"),
+                                                        new Array("101211135", "氯乙烯（气）", "10121", "101211135"),
+                                                        new Array("101211136", "光气（气）", "10121", "101211136"),
+                                                        new Array("101211137", "硫化氢（气）", "10121", "101211137"),
+                                                        new Array("101211138", "氨（气）", "10121", "101211138"),
+                                                        new Array("101211139", "三甲胺（气）", "10121", "101211139"),
+                                                        new Array("101211140", "甲硫醇（气）", "10121", "101211140"),
+                                                        new Array("101211141", "甲硫醚（气）", "10121", "101211141"),
+                                                        new Array("101211142", "二甲二硫（气）", "10121", "101211142"),
+                                                        new Array("101211143", "苯乙烯（气）", "10121", "101211143"),
+                                                        new Array("101211144", "二硫化碳（气）", "10121", "101211144"),
+                                                        new Array("101211999", "其他大气污染物", "10121", "101211999"),
+                                                        new Array("101212101", "总汞（水）", "10121", "101212101"),
+                                                        new Array("101212102", "总镉（水）", "10121", "101212102"),
+                                                        new Array("101212103", "总铬（水）", "10121", "101212103"),
+                                                        new Array("101212104", "六价铬（水）", "10121", "101212104"),
+                                                        new Array("101212105", "总砷（水）", "10121", "101212105"),
+                                                        new Array("101212106", "总铅（水）", "10121", "101212106"),
+                                                        new Array("101212107", "总镍（水）", "10121", "101212107"),
+                                                        new Array("101212108", "苯并(a)芘（水）", "10121", "101212108"),
+                                                        new Array("101212109", "总铍（水）", "10121", "101212109"),
+                                                        new Array("101212110", "总银（水）", "10121", "101212110"),
+                                                        new Array("101212201", "悬浮物(SS)（水）", "10121", "101212201"),
+                                                        new Array("101212202", "生化需氧量(BOD?)（水）", "10121", "101212202"),
+                                                        new Array("101212203", "化学需氧量(CODcr)（水）", "10121", "101212203"),
+                                                        new Array("101212204", "总有机碳（TOC）（水）", "10121", "101212204"),
+                                                        new Array("101212205", "石油类（水）", "10121", "101212205"),
+                                                        new Array("101212206", "动植物油（水）", "10121", "101212206"),
+                                                        new Array("101212207", "挥发酚（水）", "10121", "101212207"),
+                                                        new Array("101212208", "总氰化物（水）", "10121", "101212208"),
+                                                        new Array("101212209", "硫化物（水）", "10121", "101212209"),
+                                                        new Array("101212210", "氨氮（水）", "10121", "101212210"),
+                                                        new Array("101212211", "氟化物（水）", "10121", "101212211"),
+                                                        new Array("101212212", "甲醛（水）", "10121", "101212212"),
+                                                        new Array("101212213", "苯胺类（水）", "10121", "101212213"),
+                                                        new Array("101212214", "硝基苯类（水）", "10121", "101212214"),
+                                                        new Array("101212215", "阴离子表面活性剂(LAS)（水）", "10121", "101212215"),
+                                                        new Array("101212216", "总铜（水）", "10121", "101212216"),
+                                                        new Array("101212217", "总锌（水）", "10121", "101212217"),
+                                                        new Array("101212218", "总锰（水）", "10121", "101212218"),
+                                                        new Array("101212219", "彩色显影剂(CD-2)（水）", "10121", "101212219"),
+                                                        new Array("101212220", "总磷（水）", "10121", "101212220"),
+                                                        new Array("101212221", "单质磷(以P计)（水）", "10121", "101212221"),
+                                                        new Array("101212222", "有机磷农药(以P计)（水）", "10121", "101212222"),
+                                                        new Array("101212223", "乐果（水）", "10121", "101212223"),
+                                                        new Array("101212224", "甲基对硫磷（水）", "10121", "101212224"),
+                                                        new Array("101212225", "马拉硫磷（水）", "10121", "101212225"),
+                                                        new Array("101212226", "对硫磷（水）", "10121", "101212226"),
+                                                        new Array("101212227", "五氯酚及五氯酚钠(以五氯酚计)（水）", "10121", "101212227"),
+                                                        new Array("101212228", "三氯甲烷（水）", "10121", "101212228"),
+                                                        new Array("101212229", "可吸附有机卤化物(AOX)(以Cl计)（水）", "10121", "101212229"),
+                                                        new Array("101212230", "四氯化碳（水）", "10121", "101212230"),
+                                                        new Array("101212231", "三氯乙烯（水）", "10121", "101212231"),
+                                                        new Array("101212232", "四氯乙烯（水）", "10121", "101212232"),
+                                                        new Array("101212233", "苯（水）", "10121", "101212233"),
+                                                        new Array("101212234", "甲苯（水）", "10121", "101212234"),
+                                                        new Array("101212235", "乙苯（水）", "10121", "101212235"),
+                                                        new Array("101212236", "邻－二甲苯（水）", "10121", "101212236"),
+                                                        new Array("101212237", "对－二甲苯（水）", "10121", "101212237"),
+                                                        new Array("101212238", "间－二甲苯（水）", "10121", "101212238"),
+                                                        new Array("101212239", "氯苯（水）", "10121", "101212239"),
+                                                        new Array("101212240", "邻二氯苯（水）", "10121", "101212240"),
+                                                        new Array("101212241", "对二氯苯（水）", "10121", "101212241"),
+                                                        new Array("101212242", "对硝基氯苯（水）", "10121", "101212242"),
+                                                        new Array("101212243", "2,4－二硝基氯苯（水）", "10121", "101212243"),
+                                                        new Array("101212244", "苯酚（水）", "10121", "101212244"),
+                                                        new Array("101212245", "间－甲酚（水）", "10121", "101212245"),
+                                                        new Array("101212246", "2,4－二氯酚（水）", "10121", "101212246"),
+                                                        new Array("101212247", "2,4,6-三氯酚（水）", "10121", "101212247"),
+                                                        new Array("101212248", "邻苯二甲酸二丁酯（水）", "10121", "101212248"),
+                                                        new Array("101212249", "邻苯二甲酸二辛酯（水）", "10121", "101212249"),
+                                                        new Array("101212250", "丙烯腈（水）", "10121", "101212250"),
+                                                        new Array("101212251", "总硒（水）", "10121", "101212251"),
+                                                        new Array("101212301", "pH值（水）", "10121", "101212301"),
+                                                        new Array("101212302", "色度（水）", "10121", "101212302"),
+                                                        new Array("101212303", "大肠菌群数(超标)（水）", "10121", "101212303"),
+                                                        new Array("101212304", "余氯量(用氯消毒的医院废水)（水）", "10121", "101212304"),
+                                                        new Array("101212401", "禽畜养殖场(牛)（水）", "10121", "101212401"),
+                                                        new Array("101212402", "禽畜养殖场(猪)（水）", "10121", "101212402"),
+                                                        new Array("101212403", "禽畜养殖场(鸡、鸭等家禽)（水）", "10121", "101212403"),
+                                                        new Array("101212404", "小型企业（水）", "10121", "101212404"),
+                                                        new Array("101212405", "饮食娱乐服务业（水）", "10121", "101212405"),
+                                                        new Array("101212406", "医院(消毒-床)（水）", "10121", "101212406"),
+                                                        new Array("101212407", "医院(消毒-污水)（水）", "10121", "101212407"),
+                                                        new Array("101212408", "医院(不消毒-床)（水）", "10121", "101212408"),
+                                                        new Array("101212409", "医院(不消毒-污水)（水）", "10121", "101212409"),
+                                                        new Array("101212499", "其他畜禽（水）", "10121", "101212499"),
+                                                        new Array("101213001", "煤矸石（固）", "10121", "101213001"),
+                                                        new Array("101213002", "尾矿（固）", "10121", "101213002"),
+                                                        new Array("101213003", "危险废物（固）", "10121", "101213003"),
+                                                        new Array("101213004", "冶炼渣（固）", "10121", "101213004"),
+                                                        new Array("101213005", "粉煤灰（固）", "10121", "101213005"),
+                                                        new Array("101213006", "炉渣（固）", "10121", "101213006"),
+                                                        new Array("101213099", "其他固体废物（含半固态、液态废物）（固）", "10121", "101213099"),
+                                                        new Array("101214101", "超标1-3分贝（噪）", "10121", "101214101"),
+                                                        new Array("101214102", "超标4-6分贝（噪）", "10121", "101214102"),
+                                                        new Array("101214103", "超标7-9分贝（噪）", "10121", "101214103"),
+                                                        new Array("101214104", "超标10-12分贝（噪）", "10121", "101214104"),
+                                                        new Array("101214105", "超标13-15分贝（噪）", "10121", "101214105"),
+                                                        new Array("101214106", "超标16分贝以上（噪）", "10121", "101214106"),
+                                                        new Array("101999901", "滞纳金", "10199", "101999901"),
+                                                        new Array("101999902", "罚款", "10199", "101999902"),
+                                                        new Array("102011101", "职工基本养老保险(单位缴纳)", "10201", "102011101"),
+                                                        new Array("102011102", "职工基本养老保险(个人缴纳)", "10201", "102011102"),
+                                                        new Array("102011103", "职工基本养老保险(单位缴纳)利息", "10201", "102011103"),
+                                                        new Array("102011104", "职工基本养老保险(个人缴纳)利息", "10201", "102011104"),
+                                                        new Array("102011105", "职工基本养老保险(单位缴纳)滞纳金", "10201", "102011105"),
+                                                        new Array("102011106", "职工基本养老保险(个人缴纳)滞纳金", "10201", "102011106"),
+                                                        new Array("102011107", "职工基本养老保险罚款", "10201", "102011107"),
+                                                        new Array("102011201", "灵活就业人员基本养老保险", "10201", "102011201"),
+                                                        new Array("102011202", "灵活就业人员基本养老保险利息", "10201", "102011202"),
+                                                        new Array("102011701", "被征地农转非人员基本养老保险（单位缴纳）", "10201", "102011701"),
+                                                        new Array("102011702", "被征地农转非人员基本养老保险（个人缴纳）", "10201", "102011702"),
+                                                        new Array("102011703", "被征地农转非人员基本养老保险（单位缴纳）利息", "10201", "102011703"),
+                                                        new Array("102011704", "被征地农转非人员基本养老保险（个人缴纳）利息", "10201", "102011704"),
+                                                        new Array("102011705", "被征地农转非人员基本养老保险（单位缴纳）滞纳金", "10201", "102011705"),
+                                                        new Array("102011706", "被征地农转非人员基本养老保险（个人缴纳）滞纳金", "10201", "102011706"),
+                                                        new Array("102019901", "养老保险职业年金", "10201", "102019901"),
+                                                        new Array("102020101", "失业保险(单位缴纳)", "10202", "102020101"),
+                                                        new Array("102020102", "失业保险(个人缴纳)", "10202", "102020102"),
+                                                        new Array("102020103", "失业保险(单位缴纳)利息", "10202", "102020103"),
+                                                        new Array("102020104", "失业保险(个人缴纳)利息", "10202", "102020104"),
+                                                        new Array("102020105", "失业保险(单位缴纳)滞纳金", "10202", "102020105"),
+                                                        new Array("102020106", "失业保险(个人缴纳) 滞纳金", "10202", "102020106"),
+                                                        new Array("102020107", "失业保险罚款", "10202", "102020107"),
+                                                        new Array("102031101", "职工基本医疗保险(单位缴纳)", "10203", "102031101"),
+                                                        new Array("102031102", "职工基本医疗保险(个人缴纳)", "10203", "102031102"),
+                                                        new Array("102031103", "职工基本医疗保险(单位缴纳)利息", "10203", "102031103"),
+                                                        new Array("102031104", "职工基本医疗保险(个人缴纳)利息", "10203", "102031104"),
+                                                        new Array("102031105", "职工基本医疗保险(单位缴纳)滞纳金", "10203", "102031105"),
+                                                        new Array("102031106", "职工基本医疗保险(个人缴纳)滞纳金", "10203", "102031106"),
+                                                        new Array("102031107", "职工基本医疗保险罚款", "10203", "102031107"),
+                                                        new Array("102031201", "灵活就业人员基本医疗保险", "10203", "102031201"),
+                                                        new Array("102031202", "灵活就业人员基本医疗保险利息", "10203", "102031202"),
+                                                        new Array("102039901", "公务员医疗补助", "10203", "102039901"),
+                                                        new Array("102039903", "公务员医疗补助利息", "10203", "102039903"),
+                                                        new Array("102039904", "其他医疗保险滞纳金", "10203", "102039904"),
+                                                        new Array("102039905", "公务员医疗补助滞纳金", "10203", "102039905"),
+                                                        new Array("102039907", "公务员医疗补助罚款", "10203", "102039907"),
+                                                        new Array("102040101", "工伤保险", "10204", "102040101"),
+                                                        new Array("102040102", "工伤保险利息", "10204", "102040102"),
+                                                        new Array("102040103", "工伤保险滞纳金", "10204", "102040103"),
+                                                        new Array("102040104", "工伤保险罚款", "10204", "102040104"),
+                                                        new Array("102050101", "生育保险", "10205", "102050101"),
+                                                        new Array("102050102", "生育保险利息", "10205", "102050102"),
+                                                        new Array("102050103", "生育保险滞纳金", "10205", "102050103"),
+                                                        new Array("102050104", "生育保险罚款", "10205", "102050104"),
+                                                        new Array("102100100", "城乡居民基本养老保险费", "10210", "102100100"),
+                                                        new Array("102100200", "城乡居民基本养老保险基金利息", "10210", "102100200"),
+                                                        new Array("102100300", "城乡居民基本养老保险基金罚款", "10210", "102100300"),
+                                                        new Array("102100400", "城乡居民基本养老保险基金滞纳金", "10210", "102100400"),
+                                                        new Array("102110101", "机关事业单位基本养老保险费（单位缴纳）", "10211", "102110101"),
+                                                        new Array("102110102", "机关事业单位基本养老保险费（个人缴纳）", "10211", "102110102"),
+                                                        new Array("102110103", "机关事业单位基本养老保险费（单位缴纳）利息", "10211", "102110103"),
+                                                        new Array("102110104", "机关事业单位基本养老保险费（个人缴纳）利息", "10211", "102110104"),
+                                                        new Array("102110105", "机关事业单位基本养老保险费（单位缴纳）滞纳金", "10211", "102110105"),
+                                                        new Array("102110106", "机关事业单位基本养老保险费（个人缴纳）滞纳金", "10211", "102110106"),
+                                                        new Array("102110107", "机关事业单位基本养老保险费罚款", "10211", "102110107"),
+                                                        new Array("102120001", "城乡居民基本医疗保险费", "10212", "102120001"),
+                                                        new Array("102910001", "机关事业单位职业年金（单位缴费）", "10291", "102910001"),
+                                                        new Array("102910002", "机关事业单位职业年金（个人缴费）", "10291", "102910002"),
+                                                        new Array("102910003", "机关事业单位职业年金（单位缴费）利息", "10291", "102910003"),
+                                                        new Array("102910004", "机关事业单位职业年金（个人缴费）利息", "10291", "102910004"),
+                                                        new Array("102910005", "机关事业单位职业年金（单位缴费）滞纳金", "10291", "102910005"),
+                                                        new Array("102910006", "机关事业单位职业年金（个人缴费）滞纳金", "10291", "102910006"),
+                                                        new Array("301998102", "价格调节基金（营业税附征）", "30199", "301998102"),
+                                                        new Array("302030100", "增值税教育费附加", "30203", "302030100"),
+                                                        new Array("302030200", "营业税教育费附加", "30203", "302030200"),
+                                                        new Array("302030300", "消费税教育费附加", "30203", "302030300"),
+                                                        new Array("302039901", "滞纳金", "30203", "302039901"),
+                                                        new Array("302039902", "罚款", "30203", "302039902"),
+                                                        new Array("302160100", "增值税地方教育附加", "30216", "302160100"),
+                                                        new Array("302160200", "营业税地方教育附加", "30216", "302160200"),
+                                                        new Array("302160300", "消费税地方教育附加", "30216", "302160300"),
+                                                        new Array("302169901", "滞纳金", "30216", "302169901"),
+                                                        new Array("302169902", "罚款", "30216", "302169902"),
+                                                        new Array("302170100", "娱乐业文化事业建设费", "30217", "302170100"),
+                                                        new Array("302170200", "广告业文化事业建设费", "30217", "302170200"),
+                                                        new Array("302179901", "滞纳金", "30217", "302179901"),
+                                                        new Array("302179902", "罚款", "30217", "302179902"),
+                                                        new Array("302180100", "残疾人就业保障金", "30218", "302180100"),
+                                                        new Array("302189800", "残疾人就业保障金滞纳金", "30218", "302189800"),
+                                                        new Array("305010100", "罚款", "30501", "305010100"),
+                                                        new Array("305010200", "加处罚款", "30501", "305010200"),
+                                                        new Array("305010300", "没收违法所得", "30501", "305010300"),
+                                                        new Array("305010400", "没收非法财物的拍卖款", "30501", "305010400"),
+                                                        new Array("399001010", "工会经费", "39900", "399001010"),
+                                                        new Array("399001020", "工会筹备金", "39900", "399001020"),
+                                                        new Array("399070100", "免税商品特许经营费", "39907", "399070100")
+                                                        );
+                                                    </script>
+                                                    <option value="101110101" selected>购销合同</option>
+                                                    <option value="101110102">加工承揽合同</option>
+                                                    <option value="101110103">建设工程勘察设计合同</option>
+                                                    <option value="101110104">建筑安装工程承包合同</option>
+                                                    <option value="101110105">财产租赁合同</option>
+                                                    <option value="101110106">货物运输合同(按运输费用万分之五贴花)</option>
+                                                    <option value="101110107">仓储保管合同</option>
+                                                    <option value="101110108">借款合同</option>
+                                                    <option value="101110109">财产保险合同</option>
+                                                    <option value="101110110">技术合同</option>
+                                                    <option value="101110200">产权转移书据</option>
+                                                    <option value="101110301">A种股票</option>
+                                                    <option value="101110302">B种股票</option>
+                                                    <option value="101110303">非交易转让股票A种股票</option>
+                                                    <option value="101110304">非交易转让股票B种股票</option>
+                                                    <option value="101110305">无偿划拨国有股权的股数</option>
+                                                    <option value="101110400">权利、许可证照</option>
+                                                    <option value="101110501">资金账簿</option>
+                                                    <option value="101110599">其他营业账簿</option>
+                                                    <option value="101119800">其他凭证</option>
+
+                                                </select>
+
+
+
+                                            </label>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+
+                                </table>
+                                <div align="center" class="marg_top12">
+                                    <input type="button" onclick="txsbb()" value="下一步" class="bottBlue rad">
+                                    <input type="button " onclick="location.href='/jsdzsb/yhssb/lb.do'" class="bottBlue rad" value="取消添加">
+                                </div>
+                            </td>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+
+
+    <div id="yhstxsbb">
+        <form action="/jsdzsb/yhssb/lb.do" method="post" id="myForm3">
+            <input type="hidden" name="errAction" value="/jsdzsb/yhssb/txsbb.do" />
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td class="gray_bg_color">
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0" style="margin-bottom:8px; margin-top:8px;">
+                            <tr>
+                                <td align="left" class="liucheng_01"> </td>
+                                <td align="left">
+                                    <table width="750" border="0" align="left" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="center" class="liucheng_02 v2_h1_14w ">初始化</td>
+                                            <td align="center"><img src="/res/jsdzsb/bsdt/images/over_arrow.png" width="9" height="16" /></td>
+                                            <td align="center" class="liucheng_02 v2_h1_14w">填写申报表</td>
+                                            <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9" height="16" /></td>
+                                            <td align="center" class="liucheng_03 v2_h1_14b">确认申报</td>
+                                            <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9" height="16" /></td>
+                                            <td align="center" class="liucheng_03 v2_h1_14b">查看回执</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="gray3_bg_color"> </td>
+                </tr>
+                <tr>
+                    <td>
+                        @{Html.RenderAction("txsbb_Partial", new RouteValueDictionary(new { xh = ViewBag.xh, zspmDm = ViewBag.zspmDm, op = ViewBag.op }));}
+                        @RenderBody()
+
+                        <table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+                            <tr>
+                                <td valign="top" class="size14" bgcolor="#EFF4FC" style="line-height:1.5">
+                                    <p>
+                                        <font style=";color:red">说明：</font>根据《中华人民共和国印花税暂行条例》，应纳税额不足一角的，免纳印花税。应纳税额在一角以上的，其税额尾数不满五分的不计，满五分的按一角计算缴纳。财产租赁合同的应纳税额在一角以上但不满一元的，按一元计算缴纳。<br />
+
+                                        <br />
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>&nbsp;</p>
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+
+    <script type="text/javascript">
+
+        //印花税税目与核定核定比例对照
+        var smArray = new Array("101110101","101110102","101110103","101110104","101110105","101110106","101110107","101110108","101110109","101110110","101110200","101110501");
+        //数组第一个是税目名称，第二个是下限，第三个是上限
+        var hdblArray = new Array(
+        new Array("购销合同", 40, 100),new Array("加工承揽合同",40, 90),new Array("建设工程勘察设计合同", 80, 100),new Array("建筑安装工程承包合同", 80, 100),
+        new Array("财产租赁合同",100, 100),new Array("货物运输合同",70, 100),new Array("仓储保管合同", 80, 100),new Array("借款合同",100, 100),
+        new Array("财产保险合同",100, 100),new Array("技术合同",100, 100),new Array("产权转移书据",100, 100),new Array("资金帐簿",100, 100)
+        );
+        //税种变更时同步更新税目（营业税要更新输入项）
+
+        function szChange() {
+            var szObj = getObj("sbbVo['zsxmdm']");
+            var smObj = $("#zspmdm")[0];
+
+            var sz_id = szObj.value;
+            var sm_id = smObj.value;
+
+            //var jsslObj = getObj("sbbVo['JSSL']");
+            var yyeObj = getObj("sbbVo['hdzshdde']");
+            var hdblObj = getObj("sbbVo['hdzshdbl']");
+            var jsjeObj = getObj("sbbVo['jsje']");
+
+            //var lblJsslObj = document.getElementById("lbl_jssl");
+            var lblYyeObj = document.getElementById("lbl_yye");
+            var lblHdblObj = document.getElementById("lbl_hdbl");
+            //var lblJsjeObj = document.getElementById("lbl_jsje");
+
+            //税目为权利许可证照、其他营业帐簿、经财政部确定的其它凭证时，计税数量为必填项目，计税数额置空；且核定计税收入额(营业额)和核定比例等字段置空不可填。
+            //税目为权利许可证照、其他营业帐簿、经财政部确定的其它凭证以外的其他项目时，计税数额为必填，计税数量为空。
+            if(smObj.value =="101110400" || smObj.value == "101110599" || smObj.value == "101119800" ) {
+                hdblObj.value = "";
+                yyeObj.value = "";
+                jsjeObj.value = "";
+
+                lblYyeObj.style.color = "Gray";
+                lblHdblObj.style.color = "Gray";
+
+                hdblObj.readOnly = true;
+                yyeObj.readOnly = true;
+
+            } else {
+                //hdblObj.value = 100;
+                lblYyeObj.style.color = "black";
+                lblHdblObj.style.color = "black";
+                hdblObj.readOnly = false;
+                yyeObj.readOnly = false;
+                jsjeObj.readOnly = false;
+            }
+            return true;
+        }
+
+        //计算计税金额
+        function calcJsje() {
+            var smObj = $("#zspmdm")[0];
+            var yyeVal = getObj("sbbVo['hdzshdde']").value;
+            //var jsslVal = getObj("sbbVo['JSSL']").value;
+            var jsjeObj = getObj("sbbVo['jsje']");
+            var hdblVal = getObj("sbbVo['hdzshdbl']").value;
+
+            yyeVal = getoff_Qfw(yyeVal);
+
+            if(isEmpty(yyeVal)) yyeVal = 0;
+            if(hdblVal==null || hdblVal=="0") hdblVal = 1;
+            hdblVal = toFixedNum(hdblVal / 100, 2);
+            //税目为权利许可证照、其他营业帐簿、经财政部确定的其它凭证时，计税数量为必填项目，计税金额和置空；应纳税额＝计税数量×税率
+            //税目为权利许可证照、其他营业帐簿、经财政部确定的其它凭证以外的其他项目时，计税数额为必填，计税数量为空。且营业额和核定比例等字段设为可填。计税金额＝营业额×核定比率
+            if((smObj.value != "101110400") && (smObj.value != "101110599") && (smObj.value != "101119800")) {
+                //jsjeObj.value = toFixedNum( yyeVal * hdblVal, 2);
+            }
+            change_amt(jsjeObj);
+        }
+
+        //计算应纳税额
+        function calcYhse() {
+            var hdlx='1';
+            var smObj = $("#zspmdm")[0];
+            var jsjeVal = getObj("sbbVo['jsje']").value;
+            //var jsslVal = getObj("sbbVo['JSSL']").value;
+            var slVal = getObj("sbbVo['sysl']").value;
+
+            jsjeVal = getoff_Qfw(jsjeVal);
+
+            if(isEmpty(jsjeVal)) jsjeVal = 0;
+            if(isEmpty(slVal)) slVal = 0;
+            var yyeVal = getObj("sbbVo['hdzshdde']").value;//核定依据
+            var hdblVal = getObj("sbbVo['hdzshdbl']").value;//核定依据
+            if(isEmpty(yyeVal)) yyeVal = 0;
+            else yyeVal =getoff_Qfw(yyeVal);
+            if(isEmpty(hdblVal)) hdblVal = 0;
+            // hdblVal = toFixedNum(hdblVal / 100, 4);
+
+            var ynseObj = getObj("sbbVo['bqynse']");
+            ynseObj.value  = getoff_Qfw(ynseObj.value);
+            //“本期应纳税额”是按照“计税金额或件数”*“适用税率”+“核定依据”*“核定比例”20150701QJ
+            //税目为权利许可证照、其他营业帐簿、经财政部确定的其它凭证时，计税数量为必填项目，计税金额和置空；应纳税额＝计税数量×税率
+            //税目为权利许可证照、其他营业帐簿、经财政部确定的其它凭证以外的其他项目时，计税数额为必填，计税数量为空。且营业额和核定比例等字段设为可填。计税金额＝营业额×核定比率，应纳税额=计税金额×比例税率
+            var sjjyse='0';
+            var roundYnse='0';
+            if(hdlx=='1'){
+                // sjjyse= toFixedNum(jsjeVal * Math.abs(slVal));
+                roundYnse = toFixedNum(jsjeVal * Math.abs(slVal)*100, 0)/100;
+            }else if(hdlx=='2'){
+                //sjjyse= toFixedNum(yyeVal *hdblVal);
+                roundYnse = toFixedNum(yyeVal *hdblVal*100, 0)/100;
+            }else{
+                if(hdblVal==0){
+                    //   sjjyse= toFixedNum(yyeVal * Math.abs(slVal));
+                    roundYnse = toFixedNum(yyeVal * Math.abs(slVal)*100, 0)/100;
+                }else{
+                    //sjjyse = toFixedNum(yyeVal * hdblVal * Math.abs(slVal));
+                    roundYnse = toFixedNum(yyeVal * hdblVal * Math.abs(slVal)*100, 0)/100;
+                }
+
+            }
+            /*
+          if(sjjyse<0.1){
+              ynseObj.value=0;
+           }else{
+               ynseObj.value=roundYnse;
+            }
+          */
+            ynseObj.value=roundYnse;
+            change_amt(ynseObj);
+        }
+        //根据税种税目校验核定比例范围
+        function hdblChange() {
+
+            var hdblObj = getObj("sbbVo['hdzshdbl']");
+            var hdzshdde = getoff_Qfw(getObj("sbbVo['hdzshdde']").value);
+            if(hdzshdde=="")hdzshdde=='0';
+            /*
+             if(idx > -1) {
+              var hdbl = hdblArray[idx];
+              if(hdblObj.value < hdbl[1]) {
+                alert("当税目是“"+hdbl[0]+"”时核定比例不能小于“"+hdbl[1]+"”");
+                hdblObj.value = hdbl[1];
+                return false;
+              }
+            }
+            */
+            /*
+            if(hdblObj.value > 1) {
+              alert("核定比例不能大于1！");
+              hdblObj.value ='';
+              return false;
+            }*/
+            var flag='N';
+            var hdbls="";
+
+
+
+            if(hdbls!=""){
+                hdbls=hdbls.substring(1,hdbls.length);
+            }else{
+                alert("没有可以填写的核定比例，请确认！");
+                hdblObj.value ='';
+                return false;
+            }
+            if(flag=='N'){
+                alert("核定比例填写不正确，您可以填写的核定比例为："+hdbls+"!");
+                hdblObj.value ='';
+                return false;
+            }else{
+                if(hdblObj.value>1){
+                    alert("印花税核定比例大于1，核定信息可能有误，请联系主管税务机关或税管员补正。");
+                    hdblObj.value ='';
+                    return false;
+                }
+            }
+            jsjeChange();
+
+            return true;
+        }
+        //计算实际缴纳额
+        function calcSjjne() {
+
+            jsjze();//计算减征
+
+            var ynseVal = getObj("sbbVo['bqynse']").value;
+            var jmeVal = getObj("sbbVo['jmse']").value;
+            var yjVal = getObj("sbbVo['bqyjse1']").value;
+            ynseVal = getoff_Qfw(ynseVal);
+            jmeVal = getoff_Qfw(jmeVal);
+            yjVal = getoff_Qfw(yjVal);
+            if(!isNumeric(yjVal)) yjVal = 0;
+            yjVal = parseFloat(yjVal);
+
+            var bqjze=getObj("sbbVo['jze']").value;
+            bqjze=getoff_Qfw(bqjze);
+
+            var ybVal= toFixedNum(ynseVal-yjVal-jmeVal-bqjze,4);
+
+            if(parseFloat(ybVal)<0.1){
+                getObj("sbbVo['bqybtse']").value =0;
+            }else{
+                getObj("sbbVo['bqybtse']").value =toFixedNum(ybVal,1);
+            }
+            var smObj = $("#zspmdm")[0];
+            //财产合同不足1按1元算
+            if(ybVal>=0.1 && ybVal<1 && smObj.value=='101110105'){
+                getObj("sbbVo['bqybtse']").value=1;
+            }else if(ybVal>0 && ybVal<0.1 && smObj.value=='101110105'){
+                getObj("sbbVo['bqybtse']").value=0;
+            }
+            change_amt(getObj("sbbVo['bqybtse']"));
+
+        }
+
+        function jsjeChange() {
+            changeSsjmxzDm();
+            calcJsje();
+
+            calcYhse();
+
+            calcSjjne();
+            return true;
+        }
+
+
+        function ynseChange() {
+            calcSjjne();
+            return true;
+        }
+
+
+
+        function yjeChange() {
+            var kyjse=getObj("sbbVo['kyjse']").value;
+            kyjse = getoff_Qfw(kyjse);
+            var yje=getObj("sbbVo['bqyjse1']").value;
+            yje = getoff_Qfw(yje);
+            if(parseFloat(yje)>parseFloat(kyjse)){
+                alert("查询到纳税人的已缴税额信息为"+kyjse+",本期已缴税额不能超过!");
+                getObj("sbbVo['bqyjse1']").value="";
+            };
+            var kobj=getObj("sbbVo['bqyjse1']");
+            if(kobj.value=="")
+                kobj.value="0";
+            calcSjjne();
+            return true;
+        }
+
+        function jmeChange() {
+            var ssjmxzDm=getObj("sbbVo['ssjmxzdm']").value;
+            var jme=getObj("sbbVo['jmse']").value;
+            var qzdje=getObj("sbbVo['qzdje']").value;
+            var ynse=getObj("sbbVo['bqynse']").value;
+            if(ssjmxzDm==""){
+                getObj("sbbVo['jmse']").value="";
+                getObj("sbbVo['yhpzuuid']").value="";
+                return false;
+            };
+            jme=getoff_Qfw(jme);
+            ynse=getoff_Qfw(ynse);
+            qzdje=getoff_Qfw(qzdje);
+            if(jme==""){
+                return false;
+            };
+            if(parseFloat(jme)>parseFloat(ynse)){
+                alert("减免额不能大于本期应纳税额！");
+                getObj("sbbVo['jmse']").value="";
+                return false;
+            }
+            getObj("sbbVo['sfjm']").value='N';
+            if(parseFloat(jme)<parseFloat(qzdje)){
+                alert("减免额小于起征点金额，默认减免!");
+                getObj("sbbVo['ssjmxzdm']").value="";
+                getObj("sbbVo['yyqzdje']").value=jme;
+                return false;
+            }
+            var flag='N';
+            var jzed="";
+
+            jzed=getoff_Qfw(jzed);
+            if(flag=='Y'){
+                getObj("sbbVo['kjmse']").value=jzed;
+                if(parseFloat(jme)>parseFloat(jzed)){
+                    alert("本期减免税（费）额不能大于可减免金额,可减免金额为"+jzed);
+                    getObj("sbbVo['jmse']").value="";
+                    return false;
+                }else{
+                    getObj("sbbVo['sfjm']").value='Y';
+                }
+            }else{
+                alert("您选择的减免性质尚未到主管税务机关备案，请申报后尽快完成备案!");
+                getObj("sbbVo['yhpzuuid']").value="";
+            }
+            calcSjjne();
+            return true;
+        }
+
+
+        function changeSsjmxzDm(){
+
+            var slVal = getObj("sbbVo['sysl']").value;
+            var ssjmxzdm=getObj("sbbVo['ssjmxzdm']").value;
+            var jmeObj= getObj("sbbVo['jmse']");
+            var je=getObj("sbbVo['jsje']").value;
+
+            //自动带出减免代码
+            var pmdm = $("#zspmdm")[0].value;
+            if (pmdm == "101110599") {
+                getObj("sbbVo['ssjmxzdm']").value = "0009129907";
+            }
+            if (pmdm == "101110501") {
+                getObj("sbbVo['ssjmxzdm']").value = "0009129906";
+            }
+
+            je=je.replace(/,/g,'');
+            jmeObj.value="0";
+            if(ssjmxzdm==""){
+                jmeObj.readOnly=true;
+                getObj("sbbVo['sfjm']").value="N";
+            }
+            else if(ssjmxzdm=='0009129906'){
+                var num=new Number(je*slVal*0.5);
+                getObj("sbbVo['jmse']").value=num.toFixed(2);
+            }
+            else if(ssjmxzdm=="0009129907"){
+                var num=new Number(je*slVal);
+                getObj("sbbVo['jmse']").value=num.toFixed(2);
+            }
+            else{
+                jmeObj.readOnly=false;
+            }
+            calcSjjne();
+        }
+
+        function modify(xh){
+            if(confirm("是否修改 ？")){
+                location.href="/jsdzsb/yhssb/lb.do?modify=ture&xh="+xh;
+            }
+        }
+        function del(xh){
+            if(confirm("是否删除 ？")){
+                location.href="/jsdzsb/yhssb/lb.do?delete=ture&xh="+xh;
+
+            }
+        }
+        window.onload = function() {
+            var os = document.getElementById("ssjmxzdm").options;
+            for(var i=0; i<os.length; i++) os[i].title = os[i].innerHTML.substring(0,os[i].innerHTML.length);
+        }
+
+        function openJmMx(){
+
+
+            layer.open({
+                type: 2,
+                title: '印花税核定信息',
+                area: ['500px', '330px'],
+                fix: false, //不固定
+                maxmin: true,
+
+                move : ['印花税核定信息' , false],
+
+                content: '/views/jsdzsb/yhssb/yhssb_view.jsp'
+            });
+        }
+        function yhssb_import(){
+            $("#myForm1").attr("action","/jsdzsb/yhssb/import.do");
+            $("#myForm1").submit();
+        }
+
+        function jsjze(){//算减征额
+            var jzbl=0.5;
+            var bynse=getObj("sbbVo['bqynse']").value;
+            var bjmse=getObj("sbbVo['jmse']").value;
+            bynse = getoff_Qfw(bynse);
+            bjmse = getoff_Qfw(bjmse);
+            var num=toFixedNum((bynse-bjmse)*jzbl,2);
+            var jzbz='N';
+            if(jzbz=='Y')
+                getObj("sbbVo['jze']").value=num;
+            else
+                getObj("sbbVo['jze']").value=0;
+        }
+    </script>
+
+
+
+
+    <div id="_loadIfmContent" style="display:none;"></div>
+    <script language="JavaScript">
+        $(function(){
+            endIe8Load();
+        });
+
+        function endIe8Load() {
+            try{
+                var _loadIfm = ' <iframe id="_loadIfm" src="" width="1" height="1" style="border: 0px; display:none" frameborder="0" ></iframe>';
+                if (!$("#_loadIfm")[0]) {
+                    $("#_loadIfmContent").append(_loadIfm);
+                }
+                $("#_loadIfmContent", window.document).attr("src", "#");
+            }catch(e){}
+        }
+    </script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,26 @@
+{
+    "result":[
+        {
+            "skssqq":"2019-02-01",
+            "djxh":10113502010000054370,
+            "rn":1,
+            "pzxh":"10013519000006032665",
+            "zsxmdm":"10111",
+            "yzpzzldm":"BDA0610794",
+            "sbrq":"2019-03-12",
+            "ybtse":14.4,
+            "sbfsdm":"32",
+            "skssqz":"2019-02-28",
+            "sbuuid":"92F52B1DF222FC87FE57D194B9AB9674",
+            "zspmdm":"101110101"
+        }
+    ],
+    "pagination":{
+        "pageSize":10,
+        "pageNumber":1,
+        "totalCount":1,
+        "pageCount":1
+    },
+    "msg":"成功",
+    "success":true
+}

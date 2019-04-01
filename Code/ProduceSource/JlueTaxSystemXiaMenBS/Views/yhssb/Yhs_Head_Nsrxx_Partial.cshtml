@@ -1,0 +1,67 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.Nsrxx
+<table id="frm_dfsf_head " class="v2table" width="100%" border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
+    <tr>
+        <td height="21" width="15%" nowrap="nowrap">税款所属期限：</td>
+        <td>
+            @Model.GDTXDate.skssqq 至 @Model.GDTXDate.skssqz
+            <input type="hidden" name="sbbVo['skssqq']" value="2019-02-01" />
+            <input type="hidden" name="sbbVo['skssqz']" value="2019-02-28" />
+            <input type="hidden" name="sbbVo['zsxmdm']" value="10111" />
+        </td>
+        <td width="15%" nowrap="nowrap">填表日期：</td>
+        <td>
+            @Model.GDTXDate.tbrq
+            <input type="hidden" name="sbbVo['tbrq']" value="2019-03-06" />
+        </td>
+        <td>金额单位：元至角分</td>
+    </tr>
+    <tr>
+        <td>纳税人识别号</td>
+        <td colspan="4">@Model.NSRSBH</td>
+    </tr>
+</table>
+<table id="frm_dfsf_head " class="v2table" width="100%" border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
+    <tr>
+        <td height="21" width="15%" nowrap="nowrap">名称</td>
+        <td width="35%">@Model.NSRMC</td>
+        <td nowrap="nowrap" colspan="2">
+            <input type="checkbox" name="sbbVo['nsrlx']" value="0" checked="checked" />
+            单位
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="checkbox" name="sbbVo['nsrlx']" value="1" disabled="disabled" />
+            个人
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap">登记注册类型</td>
+        <td nowrap="nowrap">
+           @Model.DJZCLX
+            &nbsp;
+        </td>
+        <td nowrap="nowrap">所属行业</td>
+        <td nowrap="nowrap">
+            @Model.GBHY
+            &nbsp;
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap">联系方式</td>
+        <td nowrap="nowrap">@Model.LXDH&nbsp;</td>
+        <td nowrap="nowrap">身份证号码</td>
+        <td nowrap="nowrap">
+            <input type="text" name="sbbVo['sfzhm']" size="32" maxlength="32" onerrclear="false" required="false" requiredmsg="该项目必须填写" value="" class="line in rad" title="身份证号码" />
+        </td>
+    </tr>
+    <tr>
+        <td nowrap="nowrap">本期是否适用增值税小规模纳税人减征政策</td>
+        <td nowrap="nowrap">
+            <input type="radio" id="rad1" onclick="changeNo('rad2')" name="sbbVo['jzbz']" value="Y">是&nbsp;&nbsp;
+            <input type="radio" id="rad2" onclick="changeNo('rad2')" checked name="sbbVo['jzbz']" value="N">否&nbsp;&nbsp;
+        </td>
+        <td nowrap="nowrap">减征比例</td>
+        <td nowrap="nowrap">
+            0.5
+            <input type="hidden" name="sbbVo['jzbl']" value="0.5">
+        </td>
+    </tr>
+</table>

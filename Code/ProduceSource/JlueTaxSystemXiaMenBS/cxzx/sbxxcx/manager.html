@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+@author 翟瞳飞
+@create date: 2018/09/27
+@version: 1.00
+@modify	1.00	翟瞳飞	翟瞳飞		无		新建，申报信息查询页面
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<!-- bootstrap基础 -->
+<link rel="stylesheet" href="/js/libs/bootstrap/css/bootstrap.min.css?v=3.3.6" />
+<link rel="stylesheet" href="/js/libs/bootstrap/css/font-awesome.min.css?v=4.4.0" />
+<link rel="stylesheet" href="/js/libs/bootstrap/css/animate.css" />
+<!-- bootstrap-table列表 -->
+<link rel="stylesheet" href="/js/libs/bootstrap-table-master/dist/bootstrap-table.css" />
+<!--bootstrap-select下拉框  -->
+<link rel="stylesheet" href="/js/libs/bootstrap-select/dist/css/bootstrap-select.min.css" />
+<!-- bootstrap-datetimepicker日期控件样式 -->
+<link rel="stylesheet" href="/js/libs/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" />
+<!-- layer的样式 -->
+<link rel="stylesheet" href="/js/libs/layer/skin/layer.css" />
+<!--layui-系列 -->
+<link rel="stylesheet" href="/js/libs/layui/css/layui.css" />
+<!-- ztree的bootstrap样式 -->
+<link rel="stylesheet" href="/js/libs/ztree/css/metroStyle/metroStyle.css" />
+<!--自定义样式，必须放在最后  -->
+<link rel="stylesheet" href="/css/style.css" />
+<link rel="stylesheet" href="/dzswj/css/style-gsdzsw.css" />
+<style type="text/css">
+</style>
+
+</head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content animated fadeInRight">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 col-md-12 col-lg-12">
+				<div class="ibox">
+					<div class="ibox-title">
+						<div class="ibox-title-text">
+							<ul class="nav nav-tabs">
+								<li class="active"><a href="javascript:;" data-toggle="tab">查询条件</a></li>
+							</ul>
+						</div>
+						<div class="ibox-title-btn">
+							<a class="btns-bule" type="button" id="btn_query" onclick="onSearch()"><i class="fa fa-search"></i>查询</a>&nbsp; <a class="btns-bule" type="button" id="btn_reset" onclick="onReset()"><i class="fa fa-repeat"></i>重置</a>&nbsp;
+						</div>
+					</div>
+					<div class="ibox-content no-padding">
+						<div class="row ibox-seachbox ">
+							<form id="formSearch" class="form-horizontal">
+								<div class="form-group col-sm-6 col-xs-6 col-md-6 col-lg-6">
+									<label class="control-label col-sm-3 col-xs-3 col-md-3 col-lg-3 muted required" for="query.sbsjq">申报时间起</label>
+									<div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+										<input type="text" class="input-sm form-control laydate-icon-photo layer-date " name="query.sbsjq" id="query.sbsjq" required="required" />
+									</div>
+								</div>
+								<div class="form-group col-sm-6 col-xs-6 col-md-6 col-lg-6">
+									<label class="control-label col-sm-3 col-xs-3 col-md-3 col-lg-3 muted required" for="query.sbsjz">申报时间止</label>
+									<div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+										<input type="text" class="input-sm form-control laydate-icon-photo layer-date " name="query.sbsjz" id="query.sbsjz" required="required" />
+									</div>
+								</div>
+								<div class="form-group col-sm-6 col-xs-6 col-md-6 col-lg-6">
+									<label class="control-label col-sm-3 col-xs-3 col-md-3 col-lg-3 " for="query.skssqrqq">税款所属期起</label>
+									<div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+										<input type="text" class="input-sm form-control laydate-icon-photo layer-date " name="query.skssqrqq" id="query.skssqrqq" />
+									</div>
+								</div>
+								<div class="form-group col-sm-6 col-xs-6 col-md-6 col-lg-6">
+									<label class="control-label col-sm-3 col-xs-3 col-md-3 col-lg-3 " for="query.skssqrqz">税款所属期止</label>
+									<div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+										<input type="text" class="input-sm form-control laydate-icon-photo layer-date " name="query.skssqrqz" id="query.skssqrqz" />
+									</div>
+								</div>
+								<div class="form-group col-sm-6 col-xs-6 col-md-6 col-lg-6">
+									<label class="control-label col-sm-3 col-xs-3 col-md-3 col-lg-3 " for="query.created_time">征收项目</label>
+									<div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+										<select class="selectpicker show-tick form-control" data-style="btn-white" data-live-search="true" data-live-search-placeholder="请输入内容" name="query.zsxm" id="query.zsxm"></select>
+									</div>
+								</div>
+								<!-- 			<div class="form-group col-sm-6 col-xs-6 col-md-6 col-lg-6">
+									<label
+										class="control-label col-sm-3 col-xs-3 col-md-3 col-lg-3"
+										for="query.created_time">征收品目</label>
+									<div class="col-sm-9 col-xs-9 col-md-9 col-lg-9">
+										<select class="selectpicker show-tick form-control"
+											data-style="btn-white" data-live-search="true"
+											data-live-search-placeholder="请输入内容" name="query.zspm"
+											id="query.zspm"></select>
+									</div>
+								</div> 	 -->
+							</form>
+						</div>
+						<div class="table-responsive" style="padding-top: 5px;">
+							<table id="TableList" class="table table-striped table-hover" style="table-layout: fixed; width: 100%;">
+								<thead>
+									<tr>
+										<th data-width="30" data-field="number" data-align="center" data-formatter="number_formatter">序号</th>
+										<th data-width="30" data-field="zsxmmc">征收项目</th>
+										<th data-width="50" data-field="zspmmc">征收品目</th>
+										<th data-width="50" data-field="skssqq">所属时期起</th>
+										<th data-width="50" data-field="skssqz">所属时期止</th>
+										<th data-width="50" data-field="ysx">收入总额</th>
+										<th data-width="50" data-field="ynse">应纳税额</th>
+										<th data-width="50" data-field="ybtse">应补（退）税额</th>
+										<th data-width="30" data-field="caoz" data-align="center" data-formatter="caoz_formatter" data-show-tip="false" title="操作">操作</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 全局js -->
+	<script type="text/javascript" src="/js/jquery.min.js?v=1.12.3"></script>
+	<script type="text/javascript" src="/js/libs/bootstrap/js/bootstrap.min.js?v=3.3.6"></script>
+	<!-- layer弹框 -->
+	<script type="text/javascript" src="/js/libs/layer/layer.min.js"></script>
+	<!-- 多选弹出框 -->
+	<!-- <script type="text/javascript" th:src="@{/js/utils/formatUtils.js}"></script> -->
+	<!-- bootstrap-table列表-->
+	<script type="text/javascript" src="/js/libs/bootstrap-table-master/dist/bootstrap-table.min.js"></script>
+	<script type="text/javascript" src="/js/libs/bootstrap-table-master/dist/locale/bootstrap-table-zh-CN.min.js"></script>
+	<!-- layui系列-->
+	<script type="text/javascript" src="/js/libs/layui/layui.js"></script>
+	<!-- 打开tab页js -->
+	<script type="text/javascript" src="/js/utils/TabUtils.js"></script>
+	<!-- jquery.validate校验 -->
+	<script type="text/javascript" src="/js/libs/jquery.validate/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="/js/libs/jquery.validate/messages_zh.js"></script>
+	<script type="text/javascript" src="/js/libs/jquery.validate/form-validate.js"></script>
+	<!--bootstrap-select下拉框  -->
+	<script type="text/javascript" src="/js/libs/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script type="text/javascript" src="/js/libs/bootstrap-select/dist/js/i18n/defaults-zh_CN.js"></script>
+	<script type="text/javascript" src="/js/custom-select.js"></script>
+	<!-- ztree -->
+	<script type="text/javascript" src="/js/libs/ztree/js/jquery.ztree.all-3.5.min.js"></script>
+	<!--公共事件  -->
+	<script type="text/javascript" src="/js/utils/Events.js"></script>
+	<script type="text/javascript" src="/js/utils/Common.js"></script>
+	<script>
+    //<![CDATA[
+    /**
+     * 初始化方法
+     * @author  翟瞳飞
+     * @modify  1.00    2018/09/21  翟瞳飞   无     新建
+     */
+    $(function () {
+        //初始化日期
+        onInitDate();
+        //初始化列表
+        onInitTable();
+        //初始化下拉菜单
+
+        //征收品目
+      //  var dmGyZspmlist = null;
+       // onInitSelect("#query\\.zspm",dmGyZspmlist,'', false);
+         //征收项目
+        var dmGyZsxmlist = [{'id':'10101','text':'\u589E\u503C\u7A0E'},{'id':'10102','text':'\u6D88\u8D39\u7A0E'},{'id':'10103','text':'\u8425\u4E1A\u7A0E'},{'id':'10104','text':'\u4F01\u4E1A\u6240\u5F97\u7A0E'},{'id':'10105','text':'\u4F01\u4E1A\u6240\u5F97\u7A0E\u9000\u7A0E'},{'id':'10106','text':'\u4E2A\u4EBA\u6240\u5F97\u7A0E'},{'id':'10107','text':'\u8D44\u6E90\u7A0E'},{'id':'10109','text':'\u57CE\u5E02\u7EF4\u62A4\u5EFA\u8BBE\u7A0E'},{'id':'10110','text':'\u623F\u4EA7\u7A0E'},{'id':'10111','text':'\u5370\u82B1\u7A0E'},{'id':'10112','text':'\u57CE\u9547\u571F\u5730\u4F7F\u7528\u7A0E'},{'id':'10113','text':'\u571F\u5730\u589E\u503C\u7A0E'},{'id':'10114','text':'\u8F66\u8239\u7A0E'},{'id':'10115','text':'\u8239\u8236\u5428\u7A0E'},{'id':'10116','text':'\u8F66\u8F86\u8D2D\u7F6E\u7A0E'},{'id':'10117','text':'\u5173\u7A0E'},{'id':'10118','text':'\u8015\u5730\u5360\u7528\u7A0E'},{'id':'10119','text':'\u5951\u7A0E'},{'id':'10120','text':'\u70DF\u53F6\u7A0E'},{'id':'10121','text':'\u73AF\u5883\u4FDD\u62A4\u7A0E'},{'id':'10125','text':'\u5C60\u5BB0\u7A0E\uFF08\u5E9F\u6B62\uFF09'},{'id':'10199','text':'\u5176\u4ED6\u7A0E\u6536\u6536\u5165'},{'id':'10201','text':'\u4F01\u4E1A\u804C\u5DE5\u57FA\u672C\u517B\u8001\u4FDD\u9669\u8D39'},{'id':'10202','text':'\u5931\u4E1A\u4FDD\u9669\u8D39'},{'id':'10203','text':'\u57FA\u672C\u533B\u7597\u4FDD\u9669\u8D39'},{'id':'10204','text':'\u5DE5\u4F24\u4FDD\u9669\u8D39'},{'id':'10205','text':'\u751F\u80B2\u4FDD\u9669\u8D39'},{'id':'10206','text':'\u65B0\u578B\u519C\u6751\u5408\u4F5C\u533B\u7597\u8D39'},{'id':'10207','text':'\u57CE\u9547\u5C45\u6C11\u57FA\u672C\u533B\u7597\u4FDD\u9669\u8D39'},{'id':'10210','text':'\u57CE\u4E61\u5C45\u6C11\u57FA\u672C\u517B\u8001\u4FDD\u9669\u8D39'},{'id':'10211','text':'\u673A\u5173\u4E8B\u4E1A\u5355\u4F4D\u57FA\u672C\u517B\u8001\u4FDD\u9669\u8D39'},{'id':'10212','text':'\u57CE\u4E61\u5C45\u6C11\u57FA\u672C\u533B\u7597\u4FDD\u9669\u8D39'},{'id':'10291','text':'\u673A\u5173\u4E8B\u4E1A\u5355\u4F4D\u804C\u4E1A\u5E74\u91D1'},{'id':'10299','text':'\u5176\u4ED6\u793E\u4F1A\u4FDD\u9669\u8D39'},{'id':'11005','text':'\u56FD\u6709\u8D44\u672C\u7ECF\u8425\u9884\u7B97\u8F6C\u79FB\u652F\u4ED8\u6536\u5165'},{'id':'30102','text':'\u519C\u7F51\u8FD8\u8D37\u8D44\u91D1\u6536\u5165'},{'id':'30129','text':'\u56FD\u5BB6\u7535\u5F71\u4E8B\u4E1A\u53D1\u5C55\u4E13\u9879\u8D44\u91D1\u6536\u5165'},{'id':'30144','text':'\u57CE\u5E02\u516C\u7528\u4E8B\u4E1A\u9644\u52A0\u6536\u5165'},{'id':'30146','text':'\u56FD\u6709\u571F\u5730\u6536\u76CA\u57FA\u91D1\u6536\u5165'},{'id':'30147','text':'\u519C\u4E1A\u571F\u5730\u5F00\u53D1\u8D44\u91D1\u6536\u5165'},{'id':'30148','text':'\u56FD\u6709\u571F\u5730\u4F7F\u7528\u6743\u51FA\u8BA9\u6536\u5165'},{'id':'30149','text':'\u5927\u4E2D\u578B\u6C34\u5E93\u79FB\u6C11\u540E\u671F\u6276\u6301\u57FA\u91D1'},{'id':'30150','text':'\u8DE8\u7701\u9645\u5927\u4E2D\u578B\u6C34\u5E93\u5E93\u533A\u57FA\u91D1'},{'id':'30152','text':'\u4E09\u5CE1\u6C34\u5E93\u5E93\u533A\u57FA\u91D1'},{'id':'30156','text':'\u57CE\u5E02\u57FA\u7840\u8BBE\u65BD\u914D\u5957\u8D39\u6536\u5165'},{'id':'30158','text':'\u56FD\u5BB6\u91CD\u5927\u6C34\u5229\u5DE5\u7A0B\u5EFA\u8BBE\u57FA\u91D1\u6536\u5165'},{'id':'30166','text':'\u6838\u7535\u7AD9\u4E4F\u71C3\u6599\u5904\u7406\u5904\u7F6E\u57FA\u91D1'},{'id':'30168','text':'\u53EF\u518D\u751F\u80FD\u6E90\u53D1\u5C55\u57FA\u91D1'},{'id':'30175','text':'\u5E9F\u5F03\u7535\u5668\u7535\u5B50\u4EA7\u54C1\u5904\u7406\u57FA\u91D1\u6536\u5165'},{'id':'30176','text':'\u6C34\u571F\u4FDD\u6301\u8865\u507F\u8D39\u6536\u5165'},{'id':'30199','text':'\u5176\u4ED6\u653F\u5E9C\u6027\u57FA\u91D1\u6536\u5165'},{'id':'30201','text':'\u6392\u6C61\u8D39\u6536\u5165'},{'id':'30202','text':'\u6C34\u8D44\u6E90\u8D39\u6536\u5165'},{'id':'30203','text':'\u6559\u80B2\u8D39\u9644\u52A0'},{'id':'30212','text':'\u573A\u5916\u6838\u5E94\u6025\u51C6\u5907\u8D44\u91D1'},{'id':'30216','text':'\u5730\u65B9\u6559\u80B2\u9644\u52A0'},{'id':'30217','text':'\u6587\u5316\u4E8B\u4E1A\u5EFA\u8BBE\u8D39'},{'id':'30218','text':'\u6B8B\u75BE\u4EBA\u5C31\u4E1A\u4FDD\u969C\u91D1'},{'id':'30221','text':'\u6C34\u5229\u5EFA\u8BBE\u4E13\u9879\u6536\u5165'},{'id':'30224','text':'\u6CB9\u4EF7\u8C03\u63A7\u98CE\u9669\u51C6\u5907\u91D1'},{'id':'30299','text':'\u5176\u4ED6\u4E13\u9879\u6536\u5165'},{'id':'30407','text':'\u8D22\u653F\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30408','text':'\u7A0E\u52A1\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30424','text':'\u4EBA\u9632\u529E\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30427','text':'\u6559\u80B2\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30432','text':'\u56FD\u571F\u8D44\u6E90\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30433','text':'\u5EFA\u8BBE\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30442','text':'\u4EA4\u901A\u8FD0\u8F93\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30443','text':'\u5DE5\u4E1A\u548C\u4FE1\u606F\u4EA7\u4E1A\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30444','text':'\u519C\u4E1A\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30446','text':'\u6C34\u5229\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30499','text':'\u5176\u4ED6\u884C\u653F\u4E8B\u4E1A\u6027\u6536\u8D39\u6536\u5165'},{'id':'30501','text':'\u7A0E\u52A1\u90E8\u95E8\u7F5A\u6CA1\u6536\u5165'},{'id':'30600','text':'\u56FD\u6709\u8D44\u672C\u7ECF\u8425\u6536\u5165'},{'id':'30603','text':'\u4EA7\u6743\u8F6C\u8BA9\u6536\u5165'},{'id':'30604','text':'\u6E05\u7B97\u6536\u5165'},{'id':'30701','text':'\u6D77\u4E0A\u77F3\u6CB9\u77FF\u533A\u4F7F\u7528\u8D39'},{'id':'30702','text':'\u9646\u4E0A\u77F3\u6CB9\u77FF\u533A\u4F7F\u7528\u8D39'},{'id':'30703','text':'\u573A\u5730\u4F7F\u7528\u8D39\u6536\u5165'},{'id':'30705','text':'\u5229\u606F\u6536\u5165'},{'id':'30706','text':'\u975E\u7ECF\u8425\u6027\u56FD\u6709\u8D44\u4EA7\u6536\u5165'},{'id':'30710','text':'\u77F3\u6CB9\u7279\u522B\u6536\u76CA\u91D1'},{'id':'30714','text':'\u77FF\u4EA7\u8D44\u6E90\u4E13\u9879\u6536\u5165'},{'id':'30720','text':'\u56FD\u5BB6\u7559\u6210\u6CB9\u4E0A\u7F34\u6536\u5165'},{'id':'30799','text':'\u5176\u4ED6\u56FD\u6709\u8D44\u6E90\uFF08\u4EA7\uFF09\u6709\u507F\u4F7F\u7528\u6536\u5165'},{'id':'39900','text':'\u5176\u4ED6\u6536\u5165'},{'id':'39907','text':'\u514D\u7A0E\u5546\u54C1\u7279\u8BB8\u7ECF\u8425\u8D39'},{'id':'39912','text':'\u5DEE\u522B\u7535\u4EF7\u6536\u5165'},{'id':'39999','text':'\u5176\u4ED6\u6536\u5165'}];
+        onInitSelect("#query\\.zsxm",dmGyZsxmlist,"", true);
+       
+    });
+
+    /**
+     * 初始化列表
+     * @author  翟瞳飞
+     * @modify  1.00    2018/09/21  翟瞳飞   无     新建
+     */
+    function onInitTable() {
+        Events.onInitTable({
+            bootstrapTableId : "#TableList",//bootstrap-table列表控件id
+            queryFormId : "#formSearch",//查询表单id，不需要过滤查询此属性可不填写
+            // url : '/cxzx/sbxxcx/query',//bootstrap-table列表查询url
+            options : {
+            uniqueId: "id", //主键列
+                pageList: [10,20,30],
+                singleSelect: false,//1复选框，默认true单选
+                pageStore:true,//2启用保留分页选中，默认false不启用
+                idField:'id',
+                onDblClickRow: function (row, $element) {
+                //双击打开列表
+            }
+        }
+    });
+    }
+
+
+    /**
+     * 查询
+     * @author  翟瞳飞
+     * @modify  1.00    2018/09/21  翟瞳飞   无     新建
+     */
+    function onSearch() {
+        var validator = jQuery("#formSearch").validate();
+        if (validator.form()) {
+        	 Events.onGeneralTableFormQuery("#TableList", "#formSearch",'/cxzx/sbxxcx/query');
+    	}     
+    }
+
+    /**
+     * 重置
+     * @author  翟瞳飞
+     * @modify  1.00    2018/09/21  翟瞳飞   无     新建
+     */
+    function onReset() {
+        Events.onGeneralFormQueryReset("#formSearch");
+
+    }
+
+    //日期控件初始化方法
+    function onInitDate() {
+        layui.use('laydate', function() {// 日期控件
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#query\\.sbsjq', //指定元素
+                theme: '#0994dc'
+            });
+        	//初始化当前日期
+			var d = new Date(2019,0,10);
+			var y = d.getFullYear();
+			var m = d.getMonth() + 1;
+			if(m<=6){
+				m=m+6;
+				y=y-1;
+			}else{
+				m=m-6;
+			}
+			m = m < 10 ? '0' + m : m;
+			var day = d.getDate();
+			day = day < 10 ? '0' + day : day;
+			$("#query\\.sbsjq").val(y + '-' + m + '-' + day);
+        });
+        layui.use('laydate', function() {// 日期控件
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#query\\.sbsjz', //指定元素
+                theme: '#0994dc'
+            });
+          //初始化当前日期
+			var d = new Date(2019,0,10);
+			var y = d.getFullYear();
+			var m = d.getMonth() + 1;
+			m = m < 10 ? '0' + m : m;
+			var day = d.getDate();
+			day = day < 10 ? '0' + day : day;
+			$("#query\\.sbsjz").val(y + '-' + m + '-' + day);
+        });
+        layui.use('laydate', function() {// 日期控件
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#query\\.skssqrqq', //指定元素
+                theme: '#0994dc'
+            });
+        });
+        layui.use('laydate', function() {// 日期控件
+            var laydate = layui.laydate;
+            laydate.render({
+                elem: '#query\\.skssqrqz', //指定元素
+                theme: '#0994dc'
+            });
+        });
+    }
+    
+    /**
+  	 * 查看抽取记录操作列处理
+  	 * @author  林家辉
+  	 * @modify  1.00    2018/11/09   林家辉   无     新建
+  	 */
+  	function caoz_formatter(value, row, index) {	    		
+       return '<a class="btns-bule" type="button" id="btn_query" onclick="onAddInfo(this)" ><i class="fa fa-search"></i>查看</a>';
+  	} 
+
+    function onAddInfo(element){   
+    	window.open('/wssb/wssb/public/jsp/wssb.jsp?sblx=SBCX');
+    }
+
+    //]]>
+</script>
+</body>
+</html>

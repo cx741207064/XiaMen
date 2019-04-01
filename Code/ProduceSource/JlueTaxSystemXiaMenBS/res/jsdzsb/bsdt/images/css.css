@@ -1,0 +1,165 @@
+/* CSS Document */
+body{
+	font-family:"",Arial,Tahoma, Helvetica, "\5b8b\4f53";
+	font-size:12px;
+	line-height:24px;
+	background: # ; 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+/*logo*/
+.top_bg_color{ background-color:#1a70c1;}
+.nav_bg_color{ background-color:#1a70c1;}
+.up_blue_bg_color{ background-color:#81acd8;}
+.h12_blue_gongsi{font-size:12px; color: #dcf2ff; line-height:24px;}
+.h12_w_caidan{font-size:12px; color: #fff; line-height:24px;}
+.riqi{font-size:20px; color: #1a70c1; line-height:24px;}
+/*流程*/
+.gray_bg_color{ background-color:#fafafa;}
+.liucheng_02{ background-image:url(liucheng_02.png); background-repeat:no-repeat; height:24; width:120px;}
+.liucheng_03{ background-image:url(liucheng_03.png); background-repeat:no-repeat; height:24; width:120px;}
+.h1_14w{font-size:12px; color: #fff; }
+.h1_14b{font-size:12px; color: #000;  }
+.liucheng_gray_bg_color{ background-color:#dadada; height:1px;}
+.border_rl{
+	border-left-width:1px;
+	border-right-width: 1px;
+	border-right-color: #dadada;
+	border-left-color: #dadada;
+}
+/*表格部分*/
+.h16_bold{font-size:14px; color: #000; line-height:30px; font-weight: bold;}
+.h12_bold{font-size:12px; color: #000; line-height:30px; font-weight: bold;}
+.h12_b{font-size:12px; color: #000; line-height:26px;}
+.h12_gray{font-size:12px; color: #ff0000; line-height:26px;}
+.border{ border:1px solid #e7e7e7; }
+/*左侧菜单*/
+.caidan_01{
+	background-image:url(caidan_01.png);
+	background-repeat:no-repeat;
+	height:24px;
+	width:170px;
+	background-position: center;
+}
+.caidan_02{
+	background-image:url(caidan_02.png);
+	background-repeat:no-repeat;
+	height:24px;
+	width:170px;
+	background-position: center;
+}
+.caidan_03{
+	background-image:url(caidan_03.png);
+	background-repeat:no-repeat;
+	height:24px;
+	width:170px;
+	background-position: center;
+}
+.caidan_04{
+	background-image:url(caidan_04.png);
+	background-repeat:no-repeat;
+	height:28px;
+	width:206px;
+	background-position: right;
+}
+.caidan_h12_blue{ font-size:12px; color:#1a70c1; line-height:24px;}
+.caidan_h12_w{font-size:12px; color: #fff; line-height:24px; font-weight: bold;}
+/*回执单表格*/
+.huizhi_bg{ background-color:#ecf3f9;}
+.tijiao{ background-image:url(tijiao.png); background-repeat:no-repeat; height:24px; width:80px;}
+.quxiao{ background-image:url(quxiao.png); background-repeat:no-repeat; height:24px; width:80px;}
+.tiqu{
+	background-image:url(tiqu.png);
+	background-repeat:no-repeat;
+	height:22px;
+	width:90px;
+	background-position: center center;
+}
+.tijiao{
+	background-image:url(tijiao.png);
+	background-repeat:no-repeat;
+	height:20px;
+	width:80px;
+	background-position: center center;
+}
+.quxiao{
+	background-image:url(quxiao.png);
+	background-repeat:no-repeat;
+	height:20px;
+	width:80px;
+	background-position: center center;
+}
+/*说明*/
+.shuoming_border{border:1px solid #aae0fb;}
+
+/*bottom*/
+.bottom_hengxian{ background-color:#1a70c1; height:3px;}
+.bottom_bg{ background-color:#fafafa;}
+
+.lh-16{line-height: 16px;}
+
+/*布局样式*/
+.headerStart{text-align: center;margin-top:30px;font-size:14px; color: #000; line-height:30px; font-weight: bold;}
+.headerList{text-align: center;margin-top:60px;font-size:14px; color: #000; line-height:30px; font-weight: bold;}
+.header-qtxx{text-align: left;margin-top: 30px;width:70%;font-size:14px; color: #000; line-height:30px; font-weight: bold;}
+/**/
+.startTable{border:1px solid #e7e7e7;;width: 50%;margin-top: 10px;}
+.Item1{padding-top: 6px;padding-left: 20px;font-size:12px; color: #000; line-height:30px; font-weight: bold;text-align: left;}
+.Item2{padding-left: 20px;text-align: left;}
+.Item3{padding-left: 20px;padding-bottom: 10px;padding-top: 2px;text-align: left;}
+/**/
+.btnBar{padding:30px;text-align: center;}
+/**/
+.boundary{border:1px solid #e7e7e7;width: 80%;margin-top: 10px;}
+.w70{width: 80%;}
+
+/*流程*/
+li{	list-style: none;float: left;margin-right: 20px;}
+.liucheng-div{height: 40px;width: 100%;background-color: #fafafa;padding-top: 30px;}
+.liucheng-ul{position: absolute;height: 40px;top: -1px;}
+.liucheng-finish{
+	background-image:url(liucheng_02.png); 
+	background-repeat:no-repeat; 
+	height:24px; 
+	width:120px; 
+	font-size:12px; 
+	color: #fff;
+	text-align: center;
+}
+.liucheng-unfinish{
+	background-image:url(liucheng_03.png); 
+	background-repeat:no-repeat;
+	height:24; 
+	width:120px;
+	font-size:12px;
+	color: #000;
+	text-align: center;
+}
+.flowArrows{padding-top: 5px;width: 9px;height: 16px;}
+.readOnly{background-color: #ADADAD;}
+.required{color: red;}
+/*表格*/
+.tytb{
+	border:1px solid #000000;
+	border-collapse: collapse;
+	margin:0 auto;
+}
+.tytb td{
+	border-top:1px solid #000000;
+	border-left:1px solid #000000;
+}
+.tbpadding{
+	padding-left:20px;	
+}
+.gdtb{
+	border:1px solid #000000;
+	border-collapse: collapse;
+	margin-bottom:3px;
+	margin-left:4px;
+}
+.gdtb td{
+	border:1px solid #000000;
+}

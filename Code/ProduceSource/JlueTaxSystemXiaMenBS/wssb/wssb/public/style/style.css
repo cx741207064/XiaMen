@@ -1,0 +1,113 @@
+﻿
+<STYLE type=text/css>
+
+.drop {
+	FILTER: DropShadow(Color=#cccccc, OffX=1, OffY=1, Positive=1); FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.p1 {
+	COLOR: #000000; FONT-SIZE: 13px
+}
+.lower {
+	FILTER: alpha(opacity=70)
+}
+.higher {
+	FILTER: alpha(opacity=100)
+}
+.tra {
+	FILTER: Chroma(Color=white)
+}
+A:link {
+	COLOR: #092F63; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #0E189F; TEXT-DECORATION: none
+}
+A:active {
+	TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #ff7818; TEXT-DECORATION: underline
+}
+A.top:link {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.top:visited {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.top:active {
+	COLOR: #0E189F; TEXT-DECORATION: underline
+}
+A.top:hover {
+	COLOR: #ffffff; TEXT-DECORATION: underline
+}
+A.menu:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.menu:hover {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.dating:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.dating:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.dating:active {
+	COLOR: yellow; TEXT-DECORATION: none
+}
+A.dating:hover {
+	COLOR: yellow; TEXT-DECORATION: underline
+}
+A.left:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.left:visited {
+	COLOR: #0E189F; TEXT-DECORATION: none
+}
+A.left:active {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A.left:hover {
+	COLOR: #ff7818; TEXT-DECORATION: underline
+}
+A.body:link {
+	COLOR: #092F63; TEXT-DECORATION: underline
+}
+A.body:visited {
+	COLOR: #0E189F; TEXT-DECORATION: underline
+}
+A.body:active {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.body:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+LI {
+	COLOR: #ffffff
+}
+TD {
+	COLOR: #000000; FONT-FAMILY: ו; FONT-SIZE: 9pt
+}
+TD1 {
+	COLOR: #ffffff; FONT-FAMILY: ו; FONT-SIZE: 9pt
+}
+.input1 {
+	BORDER-BOTTOM: #000000 1px solid; BORDER-LEFT: #75acac 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #75acac 1px solid; FONT-SIZE: 14px
+}
+.input2 {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #6d8092 1px solid; BORDER-LEFT: #6d8092 1px solid; BORDER-RIGHT: #6d8092 1px solid; BORDER-TOP: #6d8092 1px solid; COLOR: #666666; FONT-SIZE: 12px; HEIGHT: 18px; cursor:hand;
+}
+.layer { position: relative; clip: rect( )}
+
+.td_menu {
+	COLOR: #000000; FONT-FAMILY: ו; FONT-SIZE: 13px
+}
+
+.button {FONT-SIZE: 13px}
+</STYLE>

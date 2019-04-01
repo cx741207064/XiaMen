@@ -1,0 +1,67 @@
+﻿<script type="text/javascript">
+    $(function () {
+        $("#frm_dfsf").children("tbody").children("tr:gt(0)").each(function (index, element) {
+            var td = $(element).children("td").eq(12)
+            $("#ssjmxzdm").children("option:gt(0)").each(function (i, e) {
+                if (td.text().trim() == $(e).val()) {
+                    td.html($(e).text() + "&nbsp;")
+                    return false;
+                }
+            })
+        });
+    })
+</script>
+@foreach (JlueTaxSystemXiaMenBS.Models.YhsData item in ViewBag.items)
+{
+    <tr>
+        <td align="center" nowrap>
+            <a href="#" onclick="modify('@item.guid')">修改</a>&nbsp;&nbsp;
+            <a href="#" onclick="del('@item.guid')">删除</a>&nbsp;&nbsp;
+        </td>
+        <td align="center" nowrap>
+            印花税&nbsp;
+        </td>
+        <td align="center" nowrap>
+            印花税-
+            @item.zspmMc&nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.skssqq&nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.skssqz&nbsp;
+        </td>
+        <td align="center" nowrap style="color:Maroon">
+            @item.yrksfe&nbsp;
+            <input type="hidden" name="sbbList[@item.index]['SJYZE']" value="@item.yrksfe" />
+        </td>
+        <td align="center" nowrap>
+            &nbsp;
+        </td>
+        <td align="center" nowrap>
+            &nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.jsje&nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.sfl&nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.ynsfe&nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.bajmsfe&nbsp;
+        </td>
+        <td align="center" nowrap>
+            @item.basxdm&nbsp;
+        </td>
+        <td align="center" nowrap>
+            &nbsp;
+        </td>
+        <td align="center" nowrap>
+            0&nbsp;
+        </td>
+    </tr>
+}
+<input type="hidden" name="tmp_count" value="@ViewBag.count" />

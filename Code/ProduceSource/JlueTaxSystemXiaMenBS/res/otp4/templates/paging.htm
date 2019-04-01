@@ -1,0 +1,42 @@
+﻿<div class="page-bar" style="background-color: #f7f7f7;">
+<div class="page-bar-item" style="float:left">
+<span class="size14">
+每页&nbsp{{pagination.pageSize}}&nbsp条,共&nbsp{{pagination.totalCount}}&nbsp条
+</span>
+</div>
+&nbsp&nbsp
+<div class="page-bar-item" style="padding-top: 1px;">
+<select ms-duplex="pagination.pageSize" xf-trigger="pageSize" style="font-size: 14px;color: #333;border: 1px solid #ccc;">
+<option value="10">10</option>
+<option value="20">20</option>
+<option value="50">50</option>
+<option value="100">100</option>
+</select>
+</div>
+&nbsp&nbsp
+<div class="page-bar-item">
+<a href="#" style="background-image: url('/res/otp4/images/pageline.png');background-repeat: no-repeat;display: inline-block;width: 1px;height: 18px;"></a>
+&nbsp&nbsp
+<a href="#" xf-trigger='first' ms-attr-disabled='pagination.pageNumber==1' class='page-btn page-first'></a>
+&nbsp
+<a href="#" xf-trigger='prev' ms-attr-disabled='pagination.pageNumber==1' class='page-btn page-prev'></a>
+</div>
+&nbsp
+<div class="page-bar-item" style="padding:3px 0px 5px 0px">
+<input type="text"  ms-duplex="pagination.pageNumber" class='xf-scopeInput' style="width:38px;font-size: 14px;color: #333;border: 1px solid #ccc;text-align: center;" xf-trigger="go" />
+<input type="hidden" ms-duplex="pagination.pageCount"/>
+</div>
+&nbsp
+<div class="page-bar-item">
+<!-- <a href="#" xf-trigger='go' class='page-btn page-go'></a> -->
+<a href="#" xf-trigger='next' ms-attr-disabled='pagination.pageNumber==(pagination.pageCount)' class='page-btn page-next'></a>
+&nbsp
+<a href="#" xf-trigger='last' ms-attr-disabled='pagination.pageNumber==(pagination.pageCount)' class='page-btn page-last'></a>
+&nbsp
+<a href="#" style="background-image: url('/res/otp4/images/pageline.png');background-repeat: no-repeat;display: inline-block;width: 1px;height: 18px;"></a>
+</div>
+&nbsp&nbsp
+<div class="page-bar-item">
+<a class="tabpage-refresh" style="display:block"></a>
+</div>
+</div><!-- pagebar -->

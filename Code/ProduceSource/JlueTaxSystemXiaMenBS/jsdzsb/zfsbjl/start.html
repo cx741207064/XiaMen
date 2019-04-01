@@ -1,0 +1,740 @@
+﻿
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!--允许搜索机器人搜索站内所有链接-->
+		<meta content="all" name="robots">
+		<meta name="Copyright" content="厦门税务版权所有 ">
+		<meta name="Description" content="厦门税务网上报税系统">
+		<meta name="Keywords" content="税务,厦门税务,网上报税系统">
+
+		<title>作废申报记录 - 厦门税务
+		</title>
+		<script src="/res/js/jquery-1.10.2.js"></script>		
+        <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+        <link type="text/css" rel="styleSheet"  href="/res/css/layerV2.css" /> 
+		<script src="/res/js/common.js" type="text/javascript"></script>
+		<script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?v1"></script>
+		<link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+  
+		
+    <meta charset="UTF-8">
+    <meta name="decorator" content="blank"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	
+<c:set var="resV" value="v1" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+   
+   <link href="/res/otp4/js/lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+   <link href="/res/otp4/css/otp4-base.css?" rel="stylesheet"/>
+   <link href="/res/otp4/css/otp4-form.css?" rel="stylesheet" type="text/css" />
+   <link href="/res/otp4/css/otp4-panel.css?" rel="stylesheet" type="text/css" />
+    
+    <link href="/res/otp4/css/otp4-page.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-menu.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-menu.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-form.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-panel.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-table.css?" rel="stylesheet" type="text/css" />
+    
+    <!-- 
+    <script src="/res/otp4/js/lib/shiv/html5shiv.min.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/shiv/respond.min.js" type="text/javascript"></script>
+     -->
+    <script src="/res/otp4/js/lib/jquery-ct.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/jquery.fix.clone.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/jquery.json.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/ztree/jquery.ztree.all-3.5.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-base.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-utils.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-core.js?" type="text/javascript" ></script>
+    <script src="/res/otp4/js/otp4-route.js?" type="text/javascript"></script>
+    
+    <script src="/res/otp4/js/lib/avalon.js?" type="text/javascript"></script>
+    <!--  script src="/res/otp4/js/lib/avalon.shim.js" type="text/javascript"></script-->
+    <script src="/res/otp4/js/otp4-iehack.js?" type="text/javascript"></script>
+    
+    <script src="/res/otp4/js/otp4-selmodel.js?" type="text/javascript"></script>
+    
+    <script src="/res/otp4/js/lib/My97DatePicker/WdatePicker.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-expression.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-controls.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-upload.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-validate.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-validate-ext.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-idcode.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-froute.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-filters.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-menu.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-menu-ie6.js?" type="text/javascript"></script>
+    <script src="/res/js/otp4-app-config.js?" type="text/javascript"></script>
+    <script src="/res/js/otp4-input-ext.js?" type="text/javascript"></script>
+    
+    <script src="/res/wsbs/js/bsfwzxmenu.js" type="text/javascript"></script>
+    
+    <link href="/res/wsbs/css/step.css" type="text/css" rel="stylesheet" >
+    <link href="/res/wsbs/css/global.css?" type="text/css" rel="stylesheet" id="mycss">
+    <link href="/res/wsbs/css/xmdswz.css" type="text/css" rel="stylesheet" >
+    <link href="/res/wsbs/css/xmdswz_print.css" type="text/css" rel="stylesheet" >
+    <link href="/res/wsbs/css/swdj_style.css" type="text/css" rel="stylesheet" >
+    
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/core.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/collections.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/system.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/ajaxrequest.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/Behaviour.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/floatlayer.js?"></script>
+   
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?"></script>
+    <script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_common.js?v=3"></script>
+	<script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_nssb.js?"></script>
+	<script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_qysds.js"></script>
+	<script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_grsds.js"></script>
+	<link href="/res/jsdzsb/css.css" rel="stylesheet" type="text/css" />
+	<script src="/res/jsdzsb/jsdzsb_common.js" type="text/javascript"></script> 
+	<link href="/res/css/css.css" rel="stylesheet" type="text/css" />
+	<script src="/res/js/jquery-1.10.2.js" type="text/javascript"></script>
+	<script src="/res/js/common.js" type="text/javascript"></script>
+	<link href="/res/jsdzsb/css.css" rel="stylesheet" type="text/css" />
+	<link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" charset="UTF-8">
+ 
+/**
+$(document).ready(function() {
+
+	$(document).ajaxError(function(){ function(e,xhr,opt){
+    		alert("登录超时,请重新登录！");  
+    		window.top.location.href="<c:url value="/login/index.do" />";}
+    );
+
+});
+**/
+
+</script>
+
+	</head>
+
+	<body>
+	
+	
+  
+  
+
+		
+
+
+<form action="/dzsb/zfsbjl/tj.do" method="post" id="myForm">
+  
+    <input type="hidden" name="errAction" value="/jsdzsb/zfsbjl/start.do" />
+   
+ 
+ <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="left" class="liucheng_01"> </td>
+        <td align="left"><table width="750" border="0" align="left" cellpadding="0" cellspacing="0">
+          
+          <tr>
+	    <td>&nbsp;</td>
+        <td align="center" class="liucheng_02 h1_14w v2_h1_14w">选择申报表</td>
+        <td align="center"><img src="/res/jsdzsb/bsdt/images/over_arrow.png" width="9" height="16" /></td>
+        <td align="center" class="liucheng_03 h1_14b v2_h1_14b" id="lc_tx">填写作废原因</td>
+        <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9" height="16" /></td>
+        <td align="center" class="liucheng_03 h1_14b  v2_h1_14b" id="lc_qr">确认作废申报表</td>
+        <td align="center"><img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9" height="16" /></td>
+        <td align="center" class="liucheng_03 h1_14b  v2_h1_14b" id="lc_hz">查看回执</td>
+      </tr>
+        </table></td>
+  </tr>
+</table></td>
+  </tr>
+  <tr>
+    <td class="gray3_bg_color"> </td>
+  </tr>
+  <tr>
+    <td><table  width="900" border="0" align="center" cellpadding="0" cellspacing="0" >
+      <tr>
+        <td align="center" class="h16_bold v2_title"><div align="left"><strong>查询条件：</strong></div></td>
+      </tr>
+      <td><table class="v2table" id="frm_dfsf_head" width="100%"  border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
+        <tr >
+         <td height="21" width="15%" nowrap="nowrap">纳税人识别号：</td>
+          <td width="35%">91350200MA2Y10EC4K</td>
+          <td width="15%" nowrap="nowrap">纳税人名称：</td>
+          <td width="35%" >威纳仕（厦门）酒业有限公司</td>
+          </tr>
+        <tr >
+          <td height="21" nowrap="nowrap">税款所属期起：</td>
+          <td>
+              <input type="text" name="queryVo['skssqq']" value="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
+             
+        </td>
+          <td nowrap="nowrap">税款所属期止：</td>
+          <td >
+              <input type="text" name="queryVo['skssqz']" value="" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
+             
+          </td>
+        </tr>
+         <tr >
+          <td height="21" nowrap="nowrap">申报日期始：</td>
+          <td>
+              <input type="text" name="queryVo['sbrqq']" value="2018-03-01" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
+                <font color="red">*</font>
+        </td>
+        <td height="21" nowrap="nowrap">申报日期止：</td>
+          <td>
+              <input type="text" name="queryVo['sbrqz']" value="2019-03-31" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
+               <font color="red">*</font> 
+        </td>
+          
+        </tr>
+         <tr >
+         <td nowrap="nowrap">申报表种类：</td>
+          <td >
+        
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<select id="_combobox_" name="queryVo['yzpzzldm']" 
+	
+	
+	style="" 
+	
+>
+	
+		<option value="" >--请选择--</option>
+			
+	    		
+		<option value="BDA0610007" >《耕地占用税纳税申报表》</option>
+	    		
+		<option value="BDA0610036" >《资源税纳税申报表》</option>
+	    		
+		<option value="BDA0610095" >《文化事业建设费申报表》</option>
+	    		
+		<option value="BDA0610100" >《通用申报表（税及附征税费）》</option>
+	    		
+		<option value="BDA0610108" >《契税纳税申报表》</option>
+	    		
+		<option value="BDA0610133" >《车船税代收代缴报告表》</option>
+	    		
+		<option value="BDA0610570" >《跨地区经营汇总纳税企业的分支机构年度纳税申报表》</option>
+	    		
+		<option value="BDA0610642" >《定期定额纳税申报表》</option>
+	    		
+		<option value="BDA0610678" >《城建税、教育费附加、地方教育附加税（费）申报表》</option>
+	    		
+		<option value="BDA0610683" >《土地增值税纳税申报表（一）（从事房地产开发的纳税人预征适用）》</option>
+	    		
+		<option value="BDA0610688" >《中华人民共和国企业所得税年度纳税申报表（A类）》（A100000）（2014年版）</option>
+	    		
+		<option value="BDA0610731" >《耕地占用税纳税申报表》</option>
+	    		
+		<option value="BDA0610750" >《车船税纳税申报表》</option>
+	    		
+		<option value="BDA0610753" >《个人所得税生产经营所得纳税申报表（A表）》</option>
+	    		
+		<option value="BDA0610754" >《个人所得税生产经营所得纳税申报表（B表）》</option>
+	    		
+		<option value="BDA0610756" >《中华人民共和国企业所得税月（季）度预缴纳税申报表（A类，2015年版）》</option>
+	    		
+		<option value="BDA0610761" >《加油站XX月份加油信息明细表》</option>
+	    		
+		<option value="BDA0610764" >《中华人民共和国企业所得税月（季）度预缴和年度纳税申报表（B类，2015年版）》（预缴申报适用）</option>
+	    		
+		<option value="BDA0610779" >《中华人民共和国企业所得税月（季）度预缴和年度纳税申报表（B类，2015年版）》（年度申报适用）</option>
+	    		
+		<option value="BDA0610790" >《城镇土地使用税纳税申报表》</option>
+	    		
+		<option value="BDA0610791" >《房产税纳税申报表》</option>
+	    		
+		<option value="BDA0610794" >《印花税纳税申报（报告）表》</option>
+	    		
+		<option value="BDA0610887" >《资源税纳税申报表》</option>
+	    		
+		<option value="BDA0610922" >《中华人民共和国企业年度关联业务往来汇总表》</option>
+	
+</select>
+        
+       
+          </td>
+          <td>征收项目：</td>
+          <td >
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<select id="_combobox_" name="queryVo['zsxmdm']" 
+	
+	
+	style="" 
+	
+>
+	
+		<option value="" >--请选择--</option>
+			
+	    		
+		<option value="10101" >增值税</option>
+	    		
+		<option value="10102" >消费税</option>
+	    		
+		<option value="10103" >营业税</option>
+	    		
+		<option value="10104" >企业所得税</option>
+	    		
+		<option value="10105" >企业所得税退税</option>
+	    		
+		<option value="10106" >个人所得税</option>
+	    		
+		<option value="10107" >资源税</option>
+	    		
+		<option value="10109" >城市维护建设税</option>
+	    		
+		<option value="10110" >房产税</option>
+	    		
+		<option value="10111" >印花税</option>
+	    		
+		<option value="10112" >城镇土地使用税</option>
+	    		
+		<option value="10113" >土地增值税</option>
+	    		
+		<option value="10114" >车船税</option>
+	    		
+		<option value="10115" >船舶吨税</option>
+	    		
+		<option value="10116" >车辆购置税</option>
+	    		
+		<option value="10117" >关税</option>
+	    		
+		<option value="10118" >耕地占用税</option>
+	    		
+		<option value="10119" >契税</option>
+	    		
+		<option value="10120" >烟叶税</option>
+	    		
+		<option value="10121" >环境保护税</option>
+	    		
+		<option value="10125" >屠宰税（废止）</option>
+	    		
+		<option value="10199" >其他税收收入</option>
+	    		
+		<option value="10201" >企业职工基本养老保险费</option>
+	    		
+		<option value="10202" >失业保险费</option>
+	    		
+		<option value="10203" >基本医疗保险费</option>
+	    		
+		<option value="10204" >工伤保险费</option>
+	    		
+		<option value="10205" >生育保险费</option>
+	    		
+		<option value="10206" >新型农村合作医疗费</option>
+	    		
+		<option value="10207" >城镇居民基本医疗保险费</option>
+	    		
+		<option value="10210" >城乡居民基本养老保险费</option>
+	    		
+		<option value="10211" >机关事业单位基本养老保险费</option>
+	    		
+		<option value="10212" >城乡居民基本医疗保险费</option>
+	    		
+		<option value="10291" >机关事业单位职业年金</option>
+	    		
+		<option value="10299" >其他社会保险费</option>
+	    		
+		<option value="11005" >国有资本经营预算转移支付收入</option>
+	    		
+		<option value="30102" >农网还贷资金收入</option>
+	    		
+		<option value="30129" >国家电影事业发展专项资金收入</option>
+	    		
+		<option value="30144" >城市公用事业附加收入</option>
+	    		
+		<option value="30146" >国有土地收益基金收入</option>
+	    		
+		<option value="30147" >农业土地开发资金收入</option>
+	    		
+		<option value="30148" >国有土地使用权出让收入</option>
+	    		
+		<option value="30149" >大中型水库移民后期扶持基金</option>
+	    		
+		<option value="30150" >跨省际大中型水库库区基金</option>
+	    		
+		<option value="30152" >三峡水库库区基金</option>
+	    		
+		<option value="30156" >城市基础设施配套费收入</option>
+	    		
+		<option value="30158" >国家重大水利工程建设基金收入</option>
+	    		
+		<option value="30166" >核电站乏燃料处理处置基金</option>
+	    		
+		<option value="30168" >可再生能源发展基金</option>
+	    		
+		<option value="30175" >废弃电器电子产品处理基金收入</option>
+	    		
+		<option value="30176" >水土保持补偿费收入</option>
+	    		
+		<option value="30199" >其他政府性基金收入</option>
+	    		
+		<option value="30201" >排污费收入</option>
+	    		
+		<option value="30202" >水资源费收入</option>
+	    		
+		<option value="30203" >教育费附加</option>
+	    		
+		<option value="30212" >场外核应急准备资金</option>
+	    		
+		<option value="30216" >地方教育附加</option>
+	    		
+		<option value="30217" >文化事业建设费</option>
+	    		
+		<option value="30218" >残疾人就业保障金</option>
+	    		
+		<option value="30221" >水利建设专项收入</option>
+	    		
+		<option value="30224" >油价调控风险准备金</option>
+	    		
+		<option value="30299" >其他专项收入</option>
+	    		
+		<option value="30407" >财政行政事业性收费收入</option>
+	    		
+		<option value="30408" >税务行政事业性收费收入</option>
+	    		
+		<option value="30424" >人防办行政事业性收费收入</option>
+	    		
+		<option value="30427" >教育行政事业性收费收入</option>
+	    		
+		<option value="30432" >国土资源行政事业性收费收入</option>
+	    		
+		<option value="30433" >建设行政事业性收费收入</option>
+	    		
+		<option value="30442" >交通运输行政事业性收费收入</option>
+	    		
+		<option value="30443" >工业和信息产业行政事业性收费收入</option>
+	    		
+		<option value="30444" >农业行政事业性收费收入</option>
+	    		
+		<option value="30446" >水利行政事业性收费收入</option>
+	    		
+		<option value="30499" >其他行政事业性收费收入</option>
+	    		
+		<option value="30501" >税务部门罚没收入</option>
+	    		
+		<option value="30600" >国有资本经营收入</option>
+	    		
+		<option value="30603" >产权转让收入</option>
+	    		
+		<option value="30604" >清算收入</option>
+	    		
+		<option value="30701" >海上石油矿区使用费</option>
+	    		
+		<option value="30702" >陆上石油矿区使用费</option>
+	    		
+		<option value="30703" >场地使用费收入</option>
+	    		
+		<option value="30705" >利息收入</option>
+	    		
+		<option value="30706" >非经营性国有资产收入</option>
+	    		
+		<option value="30710" >石油特别收益金</option>
+	    		
+		<option value="30714" >矿产资源专项收入</option>
+	    		
+		<option value="30720" >国家留成油上缴收入</option>
+	    		
+		<option value="30799" >其他国有资源（产）有偿使用收入</option>
+	    		
+		<option value="39900" >其他收入</option>
+	    		
+		<option value="39907" >免税商品特许经营费</option>
+	    		
+		<option value="39912" >差别电价收入</option>
+	    		
+		<option value="39999" >其他收入</option>
+	
+</select>
+        
+          </td>
+         
+        </tr>
+        <tr >
+          <td colspan="4">
+            <div align="center">
+              <input class="tbBtn rad" type="button"  value="查询" onclick="cx()" />
+              <input type="hidden"  name="query" value="true"/>
+              </div>
+          
+          </td>
+      </tr>
+      
+     
+       
+      </table>
+        </td>
+      </tr>
+	<tr>
+    <div align="left">
+      <td>
+        <div align="center"><span style="line-height:1.5;color:red">
+	    <input  class="tbBtn rad" name="b_zfqr" type="button" value="确认作废" align="right" onclick="ensureSubmit()" style="display: none;">
+	    <input  class="tbBtn rad" name="b_zftj" type="button" onclick="return submitCheck();" value="提  交 作 废" align="right" style="display: none;">
+	    </span></div>
+      <table  id="frm_dfsf" width="100%"  border="1" cellpadding="0" cellspacing="0"  >
+      <tr>
+        <td align="center" class="h16_bold v2_th"><div align="left"><strong>查询结果：</strong></div></td>
+      </tr>
+      <td><table class="v2table" id="frm_dfsf" width="100%"  border="1" cellpadding="0" cellspacing="0"  >
+        <tr class="head tit">
+          <td nowrap="nowrap"><div align="center">选择</div></td>
+          <td nowrap="nowrap"><div align="center">申报表种类</div></td>
+          <td nowrap="nowrap"><div align="center">征收项目</div></td>
+          <td nowrap="nowrap"><div align="center">征收品目</div></td>
+          <td nowrap="nowrap" width="70"><div align="center">申报日期</div></td>
+          <td nowrap="nowrap" width="70"><div align="center">税（费）<br />
+            所属期始</div></td>
+          <td nowrap="nowrap" width="70"><div align="center">税（费）<br />
+            所属期止</div></td>
+          <td nowrap="nowrap" style="color:Maroon"><div align="center">应入库税（费）额 </div></td>
+          <td nowrap="nowrap"><div align="center">凭证序号 </div></td>
+           <!-- 
+             <td nowrap="nowrap"><div align="center">操作 </div></td>
+            
+    
+            -->
+              
+          </tr>
+         
+          
+          	<tr >
+	          <td nowrap="nowrap" colspan="10"><div align="center" class="size14">
+	                             当前没有可以作废的申报记录!
+	        
+	            </div></td>
+          
+           <input type="hidden" name="queryVo['sbuuid']"  />
+          
+           
+
+
+
+ 
+
+ 
+<script language='javascript' type='text/javascript'>
+alert('当前没有可以作废的申报记录!')</script>
+
+      </table>
+	  </table>
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        <table width="100%" border="1" style="display: none">
+          <tr>
+            <td>请录入作废原因：</td>
+          </tr>
+          <tr>
+            <td height="63">
+              <textarea name="queryVo['zfyy']" cols="153" rows="5" readonly="readonly" onfocus="srzfyy()">网站作废申报记录</textarea>
+               
+                        </td>
+          </tr>
+        </table>
+        <p align="center">
+	    <div align="center"><span style="line-height:1.5;color:red">
+	    <input class="tbBtn rad" name="b_zfqr" type="button" value="确认作废" align="right" onclick="ensureSubmit()" style="display: none;">
+	    <input class="tbBtn rad" name="b_zftj" type="button" onclick="return submitCheck();" value="提  交 作 废" align="right" style="display: none;">
+	    </span></div>
+	  </p>
+          </td>
+    <p>&nbsp;</p>
+    </div>
+	</tr>
+	</table>
+    </td>
+  </tr>
+</table>
+</form>
+
+<script type="text/javascript">
+ 
+	function changeLiucheng(lcid){
+		$("#"+lcid).addClass("liucheng_02");
+		$("#"+lcid).addClass("h1_14w");
+		$("#"+lcid).removeClass("liucheng_03");
+		$("#"+lcid).removeClass("h1_14b");
+	}
+	function chooseSbb(){
+		changeLiucheng("lc_tx");
+	}
+	function ensureSubmit(){
+		var zfyy=getObj("queryVo['zfyy']").value;
+		if(zfyy==''){
+        alert("请输出作废原因！");
+        return false;
+	    }
+		changeLiucheng("lc_qr");
+		$("[name='b_zfqr']").hide();
+		$("[name='b_zftj']").show();
+	}
+	function radioClick(){
+		var sbuuid=$('input:radio[name="isChecked"]:checked').val();
+		if(sbuuid!='' && sbuuid!=null){
+		$("[name='b_zfqr']").show();
+		$("[name='b_zftj']").hide();
+		changeLiucheng('lc_tx');
+		}
+	}
+	function submitCheck() {
+		var sbuuid=$('input:radio[name="isChecked"]:checked').val();
+		if(!sbuuid){
+         alert("请选择一条作废记录!");
+         return false;
+		}
+		getObj("queryVo['sbuuid']").value=sbuuid;
+	 
+		var _confMsg = "请确认是否提交？";
+		 
+		  if (!confirm(_confMsg)) {
+		        return false;
+		  }else{
+			  $.post(
+     	    			"/jsdzsb/zfsbjl/tj.do",
+     	    			$("#myForm").serialize(),
+     	    			function(data) {
+         	    			if(data.success){
+         	    				changeLiucheng('lc_hz');
+     	    				    alert("作废成功！");
+     	    				    $("#myForm").attr("action","/jsdzsb/zfsbjl/start.do");  
+     	    					$("#myForm").submit();
+     	    				    //setTimeout("zfsubmit();",2000);
+     	    					 
+             	    		}else{
+                 	         var msg=data.msg;
+                 	         var sName = "jsjkltApp_31_8011";
+                     		 if (sName != null && sName != "") {
+                     		 	msg = msg + "(" + sName + ")";
+                     		 }
+                              alert(msg);
+                 	    	}
+     	    				 
+     	    			}
+     	    		);
+		  }		
+	}
+   function zfsubmit(){
+	    $("#myForm").attr("action","/jsdzsb/zfsbjl/start.do");  
+		$("#myForm").submit();
+	  }
+	function cx(){
+    var skssqq=getObj("queryVo['sbrqq']").value;
+    var skssqz=getObj("queryVo['sbrqz']").value;
+    if(skssqq==''){
+      alert("申报日期始必须填！");
+      return false;
+     }
+    if(skssqz==''){
+        alert("申报日期止必须填！");
+        return false;
+    }
+    
+    $("#myForm").attr("action","/jsdzsb/zfsbjl/start.do");  
+	$("#myForm").submit();
+    
+    }
+	function srzfyy(){
+	
+   }
+   function ckmx(yzpzzldm,pzxh,skssqq,skssqz){
+	   if( yzpzzldm=="BDA0610756"){
+       location.href='/jsdzsb/zfsbjl/mx.do?allowrepeat=Y&yzpzzldm=' + yzpzzldm+'&pzxh='+pzxh+'&skssqq='+skssqq+'&skssqz='+skssqz;
+	   }else{
+		   var height='330px';
+		if(yzpzzldm=="BDA0610753" || yzpzzldm=="BDA0610754"){
+			height='530px';
+		} 
+       layer.open({
+		   type: 2,
+		   title: '明细记录',
+		   area: ['900px', height],
+           fix: false, //不固定
+           maxmin: true,
+           offset : ['50px' , '50px'],
+           move : ['明细记录' , false],
+		   content: '/jsdzsb/zfsbjl/mx.do?allowrepeat=Y&yzpzzldm=' + yzpzzldm+'&pzxh='+pzxh
+		 });
+	   }
+  }
+</script>
+
+
+
+		
+
+<div id="_loadIfmContent" style="display:none;"></div>
+<SCRIPT LANGUAGE="JavaScript">
+$(function(){  
+	endIe8Load();
+}); 
+
+function endIe8Load() {
+	try{
+		var _loadIfm = ' <iframe id="_loadIfm" src="" width="1" height="1" style="border: 0px; display:none" frameborder="0" ></iframe>';
+		if (!$("#_loadIfm")[0]) {
+			$("#_loadIfmContent").append(_loadIfm);
+		}
+		$("#_loadIfmContent", window.document).attr("src", "#");
+	}catch(e){}
+}
+</SCRIPT>
+
+	</body>
+     
+
+</html>

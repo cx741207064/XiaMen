@@ -1,0 +1,256 @@
+﻿
+
+
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<link rel="stylesheet" href="/wssb/wssb/public/style/link.css" type="text/css">
+<title>申报查询</title>
+<script language="javascript" src="/wssb/wssb/public/js/jquery-1.7.2.min.js"></script>
+<script language=javascript src="/wssb/wssb/public/js/commonNew.js"></script>
+<SCRIPT language="JAVASCRIPT" src="/wssb/wssb/public/js/text.js"></SCRIPT>
+</head>
+
+
+<script language="javascript">
+var objscrElement = null;
+function checkData() {
+	if($("#SSSQ_Q_YEAR").val() == "") {
+		alert("税款所属时期起中的年度不能为空!!!");
+		$("#SSSQ_Q_YEAR").focus();
+		return false;
+	}
+	if($("#SSSQ_Q_MONTH").val() == "") {
+		alert("税款所属时期起中的月份不能为空!!!");
+		$("#SSSQ_Q_MONTH").val()
+		return false;
+	}
+	if($("#SSSQ_Z_YEAR").val() == "") {
+		alert("税款所属时期止中的年度不能为空!!!");
+		$("#SSSQ_Z_YEAR").val()
+		return false;
+	}
+	if($("#SSSQ_Z_MONTH").val() == "") {
+		alert("税款所属时期止中的月份不能为空!!!");
+		$("#SSSQ_Z_MONTH").val()
+		return false;
+	}
+
+	if($("#disGROUP_ID").val() == "") {
+		alert("征收项目不能为空!!!");
+		$("#disGROUP_ID").val()
+		return false;
+	}
+	return true;
+}
+
+function getFormData(){
+	$("#GROUP_ID").val($("#disGROUP_ID").val());
+	$("#SSSQ_Q").val($("#SSSQ_Q_YEAR").val()+$("#SSSQ_Q_MONTH").val()+"01");
+	var year = $("#SSSQ_Z_YEAR").val();
+	var month = $("#SSSQ_Z_MONTH").val();
+	var date = "31";
+	if(month == "04" || month == "06" || month == "09" || month == "11"){
+	  date = "30";
+	}else if(month == "02"){
+	  if( (year%4 == 0 && year%100 != 0) || year%400 ==0 ){
+	    date = "29";
+	  }else{
+	    date = "28";
+	  }
+	}
+	$("#SSSQ_Z").val(year + month + date);
+}
+
+function chgGroupid(groupidObj){
+	var groupidVal = groupidObj.value;
+	var nowMonthVal = $("#nowMonth").val();
+	var tmpMulti = 0;
+	if((groupidVal == "10101") ||(groupidVal == "10102") || (groupidVal == "10104") || (groupidVal == "10106")|| (groupidVal == "30217") || (groupidVal == "30175") || (groupidVal == "A56")|| (groupidVal == "39907")){
+		$("#SSSQ_Q_YEAR").val(2019);
+		$("#SSSQ_Q_MONTH").val(02);
+		if($("#SSSQ_Q_MONTH").val() < 10){
+			$("#SSSQ_Q_MONTH").val("0" + $("#SSSQ_Q_MONTH").val());
+		}
+		$("#SSSQ_Z_YEAR").val(2019);
+		$("#SSSQ_Z_MONTH").val(02);
+		if($("#SSSQ_Z_MONTH").val() < 10){
+			$("#SSSQ_Z_MONTH").val("0" + $("#SSSQ_Z_MONTH").val());
+		}
+	} else{
+		tmpMulti = parseInt((nowMonthVal - 1)/3);
+		if(tmpMulti > 0){
+			$("#SSSQ_Q_YEAR").val(2019);
+			$("#SSSQ_Q_MONTH").val(3 * (tmpMulti - 1) + 1);
+			if($("#SSSQ_Q_MONTH").val() < 10){
+				$("#SSSQ_Q_MONTH").val("0" + $("#SSSQ_Q_MONTH").val());
+			}
+			$("#SSSQ_Z_YEAR").val(2019);
+			$("#SSSQ_Z_MONTH").val(3 * (tmpMulti - 1) + 3);
+			if($("#SSSQ_Z_MONTH").val() < 10){
+				$("#SSSQ_Z_MONTH").val("0" + $("#SSSQ_Z_MONTH").val());
+			}
+		} else{
+			$("#SSSQ_Q_YEAR").val(2019 - 1);
+			$("#SSSQ_Q_MONTH").val(10);
+			$("#SSSQ_Z_YEAR").val(2019 - 1);
+			$("#SSSQ_Z_MONTH").val(12);
+		}
+	}
+}
+
+function submit(){
+	if(!checkData())	return;
+	if(!verifyYearDigit(document.getElementById("SSSQ_Q_YEAR")))	return;
+	if(!verifyYearDigit(document.getElementById("SSSQ_Z_YEAR")))	return;
+	if(!verifyMonth(document.getElementById("SSSQ_Q_MONTH"))) return;
+	if(!verifyMonth(document.getElementById("SSSQ_Z_MONTH"))) return;
+	var strCompareReturn = compareDate_ym($("#SSSQ_Q_YEAR").val(),$("#SSSQ_Q_MONTH").val(),$("#SSSQ_Z_YEAR").val(),$("#SSSQ_Z_MONTH").val());
+
+	if(strCompareReturn != 0) {
+		alert("所属时期起不能大于所属时期止!!!");
+		if(strCompareReturn == 1){
+			$("#SSSQ_Q_YEAR").focus();
+			$("#SSSQ_Q_YEAR").select();
+		}else if(strCompareReturn == 2){
+			$("#SSSQ_Q_MONTH").focus();
+			$("#SSSQ_Q_MONTH").select();
+		}
+		return;
+	}
+	getFormData();
+	$("#frmzsxm_cx").attr("action","/wssb/MainServlet");
+	$("#frmzsxm_cx").submit();
+}
+
+///新增申报方式选择赋值
+function chgSelectValue(selectObj){
+	$("#SBFS_DM").val(selectObj.value);
+	
+}
+</script>
+<body topmargin=0 leftmargin=0>
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr valign="top">
+    <!--菜单列-->
+    <!--<td width="161" height="100%">
+    
+    </td>-->
+
+    <!--内容列-->
+    <td valign="top" align=center height="100%">
+    <br/><br/><br/>
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="SBB">
+	<tr>
+		<td>
+			<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+		      <tr>
+		        <td width="400" class="title">输入申报查询条件</td>
+		      </tr>
+    	</table>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	      <tr bgcolor="#666666">
+	        <td height="1" colspan="3"><img src="" width="1" height="1"></td>
+	      </tr>
+	      <tr>
+	        <td width="100%" align="center" bgcolor="#FFFFFF"><br>
+						<input type="hidden" name="nowMonth" id="nowMonth" value="03">
+						<table width="65%" border="1" align="center" cellpadding="0" cellspacing="0" class="CXSBB" bordercolor='#C4C6C4'  bordercolordark='#ffffff' borderColorLight=#999999>
+							<tr>
+								<td width="10%" height=30 align="center" nowrap>征收项目 </td>
+                <td nowrap>
+                	<select name="disGROUP_ID"  id="disGROUP_ID" onchange="chgGroupid(this);">
+                		<option value="10101">增值税</option>
+						<option value="10102">消费税</option>
+          				<option value="10104">企业所得税</option>
+						<option value="10104">外资季度所得税(2008年以前)</option>
+						<option value="10106">个人所得税</option>
+						<option value="30217">文化事业建设费</option>
+						<option value="30175">废弃电器电子产品处理基金</option>
+						<option value="39907">非税收入通用申报</option>
+						<!--<option value="A56">受控外国企业信息报告表</option>
+						<option value="A55">居民企业参股外国企业信息报告表</option>-->
+						
+							
+                	</select>
+                </td>
+              </tr>
+              <tr>
+                <td height=30 nowrap>查询范围（税款所属期） </td>
+                <td><input type="text" name="SSSQ_Q_YEAR" id="SSSQ_Q_YEAR" value="2019" maxlength="4" style="width:40;ime-mode:disabled;text-align:center" onKeyDown="doOnKeyDown();setFormatDown('PURE_NUMBER',this,event);" onChange="verifyYearDigit(this);" onBlur="showErrorBlur('PURE_NUMBER',this,4,0);" onClick="this.focus();this.select();">年
+                		<input type="text" name="SSSQ_Q_MONTH" id="SSSQ_Q_MONTH" value="02" maxlength="2" style="width:25;ime-mode:disabled;text-align:center" onKeyDown="doOnKeyDown();setFormatDown('PURE_NUMBER',this,event);" onChange="fillMonthDigit(this);verifyMonth(this);" onBlur="showErrorBlur('PURE_NUMBER',this,2,0);" onClick="this.focus();this.select();">月 至
+                		<input type="text" name="SSSQ_Z_YEAR" id="SSSQ_Z_YEAR" value="2019" maxlength="4" style="width:40;ime-mode:disabled;text-align:center" onKeyDown="doOnKeyDown();setFormatDown('PURE_NUMBER',this,event);" onChange="verifyYearDigit(this);" onBlur="showErrorBlur('PURE_NUMBER',this,4,0);" onClick="this.focus();this.select();">年
+                		<input type="text" name="SSSQ_Z_MONTH" id="SSSQ_Z_MONTH" value="02" maxlength="2" style="width:25;ime-mode:disabled;text-align:center" onKeyDown="doOnKeyDown();setFormatDown('PURE_NUMBER',this,event);" onChange="fillMonthDigit(this);verifyMonth(this);" onBlur="showErrorBlur('PURE_NUMBER',this,2,0);" onClick="this.focus();this.select();">月
+                </td>
+              </tr>
+              <!--增加按申报方式查询的功能  20110808  -->
+              <tr>
+                <td height=30 nowra align="center">申报方式 </td>
+                <td>
+                    <select name="SBFS" id="SBFS" onchange="chgSelectValue(this);">
+                    	<option value="32" selected="selected">&nbsp;网上申报&nbsp; </option>
+                    	<option value="10"> &nbsp;柜台申报 &nbsp;</option>
+                    </select>
+                </td>
+              </tr>
+              <!-- 新增结束 -->
+              
+            </table>
+            <br>
+            <br>
+            <table border="0" cellpadding="0" cellspacing="0" align="center">
+              <tr>
+                 <td align="center">
+                  <a href="javascript:submit()" class="btnclass" >
+                  	打&nbsp;&nbsp;&nbsp;印
+                  </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <a href="javascript:submit()" class="btnclass" >
+                  	导&nbsp;&nbsp;&nbsp;出
+                  </a>
+                  </td>
+              </tr>
+            </table>
+            <br><br>
+					</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+</table>
+
+<br>
+<table border=0 width="69%" align="center">
+	<tr>
+		<td width="8%"><p style="line-height:2;color:'#000000'">说明:</p></td>
+	</tr>
+	<tr>
+		<td>
+			<p style="line-height:2;color:'#000000'">1、申报查询只提供查询当前可申报税种的申报情况</p>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<p style="line-height:2;color:'#000000'"><br></p>
+		</td>
+	</tr>
+<table>
+
+<form name="frmzsxm_cx" id="frmzsxm_cx">
+	<input type="hidden" name="SSSQ_Q" id="SSSQ_Q" value="2019-02-01">
+	<input type="hidden" name="SSSQ_Z" id="SSSQ_Z" value="2019-02-28">
+	<input type="hidden" name="GROUP_ID" id="GROUP_ID" value="">
+	<input type="hidden" name="TABLE_ACTION" id="TABLE_ACTION" value="display">
+	<input type="hidden" name="NSRSBH" id="NSRSBH"  value="91350200MA2Y10EC4K">
+	<input type="hidden" name="TABLE_NAME" id="TABLE_NAME" value="DZBS_SBCX">
+	<input type="hidden" name="SBFS_DM" id="SBFS_DM" value="32">
+</form>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>

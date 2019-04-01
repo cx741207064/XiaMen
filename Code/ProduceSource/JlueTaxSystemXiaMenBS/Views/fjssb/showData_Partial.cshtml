@@ -1,0 +1,472 @@
+﻿<script type="text/javascript">
+    $(function () {
+        for (var i = 0; i < 3; i++) {
+            var div = $("#jmxzmc" + i)
+            $("#ssjmxzdm").children("option:gt(0)").each(function (index, e) {
+                if (div.text().trim() == $(e).val()) {
+                    div.html($(e).text())
+                    return false;
+                }
+            })
+        }
+    })
+</script>
+@using JlueTaxSystemXiaMenBS.Models;
+@model Tuple<FjsData,Nsrxx,GDTXDate>
+<tr>
+    <td colspan="3"><p align="left">纳税人识别号</p></td>
+    <td colspan="2"><p align="left">@Model.Item2.NSRSBH</p></td>
+    <td colspan="7"><p align="left">税款所属期起</p></td>
+    <td colspan="4">
+        <p align="left">@Model.Item3.skssqq</p> <input type="hidden" name="sbbVo['skssqq']" value="2019-02-01" />
+    </td>
+    <td colspan="4"><p align="left">税款所属期止</p></td>
+    <td colspan="2">
+        <p align="left">@Model.Item3.skssqz</p> <input type="hidden" name="sbbVo['skssqz']" value="2019-02-28" />
+    </td>
+    <input type="hidden" name="sbbVo['tbrq']" value="2019-03-06" />
+    <input type="hidden" name="sbbVo['slrq']" value="2019-03-06" />
+</tr>
+<tr>
+    <td colspan="3" rowspan="3" valign="top"><p>纳税人信息</p></td>
+    <td colspan="2" valign="top"><p>名称</p></td>
+    <td colspan="11" valign="top"><p>@Model.Item2.NSRMC</p></td>
+    <td colspan="4" valign="top"><p>登记类型</p></td>
+    <td colspan="2" valign="top">
+        <input name="checkbox"
+               type="checkbox" value="checkbox" checked="checked" /> 单位 <input type="checkbox" name="checkbox" value="checkbox"
+                                                                               disabled="disabled" /> 个人
+    </td>
+</tr>
+<tr>
+    <td colspan="2" valign="top"><p>登记注册类型</p></td>
+    <td colspan="4" valign="top">
+        <p>
+            @Model.Item2.DJZCLX
+        </p>
+    </td>
+    <td colspan="4" valign="top"><p>所属行业</p></td>
+    <td colspan="2" valign="top">
+        <p>
+            @Model.Item2.GBHY
+        </p>
+    </td>
+    <td colspan="3" valign="top"><p>身份证件类型</p></td>
+    <td colspan="4" valign="top">
+        <p>
+            居民身份证
+            &nbsp;
+        </p>
+    </td>
+</tr>
+<tr>
+    <td colspan="2" valign="top"><p>身份证件号码</p></td>
+    <td colspan="9" valign="top"><p>@Model.Item2.IDCardNum&nbsp;</p></td>
+    <td colspan="2" valign="top"><p>联系方式</p></td>
+    <td colspan="6" valign="top"><p>@Model.Item2.LXDH&nbsp;</p></td>
+</tr>
+<tr>
+    <td colspan="6" rowspan="3">
+        <p align="left">
+            本期是否适用增值税小规模纳税人减征政策
+            (减免性质代码__城市维护建设税：0007049901，减免性质代码_教育费附加：0061049901，减免性质代码_地方教育附加：0099049901
+        </p>
+    </td>
+    <td colspan="6" rowspan="3">
+        <p align="left">
+
+            <input type="checkbox" name="_xgm" disabled="disabled">是</input><input type="checkbox" name="_xgm" checked="checked" disabled="disabled">否</input>
+
+            <input type="hidden" name="isXgm" value="N">
+            <input type="hidden" name="xgmNsr" value="3">
+        </p>
+    </td>
+    <td colspan="6"><p align="left">减征比例_城市维护建设税</p></td>
+    <td colspan="4">
+        <p align="left">0.5</p>
+        <input type="hidden" name="xgmjzbl" value="0.5" />
+    </td>
+</tr>
+<tr>
+    <td colspan="6"><p align="left">减征比例_教育费附加</p></td>
+    <td colspan="4"><p align="left">0.5</p></td>
+</tr>
+<tr>
+    <td colspan="6"><p align="left">减征比例_地方教育附加</p></td>
+    <td colspan="4"><p align="left">0.5</p></td>
+</tr>
+<tr>
+    <td width="68" rowspan="3" valign="top">
+        <div align="center">操作</div>
+    </td>
+    <td width="55" rowspan="3" valign="top">征收项目</td>
+    <td width="69" rowspan="3" valign="top">征收品目</td>
+    <td colspan="8" valign="top">
+        <p align="center">
+            计税（费）依据
+        </p>
+    </td>
+    <td colspan="3" rowspan="3" valign="top">
+        <p align="center">
+            税率（征收率）
+        </p>
+    </td>
+    <td colspan="2" rowspan="3" valign="top">
+        <p align="center">
+            本期应纳税（费）额
+        </p>
+    </td>
+    <td colspan="3" rowspan="2" valign="top">
+        <p align="center">
+            本期减免税（费）额
+        </p>
+    </td>
+    <td colspan="1" rowspan="3" valign="top">
+        <p align="center">
+            本期增值税小规模纳税人减征额
+        </p>
+    </td>
+    <td width="54" rowspan="3" valign="top">
+        <p align="center">本期已缴税（费）额</p>
+    </td>
+    <td width="100" rowspan="3" valign="top" style="color:Maroon">
+        <p align="center">本期应补（退）税（费）额</p>
+    </td>
+</tr>
+<tr>
+    <td colspan="3" valign="top"><p align="center">增值税</p></td>
+    <td colspan="2" rowspan="2" valign="top"><p>消费税</p></td>
+    <td colspan="2" rowspan="2" valign="top"><p>营业税</p></td>
+    <td width="105" rowspan="2" valign="top"><p>合计</p></td>
+</tr>
+<tr>
+    <td width="104" valign="top"><p>一般增值税</p></td>
+    <td colspan="2" valign="top"><p>免抵税额</p></td>
+    <td width="105" valign="top">
+        <p align="center">
+            减免性质代码
+        </p>
+    </td>
+    <td colspan="2" valign="top"><p align="center">减免额</p></td>
+</tr>
+
+@if(ViewBag.init !=true)
+{
+
+<tr>
+    <td valign="top">
+        <a href="#" onclick="modify('c348cd9a90ec40669738f2aa9a33b1e6')">修改</a>&nbsp;&nbsp;
+        <a href="#" onclick="del('c348cd9a90ec40669738f2aa9a33b1e6')">删除</a>
+        &nbsp;&nbsp;
+    </td>
+    <input type="hidden" value="8046254ED74D7592E05338401B518905" />
+    <td nowrap>
+        城市维护建设税
+    </td>
+    <td valign="top">
+        城市维护建设税-
+        市区（增值税附征）
+    </td>
+    <td valign="top">
+        <div align="right">@Model.Item1.ybzzs</div> <input type="hidden" name="sbbList[0]['ybzzs']"
+       value="@Model.Item1.ybzzs" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">@Model.Item1.mdse</div>
+        <input type="hidden" name="sbbList[0]['zzsmdse']"
+               value="@Model.Item1.mdse" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[0]['xfs']"
+               value="0.00" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[0]['yys']"
+               value="0.00" />
+    </td>
+    <td valign="top">
+        <div align="right">@Model.Item1.hj</div> <input type="hidden" name="sbbList[0]['hj']"
+       value="@Model.Item1.hj" />
+    </td>
+    <td colspan="3" valign="top"><div align="right">0.07</div></td>
+    <td colspan="2" valign="top">
+        <div align="right">@Model.Item1.bqynse</div>
+        <input type="hidden" name="sbbList[0]['bqynse']"
+               value="@Model.Item1.bqynse" />
+    </td>
+    <td valign="top">
+        <div align="right" id="jmxzmc0">
+            @Model.Item1.jmxzdm
+        </div>
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">@Model.Item1.jme</div>
+        <input type="hidden" name="sbbList[0]['jme']"
+               value="@Model.Item1.jme" />
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right">0.0</div>
+        <input type="hidden" name="sbbList[0]['bqjzse']"
+               value="0.0" />
+        <input type="hidden" name="sbbList[0]['xgmjzbl']"
+               value="0.0" />
+        <input type="hidden" name="sbbList[0]['isXgm']"
+               value="" />
+        <input type="hidden" name="sbbList[0]['jzxzdm']"
+               value="0007049901" />
+        <input type="hidden" name="sbbList[0]['jzswxsdm']"
+               value="" />
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right">@Model.Item1.bqyjse</div>
+        <input type="hidden" name="sbbList[0]['bqyjse']"
+               value="@Model.Item1.bqyjse" />
+    </td>
+    <td valign="top" class="blue">
+        <div align="right">@Model.Item1.bqybtse</div>
+        <input type="hidden" name="sbbList[0]['bqybtse']"
+               value="@Model.Item1.bqybtse" />
+    </td>
+</tr>
+
+<tr>
+    <td valign="top">
+        <a href="#" onclick="del('c348cd9a90ec40669738f2aa9a33b1e6')">删除</a>
+        &nbsp;&nbsp;
+    </td>
+    <input type="hidden" value="8046254ED74E7592E05338401B518905" />
+    <td nowrap>
+        教育费附加
+    </td>
+    <td valign="top">
+        教育费附加-
+        增值税教育费附加
+    </td>
+    <td valign="top">
+        <div align="right">@Model.Item1.ybzzs</div> <input type="hidden" name="sbbList[1]['ybzzs']"
+       value="@Model.Item1.ybzzs" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">@Model.Item1.mdse</div>
+        <input type="hidden" name="sbbList[1]['zzsmdse']"
+               value="@Model.Item1.mdse" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[1]['xfs']"
+               value="0.00" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[1]['yys']"
+               value="0.00" />
+    </td>
+    <td valign="top">
+        <div align="right">@Model.Item1.hj</div> <input type="hidden" name="sbbList[1]['hj']"
+       value="@Model.Item1.hj" />
+    </td>
+    <td colspan="3" valign="top"><div align="right">0.03</div></td>
+    <td colspan="2" valign="top">
+        <div align="right">@{Model.Item1.hj = (Model.Item1.hj == null ? "0" : Model.Item1.hj); decimal bqynse1 = Math.Round(decimal.Parse(Model.Item1.hj) * new decimal(0.03), 2);}@bqynse1</div>
+        <input type="hidden" name="sbbList[1]['bqynse']"
+               value="@bqynse1" />
+    </td>
+    <td valign="top">
+        <div align="right" id="jmxzmc1">
+            @if (Model.Item1.zzsxselx_dm == "12") 
+            {
+                string jmxzmc1 = "0061042802|按月纳税的月销售额或营业额不超过10万元缴纳义务人免征教育费附加|《财政部 国家税务总局关于扩大有关政府性基金免征范围的通知》 财税〔2016〕12号第一条";
+                @jmxzmc1
+            }
+            else 
+            {
+            @Model.Item1.jmxzdm
+            }
+        </div>
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">
+        @{decimal jme1 = 0;}
+        @if (Model.Item1.zzsxselx_dm == "13")
+        { jme1 = Model.Item1.jme; }
+        else
+        { jme1 = bqynse1; }
+        @jme1
+        </div>
+        <input type="hidden" name="sbbList[1]['jme']"
+               value="@jme1" />
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[1]['bqjzse']"
+               value="0.00" />
+        <input type="hidden" name="sbbList[1]['xgmjzbl']"
+               value="0.0" />
+        <input type="hidden" name="sbbList[1]['isXgm']"
+               value="" />
+        <input type="hidden" name="sbbList[1]['jzxzdm']"
+               value="0061049901" />
+        <input type="hidden" name="sbbList[1]['jzswxsdm']"
+               value="" />
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right">@Model.Item1.jyffjyjse</div>
+        <input type="hidden" name="sbbList[1]['bqyjse']"
+               value="@Model.Item1.jyffjyjse" />
+    </td>
+    <td valign="top" class="blue">
+        <div align="right">@{decimal bqybtse1 = bqynse1 - jme1 - Model.Item1.jyffjyjse;}@bqybtse1</div>
+        <input type="hidden" name="sbbList[1]['bqybtse']"
+               value="@bqybtse1" />
+    </td>
+</tr>
+
+<tr>
+    <td valign="top">
+        <a href="#" onclick="del('c348cd9a90ec40669738f2aa9a33b1e6')">删除</a>
+        &nbsp;&nbsp;
+    </td>
+    <input type="hidden" value="8046254EDB29756EE05338401B518A27" />
+    <td nowrap>
+        地方教育附加
+    </td>
+    <td valign="top">
+        地方教育附加-
+        增值税地方教育附加
+    </td>
+    <td valign="top">
+        <div align="right">@Model.Item1.ybzzs</div> <input type="hidden" name="sbbList[2]['ybzzs']"
+       value="@Model.Item1.ybzzs" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">@Model.Item1.mdse</div>
+        <input type="hidden" name="sbbList[2]['zzsmdse']"
+               value="@Model.Item1.mdse" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[2]['xfs']"
+               value="0.00" />
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[2]['yys']"
+               value="0.00" />
+    </td>
+    <td valign="top">
+        <div align="right">@Model.Item1.hj</div> <input type="hidden" name="sbbList[2]['hj']"
+       value="@Model.Item1.hj" />
+    </td>
+    <td colspan="3" valign="top"><div align="right">0.02</div></td>
+    <td colspan="2" valign="top">
+        <div align="right">@{decimal bqynse2 = Math.Round(decimal.Parse(Model.Item1.hj == null ? "0" : Model.Item1.hj) * new decimal(0.02), 2);}@bqynse2</div>
+        <input type="hidden" name="sbbList[2]['bqynse']"
+               value="@bqynse2" />
+    </td>
+    <td valign="top">
+        <div align="right" id="jmxzmc2">
+            @if (Model.Item1.zzsxselx_dm == "12")
+            {
+                string jmxzmc2 = "0061042802|按月纳税的月销售额或营业额不超过10万元缴纳义务人免征教育费附加|《财政部 国家税务总局关于扩大有关政府性基金免征范围的通知》 财税〔2016〕12号第一条";
+                @jmxzmc2
+            }
+            else
+            {
+                @Model.Item1.jmxzdm
+            }
+        </div>
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right">
+            @{decimal jme2 = 0;}
+            @if (Model.Item1.zzsxselx_dm == "13")
+            { jme2 = Model.Item1.jme; }
+            else
+            { jme2 = bqynse2; }
+            @jme2
+        </div>
+        <input type="hidden" name="sbbList[2]['jme']"
+               value="@jme2" />
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right">0.00</div>
+        <input type="hidden" name="sbbList[2]['bqjzse']"
+               value="0.00" />
+        <input type="hidden" name="sbbList[2]['xgmjzbl']"
+               value="0.0" />
+        <input type="hidden" name="sbbList[2]['isXgm']"
+               value="" />
+        <input type="hidden" name="sbbList[2]['jzxzdm']"
+               value="0099049901" />
+        <input type="hidden" name="sbbList[2]['jzswxsdm']"
+               value="" />
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right">@Model.Item1.dffjyjse</div>
+        <input type="hidden" name="sbbList[2]['bqyjse']"
+               value="@Model.Item1.dffjyjse" />
+    </td>
+    <td valign="top" class="blue">
+        <div align="right">@{decimal bqybtse2 = bqynse2 - jme2 - Model.Item1.dffjyjse;}@bqybtse2</div>
+        <input type="hidden" name="sbbList[2]['bqybtse']"
+               value="@bqybtse2" />
+    </td>
+</tr>
+
+}
+<input type="hidden" name="tmp_count" value="@if(ViewBag.init != true){@Html.Raw("3")}else{@Html.Raw("0")}" />
+
+<tr>
+    <td colspan="3" valign="top">合计</td>
+    <td valign="top">
+        <div align="right" id="_ybzzs"></div>&nbsp;
+    </td>
+    <td colspan="2" valign="top">
+        <div align="right"
+             id="_zzsmdse"></div>&nbsp;
+    </td>
+    <td colspan="2" valign="top"><div align="right" id="_xfs"></div></td>
+    <td colspan="2" valign="top"><div align="right" id="_yys"></div>&nbsp;</td>
+    <td valign="top"><div align="right" id="_hj"></div></td>
+    <td colspan="3" valign="top">—</td>
+    <td colspan="2" valign="top">
+        <div align="right"
+             id="_bqynse"></div>
+    </td>
+    <td valign="top">—</td>
+    <td colspan="2" valign="top"><div align="right" id="_jme"></div>&nbsp;</td>
+    <td colspan="1" valign="top">
+        <div align="right"
+             id="_bqjzse"></div>&nbsp;
+    </td>
+    <td colspan="1" valign="top">
+        <div align="right"
+             id="_bqyjse"></div>&nbsp;
+    </td>
+    <td valign="top">
+        <div align="right" id="_bqybtse"
+             style="color:red;"></div>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="3" valign="top"><p>代理人</p></td>
+    <td colspan="8" valign="top"><p>@Model.Item2.Name&nbsp;</p></td>
+    <td colspan="5" valign="top"><p>代理人身份证号</p></td>
+    <td colspan="6" valign="top"><p>@Model.Item2.IDCardNum&nbsp;</p></td>
+</tr>
+<tr>
+    <td colspan="3" valign="top"><p>受理人</p></td>
+    <td colspan="4" valign="top"><p>@Model.Item2.Name&nbsp;</p></td>
+    <td colspan="4" valign="top"><p>受理日期</p></td>
+    <td colspan="5" valign="top"><p>@Model.Item3.tbrq&nbsp;</p></td>
+    <td colspan="3" valign="top"><p>受理税务机关</p></td>
+    <td colspan="3" valign="top">
+        <p>
+            @Model.Item2.ZGDSSWJFJMC
+            &nbsp;
+        </p>
+    </td>
+</tr>

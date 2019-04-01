@@ -1,0 +1,831 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!--允许搜索机器人搜索站内所有链接-->
+		<meta content="all" name="robots">
+		<meta name="Copyright" content="厦门税务版权所有 ">
+		<meta name="Description" content="厦门税务网上报税系统">
+		<meta name="Keywords" content="税务,厦门税务,网上报税系统">
+
+		<title>厦门市电子税务局
+		</title>
+		<script src="/res/js/jquery-1.10.2.js"></script>		
+        <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+        <link type="text/css" rel="styleSheet"  href="/res/css/layerV2.css" /> 
+		<script src="/res/js/common.js" type="text/javascript"></script>
+		<script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?v1"></script>
+		<link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+  
+		
+		
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		 <meta name="decorator" content="blank"/>
+		<!--允许搜索机器人搜索站内所有链接-->
+		<meta content="all" name="robots">
+		<meta name="Copyright" content="厦门市税务局版权所有 ">
+		<meta name="Description" content="厦门市税务局网上报税系统">
+		<meta name="Keywords" content="税务,厦门市税务局,网上报税系统"> 
+		
+
+<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
+
+		<script src="/res/js/jquery-1.10.2.js"></script>		
+        <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+        <link type="text/css" rel="styleSheet"  href="/res/css/layerV2.css" /> 
+		
+<style type="text/css">
+*{
+	margin:0;
+    padding:0;/* 清除内外边距 */
+}
+body{
+	font-family : Microsoft YaHei;
+	color : black;
+	background-color: #f6f6f6;
+}
+dl, dt, dd, ul, ol, li {
+    list-style: none;
+}
+.hearder{
+	margin-left: 10px;
+    margin-right: 10px;
+    width: auto;
+	height: 105px;
+	background-color: #168de9;
+	position: relative;
+}
+.hearder .welcome{
+	font-size: 14px;
+	color: #ffffff;
+	float: right;
+	margin-top: 43px;
+	margin-right: 30px;
+}
+.hearder .welcome img{
+	margin: 0 20px;
+}
+.hearder .welcome a{
+	color: #ffffff;
+}
+.hearder>div{
+	display: inline-block;
+	vertical-align: middle;
+}
+.hearder .header_search {
+    vertical-align: top;
+	margin-top: 35px;
+}
+.header_content_search_txt {
+    color: #777;
+    right: 450px;
+    height: 36px;
+    background: url(/res/images/login_main/header_search_bg.png);
+    border: 0;
+  /*   vertical-align: top; */
+    font-size: 14px;
+    line-height: 34px;
+    width: 321px;
+    display: inline-block;
+    position: absolute;
+    padding-left: 35px;
+} 
+.header_content_search_btn{
+	border: 0;
+    width: 84px;
+	right: 405px;
+	position: absolute;
+	background-color: transparent;
+	cursor: pointer;
+}
+.logo{
+	padding-top: 10px;
+    padding-left: 40px;
+}
+.right{
+	float: right;
+	padding-top: 42px;
+}
+.main{
+	background-color: #F6F6F6;
+	height:760px;
+}
+.main .main_left{
+    position:absolute;
+	background-color: #FFFFFF;
+	border: 1px solid #EDEDED;
+	border-radius:3px;
+	width: 338px;/*高固定340px含描边*/
+	height:740px;/*高固定686px含描边*/
+	margin-left: 10px;
+}
+.main .main_left div:first-child .menuDiv{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+.main .main_right .main_right_under{
+	margin-top: 20px;
+}
+.main .main_left .menu .menuDiv{
+	font-size: 16px;
+}
+.main .main_left .menu .menuDiv{
+	background-color:#74b1ee;
+	vertical-align:middle;
+	height: 40px;
+}
+.main .main_left .menu .menuDiv>div{
+	display: inline-block;
+}
+.main .main_left .menu .menuDiv img{
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 10px;
+	vertical-align: middle;
+}
+.main .main_left .menu .menuDiv span{
+	vertical-align: bottom;
+	color: #ffffff;
+	font-size: 16px;
+}
+
+.main .main_left .menu .menuDiv .dzSpan{
+    float: right;
+    margin-right: 20px;
+	margin-top: 9px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.main .main_left .menu .menuUL {
+    list-style-type:none;
+}
+.menuUL li{ 
+   height: 50px;
+   border-bottom: 1px dotted #ccc;
+   vertical-align: middle;
+}
+.menutitle{
+   font-size: 14px;
+   color: #333333;
+   cursor: pointer;
+   padding-left: 28px;
+    display: inline-block;
+    width: 250px;
+    padding-top: 15px;
+}
+.menu_scj{
+	float: right;
+    margin-right: 20px;
+	margin-top: 9px;
+	cursor: pointer;
+}
+.main .main_left .menu .menuUL li.selectMenuLi div{	
+	color:	#ffffff;
+}
+.main .main_left .menu .menuUL li.selectMenuLi {	
+	background-color: #309ef2;
+}
+.menuimg{
+	vertical-align: top;
+    /* margin-top: 14px; */
+    display: inline-block;
+    padding-left: 28px;
+    padding-top: 15px;
+}
+
+.menuUL li.on .menutitle{
+  color: #168de9 ;
+}
+.menuUL li.on .menutitle a{
+  color: #168de9 ;
+}
+
+.main .main_right{
+	margin-left: 370px;
+	margin-right: 10px;
+	margin-top: 20px;
+}
+.main .main_right>div{
+	background-color: #FFFFFF;
+	border: 1px solid #EDEDED;
+	border-radius:3px;
+}
+
+.selectMenuLi span{
+	color: #FFFFFF !important;
+}
+
+.welcome a{
+   cursor: pointer;
+    text-decoration: underline;
+}
+.curlocal{
+	height: 70px;
+    line-height: 70px;
+    padding-left: 10px;
+}
+#toShouYe{
+	FLOAT: right;
+    padding-right: 30px;
+	margin-top: -47px;
+}
+
+.main_right_content{ 
+     height: 740px;
+	 
+}
+.curlocal{  
+    font-family: Microsoft YaHei;
+	font-size: 15px;
+}
+.curlocal a{  
+    font-family: Microsoft YaHei;
+	font-size: 15px;
+	color:#168ee8;
+}
+#firstMenuName{  
+   cursor: default;
+   color: #000;
+}
+span[name="ulscj"]{
+	display:none;
+}
+
+span[id="qxdz"]{
+	display:none;
+}
+.main_middle{ 
+	position: absolute;
+    margin-left: 337px;
+    margin-top: 343px;
+}
+.main_middle a img{ 
+	border-style: none;
+}
+
+</style>
+<script type="text/javascript">
+var for_id = '';
+var sf_bz = "Y" ;
+var aim_memu_item_id = '';
+var aim_menu_id = 'SEC';
+var dz_flag="N";
+var userTypeChar = 'NSR' ;
+//显示或隐藏左侧菜单方法
+function showOrDisable(num){  
+   if(num == "1"){ 
+	    $(".main_left").css("display","none");
+		$(".yincang").css("display","none");
+		$(".tanchu").css("display","");
+        $(".main_right").css("margin-left","10px");
+		$(".main_middle").css("margin-left","10px");
+   }
+   if(num == "2"){ 
+	   $(".main_left").css("display","");
+	   $(".yincang").css("display","");
+	   $(".tanchu").css("display","none");
+       $(".main_right").css("margin-left","370px");
+	   $(".main_middle").css("margin-left","337px");
+   }
+
+}
+function showDz(flag){
+	if(flag==1){
+		$("#dz").hide();
+		$("#qxdz").show();
+		$("span[name='ulpng']").hide();
+		$("span[name='ulscj']").show();
+		document.getElementById("table_right_content").contentWindow.dzScjClick(1);
+	}else{
+		$("#qxdz").hide();
+		$("#dz").show();
+		$("span[name='ulscj']").hide();
+		$("span[name='ulpng']").show();
+		document.getElementById("table_right_content").contentWindow.dzScjClick(0);		
+	}
+}	   
+
+function  showContent(memu_item_id,parent_id,url,wydkfs_dm,yz_bz,gds_bz){ 
+	//先判断是否sessions是否已经超时，超时返回未登录首页 ----暂时只做税务人端的判断
+	if(userTypeChar == 'SWGB') { 
+         if('NSR' == null || 'NSR' == undefined || 'NSR' == "")  
+		    window.parent.showMain2("https://wsbsfwt2.xmtax.gov.cn/tlogin/index.do");
+	}
+	
+	if(memu_item_id == "bszx_0606"){  
+        window.open("http://wzh.xmtax.gov.cn:9558/adp/xmsatProcessNoLogin?wsbq=wsbs&workId=252741173");
+		return false ;
+	}
+	if(gds_bz == "gs"  && 'N' == 'Y'){
+        window.parent.gdsTrip(url);
+		return false ;
+    }
+	$("#table_right_content").attr("src","");
+	var timestamp= "" ;
+	var nsrsbh= "" ;
+    if(memu_item_id=="tsyw_04"||memu_item_id=="bszx_020401"||memu_item_id=="bszx_0202" ||memu_item_id=="cxzx_10" ){
+        timestamp="K1551676883460";
+        nsrsbh='91350200MA2Y10EC4K';
+        if(memu_item_id !="cxzx_10")
+           url =url+"?id="+nsrsbh+"&timestamp="+timestamp;
+        if(memu_item_id =="cxzx_10")
+           url = url+"?nsrsbh="+nsrsbh+"&timestamp="+timestamp;
+    }
+	if(memu_item_id=="hdzx_05"||memu_item_id=="hdzx_0602"||memu_item_id=="hdzx_0603"){
+		var hdmk="";
+		yhmm='368805972C4CA67F06C2B28C11835A5C';
+		nsrsbh='91350200MA2Y10EC4K';
+		if(memu_item_id=="hdzx_05")
+			hdmk="nsrxq";
+		if(memu_item_id=="hdzx_0602")
+			hdmk="nsfwts";
+		if(memu_item_id=="hdzx_0603")
+			hdmk="gbwjjb";
+		url=url+"?nsrsbh="+nsrsbh+"&yhmm="+yhmm+"&hdmk="+hdmk;
+	}
+  //判断是否是企业所得税相关功能
+	if(gds_bz == "qysds" || gds_bz == "sfjn" ||  gds_bz == "wzh" ) { 
+          $.ajax({
+			url: "/tnsfwHome/qysds.do",
+			data : {"param":gds_bz},
+			type: 'post',
+	        success: function(data){
+	        	var s_url="";
+	        	if(data.jg=='false')
+	        		alert(data.message);
+	        	if(data.jg=='true'){
+                   // layer.alert(data.message,function(index){
+                   //     layer.close(index);		
+                        if(data.type=="ds"){
+                            if(gds_bz == "wzh"){
+                                window.parent.showMain(data.url);
+                            }else{
+                                queryCurLocal(memu_item_id,parent_id,data.url);
+                                $("#table_right_content").attr("src",data.url);
+                            }        		
+                        }			     
+                        if(data.type=="gs")
+                            window.open (data.url);
+                  // });
+                    
+                }	        	
+	        }	        
+		});
+	 }
+	else if(gds_bz == "go"){ 
+	     window.parent.showMain(url);
+	}
+	
+	else{ 
+		 queryCurLocal(memu_item_id,parent_id,url);//获取当前位置
+		if(wydkfs_dm == '1' ){
+			if(yz_bz == 'N'){
+			$("#table_right_content").attr("src",url+"&gobz=Y");
+			}else{
+			if(gds_bz == 'gs')
+				$("#table_right_content").attr("src",url+"&flag=Y");
+			else
+				$("#table_right_content").attr("src",url);
+			}				 
+		}else{
+			window.open(url);
+		}
+	 }
+		
+} 
+function  showContent2(memu_item_id,parent_id,url,wydkfs_dm,yz_bz){
+	queryCurLocal(memu_item_id,parent_id,url);
+	if(wydkfs_dm == '1' )
+		$("#table_right_content").attr("src",url);      
+	else
+		window.open(url);
+}     
+    //获取当前位置
+	function queryCurLocal(memu_item_id,parent_id,url){
+		clear34();
+		$.ajax({
+			url : "/tnsfwHome/queryCurLocal.do",
+			data : {"memu_item_id":memu_item_id,"flag":"2","parent_id":parent_id},//1首页 ， 2 三级菜单
+			type : 'post',
+			async : true,
+			success : function(data) {
+				if(data.success){ 
+					if(data.o.top_name != "" && data.o.top_name != undefined){ 
+						$("#firstMenuName").html(""+data.o.top_name);
+						//$("#firstMenuName").attr("href",data.o.top_url);
+						$("#firstMenuName").addClass(""+data.o.top_id);
+					}
+					if(data.o.sec_name != "" && data.o.sec_name != undefined && data.o.sec_name != data.o.thr_name ){ 
+						$("#senMenuName").html(">"+data.o.sec_name);
+						//$("#senMenuName").attr("href",data.o.sec_url);
+						//$("#senMenuName").addClass(""+data.o.sec_id);
+						$("#senMenuName").attr("class", ""+data.o.sec_id);
+
+					}
+					if(data.o.thr_name != "" && data.o.thr_name != undefined){ 
+						$("#thirdMenuName").html(">"+data.o.thr_name);
+						$("#thirdMenuName").attr("href",data.o.thr_url);
+						//$("#thirdMenuName").addClass(""+data.o.thr_id);
+					}	
+					if(data.o.sec_name == data.o.thr_name) $("#senMenuName").html("");				
+				}
+			},
+			error : function(data) {
+			}
+		});
+		//if($("#senMenuName").html() == $("#thirdMenuName").html()) $("#senMenuName").html("");
+    } 
+  function showWz2(obj){ 
+     $("#"+ obj.className).find(".menutitle").click();
+  } 
+  function gotoshouye(){ 
+	   location.href = "/views/login_v2/shouye.jsp" ;
+   }
+$(function(){	
+	//点击左侧菜单栏
+	$(".menuUL li").click(function(){
+		$(".menuUL li").removeClass("selectMenuLi");
+		$(this).addClass("selectMenuLi");
+	});
+	
+	$('.menuUL li').mouseover(function(){
+        $(this).addClass('on').siblings().removeClass('on');
+		//table_right_content.window.clearMenu3();
+	});
+	if(aim_memu_item_id != null && aim_memu_item_id !="" && aim_menu_id == "THR"){
+		$("#"+ aim_memu_item_id).find(".menutitle").click();
+	}else{
+		//默认打开第一个内嵌的功能菜单
+		if( $(".menuUL .neiqian")){ 
+          $(".menuUL .neiqian").first().find(".menutitle").click();
+		}else{ 
+		  $(".menuUL .tiaozhuan").first().find(".menutitle").click();	
+		}		
+	}
+	setTimeout(open4menu,500);
+
+})
+function open4menu(){ 	
+	if(for_id != null && for_id != undefined && for_id !=""){ 
+	   $("#table_right_content").contents().find("#"+for_id).click();
+	   sf_bz = "N" ;
+	}
+}
+
+
+function showPage(url,menu_name){		
+		if(menu_name == '纳税人学堂'){
+			window.open('http://81.24.21.213:7001/nsktadmin/index.jsp');
+		}else{
+            $("#fouthMenuName").html(">"+menu_name);
+		    $("#fouthMenuName").attr("href",url);
+			$("#table_right_content").attr("src",url); 
+		}
+	}
+	
+	function showPage2(url,menu_name){
+		if(menu_name == '财务报表接口授权申请'){
+			window.open(url);
+			return ;
+		}
+		$("#fouthMenuName").html(">"+menu_name);
+		$("#fouthMenuName").attr("href",url);
+		$("#table_right_content").attr("src",url);
+	}
+	//三级菜单点击收缩
+	function showPage3(url,menu_name,senMenuName){
+		$("#fouthMenuName").html(">"+menu_name);
+		$("#fouthMenuName").attr("href",url);
+		$("#table_right_content").attr("src",url);
+	}
+	//子页面点击收缩
+	function showPage4(url,menu_name){
+		$("#fouthMenuName").html(">"+menu_name);
+		$("#fouthMenuName").attr("href",url);
+		$("#table_right_content").attr("src",url);
+	}
+	//三级菜单子页面点击收缩
+	function showPage5(url,menu_name){
+		$("#fouthMenuName").html(">"+menu_name);
+		$("#fouthMenuName").attr("href",url);
+		$("#table_right_content").attr("src",url);
+	}
+	function clear34(){
+			$("#thirdMenuName").html("");
+			$("#fouthMenuName").html("");
+		}
+	function clear4(){
+		$("#fouthMenuName").html("");
+	}
+	//定制操作
+	function addScj(menu_item_id,parent_id,flag,yz_bz){
+		if(yz_bz=="N"){
+			window.alert("不是具体的业务节点,不能定制!")
+			return;
+		}
+		var  url = "/scj/addScj.do?item_id="+menu_item_id+"&parent_id="+parent_id;
+		var _png =  $("img[name='"+menu_item_id+"']").attr("src");
+		if(_png.indexOf("ysc.png")>-1){
+			flag ="N";
+			url = "/scj/removeScj.do?item_id="+menu_item_id+"&parent_id="+parent_id;
+		}else{
+			flag="Y";
+		}
+		$.ajax({  
+	        type : "post",  
+	         url : url,  
+	         data :"",  
+	         async : false,
+	         dataType:"text",
+	         success : function(data){  
+	           if(data=="success"){
+					//window.alert("操作成功!");
+					var  png_url = "/res/images/menu_v2/ysc.png";
+					if(flag=="N"){ 
+						png_url="/res/images/menu_v2/wsc.png";
+					}
+					$("img[name='"+menu_item_id+"']").attr("src",png_url);
+				}else{
+					window.alert("操作失败!");
+				}
+	          // $("a[name='"+menu_item_id+"']").attr("onclick","addScj('"+menu_item_id+"','"+parent_id+"','"+flag+"','"+yz_bz+")");
+				
+				
+	         }  
+	    });
+	}
+				
+</script>
+
+	</head>
+
+	<body>
+	
+	
+  
+  
+
+		
+	<div class="main">
+	    <input type="hidden" id="wsbs-home_hidden_login_id" value="91350200MA2Y10EC4K"/>
+        <input type="hidden" id="wsbs-home_hidden_djxh" value="10113502010000054370"/>
+		 <div class="main_left">				
+			
+					
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				<div class="menu bszx_03" >
+					
+					<div class="menuDiv">
+						<img src="/res/images/login_main/feature.png"><span>税费申报及缴纳 </span>
+						<span class="dzSpan" id="dz" onclick="return false;showDz(1)">定制</span>
+						<span class="dzSpan" id="qxdz" onclick="showDz(0)">保存</span>
+					</div>
+					<ul class="menuUL">				  
+						
+						        
+									<!-- 有效 -->
+									    
+											
+											
+												<li  id="bszx_0301"  class="neiqian"     >
+													<div class="menuimg">
+													    <span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
+														<span name="ulscj" class="menuUL_log">
+																 
+																
+																	<a href="#" name='bszx_0301' onclick="addScj('bszx_0301','bszx_03','N','N')"><img name="bszx_0301" src="/res/images/menu_v2/wsc.png"></a>
+												         		
+														</span>
+													 </div>
+											         <div class="menutitle" onclick="showContent('bszx_0301','bszx_03','/tnsfwHome/index.do?menuid=bszx_03&menu_item_id=bszx_0301','1','N','')">
+														 增值税及附加税费申报
+											        </div>	
+												</li>
+																													
+								 
+						
+						        
+									<!-- 有效 -->
+									    
+											
+											
+												<li  id="bszx_0304"  class="neiqian"     >
+													<div class="menuimg">
+													    <span name="ulpng"><img class="menuUL_log" src="/res/images/login_main/menuLi.png"></span>
+														<span name="ulscj" class="menuUL_log">
+																 
+																
+																	<a href="#" name='bszx_0304' onclick="addScj('bszx_0304','bszx_03','N','N')"><img name="bszx_0304" src="/res/images/menu_v2/wsc.png"></a>
+												         		
+														</span>
+													 </div>
+											         <div class="menutitle" onclick="showContent('bszx_0304','bszx_03','/tnsfwHome/index.do?menuid=bszx_03&menu_item_id=bszx_0304','1','N','')">
+														 其他申报
+											        </div>	
+												</li>
+																													
+											
+								 
+						
+					</ul>					
+				</div>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			
+	    
+					
+				
+				
+				
+				
+				
+				
+			
+	    				
+	 </div>
+	 <div class="main_middle">
+		 <a href="#" class="yincang" title="点击隐藏左侧菜单" onclick="showOrDisable('1')"><img src="/res/images/login_v2/yincang.png" /></a>
+		 <a  style="display:none" title="点击恢复左侧菜单" class="tanchu" href="#" onclick="showOrDisable('2')"><img src="/res/images/login_v2/tanchu.png" /></a>
+	 </div>
+		<div class="main_right">
+			    <div class="main_right_content">
+					<div class="curlocal" >
+						<img src="/res/images/login_v2/wz.png" style="margin-left: 10px;"/>
+							&nbsp;&nbsp;当前位置 ：
+							
+							<a id="firstMenuName" href="#" style="text-decoration: none;"  ></a>			
+							<a id="senMenuName"   href="#" onclick = "showWz2(this)"  style="text-decoration: none;"></a>
+							<a id="thirdMenuName" href="#"   style="text-decoration: none;" target="table_right_content"  onclick="clear4()"></a>
+							<a id="fouthMenuName" href="#" style="text-decoration: none;" target="table_right_content" ></a>
+							<!--	<a id="toShouYe" href="/views/login_v2/shouye.jsp"  >返回首页</a> -->							
+					</div>
+					<a id="toShouYe"  href="/views/login_v2/shouye.jsp" target="table_content" style="border:none"><img src="/res/images/login_v2/toshouye.png"  style="border:none"/></a>
+					<iframe id="table_right_content" name="table_right_content"
+						border="0" marginwidth="0" marginheight="0"  style="max-height:680px;width:98%;height: 670px;margin-left:20px;" 
+						src="/views/login_v2/menuiframe.jsp" scrolling="yes" frameborder="No"> 
+				   </iframe>
+				</div>
+		</div>
+	</div>	
+
+		
+
+<div id="_loadIfmContent" style="display:none;"></div>
+<SCRIPT LANGUAGE="JavaScript">
+$(function(){  
+	endIe8Load();
+}); 
+
+function endIe8Load() {
+	try{
+		var _loadIfm = ' <iframe id="_loadIfm" src="" width="1" height="1" style="border: 0px; display:none" frameborder="0" ></iframe>';
+		if (!$("#_loadIfm")[0]) {
+			$("#_loadIfmContent").append(_loadIfm);
+		}
+		$("#_loadIfmContent", window.document).attr("src", "#");
+	}catch(e){}
+}
+</SCRIPT>
+
+	</body>
+     
+
+</html>

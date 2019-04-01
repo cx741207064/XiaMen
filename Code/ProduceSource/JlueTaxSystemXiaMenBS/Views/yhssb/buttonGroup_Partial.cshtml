@@ -1,0 +1,32 @@
+﻿@if (ViewBag.HasValues)
+{
+<input type="button" onclick="tjsbjl()" value="添加申报记录" class="bottBlue rad" />
+
+<input class="bottBlue rad" type="button" value="暂存" id="submitList"
+       onclick="layer.alert('暂存成功！');" />
+<input class="bottBlue rad" type="button" value="保存" id="submitList"
+       onclick="tjsbb();" />
+<input class="bottBlue" type="button" xf-print value="打印" />
+<input class="bottBlue" type="button" value="申报" id="submitList"
+       onclick="tjsbbsb();" />
+<input class="bottBlue" type="button" value="作废" id="submitList" onclick="layer.alert('申报成功后才能进行作废');" />
+
+<input type="button" onclick="qxbcsb()" value="取消本次申报" align="right" class="bottBlue rad">
+
+}
+else
+{
+<input type="button" onclick="tjsbjl()" value="添加申报记录" class="bottBlue rad" />
+
+<input class="bottBlue rad" type="button" value="暂存" id="submitList"
+       onclick="layer.alert('请先添加申报记录！');" />
+<input class="bottBlue rad" type="button" value="保存" id="submitList"
+       onclick="layer.alert('请先添加申报记录！');" />
+<input class="bottBlue" type="button" xf-print value="打印" />
+<input class="bottBlue" type="button" value="申报" id="submitList"
+       onclick="layer.alert('请先添加申报记录！');" class="bottBlue rad" />
+<input class="bottBlue" type="button" value="作废" id="submitList" onclick="layer.alert('申报成功后才能进行作废');" />
+
+<input type="button" onclick="qxbcsb()" value="取消本次申报" align="right" class="bottBlue rad">
+
+}

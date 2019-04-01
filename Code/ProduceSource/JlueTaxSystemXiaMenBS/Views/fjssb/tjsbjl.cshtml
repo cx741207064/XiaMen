@@ -1,0 +1,13 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.GDTXDate
+
+@{
+    ViewBag.Title = "tjsbjl";
+    Layout = "~/Views/fjssb/_Layout.cshtml";
+}
+@{ViewBag.tzlx = "yhstjsbjl";}
+@if (ViewBag.errorMsg!=null) 
+{ 
+    <script>
+    layer.alert("同一个申报表中不允许有重复的申报记录"+ "(" + "jsjkltApp_34_8011" + ")",{icon:5,closeBtn: 0});
+    </script>
+}

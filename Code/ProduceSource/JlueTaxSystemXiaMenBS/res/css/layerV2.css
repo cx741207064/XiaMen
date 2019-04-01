@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+/*layer 弹窗框默认样式的修改*/
+.layui-layer-title {
+	height: 40px;
+	background-color: #fff;
+}
+
+.layui-layer-btn {
+	padding: 10px 10px;
+	float: right;
+}
+.layui-layer-dialog {
+    min-width: 360px;
+}
+
+.layui-layer-btn a {
+   background: #53ACF3;
+   font-weight: normal;
+   border: 1px solid #ededed;
+   border-radius: 3px;
+}
+
+.layui-layer-btn .layui-layer-btn1 {
+    background: #fff;
+    color: #090909;
+   border: 1px solid #ededed;
+}
+a.layui-layer-btn0 {
+	float: right;
+	background: #53ACF3;
+    font-weight: normal;
+    border: 1px solid #ededed;
+    border-radius: 3px;
+    margin: 0px 10px 10px 0px;
+}
+.layui-layer-ico {
+    background: url(/res/images/login_v2/x.png) no-repeat;
+}
+.layui-layer-setwin .layui-layer-close1 {
+      background-position: 0px 0px;
+      width: 18px;
+     height: 18px;
+}
+.layui-layer-setwin .layui-layer-close1:hover {
+    background-position: 0px 0px;
+}
+.layui-layer-dialog .layui-layer-content{
+	color:#333
+}

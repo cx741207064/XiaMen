@@ -1,0 +1,110 @@
+@CHARSET "UTF-8";
+
+/*细线表格*/
+TABLE.thinLine {
+	border-collapse: collapse;
+	border: 1px solid;
+}
+
+TABLE.thinLine td {
+	border-collapse: collapse;
+	border: 1px solid;
+}
+
+/*通常表格，无边框线*/
+table {
+	font-size: 9pt;
+	text-align: left;
+}
+
+/*表格标题宝石蓝背景色*/
+tr.title {
+	background-color: #6699CC;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+/*表头淡灰背景色，文字居中*/
+tr.head {
+	background-color: #DFDFDF;
+	font-weight: bold;
+	text-align: center;
+}
+
+/*对于功能页面表头固定的纳税人信息区带淡蓝色背景的样式*/
+tr.blue {
+	background-color: #D7EBFF;
+}
+
+/*细表格线TD，表格线黑色*/
+td.border {
+	border-collapse: collapse;
+	border: 1px solid #555555;
+}
+
+/*功能页面标题样式*/
+.pageTitle {
+	font-size: 20pt;
+	font-weight: bold;
+	color: #0000FF;
+	font-family: 隶书, 新宋体, 楷体, Arial, 'Times New Roman';
+}
+
+.tip {
+	border: 1px solid #316C81;
+	color: #c00000;
+	background: #F2F6F9;
+	padding: 5px;
+	line-height: 20px;
+	display: none;
+}
+
+td {
+	font-size: 12px;
+	color: #333333;
+	line-height: 20px;
+}
+
+.t-bj {
+	background-image: url(/images/sms/subscribe/t-bj.gif);
+	background-repeat: repeat-x;
+}
+
+.f14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.rbj {
+	background-image: url(/images/sms/subscribe/r-bj.gif);
+	background-repeat: repeat-x;
+}
+
+a:link {
+	color: 343331;
+	text-decoration: none;
+}
+
+a:visited {
+	color: 343331;
+	text-decoration: none;
+}
+
+a:hover {
+	color: 0008AB;
+	text-decoration: none;
+}
+
+a:active {
+	color: 333331;
+	text-decoration: none;
+}
+
+.limitlen {
+	width: 130px;
+	white-space: nowrap;
+	word-break: keep-all;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

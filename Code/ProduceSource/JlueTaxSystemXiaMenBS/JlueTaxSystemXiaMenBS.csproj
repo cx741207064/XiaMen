@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EF755E42-46FB-4E8C-8252-454EDDC33BBC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JlueTaxSystemXiaMenBS</RootNamespace>
+    <AssemblyName>JlueTaxSystemXiaMenBS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.WebApi2.4.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.0\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.1.0\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.0\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\H-ui.css" />
+    <Content Include="css\ksindex.css" />
+    <Content Include="css\QMstyle.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\styleedit.css" />
+    <Content Include="css\stylenew.css" />
+    <Content Include="cxzx\sbxxcx\manager.html" />
+    <Content Include="Error\401.html" />
+    <Content Include="Error\403.html" />
+    <Content Include="Error\404.html" />
+    <Content Include="Error\405.html" />
+    <Content Include="Error\406.html" />
+    <Content Include="Error\412.html" />
+    <Content Include="Error\500.html" />
+    <Content Include="Error\501.html" />
+    <Content Include="Error\502.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="images\required.png" />
+    <Content Include="image\kxrzd.png" />
+    <Content Include="image\zdyjb.png" />
+    <Content Include="industry.xml" />
+    <Content Include="Instruction.html" />
+    <Content Include="jsdzsb\yhssb\lb.html" />
+    <Content Include="jsdzsb\yhssb\submitSbb.html" />
+    <Content Include="js\common.js" />
+    <Content Include="js\custom-select.js" />
+    <Content Include="js\database.js" />
+    <Content Include="js\dump_src.js" />
+    <Content Include="js\H-ui.js" />
+    <Content Include="js\handlebars-v4.0.5.js" />
+    <Content Include="js\initinfo.js" />
+    <Content Include="js\jquery-1.11.3.min.js" />
+    <Content Include="js\jquery.cookie.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\json2.js" />
+    <Content Include="js\libs\bootstrap-datetimepicker-master\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="js\libs\bootstrap-select\dist\css\bootstrap-select.min.css" />
+    <Content Include="js\libs\bootstrap-select\dist\js\bootstrap-select.min.js" />
+    <Content Include="js\libs\bootstrap-select\dist\js\i18n\defaults-zh_CN.js" />
+    <Content Include="js\libs\bootstrap-table-master\dist\bootstrap-table.css" />
+    <Content Include="js\libs\bootstrap-table-master\dist\bootstrap-table.min.js" />
+    <Content Include="js\libs\bootstrap-table-master\dist\locale\bootstrap-table-zh-CN.min.js" />
+    <Content Include="js\libs\bootstrap\css\animate.css" />
+    <Content Include="js\libs\bootstrap\css\bootstrap.min.css" />
+    <Content Include="js\libs\bootstrap\css\font-awesome.min.css" />
+    <Content Include="js\libs\bootstrap\js\bootstrap.min.js" />
+    <Content Include="js\libs\jquery.validate\form-validate.js" />
+    <Content Include="js\libs\jquery.validate\jquery.validate.min.js" />
+    <Content Include="js\libs\jquery.validate\messages_zh.js" />
+    <Content Include="js\libs\layer\layer.min.js" />
+    <Content Include="js\libs\layer\skin\layer.css" />
+    <Content Include="js\libs\layer\theme\default\icon.png" />
+    <Content Include="js\libs\layer\theme\default\layer.css" />
+    <Content Include="js\libs\layer\theme\default\loading-2.gif" />
+    <Content Include="js\libs\layui\css\layui.css" />
+    <Content Include="js\libs\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="js\libs\layui\css\modules\laydate\icon.png" />
+    <Content Include="js\libs\layui\layui.js" />
+    <Content Include="js\libs\layui\lay\modules\laydate.js" />
+    <Content Include="js\libs\ztree\css\metroStyle\metroStyle.css" />
+    <Content Include="js\libs\ztree\js\jquery.ztree.all-3.5.min.js" />
+    <Content Include="js\point_line.js" />
+    <Content Include="js\utils\Common.js" />
+    <Content Include="js\utils\Events.js" />
+    <Content Include="js\utils\TabUtils.js" />
+    <Content Include="QuestionMain.aspx" />
+    <Content Include="res\css\css.css" />
+    <Content Include="res\css\layerV2.css" />
+    <Content Include="res\css\onlineTax.css" />
+    <Content Include="res\css\sms.css" />
+    <Content Include="res\css\v2.css" />
+    <Content Include="res\dwfw\js\common.js" />
+    <Content Include="res\dwfw\js\jquery-1.10.2.js" />
+    <Content Include="res\images\bigloading.gif" />
+    <Content Include="res\images\bsfwhall\bsfw_arrow_black.png" />
+    <Content Include="res\images\bsfwhall\bsfw_arrow_white.png" />
+    <Content Include="res\images\bsfwhall\bsfw_book.png" />
+    <Content Include="res\images\bsfwhall\bsfw_icon.png" />
+    <Content Include="res\images\bsfwhall\bsfw_line.jpg" />
+    <Content Include="res\images\bsfwhall\bsfw_nszx.jpg" />
+    <Content Include="res\images\bsfwhall\query_btn.png" />
+    <Content Include="res\images\bsfwhall\red.png" />
+    <Content Include="res\images\caidan_01.png" />
+    <Content Include="res\images\caidan_02.png" />
+    <Content Include="res\images\caidan_05.png" />
+    <Content Include="res\images\caidan_bbbs.png" />
+    <Content Include="res\images\caidan_dzsb.png" />
+    <Content Include="res\images\caidan_dzyj.png" />
+    <Content Include="res\images\caidan_qtgn.png" />
+    <Content Include="res\images\caidan_sbyw.png" />
+    <Content Include="res\images\caidan_sssq.png" />
+    <Content Include="res\images\caidan_sydj.png" />
+    <Content Include="res\images\caidan_zhcx.png" />
+    <Content Include="res\images\icon_light.f13cff3.png" />
+    <Content Include="res\images\left.jpg" />
+    <Content Include="res\images\liucheng_02.png" />
+    <Content Include="res\images\liucheng_03.png" />
+    <Content Include="res\images\login_main\bsjdjjgxxcx.png" />
+    <Content Include="res\images\login_main\cktscx.png" />
+    <Content Include="res\images\login_main\cktsgl.png" />
+    <Content Include="res\images\login_main\common.png" />
+    <Content Include="res\images\login_main\consult.png" />
+    <Content Include="res\images\login_main\cssjcx.png" />
+    <Content Include="res\images\login_main\dzzl.png" />
+    <Content Include="res\images\login_main\feature.png" />
+    <Content Include="res\images\login_main\flzzyjjsx.png" />
+    <Content Include="res\images\login_main\forMenuLi.png" />
+    <Content Include="res\images\login_main\forMenuLi_pass.png" />
+    <Content Include="res\images\login_main\fpsy.png" />
+    <Content Include="res\images\login_main\fpxxcx.png" />
+    <Content Include="res\images\login_main\gsqccx.png" />
+    <Content Include="res\images\login_main\gtgshd.png" />
+    <Content Include="res\images\login_main\gzfwlog.png" />
+    <Content Include="res\images\login_main\hdgl.png" />
+    <Content Include="res\images\login_main\headerbeijing.png" />
+    <Content Include="res\images\login_main\header_search_bg.png" />
+    <Content Include="res\images\login_main\header_search_btn.png" />
+    <Content Include="res\images\login_main\header_search_btn_pass.png" />
+    <Content Include="res\images\login_main\jcjc.png" />
+    <Content Include="res\images\login_main\jhjgcx.png" />
+    <Content Include="res\images\login_main\jkxxcx.png" />
+    <Content Include="res\images\login_main\lsbsczcx.png" />
+    <Content Include="res\images\login_main\menuLi.png" />
+    <Content Include="res\images\login_main\nashuixinyong.png" />
+    <Content Include="res\images\login_main\nsrmyddc.png" />
+    <Content Include="res\images\login_main\nsrxq.png" />
+    <Content Include="res\images\login_main\nsrxx.png" />
+    <Content Include="res\images\login_main\nsxyztxxcx.png" />
+    <Content Include="res\images\login_main\package.png" />
+    <Content Include="res\images\login_main\public_search.png" />
+    <Content Include="res\images\login_main\qsxxcx.png" />
+    <Content Include="res\images\login_main\qtfwsx.png" />
+    <Content Include="res\images\login_main\qybh.png" />
+    <Content Include="res\images\login_main\rzxxcx.png" />
+    <Content Include="res\images\login_main\sfsbjjn.png" />
+    <Content Include="res\images\login_main\shenbaoxinxi.png" />
+    <Content Include="res\images\login_main\ssjm.png" />
+    <Content Include="res\images\login_main\sszjjgxxcx.png" />
+    <Content Include="res\images\login_main\sszyfwjggl.png" />
+    <Content Include="res\images\login_main\swdbgzjqsq.png" />
+    <Content Include="res\images\login_main\swxzxk.png" />
+    <Content Include="res\images\login_main\vertical.png" />
+    <Content Include="res\images\login_main\wdxx.png" />
+    <Content Include="res\images\login_main\wfwzxxcxl.png" />
+    <Content Include="res\images\login_main\wlfpcx.png" />
+    <Content Include="res\images\login_main\ybtdsgl.png" />
+    <Content Include="res\images\login_main\yhgl.png" />
+    <Content Include="res\images\login_main\yhxxcx.png" />
+    <Content Include="res\images\login_main\yuyuedingjia.png" />
+    <Content Include="res\images\login_main\yybs.png" />
+    <Content Include="res\images\login_main\zhcz.png" />
+    <Content Include="res\images\login_main\zhxxbg.png" />
+    <Content Include="res\images\login_main\zmkj.png" />
+    <Content Include="res\images\login_main\zmxxcx.png" />
+    <Content Include="res\images\login_main\zxjh.png" />
+    <Content Include="res\images\login_main\zzsdspzgl.png" />
+    <Content Include="res\images\login_v2\logo.png" />
+    <Content Include="res\images\login_v2\tanchu.png" />
+    <Content Include="res\images\login_v2\toshouye.png" />
+    <Content Include="res\images\login_v2\wddbRefresh.png" />
+    <Content Include="res\images\login_v2\wz.png" />
+    <Content Include="res\images\login_v2\x.png" />
+    <Content Include="res\images\login_v2\yincang.png" />
+    <Content Include="res\images\menu_v2\wsc.png" />
+    <Content Include="res\images\position.jpg" />
+    <Content Include="res\images\red.png" />
+    <Content Include="res\images\xmswfwh.png" />
+    <Content Include="res\images\xmswwb.png" />
+    <Content Include="res\images\xmswwx.png" />
+    <Content Include="res\jsdzsb\bsdt\images\css.css" />
+    <Content Include="res\jsdzsb\bsdt\images\liucheng_02.png" />
+    <Content Include="res\jsdzsb\bsdt\images\liucheng_03.png" />
+    <Content Include="res\jsdzsb\bsdt\images\off_arrow.png" />
+    <Content Include="res\jsdzsb\bsdt\images\over_arrow.png" />
+    <Content Include="res\jsdzsb\css.css" />
+    <Content Include="res\jsdzsb\dzsbsy\dzsbsy.css" />
+    <Content Include="res\jsdzsb\jsdzsb_common.js" />
+    <Content Include="res\js\common.js" />
+    <Content Include="res\js\common\ajaxrequest.js" />
+    <Content Include="res\js\common\collections.js" />
+    <Content Include="res\js\common\components\Behaviour.js" />
+    <Content Include="res\js\common\components\floatlayer.js" />
+    <Content Include="res\js\common\components\inputCtrl.js" />
+    <Content Include="res\js\common\core.js" />
+    <Content Include="res\js\common\system.js" />
+    <Content Include="res\js\compatibility.js" />
+    <Content Include="res\js\jquery-1.10.2.js" />
+    <Content Include="res\js\login_v2\sywbl.js" />
+    <Content Include="res\js\mathcal1.0.js" />
+    <Content Include="res\js\opener.js" />
+    <Content Include="res\js\otp4-app-config.js" />
+    <Content Include="res\js\otp4-input-ext.js" />
+    <Content Include="res\js\wssb\wssb_common.js" />
+    <Content Include="res\js\wssb\wssb_grsds.js" />
+    <Content Include="res\js\wssb\wssb_nssb.js" />
+    <Content Include="res\js\wssb\wssb_qysds.js" />
+    <Content Include="res\lhpt\images\add.png" />
+    <Content Include="res\lhpt\images\subtract.png" />
+    <Content Include="res\menu\css\index.css" />
+    <Content Include="res\menu\css\indexConter.css" />
+    <Content Include="res\menu\images\bstyy.png" />
+    <Content Include="res\menu\images\logo.png" />
+    <Content Include="res\menu\images\nszx.png" />
+    <Content Include="res\menu\images\people.png" />
+    <Content Include="res\menu\images\sbns\1.png" />
+    <Content Include="res\menu\images\sbns\2.png" />
+    <Content Include="res\menu\images\sbns\image\1.png" />
+    <Content Include="res\menu\images\sbns\image\10.png" />
+    <Content Include="res\menu\images\sbns\image\11.png" />
+    <Content Include="res\menu\images\sbns\image\12.png" />
+    <Content Include="res\menu\images\sbns\image\13.png" />
+    <Content Include="res\menu\images\sbns\image\14.png" />
+    <Content Include="res\menu\images\sbns\image\15.png" />
+    <Content Include="res\menu\images\sbns\image\16.png" />
+    <Content Include="res\menu\images\sbns\image\17.png" />
+    <Content Include="res\menu\images\sbns\image\18.png" />
+    <Content Include="res\menu\images\sbns\image\19.png" />
+    <Content Include="res\menu\images\sbns\image\2.png" />
+    <Content Include="res\menu\images\sbns\image\20.png" />
+    <Content Include="res\menu\images\sbns\image\21.png" />
+    <Content Include="res\menu\images\sbns\image\3.png" />
+    <Content Include="res\menu\images\sbns\image\4.png" />
+    <Content Include="res\menu\images\sbns\image\5.png" />
+    <Content Include="res\menu\images\sbns\image\6.png" />
+    <Content Include="res\menu\images\sbns\image\7.png" />
+    <Content Include="res\menu\images\sbns\image\8.png" />
+    <Content Include="res\menu\images\sbns\image\9.png" />
+    <Content Include="res\menu\images\sfgxx.png" />
+    <Content Include="res\menu\images\sj.png" />
+    <Content Include="res\menu\images\ssti.png" />
+    <Content Include="res\menu\images\tctb.png" />
+    <Content Include="res\menu\images\wsy\1.png" />
+    <Content Include="res\menu\images\wsy\2.png" />
+    <Content Include="res\menu\images\wsy\3.png" />
+    <Content Include="res\menu\images\wsy\4.png" />
+    <Content Include="res\menu\images\wsy\5.png" />
+    <Content Include="res\menu\images\wsy\6.png" />
+    <Content Include="res\menu\images\wsy\7.png" />
+    <Content Include="res\menu\images\wsy\8.png" />
+    <Content Include="res\menu\images\wsy\9.png" />
+    <Content Include="res\menu\images\wwdhd\1.png" />
+    <Content Include="res\menu\images\wwdhd\2.png" />
+    <Content Include="res\menu\images\wwdhd\3.png" />
+    <Content Include="res\menu\images\wwdhd\4.png" />
+    <Content Include="res\menu\images\wwdhd\5.png" />
+    <Content Include="res\menu\images\wwdhd\7.png" />
+    <Content Include="res\menu\images\wwdhd\8.png" />
+    <Content Include="res\menu\images\wwdhd\9.png" />
+    <Content Include="res\menu\images\wwycx\1.png" />
+    <Content Include="res\menu\images\wwycx\10.png" />
+    <Content Include="res\menu\images\wwycx\2.png" />
+    <Content Include="res\menu\images\wwycx\3.png" />
+    <Content Include="res\menu\images\wwycx\4.png" />
+    <Content Include="res\menu\images\wwycx\5.png" />
+    <Content Include="res\menu\images\wwycx\6.png" />
+    <Content Include="res\menu\images\wwycx\7.png" />
+    <Content Include="res\menu\images\wwycx\8.png" />
+    <Content Include="res\menu\images\wwycx\9.png" />
+    <Content Include="res\menu\images\wwyzy\1.png" />
+    <Content Include="res\menu\images\wwyzy\2.png" />
+    <Content Include="res\menu\images\wwyzy\3.png" />
+    <Content Include="res\menu\images\wwyzy\4.png" />
+    <Content Include="res\menu\images\wwyzy\5.png" />
+    <Content Include="res\menu\images\wwyzy\6.png" />
+    <Content Include="res\menu\images\wwyzy\7.png" />
+    <Content Include="res\menu\images\wwyzy\8.png" />
+    <Content Include="res\menu\images\wwyzy\9.png" />
+    <Content Include="res\menu\images\wyj\1.png" />
+    <Content Include="res\menu\images\wyj\2.png" />
+    <Content Include="res\menu\images\wyj\3.png" />
+    <Content Include="res\menu\images\wyj\4.png" />
+    <Content Include="res\menu\images\wyj\5.png" />
+    <Content Include="res\menu\images\wyj\6.png" />
+    <Content Include="res\menu\images\wyj\7.png" />
+    <Content Include="res\menu\images\wyj\8.png" />
+    <Content Include="res\menu\images\ysy\1.png" />
+    <Content Include="res\menu\images\ysy\2.png" />
+    <Content Include="res\menu\images\ysy\3.png" />
+    <Content Include="res\menu\images\ysy\4.png" />
+    <Content Include="res\menu\images\ysy\5.png" />
+    <Content Include="res\menu\images\ysy\6.png" />
+    <Content Include="res\menu\images\ysy\7.png" />
+    <Content Include="res\menu\images\ysy\8.png" />
+    <Content Include="res\menu\images\ysy\9.png" />
+    <Content Include="res\menu\images\ywdhd\1.png" />
+    <Content Include="res\menu\images\ywdhd\2.png" />
+    <Content Include="res\menu\images\ywdhd\21.png" />
+    <Content Include="res\menu\images\ywdhd\3.png" />
+    <Content Include="res\menu\images\ywdhd\4.png" />
+    <Content Include="res\menu\images\ywdhd\5.png" />
+    <Content Include="res\menu\images\ywdhd\7.png" />
+    <Content Include="res\menu\images\ywdhd\8.png" />
+    <Content Include="res\menu\images\ywdhd\9.png" />
+    <Content Include="res\menu\images\ywdyx\1.png" />
+    <Content Include="res\menu\images\ywdyx\2.png" />
+    <Content Include="res\menu\images\ywycx\1.png" />
+    <Content Include="res\menu\images\ywycx\10.png" />
+    <Content Include="res\menu\images\ywycx\2.png" />
+    <Content Include="res\menu\images\ywycx\21.png" />
+    <Content Include="res\menu\images\ywycx\3.png" />
+    <Content Include="res\menu\images\ywycx\4.png" />
+    <Content Include="res\menu\images\ywycx\5.png" />
+    <Content Include="res\menu\images\ywycx\6.png" />
+    <Content Include="res\menu\images\ywycx\7.png" />
+    <Content Include="res\menu\images\ywycx\8.png" />
+    <Content Include="res\menu\images\ywycx\9.png" />
+    <Content Include="res\menu\images\ywyzy\1.png" />
+    <Content Include="res\menu\images\ywyzy\2.png" />
+    <Content Include="res\menu\images\ywyzy\21.png" />
+    <Content Include="res\menu\images\ywyzy\3.png" />
+    <Content Include="res\menu\images\ywyzy\31.png" />
+    <Content Include="res\menu\images\ywyzy\4.png" />
+    <Content Include="res\menu\images\ywyzy\41.png" />
+    <Content Include="res\menu\images\ywyzy\5.png" />
+    <Content Include="res\menu\images\ywyzy\51.png" />
+    <Content Include="res\menu\images\ywyzy\6.png" />
+    <Content Include="res\menu\images\ywyzy\61.png" />
+    <Content Include="res\menu\images\ywyzy\7.png" />
+    <Content Include="res\menu\images\ywyzy\8.png" />
+    <Content Include="res\menu\images\ywyzy\9.png" />
+    <Content Include="res\menu\images\yyj\1.png" />
+    <Content Include="res\menu\images\yyj\2.png" />
+    <Content Include="res\menu\images\yyj\3.png" />
+    <Content Include="res\menu\images\yyj\4.png" />
+    <Content Include="res\menu\images\yyj\5.png" />
+    <Content Include="res\menu\images\yyj\6.png" />
+    <Content Include="res\menu\images\yyj\7.png" />
+    <Content Include="res\menu\images\yyj\8.png" />
+    <Content Include="res\menu\images\zgswjg.png" />
+    <Content Include="res\menu\js\bainianli_1.html" />
+    <Content Include="res\menu\js\bainianli_1.js" />
+    <Content Include="res\menu\js\index.js" />
+    <Content Include="res\menu\js\jquery-1.10.2.js" />
+    <Content Include="res\menu\js\jquery-1.12.4.js" />
+    <Content Include="res\otp4\css\otp4-base.css" />
+    <Content Include="res\otp4\css\otp4-form.css" />
+    <Content Include="res\otp4\css\otp4-menu.css" />
+    <Content Include="res\otp4\css\otp4-page.css" />
+    <Content Include="res\otp4\css\otp4-panel.css" />
+    <Content Include="res\otp4\css\themes\otp4-form.css" />
+    <Content Include="res\otp4\css\themes\otp4-menu.css" />
+    <Content Include="res\otp4\css\themes\otp4-panel.css" />
+    <Content Include="res\otp4\css\themes\otp4-table.css" />
+    <Content Include="res\otp4\images\calendar.gif" />
+    <Content Include="res\otp4\images\calendar2.gif" />
+    <Content Include="res\otp4\images\page-first.gif" />
+    <Content Include="res\otp4\images\page-go.gif" />
+    <Content Include="res\otp4\images\page-last.gif" />
+    <Content Include="res\otp4\images\page-next.gif" />
+    <Content Include="res\otp4\images\page-prev.gif" />
+    <Content Include="res\otp4\images\pageline.png" />
+    <Content Include="res\otp4\images\refresh.gif" />
+    <Content Include="res\otp4\images\refresh.png" />
+    <Content Include="res\otp4\js\lib\avalon.js" />
+    <Content Include="res\otp4\js\lib\jquery-1.8.3.js" />
+    <Content Include="res\otp4\js\lib\jquery-1.9.1.js" />
+    <Content Include="res\otp4\js\lib\jquery-ct.js" />
+    <Content Include="res\otp4\js\lib\jquery.fix.clone.js" />
+    <Content Include="res\otp4\js\lib\jquery.json.js" />
+    <Content Include="res\otp4\js\lib\layer\layer.js" />
+    <Content Include="res\otp4\js\lib\layer\skin\default\icon.png" />
+    <Content Include="res\otp4\js\lib\layer\skin\default\loading-0.gif" />
+    <Content Include="res\otp4\js\lib\layer\skin\default\loading-1.gif" />
+    <Content Include="res\otp4\js\lib\layer\skin\layer.css" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\calendar.js" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\skin\default\img.gif" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="res\otp4\js\lib\My97DatePicker\WdatePicker.js" />
+    <Content Include="res\otp4\js\lib\shiv\respond.min.js" />
+    <Content Include="res\otp4\js\lib\ztree\css\zTreeStyle\zTreeStyle.css" />
+    <Content Include="res\otp4\js\lib\ztree\jquery.ztree.all-3.5.js" />
+    <Content Include="res\otp4\js\otp4-base.js" />
+    <Content Include="res\otp4\js\otp4-controls.js" />
+    <Content Include="res\otp4\js\otp4-core.js" />
+    <Content Include="res\otp4\js\otp4-expression.js" />
+    <Content Include="res\otp4\js\otp4-filters.js" />
+    <Content Include="res\otp4\js\otp4-froute.js" />
+    <Content Include="res\otp4\js\otp4-idcode.js" />
+    <Content Include="res\otp4\js\otp4-iehack.js" />
+    <Content Include="res\otp4\js\otp4-menu-ie6.js" />
+    <Content Include="res\otp4\js\otp4-menu.js" />
+    <Content Include="res\otp4\js\otp4-route.js" />
+    <Content Include="res\otp4\js\otp4-selmodel.js" />
+    <Content Include="res\otp4\js\otp4-upload.js" />
+    <Content Include="res\otp4\js\otp4-utils.js" />
+    <Content Include="res\otp4\js\otp4-validate-ext.js" />
+    <Content Include="res\otp4\js\otp4-validate.js" />
+    <Content Include="res\otp4\templates\paging.htm" />
+    <Content Include="res\plugin\simpletable\simpletable.css" />
+    <Content Include="res\plugin\simpletable\simpletable.js" />
+    <Content Include="res\wsbs\css\global.css" />
+    <Content Include="res\wsbs\css\step.css" />
+    <Content Include="res\wsbs\css\swdj_style.css" />
+    <Content Include="res\wsbs\css\xmdswz.css" />
+    <Content Include="res\wsbs\css\xmdswz_print.css" />
+    <Content Include="res\wsbs\js\bsfwzxmenu.js" />
+    <Content Include="tnsfwHome\index.aspx" />
+    <Content Include="VideoManage\css\QuestionMain.css" />
+    <Content Include="VideoManage\css\VideoIndex.css" />
+    <Content Include="VideoManage\image\bc.png" />
+    <Content Include="VideoManage\image\book.png" />
+    <Content Include="VideoManage\image\circle.png" />
+    <Content Include="VideoManage\image\mrd.png" />
+    <Content Include="VideoManage\image\xzz.png" />
+    <Content Include="VideoManage\js\mask.js" />
+    <Content Include="VideoManage\VideoGDTax.aspx" />
+    <Content Include="VideoManage\VideoManage.aspx" />
+    <Content Include="VideoManage\videostyle\image\arrow.png" />
+    <Content Include="VideoManage\videostyle\image\left.png" />
+    <Content Include="VideoManage\videostyle\image\play.png" />
+    <Content Include="VideoManage\videostyle\image\right.png" />
+    <Content Include="VideoManage\videostyle\jquery-1.8.0.min.js" />
+    <Content Include="VideoManage\videostyle\memcachecheck.js" />
+    <Content Include="VideoManage\videostyle\player.swf" />
+    <Content Include="VideoManage\videostyle\polyvplayer.min.js" />
+    <Content Include="VideoManage\videostyle\video.css" />
+    <Content Include="VideoManage\videostyle\video.js" />
+    <Content Include="Video\css\boxsizing.htc" />
+    <Content Include="Video\css\video.css" />
+    <Content Include="Video\images\dot.png" />
+    <Content Include="Video\images\left.png" />
+    <Content Include="Video\images\play.png" />
+    <Content Include="Video\images\return.png" />
+    <Content Include="Video\images\right.png" />
+    <Content Include="Video\js\jquery-1.12.4.min.js" />
+    <Content Include="Video\js\video.js" />
+    <Content Include="Video\Video.aspx" />
+    <Content Include="Views\otp4query\List.cshtml" />
+    <Content Include="Views\cxzx\manager.cshtml" />
+    <Content Include="common\checktjts.json" />
+    <Content Include="common\codelist.JS_DZBZDSZL_DM.json" />
+    <Content Include="common\codelist.NEW_ZSPM_DM.json" />
+    <Content Include="common\codelist.ZSXM_DM.json" />
+    <Content Include="common\commonAjaxStart.json" />
+    <Content Include="common\jyrq.json" />
+    <Content Include="cxzx\sbxxcx\query.json" />
+    <Content Include="otp4query\query.json" />
+    <None Include="Views\wssb\MainServlet_DZBS_QUERY.cshtml" />
+    <Content Include="Views\wssb\MainServlet_DZBS_SBCX.cshtml" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_ButtonPartial.cshtml" />
+    <Content Include="Views\wssb_wssb_public_jsp\wssb.cshtml" />
+    <None Include="Views\zfsbjl\start.cshtml" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.Message.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR.cshtml" />
+    <None Include="Views\wssb\MainServlet_INFORMATION.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="wssb\MainServlet.INFORMATION.display.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR.initial.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB1.initial.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB2.initial.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB3.initial.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FB4.initial.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_FLZL5.initial.html" />
+    <Content Include="wssb\MainServlet.SBB_ZZS_YGZ_YBNSR_JMSSBMXB.initial.html" />
+    <Content Include="wssb\wssb\layout\left.html" />
+    <Content Include="wssb\wssb\public\jsp\wssb.html" />
+    <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB1.js" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Message.cshtml" />
+    <Content Include="wssb\wssb\layout\center.jsp" />
+    <Content Include="Views\wssb_wssb_layout\left.cshtml" />
+    <Content Include="wssb\wssb\layout\left.nodeDatas.json" />
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.commerce.xml" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.industry.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\AutofacMVCConfig.cs" />
+    <Compile Include="App_Start\AutofacWebApiConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="ChuShiHua.ashx.cs">
+      <DependentUpon>ChuShiHua.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\ActionResult.cs" />
+    <Compile Include="Code\Check.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Code\CurrentUser.cs" />
+    <Compile Include="Code\GDTXXiaMenUserYSBQC.cs" />
+    <Compile Include="Code\GDTXXiaMenUserYSBQCReportData.cs" />
+    <Compile Include="Code\GTXMethod.cs" />
+    <Compile Include="Code\GTXNameValue.cs" />
+    <Compile Include="Code\GTXResult.cs" />
+    <Compile Include="Code\IYsbqcSetting.cs" />
+    <Compile Include="Code\Model\Company.cs" />
+    <Compile Include="Code\YsbqcSetting.cs" />
+    <Compile Include="Controllers\commonController.cs" />
+    <Compile Include="Controllers\cxzxController.cs" />
+    <Compile Include="Controllers\dzsbController.cs" />
+    <Compile Include="Controllers\fjssbController.cs" />
+    <Compile Include="Controllers\otp4queryController.cs" />
+    <Compile Include="Controllers\swxxtxController.cs" />
+    <Compile Include="Controllers\tnsfwHomeController.cs" />
+    <Compile Include="Controllers\wssbController.cs" />
+    <Compile Include="Controllers\wssb_wssb_layoutController.cs" />
+    <Compile Include="Controllers\wssb_wssb_public_jspController.cs" />
+    <Compile Include="Controllers\yhssbController.cs" />
+    <Compile Include="Controllers\zfsbjlController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DZBS_QUERY.cs" />
+    <Compile Include="Models\OP.cs" />
+    <Compile Include="Models\GDTXDate.cs" />
+    <Compile Include="Models\MyCustomModelBinder.cs" />
+    <Compile Include="Models\Nsrxx.cs" />
+    <Compile Include="Models\FjsData.cs" />
+    <Compile Include="Models\YhsData.cs" />
+    <Compile Include="Models\ZzsYgzYbnsrZBData.cs" />
+    <Compile Include="Models\ZzsYgzYbnsrPublic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="publicmethod.cs" />
+    <Compile Include="QuestionMain.aspx.cs">
+      <DependentUpon>QuestionMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuestionMain.aspx.designer.cs">
+      <DependentUpon>QuestionMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="tnsfwHome\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tnsfwHome\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoManage\GetVideo.ashx.cs">
+      <DependentUpon>GetVideo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoManage\VideoGDTax.aspx.cs">
+      <DependentUpon>VideoGDTax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VideoManage\VideoGDTax.aspx.designer.cs">
+      <DependentUpon>VideoGDTax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VideoManage\VideoManage.aspx.cs">
+      <DependentUpon>VideoManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VideoManage\VideoManage.aspx.designer.cs">
+      <DependentUpon>VideoManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Video\Video.aspx.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Video\Video.aspx.designer.cs">
+      <DependentUpon>Video.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\dzsb\" />
+    <Folder Include="Views\tnsfwHome\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ChuShiHua.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\login_v2\menuiframe.jsp" />
+    <Content Include="Views\login_v2\shouye.jsp" />
+    <Content Include="Views\login_v2\syiframe.jsp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="VideoManage\GetVideo.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="wssb\wssb\layout\top.jsp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\lb_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\lb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\Yhs_Head_Nsrxx_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\yhstjsbjl_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\tjsbjl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\txsbb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\txsbb_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\submitSbb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\showData_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\modify.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\txsbb_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\buttonGroup_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\yhssb\tjsblbsb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\CFSB.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\FunctionNotOpen.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\tjsbjl.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\tjsbjl_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\txsbb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\txsbb_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\libs\bootstrap-select\dist\js\bootstrap-select.js.map" />
+    <Content Include="js\libs\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="js\libs\bootstrap\fonts\fontawesome-webfont.woff" />
+    <Content Include="js\libs\bootstrap\fonts\fontawesome-webfont.woff2" />
+    <Content Include="js\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="js\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="js\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="js\libs\layui\font\iconfont.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="res\otp4\css\otp4-base.css%253f" />
+    <Content Include="res\otp4\css\otp4-form.css%253f" />
+    <Content Include="res\otp4\css\otp4-menu.css%253f" />
+    <Content Include="res\otp4\css\otp4-page.css%253f" />
+    <Content Include="res\otp4\css\otp4-panel.css%253f" />
+    <Content Include="res\otp4\css\themes\otp4-form.css%253f" />
+    <Content Include="res\otp4\css\themes\otp4-menu.css%253f" />
+    <Content Include="res\otp4\css\themes\otp4-panel.css%253f" />
+    <Content Include="res\otp4\css\themes\otp4-table.css%253f" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\showData_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\submitSbb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\fjssb\tjsblb.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB1.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB3.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FB4.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_Partial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_HeadPartial.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_FLZL5.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\wssb\MainServlet_SBB_ZZS_YGZ_YBNSR_JMSSBMXB.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55884</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55884/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

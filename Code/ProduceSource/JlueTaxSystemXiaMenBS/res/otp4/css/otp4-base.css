@@ -1,0 +1,56 @@
+.xf-unselectable{
+	-moz-user-select:none;
+}
+
+.fix-ie-resize{
+	with:100%;
+	height:100%;
+	position:absolute;
+	z-index:-999;
+}
+.xf-log-panel{
+	position:absolute;
+	display:none;
+	bottom:25px;	
+	margin:0px;
+	padding:0px;
+	width:80%;
+	z-index:9999;
+}
+.xf-logger{
+	width:80%;
+	height:180px;
+}
+
+.xf-acall-lock{
+	position:absolute;
+	left:0px;
+	top:0px;
+	display:none;
+	z-index:1000;
+	opacity: 0.30;
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+	filter: alpha(opacity = 30);
+	width:100%;
+	height:100%;	
+	background-color:#1e3eae;
+}
+
+
+.xf-pop-view{
+	/*position:absolute;*/
+	background:#fff;
+	display:none;
+	margin:0px;
+	padding:0px;
+	z-index:99;
+}
+
+
+.xf-empty-a{
+	cursor:pointer;
+	white-space: nowrap;
+	text-decoration: none;	
+	outline: 0;
+	padding:0px 8px;	
+}

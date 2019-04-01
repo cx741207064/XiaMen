@@ -1,0 +1,90 @@
+.gridTable {
+	margin: 15px 15px 0;
+	padding:0px;
+	font-size:12px;
+	color:#3a4245;
+}
+
+/** grid body */
+.gridBody {
+	border-right: 1px solid #e7e7e7;
+	border-top: 1px solid #e7e7e7;
+}
+.gridBody th {
+	border-left: 1px solid #e7e7e7;
+	border-bottom: 1px solid #d0d0d0;
+	vertical-align: middle;
+	padding:8px 8px 8px 8px;
+	font-weight: normal;
+	background-color: #f7f7f7;
+	font-size:12px;
+	/** background: url(images/thbg.png);*/
+	/*vertical-align: top;*/
+}
+.gridBody tr {
+}
+.gridBody td {
+	border-left: 1px solid #e7e7e7;
+	border-bottom: 1px solid #e7e7e7;
+	padding: 8px;
+	font-size:12px;
+	/*vertical-align: top;*/
+}
+
+/** grid header sort */
+.gridBody th.sort {
+	background-color:red;
+}
+.gridBody th.sort.desc {
+	background:url(images/sort_desc.gif) center right no-repeat;
+	background-color:#b3d2dd;
+}
+.gridBody th.sort.asc {
+	background:url(images/sort_asc.gif)center right no-repeat;
+	background-color:#b3d2dd;
+}
+
+/** mouse hove over sort header */
+.gridBody .tableHeaderSortHover {
+	background-color: #bde0be !important;
+	text-decoration: underline;
+	cursor: pointer;
+	color: #807227;
+}
+
+/** gridBody row colors */
+.gridBody .odd {
+	background-color: #FFFFFF;
+}
+.gridBody .even {
+	background-color: #fff;
+}
+.gridBody .highlight {
+	background-color: #f5f5f5 !important;
+}
+
+/** grid toolbar */
+.gridToolbar .leftControls {
+}
+.paginationControls{ font-size: 14px; padding: 5px 0 1px 0}
+.paginationControls a{ padding: 0 3px;}
+.paginationControls select{ margin-left: 8px;}
+.gridToolbar .paginationControls .buttonLabel{
+	margin:0 8px 0 12px
+}
+.gridToolbar .box div {
+	display:inline;
+	float:left;
+}
+.gridToolbar .box .paginationControls {
+	float:left;
+	color:black;
+	line-height: 26px;
+}
+.gridToolbar td{
+	/*background-color: #F4F4F4;*/
+}
+
+.gridBody .odd a, .even a {
+	color: #005C9C !important;
+}

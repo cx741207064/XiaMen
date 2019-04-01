@@ -1,0 +1,350 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.YhsData
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:30px;">
+    <tr>
+        <td align="left" class="STYLE2">
+            <strong>请填写申报记录：</strong>
+        </td>
+    </tr>
+    <td>
+        <table width="100%" border="0" class="v2_border h12_b v2_table" style="margin-top:10px;">
+            <tr>
+                <td width="234" class="hintText"><div align="right"><span class="STYLE1 STYLE4">*</span>税款所属期起：</div></td>
+                <td width="16">&nbsp;</td>
+                <td width="375">
+                    @Model.skssqq
+                    <input type="hidden" name="sbbVo['skssqq']" value="2019-02-01" />
+                    <input type="hidden" name="sbbVo['tbrq']" value="2019-03-04" />
+                    <input type="hidden" name="xh" value="@ViewBag.xh" />
+                </td>
+                <td width="355">&nbsp;</td>
+            </tr>
+            <tr>
+                <td class="hintText"><div align="right"><span class="STYLE1 STYLE4">*</span>税款所属期止：</div></td>
+                <td>&nbsp;</td>
+                <td>
+                    @Model.skssqz
+                    <input type="hidden" name="sbbVo['skssqz']" value="2019-02-28" />
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </td>
+    <tr></tr>
+    <td>
+        <table width="100%" border="0" class="v2_border h12_b v2_table" style="margin-top:10px;">
+            <tr>
+                <td width="24%">
+                    <div align="right" class="hintText">
+                        <div align="right"><span class="STYLE1 STYLE4">*</span>征收项目：</div>
+                    </div>
+                </td>
+                <td width="2%">&nbsp;</td>
+                <td width="38%">
+                    印花税
+                    <input type="hidden" name="sbbVo['zsxmdm']" value="10111" />
+
+                </td>
+                <td width="36%"><label></label></td>
+            </tr>
+            <tr>
+                <td class="hintText"><div align="right"><span class="STYLE1 STYLE4">*</span>应征凭证名称：</div></td>
+                <td>&nbsp;</td>
+                <td>
+                    印花税-
+                    @Model.zspmMc
+                    <input type="hidden" name="sbbVo['zspmdm']" id="zspmdm" value="@Model.zspm" />
+                </td>
+                <td><label></label></td>
+            </tr>
+
+        </table>
+    </td>
+    <tr></tr>
+    <td>
+        <table width="100%" border="0" class="v2_border h12_b v2_table" style="margin-top:10px;">
+            <tr>
+                <td width="24%">
+                    <div align="right" class="hintText">
+                        <div align="right">计税金额或件数：</div>
+                    </div>
+                </td>
+                <td width="2%">&nbsp;</td>
+                <td width="38%">
+                    <label>
+                        <input class="in" name="sbbVo['jsje']" type="text" value="@Model.jsje" onblur="return jsjeChange();">
+                    </label>
+                </td>
+                <td width="36%">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div id="lbl_yye" align="right">核定依据：</div></td>
+                <td>&nbsp;</td>
+                <td>
+                    <label>
+                        <input class="in" name="sbbVo['hdzshdde']" type="text" value="" onblur="jsjeChange()">
+                    </label>
+                </td>
+                <td><span class="hintColor">采用核定征收的请填录此项&nbsp;</span></td>
+            </tr>
+            <tr>
+                <td><div id="lbl_hdbl" align="right">核定比例：</div></td>
+                <td>&nbsp;</td>
+                <td>
+
+                    <input class="in" name="sbbVo['hdzshdbl']" type="text" value="">
+
+                </td>
+                <td><span class="hintColor">示例：核定比例65%，填写为0.65</span></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div align="right">
+                        <p align="right"><span class="STYLE1 STYLE4">*</span>适用税率：</p>
+                    </div>
+                </td>
+                <td>&nbsp;</td>
+                <td>
+                    @Model.sfl
+                    <input class="in" name="sbbVo['sysl']" type="hidden" value="@Model.sfl">
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div align="right"><span class="hintText"><span class="STYLE1 STYLE4">*</span>本期应纳税额</span>：</div></td>
+
+                <td>&nbsp;</td>
+                <td>
+                    <input class="in" name="sbbVo['bqynse']" type="text" value="@Model.ynsfe" onchange="return ynseChange();" readonly="readonly">
+                </td>
+                <td><span class="hintColor"><!--=计税金额或件数×适用税率+核定依据×核定比例×适用税率  --></span></td>
+            </tr>
+
+        </table>
+    </td>
+    <tr></tr>
+    <td>
+        <table width="100%" border="0" class="v2_border h12_b v2_table" style="margin-top:10px;">
+            <tr>
+                <td width="24%"><div align="right">本期减免税额：</div></td>
+                <td width="2%">&nbsp;</td>
+                <td width="38%"> <input name="sbbVo['jmse']" type="text" value="" onchange="jmeChange()"> </td>
+                <td width="36%">&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div align="right">减免性质：</div></td>
+                <td>&nbsp;</td>
+                <td colspan="2">
+
+                    <select id="ssjmxzdm" name="sbbVo['ssjmxzdm']"
+                            onchange="changeSsjmxzDm()"
+                            style="overflow:hidden;width: 550px;">
+
+                        <option value="">--请选择--</option>
+
+
+                        <option value="0009011701">0009011701|对个人销售或购买住房暂免征收印花税|《财政部 国家税务总局关于调整房地产交易环节税收政策的通知》 财税〔2008〕137号第二条</option>
+
+                        <option value="0009011702">0009011702|对廉租住房、经济适用住房经营管理单位与廉租住房、经济适用住房相关的印花税以及廉租住房承租人、经济适用住房购买人涉及的印花税予以免征|《财政部 国家税务总局关于廉租住房经济适用住房和住房租赁有关税收政策的通知》 财税〔2008〕24号第一条第（四）项</option>
+
+                        <option value="0009011704">0009011704|保障性住房免征印花税|《财政部 国家税务总局关于棚户区改造有关税收政策的通知》 财税〔2013〕101号第一条</option>
+
+                        <option value="0009011706">0009011706|对开发商建造廉租房和经济适用住房有关印花税予以免征|《财政部 国家税务总局关于廉租住房经济适用住房和住房租赁有关税收政策的通知》 财税〔2008〕24号第一条第（四）项</option>
+
+                        <option value="0009011707">0009011707|免征个人出租承租住房签订的租赁合同印花税|《财政部 国家税务总局关于廉租住房经济适用住房和住房租赁有关税收政策的通知》 财税〔2008〕24号第二条第（二）项</option>
+
+                        <option value="0009011709">0009011709|对公租房经营管理单位建造、管理公租房、购买住房作为公租房免征印花税|《财政部 国家税务总局关于公共租赁住房税收优惠政策的通知》 财税〔2015〕139号第二条</option>
+
+                        <option value="0009011710">0009011710|对公共租赁住房双方免征租赁协议印花税|《财政部 国家税务总局关于公共租赁住房税收优惠政策的通知》 财税〔2015〕139号第三条</option>
+
+                        <option value="0009011711">0009011711|易地扶贫搬迁实施主体取得安置住房土地免征印花税|《财政部 国家税务总局关于易地扶贫搬迁税收优惠政策的通知》 财税〔2018〕135号第二条第（一）款</option>
+
+                        <option value="0009011712">0009011712|易地扶贫搬迁安置住房建设和分配过程中免征印花税|《财政部 国家税务总局关于易地扶贫搬迁税收优惠政策的通知》 财税〔2018〕135号第二条第（二）款</option>
+
+                        <option value="0009011713">0009011713|易地扶贫搬迁实施主体安置住房房源免征印花税|《财政部 国家税务总局关于易地扶贫搬迁税收优惠政策的通知》 财税〔2018〕135号第二条第（五）款</option>
+
+                        <option value="0009012701">0009012701|房地产管理部门与个人订立的租房合同免征印花税|《国家税务局关于印花税若干具体问题的规定》 （88）国税地字第025号第三条</option>
+
+                        <option value="0009012702">0009012702|铁路、公路、航运、水路承运快件行李、包裹开具的托运单据免征印花税|《国家税务局关于印花税若干具体问题的规定》 （88）国税地字第025号第六条</option>
+
+                        <option value="0009012703">0009012703|社保基金会、社保基金投资管理人管理的社保基金转让非上市公司股权，免征印花税|《财政部 税务总局关于全国社会保障基金有关投资业务税收政策的通知》 财税〔2018〕94号第三条</option>
+
+                        <option value="0009012704">0009012704|社保基金会、养老基金投资管理机构管理的养老基金转让非上市公司股权，免征印花税|《财政部 税务总局关于基本养老保险基金有关投资业务税收政策的通知》 财税〔2018〕95号第三条</option>
+
+                        <option value="0009033301">0009033301|青藏铁路公司及其所属单位营业账簿免征印花税|《财政部 国家税务总局关于青藏铁路公司运营期间有关税收等政策问题的通知》 财税〔2007〕11号第二条</option>
+
+                        <option value="0009041503">0009041503|对金融机构与小型企业、微型企业签订的借款合同免征印花税|《财政部 税务总局关于支持小微企业融资有关税收政策的通知》 财税〔2017〕77号第二条</option>
+
+                        <option value="0009049901">0009049901|增值税小规模纳税人印花税减征|《财政部 税务总局关于实施小微企业普惠性税收减免政策的通知》 财税〔2019〕13号</option>
+
+                        <option value="0009052401">0009052401|企业改制、重组过程中印花税予以免征|《财政部 国家税务总局关于中国邮政储蓄银行改制上市有关税收政策的通知》 财税〔2013〕53号第五条</option>
+
+                        <option value="0009052501">0009052501|对中国铁路总公司改革过程中涉及的印花税进行减免|《财政部 国家税务总局关于组建中国铁路总公司有关印花税政策的通知》 财税〔2015〕57号</option>
+
+                        <option value="0009059901">0009059901|企业改制、重组过程中印花税予以免征|《财政部 国家税务总局关于明确中国邮政集团公司邮政速递物流业务重组改制过程中有关契税和印花税政策的通知》 财税〔2010〕92号第二、三、四条</option>
+
+                        <option value="0009059902">0009059902|企业改制、重组过程中印花税予以免征|《财政部 国家税务总局关于企业改制过程中有关印花税政策的通知》 财税〔2003〕183号</option>
+
+                        <option value="0009059903">0009059903|对企业改制、资产整合过程中涉及的所有产权转移书据及股权转让协议印花税予以免征|《财政部 国家税务总局关于中国联合网络通信集团有限公司转让CDMA网及其用户资产企业合并资产整合过程中涉及的增值税营业税印花税和土地增值税政策问题的通知》 财税〔2011〕13号第五、六、七条</option>
+
+                        <option value="0009059904">0009059904|对联通新时空移动通信有限公司接受中国联合网络通信集团固定通信资产增加资本金涉及的印花税予以免征|《财政部 国家税务总局关于中国联合网络通信集团有限公司转让CDMA网及其用户资产企业合并资产整合过程中涉及的增值税营业税印花税和土地增值税政策问题的通知》 财税〔2011〕13号第八条</option>
+
+                        <option value="0009059905">0009059905|对2011年中国移动增加的资本公积、股权调整协议、盈余公积转增实收资本印花税予以免征|《财政部 国家税务总局关于中国移动集团股权结构调整及盈余公积转增实收资本有关印花税政策的通知》 财税〔2012〕62号第一、二条</option>
+
+                        <option value="0009081502">0009081502|买卖封闭式证券投资基金免征印花税|《财政部 国家税务总局关于对买卖封闭式证券投资基金继续予以免征印花税的通知》 财税〔2004〕173号</option>
+
+                        <option value="0009081503">0009081503|股权分置改革过程中发生的股权转让免征印花税|《财政部 国家税务总局关于股权分置试点改革有关税收政策问题的通知》 财税〔2005〕103号第一条</option>
+
+                        <option value="0009081504">0009081504|贴息贷款合同免征印花税|《财政部 国家税务总局关于国家开发银行缴纳印花税问题的复函 》 财税字〔1995〕47号第一条</option>
+
+                        <option value="0009081505">0009081505|国有股东向全国社会保障基金理事会转持国有股免征证券（股票）交易印花税|《财政部 国家税务总局关于境内证券市场转持部分国有股充实全国社会保障基金有关证券（股票）交易印花税政策的通知》 财税〔2009〕103号</option>
+
+                        <option value="0009081509">0009081509|企业改制、重组过程中印花税予以免征|《财政部 国家税务总局关于外国银行分行改制为外商独资银行有关税收问题的通知》 财税〔2007〕45号第三条</option>
+
+                        <option value="0009081510">0009081510|信贷资产证券化免征印花税|《财政部 国家税务总局关于信贷资产证券化有关税收政策问题的通知》 财税〔2006〕5号第一条</option>
+
+                        <option value="0009081512">0009081512|证券投资者保护基金免征印花税|《财政部 国家税务总局关于证券投资者保护基金有关印花税政策的通知》 财税〔2006〕104号</option>
+
+                        <option value="0009081515">0009081515|无息、贴息贷款合同免征印花税|《中华人民共和国印花税暂行条例实施细则》 财税字〔1988〕255号第十三条第（二）项</option>
+
+                        <option value="0009081516">0009081516|被撤销金融机构接收债权、清偿债务签订的产权转移书据免征印花税|《财政部 国家税务总局关于被撤销金融机构有关税收政策问题的通知》 财税〔2003〕141号第二条第1项</option>
+
+                        <option value="0009081517">0009081517|外国政府或者国际金融组织向我国政府及国家金融机构提供优惠贷款所书立的合同免征印花税|《中华人民共和国印花税暂行条例实施细则》 财税字〔1988〕255号第十三条第（三）项</option>
+
+                        <option value="0009081518">0009081518|新设立的资金账簿免征印花税|《财政部 税务总局关于保险保障基金有关税收政策问题的通知》 财税〔2018〕41号第二条第一款</option>
+
+                        <option value="0009081519">0009081519|对保险公司进行风险处置和破产救助过程中签订的产权转移书据免征印花税|《财政部 税务总局关于保险保障基金有关税收政策问题的通知》 财税〔2018〕41号第二条第二款</option>
+
+                        <option value="0009081520">0009081520|对保险公司进行风险处置过程中与中国人民银行签订的再贷款合同免征印花税|《财政部 税务总局关于保险保障基金有关税收政策问题的通知》 财税〔2018〕41号第二条第三款</option>
+
+                        <option value="0009081521">0009081521|以保险保障基金自有财产和接收的受偿资产与保险公司签订的财产保险合同免征印花税|《财政部 税务总局关于保险保障基金有关税收政策问题的通知》 财税〔2018〕41号第二条第四款</option>
+
+                        <option value="0009083901">0009083901|国有商业银行划转给金融资产管理公司的资产免征印花税|《财政部 国家税务总局关于4家资产管理公司接收资本金项下的资产在办理过户时有关税收政策问题的通知》 财税〔2003〕21号</option>
+
+                        <option value="0009083902">0009083902|证券投资基金免征印花税|《财政部 国家税务总局关于开放式证券投资基金有关税收问题的通知》 财税〔2002〕128号第三条</option>
+
+                        <option value="0009083903">0009083903|金融资产管理公司收购、承接、处置不良资产免征印花税|《财政部 国家税务总局关于中国信达等4家金融资产管理公司税收政策问题的通知》 财税〔2001〕10号</option>
+
+                        <option value="0009083904">0009083904|农村信用社接受农村合作基金会财产产权转移书免征印花税|《中国人民银行 农业部 国家发展计划委员会 财政部 国家税务总局关于免缴农村信用社接收农村合作基金会财产产权过户税费的通知》 银发〔2000〕21号</option>
+
+                        <option value="0009083906">0009083906|对中国信达资产管理股份有限公司、中国华融资产管理股份有限公司及其分支机构处置剩余政策性剥离不良资产以及出让上市公司股权免征印花税|《财政部 国家税务总局关于中国信达资产管理股份有限公司等4家金融资产管理公司有关税收政策问题的通知》 财税〔2013〕56号第一条</option>
+
+                        <option value="0009092301">0009092301|对农民专业合作社与本社成员签订的农业产品和农业生产资料购销合同，免征印花税|《财政部 国家税务总局关于农民专业合作社有关税收政策的通知》 财税〔2008〕81号第四条</option>
+
+                        <option value="0009092305">0009092305|饮水工程运营管理单位为建设饮水工程取得土地使用权签订的产权转移书据，以及与施工单位签订的建设工程承包合同免征印花税|《财政部 国家税务总局关于继续实行农村饮水安全工程建设运营税收优惠政策的通知》 财税〔2016〕19号第二条</option>
+
+                        <option value="0009092306">0009092306|农村集体经济组织清产核资免征印花税|《财政部 税务总局关于支持农村集体产权制度改革有关税收政策的通知》 财税〔2017〕55号第二条第二款</option>
+
+                        <option value="0009101401">0009101401|对财产所有人将财产赠给学校所书立的书据免征印花税|《财政部 国家税务总局关于教育税收政策的通知》 财税〔2004〕39号第二条</option>
+
+                        <option value="0009101401">0009101401|财产所有人将财产赠给政府、社会福利单位、学校所立的书据|《财政部 国家税务总局关于教育税收政策的通知》 财税〔2004〕39号第二条</option>
+
+                        <option value="0009101405">0009101405|高校学生公寓租赁合同免征印花税|《财政部 国家税务总局关于继续执行高校学生公寓和食堂有关税收政策的通知》 财税〔2016〕82号第一条</option>
+
+                        <option value="0009102905">0009102905|对北京冬奥组委、北京冬奥会测试赛赛事组委会使用的营业账簿和签订的各类合同免征印花税|《财政部 税务总局 海关总署关于北京2022年冬奥会和冬残奥会税收政策的通知》 财税〔2017〕60号第一条第（九）款</option>
+
+                        <option value="0009102906">0009102906|对国际奥委会签订的与北京2022年冬奥会有关的各类合同，免征国际奥委会的印花税|《财政部 税务总局 海关总署关于北京2022年冬奥会和冬残奥会税收政策的通知》 财税〔2017〕60号第二条第（二）款</option>
+
+                        <option value="0009102907">0009102907|对中国奥委会签订的与北京2022年冬奥会有关的各类合同，免征中国奥委会的印花税|《财政部 税务总局 海关总署关于北京2022年冬奥会和冬残奥会税收政策的通知》 财税〔2017〕60号第二条第（二）款</option>
+
+                        <option value="0009102908">0009102908|对国际残奥委会取得的与北京2022年冬残奥会有关的收入免征印花税|《财政部 税务总局 海关总署关于北京2022年冬奥会和冬残奥会税收政策的通知》 财税〔2017〕60号第二条第（五）款</option>
+
+                        <option value="0009102909">0009102909|对中国残奥委会取得的由北京冬奥组委分期支付的收入免征印花税|《财政部 税务总局 海关总署关于北京2022年冬奥会和冬残奥会税收政策的通知》 财税〔2017〕60号第二条第（六）款</option>
+
+                        <option value="0009102910">0009102910|对财产所有人将财产捐赠给北京冬奥组委所书立的产权转移书据免征印花税|《财政部 税务总局 海关总署关于北京2022年冬奥会和冬残奥会税收政策的通知》 财税〔2017〕60号第三条第（四）款</option>
+
+                        <option value="0009102911">0009102911|对财产所有人将财产捐赠给执委会所书立的产权转移书据免征应缴纳的印花税|《财政部 税务总局 海关总署关于第七届世界军人运动会税收政策的通知》 财税〔2018〕119号 第二条第（三）项</option>
+
+                        <option value="0009103201">0009103201|发行单位之间，发行单位与订阅单位或个人之间书立的征订凭证，暂免征印花税|《国家税务局关于图书、报刊等征订凭证征免印花税问题的通知》 （89）国税地字第142号第二条</option>
+
+                        <option value="0009103203">0009103203|文化单位转制为企业时的印花税优惠|《财政部 国家税务总局 中宣部关于继续实施文化体制改革中经营性文化事业单位转制为企业若干税收政策的通知》 财税〔2014〕84号第一条第（四）项</option>
+
+                        <option value="0009120601">0009120601|财产所有人将财产赠给政府、社会福利单位、学校所立的书据|《中华人民共和国印花税暂行条例》 中华人民共和国国务院令第11号第四条第2项</option>
+
+                        <option value="0009121301">0009121301|特殊货运凭证免征印花税|《国家税务总局关于货运凭证征收印花税几个具体问题的通知》 国税发〔1990〕173号</option>
+
+                        <option value="0009121302">0009121302|免征飞机租赁企业购机环节购销合同印花税|《财政部 国家税务总局关于飞机租赁企业有关印花税政策的通知》 财税〔2014〕18号</option>
+
+                        <option value="0009122602">0009122602|对国家石油储备基地第一期项目建设过程中涉及的印花税，予以免征|《财政部 国家税务总局关于国家石油储备基地建设有关税收政策的通知》 财税〔2005〕23号第一条</option>
+
+                        <option value="0009122604">0009122604|对国家石油储备基地第一期项目建设过程中涉及的印花税，予以免征|《财政部 国家税务总局关于国家石油储备基地有关税收政策的通知》 财税〔2011〕80号</option>
+
+                        <option value="0009122604">0009122604|对国家石油储备基地第二期项目建设过程中应缴的印花税，予以免征|《财政部 国家税务总局关于国家石油储备基地有关税收政策的通知》 财税〔2011〕80号</option>
+
+                        <option value="0009122605">0009122605|储备公司资金账簿和购销合同印花税减免|《财政部 国家税务总局关于部分国家储备商品有关税收政策的通知》 财税〔2016〕28号第一条</option>
+
+                        <option value="0009129904">0009129904|其他|《中华人民共和国印花税暂行条例》 中华人民共和国国务院令第11号第四条第1项</option>
+
+                        <option value="0009129904">0009129904|已缴纳印花税的凭证的副本或者抄本免纳印花税|《中华人民共和国印花税暂行条例》 中华人民共和国国务院令第11号第四条第1项</option>
+
+                        <option value="0009129906">0009129906|资金账簿减半征收印花税|《财政部 税务总局关于对营业账簿减免印花税的通知》 财税〔2018〕50号</option>
+
+                        <option value="0009129907">0009129907|其他账簿免征印花税|《财政部 税务总局关于对营业账簿减免印花税的通知》 财税〔2018〕50号</option>
+
+                        <option value="0009129999">0009129999|其他|其他</option>
+
+                    </select>
+
+                </td>
+            </tr>
+            <tr>
+                <td><div align="right">增值税小规模纳税人减征比例：</div></td>
+                <td>&nbsp;</td>
+                <td>
+                    <input name="sbbVo['jzbl']" type="text" value="0.5" readonly="readonly">
+                    <input name="sbbVo['jzbz']" type="hidden" value="N">
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div align="right">本期增值税小规模纳税人减征额：</div></td>
+                <td>&nbsp;</td>
+                <td><input name="sbbVo['jze']" type="text" readonly="readonly" value=""></td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td><div align="right">本期已缴税额：</div></td>
+                <td>&nbsp;</td>
+                <td><input name="sbbVo['bqyjse1']" type="text" value="@Model.bqyjse" onblur="yjeChange()"></td>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
+                <td>
+                    <div align="right">
+                        <div title="本期应补（退）税（费）额(10=7-8-9)"><span style="color:#FF7E6E">*本期应补（退）税额：</span></div>
+                    </div>
+                </td>
+                <td>&nbsp;</td>
+                <td><input class="in" name="sbbVo['bqybtse']" type="text" readonly="readonly" value=""></td>
+                <td><span class="hintColor">=本期应纳税额-本期减免税额-本期已缴税额</span></td>
+            </tr>
+            <input type="hidden" name="sbbVo['sfzhm']" value="" />
+            <input type="hidden" name="sbbVo['kjmse']" value="" />
+            <input type="hidden" name="sbbVo['kyjse']" value="0.0" />
+            <input type="hidden" name="sbbVo['sfjm']" value="" />
+            <input type="hidden" name="sbbVo['sfyj']" value="" />
+            <input type="hidden" name="sbbVo['qzdje']" value="" />
+            <input type="hidden" name="sbbVo['hdlx']" value="1" />
+            <input type="hidden" name="sbbVo['hdlx2']" value="" />
+            <input type="hidden" name="sbbVo['rdpzuuid']" value="" />
+            <input type="hidden" name="sbbVo['yhpzuuid']" />
+            <input type="hidden" name="yjskuuid" value="" />
+            <input type="hidden" name="sbbVo['yjskuuid']" />
+            <input type="hidden" name="sbbVo['yyqzdje']" />
+        </table>
+        <div align="center" class="marg_top12">
+            @if(ViewBag.op=="modify")
+            {
+                <input type="button" class="bottBlue rad" onclick="qrtj('modify')" value="确认修改">
+            }
+            else
+            {
+                <input type="button" class="bottBlue rad" onclick="qrtj('tj')" value="确认添加">
+            }
+            
+            <input type="button" class="bottBlue rad" onclick="location.href='/jsdzsb/yhssb/lb.do'" value="上一步">
+            <input type="button" class="bottBlue rad" onclick="location.href='/jsdzsb/yhssb/lb.do'" value="取消添加">
+        </div>
+    </td>
+</table>

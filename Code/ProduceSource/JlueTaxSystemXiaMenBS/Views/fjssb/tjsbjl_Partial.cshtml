@@ -1,0 +1,322 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.FjsData
+<form action="/jsdzsb/yhssb/lb.do" method="post" id="myForm2">
+    <input type="hidden" name="errAction" value="/jsdzsb/fjssb/tjsbjl.do" />
+    <input type="hidden" name="nsqx_dm" value="06" /> <input type="hidden" name="xms" value="10109" />
+
+    <table width="1200" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="gray_bg_color">
+                <table width="100%" border="0"
+                       cellpadding="0" cellspacing="0"
+                       style="margin-bottom:8px; margin-top:8px;">
+                    <tr>
+                        <td align="left" class="liucheng_01"></td>
+                        <td align="left">
+                            <table width="650" border="0" align="left"
+                                   cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" class="liucheng_02 h1_14w v2_h1_14w">初始化</td>
+                                    <td align="center">
+                                        <img src="/res/jsdzsb/bsdt/images/over_arrow.png" width="9"
+                                             height="16" />
+                                    </td>
+                                    <td align="center" class="liucheng_02 h1_14w v2_h1_14w">填写申报表</td>
+                                    <td align="center">
+                                        <img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9"
+                                             height="16" />
+                                    </td>
+                                    <td align="center" class="liucheng_03 h1_14b v2_h1_14b">确认申报</td>
+                                    <td align="center">
+                                        <img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9"
+                                             height="16" />
+                                    </td>
+                                    <td align="center" class="liucheng_03 h1_14b v2_h1_14b">查看回执</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="gray3_bg_color"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="1000" border="0" align="center"
+                       cellpadding="0" cellspacing="0" style="margin-top:30px;">
+                    <tr>
+                        <td align="left" class="STYLE2"><strong>请添加申报记录：</strong></td>
+                    </tr>
+                    <td>
+                        <table width="100%" border="0"
+                               class="border h12_b v2_border v2_table"
+                               style="margin-top:10px;">
+                            <tr>
+                                <td width="183" class="hintText">
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>税款所属期起：
+                                    </div>
+                                </td>
+                                <td width="28">&nbsp;</td>
+                                <td width="212">
+                                    @Model.GDTXDate.skssqq<input type="hidden"
+                                                     name="sbbVo['skssqq']" value="2019-02-01" /> <input type="hidden" name="sbbVo['skssqz']" value="2019-02-28" />
+                                    <input type="hidden" name="sbbVo['sffjjm']" />
+                                </td>
+                                <td width="357">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="hintText">
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>税款所属期止：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>@Model.GDTXDate.skssqz</td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <tr></tr>
+                    <td>
+                        <table width="100%" border="0"
+                               class="border h12_b v2_border v2_table"
+                               style="margin-top:10px;">
+                            <tr>
+                                <td width="183">
+                                    <div align="right" class="hintText">
+                                        <div align="right">
+                                            <span class="STYLE1 STYLE4">*</span>征收项目：
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="28">&nbsp;</td>
+                                <td width="212">
+                                    <label>
+
+                                        <script language=javascript type=text/javascript>
+<!--
+Array.prototype.remove=function(param){
+  var index=0;
+
+  if(isNaN(param)){
+    index=this.indexOf(param);
+  }
+  else {
+    index=param;
+  }
+  var buffer = this;
+
+  if(index>=0 && index<this.length){
+    for(var i=index;i<this.length-1;i++)
+      buffer[i]=buffer[i+1];
+    this.length-=1;
+    return true;
+  }
+  else {
+    return false;
+  }
+}
+
+function relationSelect() {
+  this.$ = function(id) {
+    return document.getElementById(id);
+  }
+
+  this.$$ = function(id, idx) {
+    var objs = document.getElementsByName(id);
+    if(objs[idx])
+      return objs[idx];
+    else
+      throw new Error("$$("+id+","+idx+"): 对象不存在或下标超出范围");
+  }
+
+  //给列表增加一个空选项
+  this.addOptionItem = function (obj, itemVal, itemText, selected) {
+    var no = new Option();
+    no.value = itemVal ;
+    no.text =  itemText ;
+    if($(obj).attr("showdefaulttittle"))	no.title =  itemText ;
+    obj.options[obj.options.length] = no;
+    if(selected)
+      obj.options[obj.options.length - 1].selected = true;
+  }
+
+  //删除指定Select控件的所有下拉选项的JS
+  this.clearSelectObj = function ( obj ) {
+    for(var i=0; i<obj.options.length; i++);
+      obj.options[i] == null;
+    obj.options.length = 0;
+  }
+
+  //生成下拉列表
+  this.renderSelectObj = function (obj, parentValue) {
+    if(obj.getAttribute("blankOption")) {
+      var bOpts = obj.getAttribute("blankOption").split(",");
+      if(bOpts.length>1)
+        this.addOptionItem( obj, bOpts[0],  bOpts[1]);
+    }
+    var parentObjID = obj.getAttribute("parentObjID");
+    if(parentObjID==null) parentObjID = "";
+    if(parentObjID!="")
+      var parentObj = this.$(parentObjID);
+
+    var defaultValue = obj.getAttribute("defaultID");
+
+    var dataArray = new Array();
+    if(obj.getAttribute("dataArray")) dataArray = this.cleanDataArray(obj);
+    if(parentValue==null) parentValue = "";
+
+    var datalen = dataArray.length;
+
+    for(var ii=0; ii<datalen; ii++) {
+      //如果数组中的父代码不等于要显示的父代码，则跳过
+      if(parentObj && dataArray[ii][2] != parentValue) continue;
+      if ( dataArray[ii][0]==defaultValue)
+        this.addOptionItem( obj, dataArray[ii][0], dataArray[ii][1], true);
+      else
+        this.addOptionItem( obj, dataArray[ii][0], dataArray[ii][1]);
+    }
+  }
+
+  //取得代码数组并根据显示或隐藏列表进行清理
+  this.cleanDataArray = function(obj) {
+    var dataArray = new Array();
+    if(obj.getAttribute("dataArray")) dataArray = eval(obj.getAttribute("dataArray"));
+
+    if(obj.getAttribute("showList")) {
+      var showVals = obj.getAttribute("showList").split(",");
+      for(ii=0; ii<dataArray.length; ii++) {
+        var bFound = false;
+        for(jj=0; jj<showVals.length; jj++) {
+          if(showVals[jj]==dataArray[ii][0]) {
+            bFound = true;
+            break;
+          }
+        }
+        if(!bFound) {
+          dataArray.remove(ii--);
+        }
+      }
+    }else if(obj.getAttribute("hiddenList")) {
+      var hiddenVals = obj.getAttribute("hiddenList").split(",");
+      for(ii=0; ii<dataArray.length; ii++) {
+        for(jj=0; jj<hiddenVals.length; jj++) {
+          if(hiddenVals[jj]==dataArray[ii][0]) {
+            dataArray.remove(ii--);
+            break;
+          }
+        }
+      }
+    }
+    return dataArray;
+  }
+
+  //父对象OnChange事件处理JS函数
+  this.selectChanged = function ( obj ) {
+    var childObjID = obj.getAttribute("childObjID");
+    var childObj = this.$(childObjID);
+    if(childObj) {
+      this.clearSelectObj(childObj, obj.value);
+      this.renderSelectObj(childObj, obj.value);
+      //触发子控件的onChange事件
+      this.selectChanged(childObj);
+    }
+  }
+}
+
+var relSelect = new relationSelect();
+//-->
+
+                                        </script>
+
+                                        <select onchange="if(relSelect) {relSelect.selectChanged(this);}" id="sbbVo['zsxmDm']" name="sbbVo['zsxmDm']" childobjid="sbbVo['zspmDm']" blankoption=",--请选择--" dataarray="JS_ZSXM_DM">
+                                            <script type="text/javascript" language="javascript">
+                                                //字段名： DM, DMZW_MC, SJDM, DM_MC
+                                                var JS_ZSXM_DM = new Array(
+                                                new Array("10109", "城市维护建设税", "", "10109")
+                                                );
+                                            </script>
+                                            <option value="">--请选择--</option>
+                                            <option value="10109">城市维护建设税</option>
+
+                                        </select>
+
+                                    </label>
+                                </td>
+                                <td width="357">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td class="hintText">
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>征收品目：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <label>
+
+                                        <select onchange="if(relSelect) {relSelect.selectChanged(this);}" id="sbbVo['zspmDm']" name="sbbVo['zspmDm']" parentobjid="sbbVo['zsxmDm']" dataarray="JS_ZSPM_DM" defaultid="101090101">
+                                            <script type="text/javascript" language="javascript">
+                                                //字段名： DM, DMZW_MC, SJDM, DM_MC
+                                                var JS_ZSPM_DM = new Array(
+                                                new Array("101090101", "市区（增值税附征）", "10109", "101090101")
+                                                );
+                                            </script>
+                                            <option value="">--请选择--</option>
+                                            <option value="101090101" @if (Model.zspm == "101090101") { @Html.Raw("selected")}>市区（增值税附征）</option>
+                                        </select>
+
+                                    </label>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td width="183">
+                                    <div align="right" class="hintText">
+                                        <div align="right" id="ybzzs">
+
+                                            <span class="STYLE1 STYLE4">*</span>本月销售额合计数
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="28">&nbsp;</td>
+                                <td width="212">
+                                    <label>
+
+                                        <select id="_combobox_" name="sbbVo['zzsxselx_dm']"
+                                                style="">
+
+                                            <option value="" selected>--请选择--</option>
+
+                                            <option value="11">增值税入库税款为0（月报）</option>
+
+                                            <option value="12">月销售额合计10万（含）以下</option>
+
+                                            <option value="13">月销售额合计数为10万以上</option>
+
+                                        </select>
+
+                                    </label>
+                                </td>
+                                <td width="357">（用于小微企业免征增值税附加税费的计算，请正确填写。）&nbsp;</td>
+                            </tr>
+
+                        </table>
+                        <div align="center">
+                            <input type="button" class="bottBlue  rad marg_top12"
+                                   onclick="txsbb()" value="下一步"> <input type="button"
+                                                                         class="bottBlue rad marg_top12"
+                                                                         onclick="location.href='/jsdzsb/fjssb/lb.do'" value="取消添加">
+                        </div>
+                    </td>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</form>

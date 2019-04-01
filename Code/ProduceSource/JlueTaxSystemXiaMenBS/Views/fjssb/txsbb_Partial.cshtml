@@ -1,0 +1,472 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.FjsData
+@using JlueTaxSystemXiaMenBS.Models
+<form action="/jsdzsb/yhssb/lb.do" method="post" id="myForm3">
+    <input type="hidden" name="errAction" value="/jsdzsb/fjssb/txsbb.do" />
+    <input type="hidden" name="nsqx_dm" value="06" /> <input type="hidden" name="xms" value="10109" /> <input type="hidden"
+                                                                                                              name="tenwjmFlag" value="Y" /> <input type="hidden"
+                                                                                                                                                    name="threewjmFlag" value="N" />
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td class="gray_bg_color">
+                <table width="100%" border="0"
+                       cellpadding="0" cellspacing="0"
+                       style="margin-bottom:8px; margin-top:8px;">
+                    <tr>
+                        <td align="left" class="liucheng_01"></td>
+                        <td align="left">
+                            <table width="650" border="0" align="left"
+                                   cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center" class="liucheng_02 h1_14w v2_h1_14w">初始化</td>
+                                    <td align="center">
+                                        <img src="/res/jsdzsb/bsdt/images/over_arrow.png" width="9"
+                                             height="16" />
+                                    </td>
+                                    <td align="center" class="liucheng_02 h1_14w v2_h1_14w">填写申报表</td>
+                                    <td align="center">
+                                        <img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9"
+                                             height="16" />
+                                    </td>
+                                    <td align="center" class="liucheng_03 h1_14b v2_h1_14b">确认申报</td>
+                                    <td align="center">
+                                        <img src="/res/jsdzsb/bsdt/images/off_arrow.png" width="9"
+                                             height="16" />
+                                    </td>
+                                    <td align="center" class="liucheng_03 h1_14b v2_h1_14b">查看回执</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="gray3_bg_color"></td>
+        </tr>
+        <tr>
+            <td>
+                <table width="1000" border="0" align="center"
+                       cellpadding="0" cellspacing="0" style="margin-top:30px;">
+                    <tr>
+                        <td align="left" class="STYLE2"><strong>请添加申报记录：</strong></td>
+                    </tr>
+                    <td>
+                        <table width="100%" border="0"
+                               class="border h12_b v2_border v2_table"
+                               style="margin-top:10px;">
+                            <tr>
+                                <td width="234" class="hintText">
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>税款所属期起：
+                                    </div>
+                                </td>
+                                <td width="16">&nbsp;</td>
+                                <td width="375">
+                                    @Model.skssqq<input type="hidden"
+                                                     name="sbbVo['skssqq']" value="2019-02-01" /> <input type="hidden" name="sbbVo['tbrq']" value="2019-03-06" />
+                                </td>
+                                <td width="355">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="hintText">
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>税款所属期止：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    @Model.skssqz<input type="hidden"
+                                                     name="sbbVo['skssqz']" value="2019-02-28" />
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <tr></tr>
+                    <td>
+                        <table width="100%" border="0"
+                               class="border h12_b  v2_border v2_table"
+                               style="margin-top:10px;">
+                            <tr>
+                                <td width="24%">
+                                    <div align="right" class="hintText">
+                                        <div align="right">
+                                            <span class="STYLE1 STYLE4">*</span>征收项目：
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="38%">
+
+
+                                    城市维护建设税 <input type="hidden" name="sbbVo['zsxmDm']" value="10109" />
+                                </td>
+                                <td width="36%"><label></label></td>
+                            </tr>
+                            <tr>
+                                <td class="hintText">
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>征收品目：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+
+
+                                    市区（增值税附征） <input type="hidden" name="sbbVo['zspmDm']" value="101090101" />
+                                </td>
+                                <td><label></label></td>
+                            </tr>
+                            <tr>
+                                <td width="24%">
+                                    <div align="right" class="hintText">
+                                        <div align="right" id="ybzzs">
+
+                                            <span class="STYLE1 STYLE4">*</span>本月销售额合计数
+
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="38%">
+                                    <label>
+                                        @Model.zzsxselx_mc
+                                        <input name="sbbVo['zzsxselx_dm']" id="ZZSXSELX_DM"
+                                               type="hidden" value="@Model.zzsxselx_dm"> <input name="sbbVo['xshjs']" type="hidden" value="@Model.xshjs">
+                                        <input name="xshjs" type="hidden" value="@Model.xshjs">
+                                    </label>
+                                </td>
+                                <td width="36%">（用于小微企业免征增值税附加税费的计算。）&nbsp;</td>
+                            </tr>
+
+                        </table>
+                    </td>
+                    <tr></tr>
+                    <td>
+                        <table width="100%" border="0"
+                               class="border h12_b  v2_border v2_table"
+                               style="margin-top:10px;">
+                            <tr>
+                                <td width="24%">
+                                    <div align="right" class="hintText">
+                                        <div align="right" id="ybzzs">
+                                            <span class="STYLE1 STYLE4">*</span>增值税（一般增值税）：
+                                        </div>
+                                    </div>
+                                </td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="38%">
+                                    <label>
+                                        <input name="sbbVo['ybzzs']" type="text" value="@Model.ybzzs"
+                                               onblur="return sdeChange();">
+                                    </label>
+                                </td>
+                                <td width="36%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><div align="right" id="zzs_mdse">增值税（免抵税额）：</div></td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <label>
+                                        <input name="sbbVo['zzsmdse']"
+                                               type="text" value="@Model.mdse"
+                                               onblur="return sdeChange();">
+                                    </label>
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="right" id="xfs">
+                                        <span class="STYLE1 STYLE4">*</span>消费税：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <input name="sbbVo['xfs']" type="text"
+                                           value="" onblur="return sdeChange();">
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div align="right" id="yys">
+                                        <span class="STYLE1 STYLE4">*</span>营业税：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <input name="sbbVo['yys']" type="text"
+                                           value="" onblur="return sdeChange();">
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="right">
+                                        <span class="STYLE1 STYLE4">*</span>合计：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <input name="sbbVo['hj']" type="text"
+                                           value="@Model.hj" readonly="readonly">&nbsp;
+                                </td>
+                                <td><span class="STYLE3 hintColor">自动计算</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div align="right">
+                                        <p align="right">
+                                            <span class="STYLE1 STYLE4">*</span>税率（征收率）：
+                                        </p>
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>0.07</td>
+                                <td>
+                                    <input type="hidden" name="sbbVo['sl1']"
+                                           value="0.07" />
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <div align="right">
+                                        <span class="hintText"><span class="STYLE1 STYLE4">*</span>本期应纳税（费）额</span>：
+                                    </div>
+                                </td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <input name="sbbVo['bqynse']" type="text"
+                                           value="@Model.bqynse" readonly="readonly"
+                                           onchange="calcSjjne()">&nbsp;&nbsp;
+                                </td>
+                                <td><span class="STYLE3 hintColor">自动计算</span></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <tr></tr>
+                    <td>
+                        <table width="960" border="0"
+                               class="border h12_b  v2_border v2_table"
+                               style="margin-top:10px;overflow: hidden">
+
+                            <tr>
+                                <td width="24%"><div align="right">本期减免税（费）额：</div></td>
+                                <td width="2%">&nbsp;</td>
+                                <td width="38%" style="overflow: hidden">
+                                    <input name="sbbVo['jme']" type="text" value="@Model.jme"
+                                           onchange="jmeChange()">
+                                </td>
+                                <td width="36%">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td><div align="right">减免性质：</div></td>
+                                <td>&nbsp;</td>
+                                <td colspan="2">
+
+                                    <select id="ssjmxzdm" name="sbbVo['jmxzDm']"
+                                            onchange="changeSsjmxzDm()"
+                                            style="overflow:hidden;width: 550px;">
+
+                                        <option value="">--请选择--</option>
+
+
+                                        <option value="0001011811">0001011811|退役士兵从事个体经营扣减地方教育附加优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第一条</option>
+
+                                        <option value="0001011811">0001011811|退役士兵从事个体经营扣减城市维护建设税优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第一条</option>
+
+                                        <option value="0001011811">0001011811|退役士兵从事个体经营扣减增值税优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第一条</option>
+
+                                        <option value="0001011811">0001011811|退役士兵从事个体经营扣减教育费附加优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第一条</option>
+
+                                        <option value="0001011812">0001011812|企业招用退役士兵扣减地方教育附加优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第二条</option>
+
+                                        <option value="0001011812">0001011812|企业招用退役士兵扣减城市维护建设税优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第二条</option>
+
+                                        <option value="0001011812">0001011812|企业招用退役士兵扣减增值税优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第二条</option>
+
+                                        <option value="0001011812">0001011812|企业招用退役士兵扣减教育费附加优惠|《财政部 税务总局 民政部关于继续实施扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2017〕46号第二条</option>
+
+                                        <option value="0001013608">0001013608|重点群体从事个体经营扣减地方教育附加优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013608">0001013608|重点群体从事个体经营扣减城市维护建设税优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013608">0001013608|重点群体从事个体经营扣减增值税优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013608">0001013608|重点群体从事个体经营扣减教育费附加优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013608">0001013608|除高校毕业生以外的失业人员从事个体经营，扣减教育费附加|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013608">0001013608|高校毕业生从事个体经营，扣减教育费附加|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013608">0001013608|高校毕业生从事个体经营，扣减教育费附加|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第一条</option>
+
+                                        <option value="0001013609">0001013609|招录重点群体就业扣减地方教育附加优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第二条</option>
+
+                                        <option value="0001013609">0001013609|招录重点群体就业扣减城市维护建设税优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第二条</option>
+
+                                        <option value="0001013609">0001013609|招录重点群体就业扣减增值税优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第二条</option>
+
+                                        <option value="0001013609">0001013609|招录重点群体就业扣减教育费附加优惠|《财政部 税务总局 人力资源社会保障部关于继续实施支持和促进重点群体创业就业有关税收政策的通知》 财税〔2017〕49号第二条</option>
+
+                                        <option value="0007011803">0007011803|退役士兵从事个体经营扣减城市维护建设税优惠|《财政部 税务总局 退役军人部关于进一步扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2019〕21号第一条</option>
+
+                                        <option value="0007011804">0007011804|企业招用退役士兵扣减城市维护建设税优惠|《财政部 税务总局 退役军人部关于进一步扶持自主就业退役士兵创业就业有关税收政策的通知》 财税〔2019〕21号第二条</option>
+
+                                        <option value="0007013610">0007013610|建档立卡贫困人口从事个体经营扣减城市维护建设税|《财政部 税务总局 人力资源社会保障部 国务院扶贫办关于进一步支持和促进重点群体创业就业有关税收政策的通知》 财税〔2019〕22号第一条</option>
+
+                                        <option value="0007013611">0007013611|登记失业半年以上人员，零就业家庭、享受城市低保登记失业人员，毕业年度内高校毕业生从事个体经营扣减城市维护建设税|《财政部 税务总局 人力资源社会保障部 国务院扶贫办关于进一步支持和促进重点群体创业就业有关税收政策的通知》 财税〔2019〕22号第一条</option>
+
+                                        <option value="0007013612">0007013612|企业招用建档立卡贫困人口就业扣减城市维护建设税|《财政部 税务总局 人力资源社会保障部 国务院扶贫办关于进一步支持和促进重点群体创业就业有关税收政策的通知》 财税〔2019〕22号第二条</option>
+
+                                        <option value="0007013613">0007013613|企业招用登记失业半年以上人员，零就业家庭、享受城市低保登记失业人员，毕业年度内高校毕业生就业扣减城市维护建设税|《财政部 税务总局 人力资源社会保障部 国务院扶贫办关于进一步支持和促进重点群体创业就业有关税收政策的通知》 财税〔2019〕22号第二条</option>
+
+                                        <option value="0007049901">0007049901|增值税小规模纳税人城市维护建设税减征|《财政部 税务总局关于实施小微企业普惠性税收减免政策的通知》 财税〔2019〕13号</option>
+
+                                        <option value="0007064002">0007064002|国家重大水利工程建设基金免征城市维护建设税|《财政部 国家税务总局关于免征国家重大水利工程建设基金的城市维护建设税和教育费附加的通知》 财税〔2010〕44号</option>
+
+                                        <option value="0007129999">0007129999|上海期货交易所会员和客户通过上海期货交易所销售标准黄金,发生实物交割并已出库的，免征城市维护建设税|其他</option>
+
+                                        <option value="0007129999">0007129999|促进就业企业限额减免城市维护建设税|其他</option>
+
+                                        <option value="0007129999">0007129999|其他|其他</option>
+
+                                        <option value="0007129999">0007129999|受灾地区促进就业企业限额减免城市维护建设税|其他</option>
+
+                                        <option value="0007129999">0007129999|对国家石油储备基地第一期项目建设过程中涉及的城市维护建设税，予以免征|其他</option>
+
+                                        <option value="0007129999">0007129999|文化单位转制为企业时的城市维护建设税优惠|其他</option>
+
+                                        <option value="0007129999">0007129999|被撤销金融机构财产用来清偿债务免征城市维护建设税|其他</option>
+
+                                        <option value="0007129999">0007129999|金融资产管理公司收购、承接、处置不良资产免征城市维护建设税|其他</option>
+
+                                        <option value="0007129999">0007129999|黄金交易所会员单位免征城市维护建设税|其他</option>
+
+                                    </select>
+
+
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td><div align="right">本期已缴税（费）额：</div></td>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <input name="sbbVo['bqyjse']" type="text"
+                                           value="@Model.bqyjse" onblur="yjeChange()">
+                                </td>
+                                <td>&nbsp;</td>
+                            </tr>
+
+
+        </tr>
+        <tr>
+            <td><div align="right">教育费附加已缴税（费）额：</div></td>
+            <td>&nbsp;</td>
+            <td>
+                <input name="sbbVo['jyffjyjse']"
+                       @if (Model.zzsxselx_dm != "13") { @Html.Raw("readonly=\"readonly\" disabled=\"disabled\"") }
+                       type="text" value=""
+                       onchange="jyyjeChange()">
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+        </tr>
+        <tr>
+            <td><div align="right">地方教育附加已缴税（费）额：</div></td>
+            <td>&nbsp;</td>
+            <td>
+                <input name="sbbVo['dffjjyjse']"
+                       @if (Model.zzsxselx_dm != "13") { @Html.Raw("readonly=\"readonly\" disabled=\"disabled\"")}
+                       type="text" value=""
+                       onchange="dfjyyjeChange()">
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <div align="right">
+                    <div title="本期应补（退）税（费）额(10=7-8-9)">
+                        <span style="color:#FF7E6E">*本期应补（退）税额：</span>
+                    </div>
+                </div>
+            </td>
+            <td>&nbsp;</td>
+            <td>
+                <input name="sbbVo['bqybtse']" type="text"
+                       value="@Model.bqybtse" readonly="">
+            </td>
+            <td><span class="STYLE3 hintColor">=本期应纳税额-本期减免税额-本期已缴税额</span></td>
+        </tr>
+        <input type="hidden" name="sbbVo['sffjjm']"
+               value="Y" />
+        <input type="hidden" name="sbbVo['pzxh']"
+               value="" />
+        <input type="hidden" name="sbbVo['sfzf']"
+               value="" />
+        <input type="hidden" name="sbbVo['sfzhm']"
+               value="" />
+        <input type="hidden" name="sbbVo['kjmse']"
+               value="" />
+        <input type="hidden" name="sbbVo['kyjse']"
+               value="0.0" />
+        <input type="hidden" name="sbbVo['sfjm']"
+               value="" />
+        <input type="hidden" name="sbbVo['sfyj']"
+               value="" />
+        <input type="hidden" name="sbbVo['qzdje']"
+               value="" />
+        <input type="hidden" name="sbbVo['yhpzuuid']" />
+        <input type="hidden" name="sbbVo['yjskuuid']" />
+        <input type="hidden" name="yjskuuid" value="" />
+        <input type="hidden" name="sbbVo['yyqzdje']" />
+        <input type="hidden" name="sbbVo['rdpzuuid']"
+               value="8046254ED74D7592E05338401B518905" />
+        <input type="hidden" name="xh" value="d899934e893346edbb4824e6119825c7" />
+    </table>
+    <div align="center" class="marg_top12">
+    @if(Model.OP==OP.Add) 
+    {
+        <input type="button" class="bottBlue rad" onclick="qrtj('tj')" value="确认添加">
+    }
+    else
+    { 
+        <input type="button" class="bottBlue rad" onClick="qrtj('modify')" value="确认修改">
+    }
+        <input type="button" class="bottBlue rad"
+               onclick="location.href='/jsdzsb/fjssb/lb.do'" value="上一步">
+
+        <input type="button" class="bottBlue rad"
+               onclick="location.href='/jsdzsb/fjssb/lb.do'" value="取消添加">
+    </div></td>
+    </table>
+    <table width="1000" border="0" align="center" cellpadding="0"
+           cellspacing="0" style="margin-top:30px;">
+        <tr>
+            <td valign="top" class="size14" bgcolor="#EFF4FC"
+                style="line-height:1.5;color:red">
+                <p>
+                    说明： &nbsp;&nbsp;&nbsp;&nbsp;1、红色*号必须填写；<br />
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;2、减免性质代码：减免性质代码按照国家税务总局制定下发的最新《减免性质及分类表》中的最细项减免性质代码填报。<br />
+
+
+                    <br /> <br />
+                </p>
+            </td>
+        </tr>
+    </table>
+    <p>&nbsp;</p></td>
+    </tr>
+    </table>
+
+</form>
