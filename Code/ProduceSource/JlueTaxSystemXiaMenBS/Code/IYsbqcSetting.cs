@@ -24,8 +24,16 @@ namespace JlueTaxSystemXiaMenBS.Code
 
         GDTXXiaMenUserYSBQC getUserYSBQC(string dm);
 
+        /// <summary>
+        /// 获取已申报的清册
+        /// </summary>
+        /// <returns></returns>
         List<GDTXXiaMenUserYSBQC> getYsbUserYSBQC();
 
+        /// <summary>
+        /// 获取未申报的清册
+        /// </summary>
+        /// <returns></returns>
         List<GDTXXiaMenUserYSBQC> getWsbUserYSBQC();
 
         GTXResult saveUserYSBQCReportData(JToken json, string userYsbqcId, string reportCode, string dataKey = "data");
@@ -36,25 +44,15 @@ namespace JlueTaxSystemXiaMenBS.Code
 
         JToken getUserYSBQCReportData(int id, string reportCode, string dataKey = "data");
 
-        void UpdateYsbqcSBSE(string userYSBQCId, JToken input_jo, string ywbm);
-
-        JArray getsbzfmx(string sbblxDm);
-
-        void sbZfSubmit(string yzpzzlDm);
-
         Nsrxx getNsrxx();
-
-        void getHeadNsrxx(ref JObject in_jo);
 
         void getYbnsrzzsBnlj(ref JObject in_jo, string dm);
 
-        JArray aqsb_getSbqcList();
+        JObject getYbnsrzzsDataConfig(object in_obj, string dm);
 
         GDTXDate getGDTXDate(Type type);
 
         GDTXDate getGDTXDate(string dm);
-
-        void formatCd(ref JObject in_jo);
 
         JArray getYhsZspmSl();
 

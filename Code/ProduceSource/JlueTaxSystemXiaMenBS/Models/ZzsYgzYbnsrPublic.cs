@@ -22,5 +22,9 @@ namespace JlueTaxSystemXiaMenBS.Models
 
         public ZzsYgzYbnsrZBData ZBData { get; set; }
 
+        public ZzsYgzYbnsrFB1Data FB1Data { get; set; }
+
+        public ZzsYgzYbnsrFB2Data FB2Data { get; set; }
+
     }
 }

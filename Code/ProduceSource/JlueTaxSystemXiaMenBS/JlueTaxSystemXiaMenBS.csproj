@@ -620,6 +620,9 @@
     <Content Include="Views\yhssb\txsbb_Partial.cshtml" />
     <Content Include="Views\yhssb\yhstjsbjl_Partial.cshtml" />
     <Content Include="Views\yhssb\Yhs_Head_Nsrxx_Partial.cshtml" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB1.commerce.xml" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB2.commerce.xml" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB1.industry.xml" />
     <Content Include="wssb\wssb\layout\center.jsp" />
     <Content Include="wssb\wssb\layout\css\css.css" />
     <Content Include="wssb\wssb\layout\css\overlay.css" />
@@ -664,6 +667,7 @@
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FB4.js" />
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FLZL5.js" />
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_JMSSBMXB.js" />
+    <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB2.industry.xml" />
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.Message.xml">
       <SubType>Designer</SubType>
@@ -720,6 +724,8 @@
     <Compile Include="Models\Nsrxx.cs" />
     <Compile Include="Models\FjsData.cs" />
     <Compile Include="Models\YhsData.cs" />
+    <Compile Include="Models\ZzsYgzYbnsrFB1Data.cs" />
+    <Compile Include="Models\ZzsYgzYbnsrFB2Data.cs" />
     <Compile Include="Models\ZzsYgzYbnsrZBData.cs" />
     <Compile Include="Models\ZzsYgzYbnsrPublic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

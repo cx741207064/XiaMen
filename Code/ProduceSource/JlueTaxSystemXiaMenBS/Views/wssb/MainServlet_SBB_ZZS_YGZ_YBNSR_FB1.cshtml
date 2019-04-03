@@ -147,10 +147,10 @@
                                             <!-- 不管专票还是普票，存在部分冲减的时候都不取数，由纳税人填报 modify by zhiweiHuang 20170928 -->
 
                                             <td width="105px">
-                                                <input type="text" class="input_money_readonly" readonly="readonly" id="KJZZSFP_XSE1" value="0.0" originvalue="0.0" onchange="changevalue1()" onkeydown="checknum()" name="KJZZSFP_XSE1">
+                                                <input type="text" class="input_money_readonly" readonly="readonly" id="KJZZSFP_XSE1" value="@Model.FB1Data.KJZZSFP_XSE1" originvalue="0.0" onchange="changevalue1()" onkeydown="checknum()" name="KJZZSFP_XSE1">
                                             </td>
                                             <td width="95px">
-                                                <input type="text" class="input_money_readonly" readonly="readonly" id="KJZZSFP_XXSE1" value="0.0" onchange="changevalue1();checkXxseIsAvailable('KJZZSFP_', '1', '1', '2', 0.16);" onkeydown="checknum()" name="KJZZSFP_XXSE1">
+                                                <input type="text" class="input_money_readonly" readonly="readonly" id="KJZZSFP_XXSE1" value="@Model.FB1Data.KJZZSFP_XXSE1" onchange="changevalue1();checkXxseIsAvailable('KJZZSFP_', '1', '1', '2', 0.16);" onkeydown="checknum()" name="KJZZSFP_XXSE1">
                                             </td>
 
                                             <!-- 仅核定税控发票，且不存在部分冲减的情况 -->

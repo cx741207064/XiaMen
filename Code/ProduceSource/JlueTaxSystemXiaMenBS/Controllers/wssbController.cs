@@ -61,17 +61,9 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                     GTXMethod.DeleteUserReportData(qc.Id.ToString(), TABLE_NAME);
                     return View("MainServlet_SBB_ZZS_YGZ_YBNSR_Message", re_zd);
                 case "initial":
-                    if (TABLE_NAME == "SBB_ZZS_YGZ_YBNSR")
-                    {
-                        return SBB_ZZS_YGZ_YBNSR_Load(re_zd);
-                    }
-                    break;
+                    return MainServlet_initial(TABLE_NAME, re_zd);
                 case "edit":
-                    if (TABLE_NAME == "SBB_ZZS_YGZ_YBNSR")
-                    {
-                        return SBB_ZZS_YGZ_YBNSR_Load(re_zd);
-                    }
-                    break;
+                    return MainServlet_edit(TABLE_NAME, re_zd);
                 case "submit":
                     GTXMethod.UpdateYSBQC(qc.Id.ToString(), set.ysbzt);
                     return View("MainServlet_" + TABLE_NAME + "_" + TABLE_ACTION);
@@ -280,6 +272,47 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             JObject jo_zb = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(ZBData));
             set.getYbnsrzzsBnlj(ref jo_zb, this.BDDM);
             ZBData = JsonConvert.DeserializeObject<ZzsYgzYbnsrZBData>(JsonConvert.SerializeObject(jo_zb));
+        }
+
+        System.Web.Mvc.ActionResult MainServlet_initial(string TABLE_NAME, ZzsYgzYbnsrPublic re_zd)
+        {
+            JObject dataConfig = new JObject();
+            switch (TABLE_NAME)
+            {
+                case "SBB_ZZS_YGZ_YBNSR":
+                    return SBB_ZZS_YGZ_YBNSR_Load(re_zd);
+                case "SBB_ZZS_YGZ_YBNSR_FB1":
+                    ZzsYgzYbnsrFB1Data fb1d = new ZzsYgzYbnsrFB1Data();
+                    dataConfig = set.getYbnsrzzsDataConfig(fb1d, TABLE_NAME);
+                    fb1d = JsonConvert.DeserializeObject<ZzsYgzYbnsrFB1Data>(JsonConvert.SerializeObject(dataConfig));
+                    re_zd.FB1Data = fb1d;
+                    break;
+                case "SBB_ZZS_YGZ_YBNSR_FB2":
+                    ZzsYgzYbnsrFB2Data fb2d = new ZzsYgzYbnsrFB2Data();
+                    dataConfig = set.getYbnsrzzsDataConfig(fb2d, TABLE_NAME);
+                    fb2d = JsonConvert.DeserializeObject<ZzsYgzYbnsrFB2Data>(JsonConvert.SerializeObject(dataConfig));
+                    re_zd.FB2Data = fb2d;
+                    break;
+            }
+            return View("MainServlet_" + TABLE_NAME, re_zd);
+        }
+
+        System.Web.Mvc.ActionResult MainServlet_edit(string TABLE_NAME, ZzsYgzYbnsrPublic re_zd)
+        {
+            switch (TABLE_NAME)
+            {
+                case "SBB_ZZS_YGZ_YBNSR":
+                    return SBB_ZZS_YGZ_YBNSR_Load(re_zd);
+                case "SBB_ZZS_YGZ_YBNSR_FB1":
+                    ZzsYgzYbnsrFB1Data fb1d = new ZzsYgzYbnsrFB1Data();
+                    re_zd.FB1Data = fb1d;
+                    break;
+                case "SBB_ZZS_YGZ_YBNSR_FB2":
+                    ZzsYgzYbnsrFB2Data fb2d = new ZzsYgzYbnsrFB2Data();
+                    re_zd.FB2Data = fb2d;
+                    break;
+            }
+            return View("MainServlet_" + TABLE_NAME, re_zd);
         }
 
     }
