@@ -45,6 +45,8 @@ namespace JlueTaxSystemXiaMenBS.Models
                     string xh = controllerContext.HttpContext.Request.QueryString["xh"];
                     string mdse = form["sbbVo['zzsmdse']"] == null ? form["sbbList[0]['zzsmdse']"] : form["sbbVo['zzsmdse']"];
                     string jme = form["sbbVo['jme']"] == null ? form["sbbList[0]['jme']"] : form["sbbVo['jme']"];
+                    jme = string.IsNullOrEmpty(jme) ? "0" : jme;
+
                     string bqyjse = form["sbbVo['bqyjse']"] == null ? form["sbbList[0]['bqyjse']"] : form["sbbVo['bqyjse']"];
                     string jyffjyjse = form["sbbVo['jyffjyjse']"] == null ? form["sbbList[1]['bqyjse']"] : form["sbbVo['jyffjyjse']"];
                     jyffjyjse = jyffjyjse == null || jyffjyjse == "" ? "0" : jyffjyjse;
