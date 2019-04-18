@@ -1,9 +1,9 @@
-ï»¿table {font-size: 9pt; color:#000000;}
+table {font-size: 9pt; color:#000000;}
 BODY {
-	SCROLLBAR-FACE-COLOR: #dee3e7; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #efefef; FONT-FAMILY: å®‹ä½“; SCROLLBAR-DARKSHADOW-COLOR: #98aab1; BACKGROUND-COLOR: #DFE4E8
+	SCROLLBAR-FACE-COLOR: #dee3e7; FONT-SIZE: 12px; SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #dee3e7; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #d1d7dc; SCROLLBAR-ARROW-COLOR: #006699; SCROLLBAR-TRACK-COLOR: #efefef; FONT-FAMILY: ËÎÌå; SCROLLBAR-DARKSHADOW-COLOR: #98aab1; BACKGROUND-COLOR: #DFE4E8
 }
 TD {
-	FONT-SIZE: 12px; FONT-FAMILY: å®‹ä½“
+	FONT-SIZE: 12px; FONT-FAMILY: ËÎÌå
 }
 a {text-decoration:none;font-size: 9pt;color:#990033}
 A:LINK {
@@ -34,13 +34,13 @@ A.menu:hover {
 .input1 {BORDER-BOTTOM: #0000ff 1px solid; BORDER-LEFT: #000000 1px solid; BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #0000ff 1px solid;}
 .type1 {  line-height: 18px; font-variant: normal; font-family: "Arial", "Helvetica", "sans-serif"; font-style: normal; font-weight: lighter; color: #0033FF; text-decoration: blink}
 INPUT {
-	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,å®‹ä½“; width:100%;
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,ËÎÌå; width:100%;
 }
 SELECT {
-	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,å®‹ä½“
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,ËÎÌå
 }
 TEXTAREA {
-	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,å®‹ä½“
+	FONT-SIZE: 12px; LINE-HEIGHT: 15px; FONT-FAMILY: Tahoma,Verdana,ËÎÌå
 }
 
 TABLE.SBB{background-color:#E8ECE8}
@@ -115,18 +115,18 @@ INPUT.input_cxnum_readonly{
 }
 
 .title {width:80%; min-width:498px; height:36px; border:1px solid #4d8fbc; background:#5dace0;text-align: center;color: #FFFFFF}
-.btnclass {width:148px;height:25px;display:block;display:inline;display:inline-block;align:center;color:#FFF;line-height:25px;background:#fff url(../../layout/images/bt.jpg);cursorï¼špointer;}
+.btnclass {width:148px;height:25px;display:block;display:inline;display:inline-block;align:center;color:#FFF;line-height:25px;background:#fff url(../../layout/images/bt.jpg);cursor£ºpointer;}
 a.btnclass:link{COLOR: #ffffff; TEXT-DECORATION: none}
 a.btnclass:visited{COLOR: #ffffff; TEXT-DECORATION: none}
 a.btnclass:active{COLOR: #ffffff; TEXT-DECORATION: none}
 a.btnclass:hover{COLOR: #ffffff; TEXT-DECORATION: none}
 
-/*è¡Œæ¬¡å•å…ƒæ ¼æ ·å¼*/
+/*ĞĞ´Îµ¥Ôª¸ñÑùÊ½*/
 .HcInputReadonly {
 	width: 100%;
 	text-align: center; 
 	border: 0px; 
 	background-color: transparent;
 }
-/*lhgdialog inputçš„cssä¸è¯¥é‡Œé¢çš„cssæœ‰å†²çªï¼Œè¿™é‡Œä¿®æ”¹ä¸‹lhgdialgçš„inputæ ·å¼  20180323 cyueyun*/
+/*lhgdialog inputµÄcssÓë¸ÃÀïÃæµÄcssÓĞ³åÍ»£¬ÕâÀïĞŞ¸ÄÏÂlhgdialgµÄinputÑùÊ½  20180323 cyueyun*/
 .ui_buttons INPUT{width:auto;}

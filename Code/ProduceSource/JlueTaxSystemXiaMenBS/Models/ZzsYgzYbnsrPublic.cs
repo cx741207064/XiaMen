@@ -12,6 +12,8 @@ namespace JlueTaxSystemXiaMenBS.Models
 
         public string TABLE_ACTION { get; set; }
 
+        public string BDDM { get; set; }
+
         public string json { get; set; }
 
         public string msg { get; set; }

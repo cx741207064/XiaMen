@@ -1,0 +1,88 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.ZzsYgzYbnsrPublic
+
+<script type="text/javascript">
+    function showTableData() {
+        @{
+            IHtmlString json;
+            if (Model.json!=null) 
+            {
+                json = Html.Raw(Model.json);
+            }
+            else
+            {
+                json = Html.Raw("\"{}\"");
+            }
+            }
+        var obj = eval("(" + @json + ")")
+        var TABLE_NAME = "@Model.TABLE_NAME"
+        if (TABLE_NAME == "SBB_ZZS_YGZ_YBNSR_JMSSBMXB") {
+            addRow(obj)
+        }
+        else {
+            for (var key in obj) {
+                var input = $("input[name=" + key + "]")
+                if (input) {
+                    input.val(obj[key])
+                }
+            }
+
+        }
+    }
+
+    function showTableActionDisplay() {
+        var action = "@Model.TABLE_ACTION"
+        if (action == "display") {
+            $("input.money,input.integer").removeClass("money").addClass("input_money_readonly").prop("readonly", true).css("background-color", "rgb(232, 236, 232)").css("border-style", "none")
+            $("select").prop("disabled", "disabled")
+            $("input[type=radio]").prop("disabled", "disabled")
+            $("a[name=save]").css("display", "none")
+        }
+    }
+
+    function addRow(result) {
+        window.event.ctrlKey = true
+        window.event.keyCode = 45
+        nTbyRowNo = 0
+        nCellNo = 2
+
+        var Count1, Count2
+        var ArrXMLX = result["XMLX"].split(',')
+        $.each(ArrXMLX, function (index, el) {
+            if (el == "2") {
+                Count1 = index
+                Count2 = ArrXMLX.length - index
+                return false
+            }
+        })
+
+        for (var i = 0; i < Count1 - 2; i++) {
+            objTBY = document.getElementById("SB_FLZL4_JS_MX")
+            keyDownInsert_calculate('js')
+        }
+        for (var i = 0; i < Count2 - 4; i++) {
+            objTBY = document.getElementById("SB_FLZL4_MS_MX")
+            keyDownInsert_calculate('ms')
+        }
+
+        for (var i = 1; i <= 5; i++) {
+            var InputName = "COL" + i + "";
+            var Arr = result[InputName].split(',')
+            $.each(Arr, function (index, el) {
+                document.getElementsByName(InputName)[index].value = el
+            })
+        }
+
+        var XZDMJMC = "XZDMJMC";
+        var ArrXZDMJMC = result[XZDMJMC].split(',')
+        $.each(ArrXZDMJMC, function (index, el) {
+            document.getElementsByName(XZDMJMC)[index].value = el
+        })
+
+    }
+
+    $(function () {
+        showTableData()
+        showTableActionDisplay()
+    })
+
+</script>

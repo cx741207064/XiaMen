@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Collections.Specialized;
 using System.Xml;
+using System.Reflection;
 
 namespace JlueTaxSystemXiaMenBS.Controllers
 {
@@ -37,9 +38,10 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             return View("FunctionNotOpen");
         }
 
-        [Route("MainServlet")]
+        //[Route("MainServlet")]
         public System.Web.Mvc.ActionResult MainServlet(string TABLE_NAME, string TABLE_ACTION)
         {
+
             TABLE_ACTION = TABLE_ACTION.ToLower();
 
             ZzsYgzYbnsrPublic re_zd = new ZzsYgzYbnsrPublic();
@@ -136,9 +138,9 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         [ChildActionOnly]
         public System.Web.Mvc.ActionResult MainServlet_SBB_ZZS_YGZ_YBNSR_ButtonPartial(string TABLE_ACTION)
         {
-            ZzsYgzYbnsrPublic zd = new ZzsYgzYbnsrPublic();
-            zd.TABLE_ACTION = TABLE_ACTION.ToLower();
-            return PartialView(zd);
+            ModelMainServlet ms = new ModelMainServlet();
+            ms.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
+            return PartialView(ms);
         }
 
         void savePublic(NameValueCollection form)

@@ -369,5 +369,49 @@ namespace JlueTaxSystemXiaMenBS.Code
            saveUserYSBQCReportData(data_ja, id.ToString(), reportCode);
        }
 
+       public string getBDDMFromTABLE_NAME(string TABLE_NAME)
+       {
+           JObject jo = JsonConvert.DeserializeObject<JObject>(File.ReadAllText(AppDomain.CurrentDomain.BaseDirectory + "wssb/TABLE_NAME.json"));
+           foreach (JProperty jp in jo.Properties())
+           {
+               int count = jp.Value.Where(a => a.ToString() == TABLE_NAME).Count();
+               if (count > 0)
+               {
+                   return jp.Name;
+               }
+           }
+           return "";
+       }
+
+       public Message getMessage(string TABLE_NAME, string TABLE_ACTION)
+       {
+           Message m = new Message();
+           XmlDocument xml = new XmlDocument();
+           xml.Load(AppDomain.CurrentDomain.BaseDirectory + "wssb/Message.xml");
+           JObject Message = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeXmlNode(xml));
+           JToken tn = Message.SelectToken("root").SelectToken(TABLE_NAME);
+           if (tn == null)
+           {
+               return m;
+           }
+           JToken ta = tn.SelectToken(TABLE_ACTION);
+           if (ta == null)
+           {
+               return m;
+           }
+           JToken showNextButton = ta.SelectToken("showNextButton");
+           if (showNextButton == null)
+           {
+               m.showNextButton = false;
+           }
+           else
+           {
+               m.showNextButton = bool.Parse(showNextButton.Value<string>());
+           }
+           m.msg = ta.SelectToken("msg").Value<string>();
+
+           return m;
+       }
+
     }
 }

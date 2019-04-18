@@ -1,0 +1,576 @@
+@using JlueTaxSystemXiaMenBS.Models
+@{
+    Layout = "CWXX2016XQYKJZZ_Layout.cshtml";
+}
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>利润表(适用执行小企业会计准则的企业)</title>
+
+<script language="javascript"  src="/wssb/wssb/public/js/jquery-1.7.2.min.js"></script>
+<script language="javascript"  src="/wssb/wssb/cwxx2016/CWXX2016XQYKJZZ_LRB.js?t=20180110"></script>
+<script language="javascript"  src="/wssb/wssb/public/js/pub.js"></script>
+<script language="javascript"  src="/wssb/wssb/public/js/commonNew.js"></script>
+<script language="javascript"  src="/wssb/wssb/public/js/text.js"></script>
+<script language="javascript"  src="/wssb/wssb/public/js/wssbCommon.js"></script>
+
+<link rel="stylesheet" href="/wssb/wssb/public/style/link.css" type="text/css">
+</head>
+
+<body marginwidth = "0" marginheight = "0"  topmargin = "0" leftmargin="0">
+<table width="1050px" height="100%" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <!--菜单列-->
+    <!--<td width="161" align="left" height="100%">
+    
+    </td>-->
+
+    <!--内容列-->
+    <td height="100%" valign="top" align="center">
+	    <br />
+        
+	<form name="xform" method="POST">
+	<table width="90%" border="0"  align="center" >
+		<tr>
+			<td align="center"><font size="3"><strong>利润表(适用执行小企业会计准则的企业)</strong></font></td>
+		</tr>  
+	    <tr>
+	        <td>&nbsp;</td>
+	    </tr>
+	    <tr>
+	        <td>
+<script language="javascript" src="/wssb/wssb/public/js/configstyle.js"></script>
+
+
+<table width="100%" border="0"  align="center">
+	<tr>
+		<td width="40%">纳税人识别号：91350200MA2Y6UGR9M</td>
+		<td colspan="2">纳税人名称：厦门动听资产管理有限公司</td>
+	</tr>
+	<tr>
+		<td width="40%">所属时期：20190101 至 20190331</td>
+		<td width="30%">填表日期：20190412</td>
+		<td align="right">金额单位：元(列至角分)</td>
+	</tr>
+</table></td>
+	    </tr>
+	</table>
+	
+	<table id="inputTable" width="90%" color="#E8ECE8" border="1" align="center" cellpadding="0" cellspacing="0" class="SBB" bordercolor='#C4C6C4'  bordercolordark='#ffffff' borderColorLight=#999999 >
+	    <tr style=" line-height: 20px;">
+	    	<td width="45%" align="center">项目</td>
+	    	<td width="5%" align="center">行次</td>
+	    	<td width="25%" align="center">本期金额</td>
+	    	<td width="25%" align="center">本年累计金额</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;一、营业收入</td>
+	    	<td align="center">1</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_1" type="text" onchange="setValueToBnljje('1');changeValue_byje();" value="1000" class="money"  originValue="1000 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_1" type="text" onchange="changeValue_bnljje();" value="1000" class="money"  originValue="1000 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;减：营业成本</td>
+	    	<td align="center">2</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_2" type="text" onchange="setValueToBnljje('2');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_2" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;税金及附加</td>
+	    	<td align="center">3</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_3" type="text" onchange="setValueToBnljje('3');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_3" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中：消费税</td>
+	    	<td align="center">4</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_4" type="text" onchange="setValueToBnljje('4');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_4" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr style=" line-height: 20px;">
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;营业税</td>
+	    	<td align="center">5</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_5" type="text" onchange="setValueToBnljje('5');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_5" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;城市维护建设税</td>
+	    	<td align="center">6</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_6" type="text" onchange="setValueToBnljje('6');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_6" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;资源税</td>
+	    	<td align="center">7</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_7" type="text" onchange="setValueToBnljje('7');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_7" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr style=" line-height: 20px;">
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;土地增值税</td>
+	    	<td align="center">8</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_8" type="text" onchange="setValueToBnljje('8');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_8" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr style=" line-height: 20px;">
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;城镇土地使用税、房产税、车船税、印花税</td>
+	    	<td align="center">9</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_9" type="text" onchange="setValueToBnljje('9');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_9" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;教育费附加、矿产资源补偿费、排污费</td>
+	    	<td align="center">10</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_10" type="text" onchange="setValueToBnljje('10');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_10" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;销售费用</td>
+	    	<td align="center">11</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_11" type="text" onchange="setValueToBnljje('11');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_11" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中：商品维修费</td>
+	    	<td align="center">12</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_12" type="text" onchange="setValueToBnljje('12');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_12" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;广告费和业务宣传费</td>
+	    	<td align="center">13</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_13" type="text" onchange="setValueToBnljje('13');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_13" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;管理费用</td>
+	    	<td align="center">14</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_14" type="text" onchange="setValueToBnljje('14');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_14" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中：开办费</td>
+	    	<td align="center">15</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_15" type="text" onchange="setValueToBnljje('15');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_15" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    
+	    <tr style=" line-height: 20px;">
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业务招待费</td>
+	    	<td align="center">16</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_16" type="text" onchange="setValueToBnljje('16');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_16" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    
+	    <tr style=" line-height: 20px;">
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;研究费用</td>
+	    	<td align="center">17</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_17" type="text" onchange="setValueToBnljje('17');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_17" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;财务费用</td>
+	    	<td align="center">18</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_18" type="text" onchange="setValueToBnljje('18');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_18" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中：利息费用(收入以–填列)</td>
+	    	<td align="center">19</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_19" type="text" onchange="setValueToBnljje('19');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_19" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加：投资收益(亏损以–填列)</td>
+	    	<td align="center">20</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_20" type="text" onchange="setValueToBnljje('20');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_20" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;二、营业利润(亏损以–号填列)</td>
+	    	<td align="center">21</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_21" type="text" onchange="setValueToBnljje('21');" value="1000" class="input_money_readonly" readonly="readonly" originValue="1000 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_21" type="text" value="1000" class="input_money_readonly" readonly="readonly" originValue="1000 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;加：营业外收入</td>
+	    	<td align="center">22</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_22" type="text" onchange="setValueToBnljje('22');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_22" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中：政府补助</td>
+	    	<td align="center">23</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_23" type="text" onchange="setValueToBnljje('23');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_23" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;减：营业外支出</td>
+	    	<td align="center">24</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_24" type="text" onchange="setValueToBnljje('24');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_24" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;其中：坏账损失</td>
+	    	<td align="center">25</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_25" type="text" onchange="setValueToBnljje('25');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_25" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无法收回的长期债券投资损失</td>
+	    	<td align="center">26</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_26" type="text" onchange="setValueToBnljje('26');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_26" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无法收回的长期股权投资损失</td>
+	    	<td align="center">27</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_27" type="text" onchange="setValueToBnljje('27');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_27" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;自然灾害等不可抗力因素造成的损失</td>
+	    	<td align="center">28</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_28" type="text" onchange="setValueToBnljje('28');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_28" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;税收滞纳金</td>
+	    	<td align="center">29</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_29" type="text" onchange="setValueToBnljje('29');" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_29" type="text" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;三、利润总额(亏损总额以–号填列)</td>
+	    	<td align="center">30</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_30" type="text" value="1000" class="input_money_readonly" readonly="readonly" originValue="1000 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_30" type="text" value="1000" class="input_money_readonly" readonly="readonly" originValue="1000 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;减：所得税费用</td>
+	    	<td align="center">31</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_31" type="text" onchange="setValueToBnljje('31');changeValue_byje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_31" type="text" onchange="changeValue_bnljje();" value="0" class="money"  originValue="0 "/>
+	    	</td>
+	    </tr>	    	    
+	    <tr>
+	    	<td align="left">&nbsp;四、净利润(净亏损以–号填列)</td>
+	    	<td align="center">32</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BYJE_32" type="text" value="1000" class="input_money_readonly" readonly="readonly" originValue="1000 "/>
+	    	</td>
+	    	<td align="center">
+	    		<input id="wssb" name="BNLJJE_32" type="text" value="1000" class="input_money_readonly" readonly="readonly" originValue="1000 "/>
+	    	</td>
+	    </tr>	    	    
+	</table>
+	
+	  <p>
+	  
+	    <input type="hidden" name="TABLE_NAME" value="CWXX2016XQYKJZZ_LRB">
+	    <input  type="hidden"  name="TABLE_ACTION"   value="edit">
+	    <input  type="hidden"  name="NSRSBH"   value="91350200MA2Y6UGR9M">
+	    <input  type="hidden"  name="NSRMC"   value="厦门动听资产管理有限公司">
+	    <input  type="hidden"  name="SSSQ_Q"   value="20190101">
+	    <input  type="hidden"  name="SSSQ_Z"   value="20190331">
+	
+	<div align="center">
+	  <!--修改在离开页面触发isSave,edit by zhonggc,20060531-->
+<!--body onbeforeunload="return isSave();" -->
+
+
+<body>
+<input type="hidden" name="isSave" value="yes">
+<!--用于控制退出时是否提示 no-提示 yes-不提示-->
+
+<script language="javascript">
+                           document.all("isSave").value = "no"; //设置退出提示
+                        </script>
+
+@{Html.RenderAction("Button_Partial");}
+
+<script language="javascript">
+
+            function deletesbb()
+            {
+               if(confirm("是否真的作废申报表？")==true)
+               {
+                  frmdelete();
+               }
+               else
+               {
+                  //如果不删除时则恢复退出提示
+                  document.all("isSave").value = "no";
+               }
+            }
+
+            //在关闭页面前提示用户是否保存
+            function isSave()
+            {
+               var flag = document.all("isSave").value;
+               if(flag != "yes")
+               {
+                  return "请确定在离开页面之前先保存数据！";
+               }
+               return;
+            }
+
+            function setSave()  //设置退出不提示
+            {
+               document.all("isSave").value = "yes";
+            }
+
+			function setDisable(but,b_true){
+			  but.disabled=b_true;
+			}
+
+			
+			function doRollbackSbzt(pzxh)
+			{
+				
+				if(confirm("是否确认进行申报更正？"))
+                {
+					$.ajax({
+						   type: "POST",
+						   async: false,
+						   url: "/wssb/CommonDataServlet",
+						   data: "type=4&pzxh="+ pzxh,
+						   success: function(msg){
+
+							   //执行成功，跳转至主表的编辑页面						
+						   	   if($.trim(msg) == '1')
+						   	   {
+								   	changeMenuState();
+									location.href = "./null";
+						   	   }
+						   	   else
+						   	   {
+						   		   alert("执行申报更正出错!");
+						   	   }
+						   }
+					});
+                }
+			}
+			//【更正申报】更新左边的菜单
+			function changeMenuState(){
+			   	var submitUrl = "null";
+			   	var yqsqq = "null";
+			   	var yqsqz = "null";
+			   	var nsrsbh = "91350200MA2Y6UGR9M";
+			   	var leftFrameWin = parent.$("#leftFrame")[0].contentWindow;
+			   	var click_node_input_id = leftFrameWin.$("#click_input_id").val();//left菜单节点点击的菜单ID
+			   	var save_status = leftFrameWin.$("#"+click_node_input_id+"_SAVE_SPAN");
+			   	var table_url_input = leftFrameWin.$("#"+click_node_input_id);
+			   	var saveSpan = leftFrameWin.$("#"+click_node_input_id+"").closest("div.nav-tow");
+			   	var saveState = $(".savestate",saveSpan);
+				saveState.each(function(i){
+					var table_url_submit = $(this).prev("input");
+					if("Y" == $(this).attr("zssb")){
+						$(this).html("");
+						table_url_submit.val(submitUrl);
+					}
+					//由于申报更正后并且未重新刷新页面时要给未保存的表重新赋url add by zwx20180815
+					if($(this).attr("state") != "submit"){
+						var idStr = $(this).attr("id");
+						if(idStr.indexOf("_NB_") > -1 && idStr.indexOf("_NB_CX_") == -1){
+							var tableStr = idStr.substring(0,idStr.indexOf("_NB_"));
+							var gzUrl = "MainServlet?TABLE_NAME="+ tableStr +"_NB&TABLE_ACTION=initial&NSRSBH="+ nsrsbh +"&SSSQ_Q="+ yqsqq +"&SSSQ_Z="+yqsqz;
+							table_url_submit.val(gzUrl);
+						}
+					}
+					if($(this).attr("state") == "submit"&&$(this).attr("zssb")!="Y"){
+						$(this).html("(已保存)");
+						$(this).attr({state:"save"});
+						table_url_submit.val(table_url_submit.val().replace("display","edit"));
+					}
+				});
+			}
+			function zssbkk(){
+				var wssbpath = "../../..//wssb/null";
+				var isfwsk = $("#cnmce").val();
+				var wssbtableName = $("#wssbtableName").val();
+				//Y: 是, N:否
+				var nr = "";
+				var zckdiv = "";
+				if(wssbtableName.indexOf("CWXX2013") == -1 && wssbtableName.indexOf("CWXX2016") == -1){
+					if(isfwsk == true){
+						nr = "<p><input type=\"radio\" value=\"y\" checked=\"checked\" name=\"kk\" id=\"cnm1\" />" +
+								"<b>“立即扣款”</b>：“清卡”正式申报时实时扣款。</p>"+
+						   "<p><input type=\"radio\" value=\"n\" name=\"kk\" id=\"cnm2\"  onclick=\"opendia('"+wssbpath+"')\"/>" +
+						   "<b>“暂不扣款”</b>：“清卡”正式申报时不扣款，需在正式申报成功后，操作“税费缴纳（网上申报）” 执行扣款。</p>"+
+						   "<p><b>说明：税控纳税人柜台“清卡”正式申报，统一为“立即扣款”。</b></p>";
+					}else{
+						nr = "<p><input type=\"radio\" value=\"y\" checked=\"checked\" name=\"kk\" id=\"cnm1\" />" +
+						"<b>“立即扣款”</b>：正式申报并实时扣款。</p>"+
+						   "<p><input type=\"radio\" value=\"n\" name=\"kk\" id=\"cnm2\"  onclick=\"opendia('"+wssbpath+"')\"/>" +
+						   "<b>“暂不扣款”</b>：正式申报不扣款，需在正式申报成功后，操作“税费缴纳（网上申报）” 执行扣款。</p>";
+					}
+					////财务报表不用执行扣款
+					zckdiv = parent.$.dialog({
+						lock:true,
+						id:'tips1',
+						content:"<script>var kkval = $(\"#kkval\").val();if(kkval == \"y\"){$(\"input[name=kk]:eq(0)\").attr(\"checked\",\"checked\");"+
+						 "}else if(kkval == \"n\"){$(\"input[name=kk]:eq(1)\").attr(\"checked\",\"checked\");}<\/script>" +
+							"<div id=\"ts\"><div style=\"width:450px; margin:auto; height:230px;text-align:center; border-radius: 5px;\">"+
+						  "<div id=\"tstitle\"></div>  <div style=\" border: 1px solid #eee; border-top:none; background: #fff;  \">" +
+						  " <h1>确认提交申报表？请选择扣款方式：</h1>"+nr+" <div id=\"btn\"><a href=\"javascript:kklc('"+wssbpath+"');\">确定</a>" +
+					       "<a href=\"javascript:gbck();\">取消</a></div>  </div>  </div></div> ",
+						width:'450px',
+						height:'240px',
+						esc: false,  
+						title:false,
+						cancel:false
+				     });
+				}else{
+					if(confirm("请确认是否正式申报?")){
+						parent.document.getElementById("workspace").src = wssbpath;
+						window.parent.showOverlay();
+					}
+				}
+			}
+            </script></body>
+
+	</div>
+	
+	</form>
+</td>
+</tr>
+
+</table>
+<br />
+           
+<div id="div_status" style="position:absolute; left:45%; top:80%; visibility:hidden; z-index:2;">
+ <table width="280" height="100" border=1 cellspacing=0 cellpadding=0 bgcolor="#CCFFCC">
+    <tr>
+      <td align=center>正在处理中，请耐心等待。。。。！<br /><br />
+	  <font color="red" size="2" ><strong>请不要重复刷新页面，以免出现重复申报或重复扣款！！！</strong></font>
+	  </td>
+    </tr>
+    
+  </table>
+</div> 
+ <script type="text/javascript">
+ $(function(){contentready();});
+</script>
+</body>
+</html>

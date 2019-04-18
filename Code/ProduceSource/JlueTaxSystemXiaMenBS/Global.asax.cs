@@ -8,6 +8,7 @@ using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using JlueTaxSystemXiaMenBS.Models;
+using JlueTaxSystemXiaMenBS.Code;
 
 namespace JlueTaxSystemXiaMenBS
 {
@@ -25,6 +26,9 @@ namespace JlueTaxSystemXiaMenBS
 
             ModelBinders.Binders.Add(typeof(YhsData), new MyCustomModelBinder());
             ModelBinders.Binders.Add(typeof(FjsData), new MyCustomModelBinder());
+
+            RegisterView();//注册视图访问规则
+
         }
 
         public override void Init()
@@ -43,6 +47,12 @@ namespace JlueTaxSystemXiaMenBS
 
         protected void Application_EndRequest(object sender, EventArgs e)
         {
+        }
+
+        protected void RegisterView()
+        {
+            ViewEngines.Engines.Clear();
+            ViewEngines.Engines.Add(new MyViewEngine());
         }
 
     }

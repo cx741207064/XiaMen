@@ -1,4 +1,6 @@
-﻿@if (Model.TABLE_ACTION == "edit")
+﻿@using JlueTaxSystemXiaMenBS.Models
+
+@if (Model.ta == TABLE_ACTION.edit)
 {
 <a name="update" value="2" onclick="javascript:setSave(); frmzcupdate();" style="cursor: pointer;" class="btnclass">
 	暂&nbsp;&nbsp;存
@@ -13,7 +15,7 @@
 </a>
 @Html.Raw("&nbsp;")
 }
-else if (Model.TABLE_ACTION == "display")
+else if (Model.ta == TABLE_ACTION.display)
 {
 }
 else

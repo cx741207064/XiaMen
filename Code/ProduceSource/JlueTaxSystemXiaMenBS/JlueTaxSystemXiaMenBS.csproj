@@ -582,6 +582,21 @@
     <Content Include="Views\login_v2\menuiframe.jsp" />
     <Content Include="Views\login_v2\shouye.jsp" />
     <Content Include="Views\login_v2\syiframe.jsp" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_CX.cshtml" />
+    <Content Include="Views\MainServlet\Button_Partial.cshtml" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_Layout.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_Layout.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_JS_Partial.cshtml" />
+    <Content Include="Views\MainServlet\DZBS_QUERY.cshtml" />
+    <Content Include="Views\MainServlet\DZBS_SBCX.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FB1.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FB2.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FB3.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FB4.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_JMSSBMXB.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FLZL5.cshtml" />
+    <None Include="wssb\TABLE_NAME.json" />
+    <None Include="Views\MainServlet\CWXX2016XQYKJZZ_LRB.cshtml" />
     <Content Include="Views\otp4query\List.cshtml" />
     <Content Include="Views\Shared\CFSB.cshtml" />
     <Content Include="Views\Shared\FunctionNotOpen.cshtml">
@@ -620,6 +635,9 @@
     <Content Include="Views\yhssb\txsbb_Partial.cshtml" />
     <Content Include="Views\yhssb\yhstjsbjl_Partial.cshtml" />
     <Content Include="Views\yhssb\Yhs_Head_Nsrxx_Partial.cshtml" />
+    <Content Include="wssb\Message.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB1.commerce.xml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB2.commerce.xml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB1.industry.xml" />
@@ -639,7 +657,6 @@
     <Content Include="wssb\wssb\layout\images\yinbtb.jpg" />
     <Content Include="wssb\wssb\layout\js\menu.js" />
     <Content Include="wssb\wssb\layout\js\overlay.js" />
-    <Content Include="wssb\wssb\layout\left.html" />
     <Content Include="wssb\wssb\layout\left.nodeDatas.json" />
     <Content Include="wssb\wssb\layout\top.jsp" />
     <Content Include="wssb\wssb\public\images\line4.gif" />
@@ -681,6 +698,13 @@
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.industry.xml" />
     <Content Include="wssb\wssb\public\jsp\etaxErrPage.jsp" />
     <Content Include="Views\zfsbjl\start.cshtml" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_ZCFZB_submit.cshtml" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_ZCFZB.cshtml" />
+    <Content Include="Views\MainServlet\Message.cshtml" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_JS_Partial.cshtml" />
+    <Content Include="Views\MainServlet\INFORMATION.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_HeadPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacMVCConfig.cs" />
@@ -701,12 +725,17 @@
     <Compile Include="Code\GTXNameValue.cs" />
     <Compile Include="Code\GTXResult.cs" />
     <Compile Include="Code\IYsbqcSetting.cs" />
+    <Compile Include="Code\MainServlet.cs" />
+    <Compile Include="Code\MyViewEngine.cs" />
     <Compile Include="Code\YsbqcSetting.cs" />
     <Compile Include="Controllers\commonController.cs" />
     <Compile Include="Controllers\cxzxController.cs" />
+    <Compile Include="Controllers\dwfwController.cs" />
     <Compile Include="Controllers\dzsbController.cs" />
     <Compile Include="Controllers\fjssbController.cs" />
+    <Compile Include="Controllers\MainServletController.cs" />
     <Compile Include="Controllers\otp4queryController.cs" />
+    <Compile Include="Controllers\qydsdjdController.cs" />
     <Compile Include="Controllers\swxxtxController.cs" />
     <Compile Include="Controllers\tnsfwHomeController.cs" />
     <Compile Include="Controllers\wssbController.cs" />
@@ -717,12 +746,16 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CWXX2016XQYKJZZ.cs" />
     <Compile Include="Models\DZBS_QUERY.cs" />
+    <Compile Include="Models\ModelMainServlet.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\OP.cs" />
     <Compile Include="Models\GDTXDate.cs" />
     <Compile Include="Models\MyCustomModelBinder.cs" />
     <Compile Include="Models\Nsrxx.cs" />
     <Compile Include="Models\FjsData.cs" />
+    <Compile Include="Models\TABLE_ACTION.cs" />
     <Compile Include="Models\YhsData.cs" />
     <Compile Include="Models\ZzsYgzYbnsrFB1Data.cs" />
     <Compile Include="Models\ZzsYgzYbnsrFB2Data.cs" />
@@ -777,7 +810,9 @@
     <Folder Include="jsdzsb\fjssb\" />
     <Folder Include="jsdzsb\yhssb\" />
     <Folder Include="jsdzsb\zfsbjl\" />
+    <Folder Include="Views\dwfw\" />
     <Folder Include="Views\Home\" />
+    <Folder Include="Views\qydsdjd\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChuShiHua.ashx" />

@@ -1,0 +1,2257 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!--允许搜索机器人搜索站内所有链接-->
+		<meta content="all" name="robots">
+		<meta name="Copyright" content="厦门税务版权所有 ">
+		<meta name="Description" content="厦门税务网上报税系统">
+		<meta name="Keywords" content="税务,厦门税务,网上报税系统">
+
+		<title>企业所得税季度申报（查账征收企业 ） - 厦门税务局
+		</title>
+		<script src="/res/js/jquery-1.10.2.js"></script>		
+        <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+        <link type="text/css" rel="styleSheet"  href="/res/css/layerV2.css" /> 
+		<script src="/res/js/common.js" type="text/javascript"></script>
+		<script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?v1"></script>
+		<link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+  
+		
+	<meta charset="UTF-8">
+    <meta name="decorator" content="blank"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<link href="/res/jsdzsb/css.css" rel="stylesheet" type="text/css" />
+	
+<c:set var="resV" value="v1" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+   
+	<link href="/res/jsdzsb/bsdt/images/css.css" rel="stylesheet" type="text/css" />
+
+    <link href="/res/otp4/js/lib/ztree/css/zTreeStyle/zTreeStyle.css" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-base.css?" rel="stylesheet"/>
+    <link href="/res/otp4/css/otp4-form.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-panel.css?" rel="stylesheet" type="text/css" />
+    
+    <link href="/res/otp4/css/otp4-page.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/otp4-menu.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-menu.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-form.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-panel.css?" rel="stylesheet" type="text/css" />
+    <link href="/res/otp4/css/themes/otp4-table.css?" rel="stylesheet" type="text/css" />
+    
+    <link href="/res/wsbs/css/step.css" type="text/css" rel="stylesheet" >
+    <link href="/res/wsbs/css/global.css?" type="text/css" rel="stylesheet" id="mycss">
+    <link href="/res/wsbs/css/xmdswz.css" type="text/css" rel="stylesheet" >
+    <link href="/res/wsbs/css/xmdswz_print.css" type="text/css" rel="stylesheet" >
+    <link href="/res/wsbs/css/swdj_style.css" type="text/css" rel="stylesheet" >
+
+    
+    <script src="/res/otp4/js/lib/jquery-ct.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/jquery.fix.clone.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/jquery.json.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/layer/layer.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/lib/ztree/jquery.ztree.all-3.5.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-base.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-utils.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-core.js?" type="text/javascript" ></script>
+    <script src="/res/otp4/js/otp4-route.js?" type="text/javascript"></script>
+    
+    <script src="/res/otp4/js/lib/avalon.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-iehack.js?" type="text/javascript"></script>
+    
+    <script src="/res/otp4/js/otp4-selmodel.js?" type="text/javascript"></script>
+    
+    <script src="/res/otp4/js/lib/My97DatePicker/WdatePicker.js?" type="text/javascript"></script>
+
+    
+   	<script src="/res/otp4/js/otp4-expression.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-controls.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-upload.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-validate.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-validate-ext.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-idcode.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-froute.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-filters.js?" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-menu.js?" type="text/javascript"></script>
+        <script src="/res/js/otp4-app-config.js?" type="text/javascript"></script>
+    <script src="/res/js/otp4-input-ext.js?" type="text/javascript"></script>
+    
+    <script src="/res/wsbs/js/bsfwzxmenu.js" type="text/javascript"></script>
+    <script src="/res/otp4/js/otp4-menu-ie6.js?" type="text/javascript"></script>
+    
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/core.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/collections.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/system.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/ajaxrequest.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/Behaviour.js?"></script>
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/floatlayer.js?"></script>
+   
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?"></script>
+    
+    <script type="text/javascript" language="JavaScript" src="/res/js/common/components/inputCtrl.js?"></script>
+    <script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_common.js?"></script>
+	<script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_nssb.js?"></script>
+	<script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_qysds.js"></script>
+	<script language="javascript" type="text/javascript" src="/res/js/wssb/wssb_grsds.js"></script>
+	<link href="/res/jsdzsb/css.css" rel="stylesheet" type="text/css" />
+	<link href="/res/css/css.css" rel="stylesheet" type="text/css" />
+	<script src="/res/js/common.js" type="text/javascript"></script>
+	<script src="/res/js/mathcal1.0.js" type="text/javascript"></script>
+	<script src="/res/otp4/js/lib/shiv/respond.min.js" type="text/javascript"></script>
+	<link href="/res/css/v2.css" rel="stylesheet" type="text/css" />
+	 <style>
+	 	tr.blue
+		{
+			background-color:#D7EBFF;
+		}
+	 </style>
+<script type="text/javascript" charset="UTF-8">
+
+ 
+/**
+$(document).ready(function() {
+
+	$(document).ajaxError(function(){ function(e,xhr,opt){
+    		alert("登录超时,请重新登录！");  
+    		window.top.location.href="<c:url value="/login/index.do" />";}
+    );
+
+});
+**/
+
+$(document).keydown(function(e){ 
+    var keyEvent; 
+    if(e.keyCode==8){ 
+        var d=e.srcElement||e.target; 
+        if(d.tagName.toUpperCase()=='INPUT'||d.tagName.toUpperCase()=='TEXTAREA'){ 
+            keyEvent=d.readOnly||d.disabled; 
+        }else{ 
+            keyEvent=true; 
+        } 
+    }else{ 
+        keyEvent=false; 
+    } 
+    if(keyEvent){ 
+        e.preventDefault(); 
+    } 
+});
+
+</script>
+	
+<script language="javascript" src="/res/js/tab/tab.js?ver=2"></script>
+<script language="javascript" src="/res/js/tab/common_funcs.js"></script>
+<script language="javascript" src="/res/js/wssp/wssp.js"></script>
+
+
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css">
+	.normalFieldEdit2 {
+	BACKGROUND-COLOR: white;
+	BORDER-BOTTOM: 0px;
+	BORDER-LEFT: 0px ;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	COLOR: #487dd9;
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12px;
+	}
+</style>
+	
+	</head>
+
+	<body>
+	
+	
+  
+  
+
+		
+
+
+
+
+
+
+
+<script language="javascript" type="text/javascript">
+function backjdsb(){
+	var query = getParameter("query");
+	if(query == 'true'){
+		window.history.back(-1);
+	}else{
+		var HZHBNSQYLB_DM = '10';
+		var SBBLX_DM = '';
+		if (HZHBNSQYLB_DM == "30") { //分支机构
+			location.href='/jsdzsb/qydsdjd/czzsFzjgIndex.do';
+		} else if (HZHBNSQYLB_DM == "40") { //定额
+			location.href='/jsdzsb/qydsdjd/hdzsDqdeIndex.do';
+		} else if (HZHBNSQYLB_DM == "50") { //定率
+			if ("NB" == SBBLX_DM) {
+				location.href='/jsdzsb/qysdsnd/hdzsDqdlIndex.do';
+			} else {
+				location.href='/jsdzsb/qydsdjd/hdzsDqdlIndex.do';
+			}
+		} else if (HZHBNSQYLB_DM == "10" || HZHBNSQYLB_DM == "20") {
+			location.href='/jsdzsb/qydsdjd/czzsFfzIndex.do';
+		} else {
+			location.href='/jsdzsb/qydsdjd/index.do';
+		}
+	}
+}
+function getParameter(param)  
+{  
+    var query = window.location.search;  
+    var iLen = param.length;  
+    var iStart = query.indexOf(param);  
+    if (iStart == -1)  
+       return "";  
+    iStart += iLen + 1;  
+    var iEnd = query.indexOf("&", iStart);  
+    if (iEnd == -1)  
+       return query.substring(iStart);  
+    return query.substring(iStart, iEnd);  
+}
+
+</script>
+<style type="text/css">
+/* 样式特殊处理，右对齐 */
+/* 文本编辑框 */
+.normalFieldEdit {
+	BACKGROUND-COLOR: white;
+	BORDER-BOTTOM: 1px groove #60BBFF;
+	BORDER-LEFT: 0px ;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	COLOR: #487dd9;
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12px;
+  text-align: right;
+}
+
+.colorFieldEdit {
+	BACKGROUND-COLOR: pink;
+	BORDER-BOTTOM: 0px groove #60BBFF;
+	BORDER-LEFT: 0px ;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	COLOR: #487dd9;
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12px;
+  text-align: right;
+}
+
+.normalLeftFieldEdit {
+	BACKGROUND-COLOR: white;
+	BORDER-BOTTOM: 1px groove #60BBFF;
+	BORDER-LEFT: 0px ;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	COLOR: #487dd9;
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12px;
+  text-align: left;
+}
+
+.colorLeftFieldEdit {
+	BACKGROUND-COLOR: pink;
+	BORDER-BOTTOM: 0px groove #60BBFF;
+	BORDER-LEFT: 0px ;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	COLOR: #487dd9;
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12px;
+  text-align: left;
+}
+
+.colorFieldReadOnly {
+	BACKGROUND-COLOR: #ff80ff;
+	BORDER-BOTTOM: 0px groove #60BBFF;
+	BORDER-LEFT: 0px ;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	COLOR: #487dd9;
+	FONT-FAMILY: "宋体";
+	FONT-SIZE: 12px;
+  text-align: right;
+}
+</style>
+
+<form name="form1" method="post" action="/jsdzsb/qydsdjd/jdservice.do" submitted="false" onsubmit="return verify(this)">
+	<input type="hidden" name="errAction" value="/jsdzsb/qydsdjd/index.do" />
+	<input type="hidden" name="b_service" id="b_service" value="true"> 
+	<input type="hidden" name="view" id="view" value="">
+	<input type="hidden" name="returnPage" id="returnPage" value="/pw/pwlr.do"> 
+	<input type="hidden" name="forwardPage" id="forwardPage" value="null"/>
+	<input type="hidden" name="tabid" id="tabid" value="WZZS5020"> 
+<TABLE border=0 cellPadding=0 cellSpacing=0  width="100%" >
+  <tr>
+    <td>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 height="100%" width="100%">
+        <TBODY>
+          <TR>
+            <TD style="WIDTH:100%" >
+              <table align="center" width="100%" class="line" cellspacing="2" cellpadding="3" border="0" cellpadding="0" id="printarea">
+                <tr>
+                  <td>
+					
+					<!-- 表单开始 -->
+					
+	
+	
+ <table width="750" height="100%" border="0" cellspacing="1" cellpadding="3" bgcolor="#FFFFFF" align="center">
+  <input type="hidden" name="leostudio.request.TRANSACTION_TOKEN_PREFIX.form1" value="null">
+<input type="hidden" name="leostudio.request.serviceID" value="tab_default">
+
+<input type="hidden" name="tabForm.table.operateDetail" value="">
+<input type="hidden" name="tabForm.table.pageIndex" value="0">
+<input type="hidden" name="tabForm.table.tableValue.string(XHKFIELDNAME)" pos="" value="">
+<input type="hidden" name="serviceName" value=""><tr>
+          <td height="100%" bgcolor="#FFFFFF" align="center" valign="top">
+			<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+				  <tr> 
+					<td colspan="2" align="center">
+						<strong class="td_center_font22pt_tab">居民企业参股外国企业信息报告表</strong>
+					</td>
+				  </tr>	
+				  <tr>
+					<td colspan="2" class="td_center_tab">
+					 <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$BGSSQS)"  prefix="tabForm.table.tableValue"  value="2019-01-01"  style="width:100px;"  readonly="true"  maxlength="100"  fieldname="报告所属期始"  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font><tt>至</tt>
+					<input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$BGSSQZ)"  prefix="tabForm.table.tableValue"  value="2019-03-31"  style="width:100px;"  readonly="true"  maxlength="100"  fieldname="报告所属期止"  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font></td>
+				  </tr>
+			</table>	
+
+			<table width="100%" border="1" cellpadding="2" cellspacing="0" bordercolor="#000000" bordercolordark="#ffffff" bgcolor="#ffffff">
+			  <tr>
+				<td colspan="5"><strong>一、报告人信息</strong></td>
+			  </tr>
+			  <tr>
+				<td width="15%" nowrap="nowrap">企业名称：</td>
+				<td colspan="2">
+				        <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$NSR_MC)"  prefix="tabForm.table.tableValue"  value="厦门动听资产管理有限公司"  style="width:200px;"  readonly="true"  maxlength="100"  fieldname="纳税人名称"  class="normalFieldEdit" >
+</td>
+				<td width="15%" nowrap="nowrap">纳税识别号：</td>
+				<td>
+				        <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$NSRSBH)"  prefix="tabForm.table.tableValue"  value="91350200MA2Y6UGR9M"  style="width:200px;"  readonly="true"  maxlength="100"  fieldname="纳税人识别号"  class="normalFieldEdit" >
+</td>
+			  </tr>
+			  <tr>
+				<td colspan="5"><strong>二、被投资外国企业信息</strong></td>
+			  </tr>
+			  <tr>
+				<td nowrap="nowrap">外国企业名称：</td>
+				<td colspan="2">
+				        <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$WGQYMC)"  prefix="tabForm.table.tableValue"  value=""  style="width:190px;"  maxlength="100"  fieldname="外国企业名称"  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font></td>
+				<td nowrap="nowrap">所在国纳税识别号：</td>
+				<td>
+				        <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$SZGDJXH)"  prefix="tabForm.table.tableValue"  value=""  style="width:100:32px;"  maxlength="100"  fieldname="所在国纳税识别号"  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font></td>
+			  </tr>
+			  <tr>
+				<td nowrap="nowrap">成立地：</td>
+				<td colspan="2">
+				     <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$CLDZ)"  prefix="tabForm.table.tableValue"  value=""  style="width:100px;"  maxlength="100"  fieldname="成立地"  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font></td>
+				<td nowrap="nowrap">主营业务类型：</td>
+				<td>
+				    <input type="text"  name="tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$ZYYWLX)"  prefix="tabForm.table.tableValue"  value=""  style="width:100px;"  maxlength="100"  fieldname="主营业务类型"  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font></td>
+			  </tr>
+			  <tr>
+				<td nowrap="nowrap">报告人持股比例：</td>
+				<td colspan="4">
+				    <input type="text"  name="tabForm.table.tableValue.double(WZ_SB_JMQY_CGWGQYBGB$BGRCGBL)"  prefix="tabForm.table.tableValue"  value=""  style="width:100px;"  maxlength="100"  fieldname="报告人持股比例"  validatefunc="validateNumberInScale(e,0,0,18,4,true, 'null');  "  validatefunc="validateNotNull(e)"  class="normalFieldEdit" >
+<font color="#FF0000">*</font><TT>%</TT>
+				</td>
+			  </tr>
+			  <tr>
+				<td colspan="5"><strong>持有外国企业10%以上股份或有表决权股份的其他股东情况</strong></td>
+			  </tr>
+			  <tr>
+				<td>持股股东名称</td>
+				<td>居住地或成立地</td>
+				<td>持股类型</td>
+				<td>持股比例</td>
+				<td>达到10%以上权益份额的起始日期</td>
+			  </tr>
+			   	
+			  <tr>
+				<td>
+					 <input type="hidden"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$WSBH)"  prefix="tabForm.table.detail1[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$WSLX_DM)"  prefix="tabForm.table.detail1[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$XH)"  prefix="tabForm.table.detail1[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$TABID)"  prefix="tabForm.table.detail1[0]"  value="WZZS5020" >
+<input type="checkbox" name="tabForm.table.detail1[0].isChecked" value="true" ><input type="text"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$CGGDMC)"  prefix="tabForm.table.detail1[0]"  index="0"  value=""  style="width:80px;"  maxlength="100"  fieldname="持股股东名称"  class="normalFieldEdit" >
+</td>
+				<td>
+				    <input type="text"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$JZDHCLD)"  prefix="tabForm.table.detail1[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="居住地或成立地"  class="normalFieldEdit" >
+</td>
+				<td>
+				    <script language="javascript">
+var jm_cglx_dm=[
+	["1", "有表决权股份", "", "", ""],	["2", "无表决权股份", "", "", ""]];
+</script>
+<select name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$JM_CGLX_DM)"  prefix="tabForm.table.detail1[0]"  class="normalFieldEdit"  style="width:100px;"  fieldname="持股类型" >
+<option value="">请选择..</option><option value="1" >有表决权股份</option>
+<option value="2" >无表决权股份</option>
+</select></td>
+				<td nowrap>
+				    <input type="text"  name="tabForm.table.detail1[0].double(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$CGBL)"  prefix="tabForm.table.detail1[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="持股比例"  validatefunc="validateNumberInScale(e,0,0,18,4,false, 'null');  "  class="normalFieldEdit" >
+<TT>%</TT>
+				</td>
+				<td>
+				    <input type="text"  name="tabForm.table.detail1[0].string(WZ_SB_JMQY_CGWGQYBGB_CGGDQK$DDYQFEQSRQ)"  prefix="tabForm.table.detail1[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="达到10%以上权益份额的起始日期"  validatefunc="validateDateFormat(e,0,10,0,0,false, 'null');  " onkeydown="dateConvert(this)" onblur="return isDateIn(this)"  class="normalFieldEdit" >
+</td>
+			  </tr>
+			   
+
+			 <tr>
+			    <td colspan="5">
+					    <table width="100%"> 
+ <tr><td class="td_left_tab">
+ <input  type="button"  name="del_detail1"  value="-" title="删除明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail1' ;  this.form('serviceName').value='tab_del_detail' ;  this.form.submit(); " > <input  type="button"  name="add_detail1"  value="+" title="增加明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail1' ;  this.form('serviceName').value='tab_add_detail' ;  this.form.submit(); " >&nbsp; </td></tr> 
+ </table> 
+</td>
+			  </tr>
+
+			  <tr>
+				<td colspan="5"><strong>中国居民个人担任外国企业高管或董事情况</strong></td>
+			  </tr>
+			  <tr>
+				<td>中国居民个人姓名</td>
+				<td>中国境内常住地</td>
+				<td>身份识别号</td>
+				<td>职务</td>
+				<td>任职起止日期</td>
+			  </tr>
+			  			   
+			  <tr>
+				<td>
+				   <input type="hidden"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$WSBH)"  prefix="tabForm.table.detail2[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$WSLX_DM)"  prefix="tabForm.table.detail2[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$XH)"  prefix="tabForm.table.detail2[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$TABID)"  prefix="tabForm.table.detail2[0]"  value="WZZS5020" >
+<input type="checkbox" name="tabForm.table.detail2[0].isChecked" value="true" ><input type="text"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$ZGJMGRXM)"  prefix="tabForm.table.detail2[0]"  index="0"  value=""  style="width:90px;"  maxlength="100"  fieldname="中国居民个人姓名"  class="normalFieldEdit" >
+</td>
+				<td>
+				 <input type="text"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$ZGJNCZD)"  prefix="tabForm.table.detail2[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="中国境内常住地"  class="normalFieldEdit" >
+</td>
+				<td>
+				 <input type="text"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$SFSBH)"  prefix="tabForm.table.detail2[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="身份识别号"  class="normalFieldEdit" >
+</td>
+				<td>
+				 <input type="text"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$ZW)"  prefix="tabForm.table.detail2[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="职务"  class="normalFieldEdit" >
+</td>
+				<td>
+				 <input type="text"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$RZRQQ)"  prefix="tabForm.table.detail2[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="任职日期起"  validatefunc="validateDateFormat(e,0,10,0,0,false, 'null');  " onkeydown="dateConvert(this)" onblur="return isDateIn(this)"  class="normalFieldEdit" >
+<input type="text"  name="tabForm.table.detail2[0].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$RZRQZ)"  prefix="tabForm.table.detail2[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="任职日期止"  validatefunc="validateDateFormat(e,0,10,0,0,false, 'null');  " onkeydown="dateConvert(this)" onblur="return isDateIn(this)"  class="normalFieldEdit" >
+</td>
+			  </tr>
+			    
+
+			  <tr>
+				<td align="left" class="td_left_tab" colspan="9">
+					 <table width="100%"> 
+ <tr><td class="td_left_tab">
+ <input  type="button"  name="del_detail2"  value="-" title="删除明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail2' ;  this.form('serviceName').value='tab_del_detail' ;  this.form.submit(); " > <input  type="button"  name="add_detail2"  value="+" title="增加明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail2' ;  this.form('serviceName').value='tab_add_detail' ;  this.form.submit(); " >&nbsp; </td></tr> 
+ </table> 
+</td>
+			  </tr>
+
+			  <tr>
+				<td colspan="5"><strong>三、外国企业股份变动信息</strong></td>
+			  </tr>
+			  <tr>
+				<td colspan="5"><strong>报告人收购外国企业股份情况</strong></td>
+			  </tr>
+			  <tr>
+				<td>被收购股份类型</td>
+				<td>交易日期</td>
+				<td>收购方式</td>
+				<td nowrap>收购前报告人在外国企业持股份额</td>
+				<td nowrap>收购后报告人在外国企业持股份额</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				    <input type="hidden"  name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$WSBH)"  prefix="tabForm.table.detail3[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$WSLX_DM)"  prefix="tabForm.table.detail3[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$XH)"  prefix="tabForm.table.detail3[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$TABID)"  prefix="tabForm.table.detail3[0]"  value="WZZS5020" >
+<input type="checkbox" name="tabForm.table.detail3[0].isChecked" value="true" ><script language="javascript">
+var jm_cglx_dm=[
+	["1", "有表决权股份", "", "", ""],	["2", "无表决权股份", "", "", ""]];
+</script>
+<select name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$JM_CGLX_DM)"  prefix="tabForm.table.detail3[0]"  class="normalFieldEdit"  style="width:100px;"  fieldname="被收购股份类型" >
+<option value="">请选择..</option><option value="1" >有表决权股份</option>
+<option value="2" >无表决权股份</option>
+</select></td>
+				<td>
+				<input type="text"  name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$JYRQ)"  prefix="tabForm.table.detail3[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="交易日期"  validatefunc="validateDateFormat(e,0,10,0,0,false, 'null');  " onkeydown="dateConvert(this)" onblur="return isDateIn(this)"  class="normalFieldEdit" >
+</td>
+				<td>
+				<input type="text"  name="tabForm.table.detail3[0].string(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$SGFS)"  prefix="tabForm.table.detail3[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="收购方式"  class="normalFieldEdit" >
+</td>
+				<td>
+				<input type="text"  name="tabForm.table.detail3[0].double(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$SGQZWQCGFE)"  prefix="tabForm.table.detail3[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="收购前报告人在外国企业持股份额"  validatefunc="validateNumberInScale(e,0,0,18,4,false, 'null');  "  class="normalFieldEdit" >
+<TT>%</TT>
+				</td>
+				<td>
+				<input type="text"  name="tabForm.table.detail3[0].double(WZ_SB_JMQY_CGWGQYBGB_SGWQGFQK$SGHZWQCGFE)"  prefix="tabForm.table.detail3[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="收购后报告人在外国企业持股份额"  validatefunc="validateNumberInScale(e,0,0,18,4,false, 'null');  "  class="normalFieldEdit" >
+<TT>%</TT>
+				</td>
+			  </tr>
+			    
+
+			  <tr>
+				<td align="left" class="td_left_tab" colspan="9">
+					 <table width="100%"> 
+ <tr><td class="td_left_tab">
+ <input  type="button"  name="del_detail3"  value="-" title="删除明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail3' ;  this.form('serviceName').value='tab_del_detail' ;  this.form.submit(); " > <input  type="button"  name="add_detail3"  value="+" title="增加明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail3' ;  this.form('serviceName').value='tab_add_detail' ;  this.form.submit(); " >&nbsp; </td></tr> 
+ </table> 
+</td>
+			  </tr>
+
+
+			  <tr>
+				<td colspan="5"><strong>报告人处置外国企业股份情况</strong></td>
+			  </tr>
+			  <tr>
+				<td>被处置股份类型</td>
+				<td>处置日期</td>
+				<td>处置方式</td>
+				<td nowrap>处置前报告人在外国企业持股份额</td>
+				<td>处置后报告人在外国企业持股份额</td>
+			  </tr>
+			  
+			  <tr>
+				<td>
+				     <input type="hidden"  name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$WSBH)"  prefix="tabForm.table.detail4[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$WSLX_DM)"  prefix="tabForm.table.detail4[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$XH)"  prefix="tabForm.table.detail4[0]"  value="" >
+<input type="hidden"  name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$TABID)"  prefix="tabForm.table.detail4[0]"  value="" >
+<input type="checkbox" name="tabForm.table.detail4[0].isChecked" value="true" ><script language="javascript">
+var jm_cglx_dm=[
+	["1", "有表决权股份", "", "", ""],	["2", "无表决权股份", "", "", ""]];
+</script>
+<select name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$JM_CGLX_DM)"  prefix="tabForm.table.detail4[0]"  class="normalFieldEdit"  style="width:100px;"  fieldname="被处置股份类型" >
+<option value="">请选择..</option><option value="1" >有表决权股份</option>
+<option value="2" >无表决权股份</option>
+</select></td>
+				<td>
+				<input type="text"  name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$CZRQ)"  prefix="tabForm.table.detail4[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="处置日期"  validatefunc="validateDateFormat(e,0,10,0,0,false, 'null');  " onkeydown="dateConvert(this)" onblur="return isDateIn(this)"  class="normalFieldEdit" >
+</td>
+				<td>
+				<input type="text"  name="tabForm.table.detail4[0].string(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$CZFS)"  prefix="tabForm.table.detail4[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="处置方式"  class="normalFieldEdit" >
+</td>
+				<td nowrap>
+				<input type="text"  name="tabForm.table.detail4[0].double(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$CZQZWQCGFE)"  prefix="tabForm.table.detail4[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="处置前报告人在外国企业持股份额"  validatefunc="validateNumberInScale(e,0,0,18,4,false, 'null');  "  class="normalFieldEdit" >
+<TT>%</TT>
+				</td>
+				<td>
+				<input type="text"  name="tabForm.table.detail4[0].double(WZ_SB_JMQY_CGWGQYBGB_CZWQGFQK$CZHZWQCGFE)"  prefix="tabForm.table.detail4[0]"  index="0"  value=""  style="width:100px;"  maxlength="100"  fieldname="处置后报告人在外国企业持股份额"  validatefunc="validateNumberInScale(e,0,0,18,4,false, 'null');  "  class="normalFieldEdit" >
+<TT>%</TT>
+				</td>
+			  </tr>
+			   
+
+			  <tr>
+				<td align="left" class="td_left_tab" colspan="9">
+					 <table width="100%"> 
+ <tr><td class="td_left_tab">
+ <input  type="button"  name="del_detail4"  value="-" title="删除明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail4' ;  this.form('serviceName').value='tab_del_detail' ;  this.form.submit(); " > <input  type="button"  name="add_detail4"  value="+" title="增加明细"  class="button"  onclick="  this.form('tabForm.table.operateDetail').value='detail4' ;  this.form('serviceName').value='tab_add_detail' ;  this.form.submit(); " >&nbsp; </td></tr> 
+ </table> 
+</td>
+			  </tr>
+
+			</table>
+</td>
+</tr>
+</table>
+
+
+
+
+					<!-- 表单结束 -->
+                  </td>
+                </tr>
+              </table>
+            </TD>
+          </TR>
+          <TR>
+            <TD id=frmTitle style="WIDTH:100%" >
+              <table align="center" width="100%" cellspacing="2" cellpadding="3" border="0" cellpadding="0"  id="noprint">
+                <tr>
+                  <td align="center">
+					
+					 <input  type="button"  value="保    存"  class="button1"  onclick="formsubmit2('WZZS5020',this.form);" >&nbsp;
+					
+					<input name="back" type="button" value="返   回" onClick="backjdsb();">
+					
+					<input name="tbsm" type="button" value="显示填表说明" onClick="showTbsm('WZZS5020');">
+					
+                 </td>
+                </tr>
+              </table>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+    </td>
+  </tr>
+</table>
+
+<script language="javascript">
+
+function checkWZZS5020SKSSQ() {
+	try {
+	if ("WZZS5020" == "WZZS5020") {
+		if (document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$BGSSQS)")[0].value == '') {
+			document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$BGSSQS)")[0].readOnly = false;
+		}
+		if (document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$BGSSQZ)")[0].value == '') {
+			document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$BGSSQZ)")[0].readOnly = false;
+		}
+	}
+	}catch(e){}
+}
+checkWZZS5020SKSSQ();
+
+function saveToDisk(swwsdm) {
+	try {
+		document.execCommand("SaveAs", true, swwsdm);
+	} catch(e) {
+		alert(e);
+	}
+}
+
+function showTbsm(swwsdm) {
+	/*if (swwsdm != "WZZS5020") {
+		layer.alert("当前表单没有填报说明。");
+		return;
+	}*/
+	var url="/res/staticHtml/tbsm/TBSM" + swwsdm + ".html";
+	if(window.showModalDialog){
+	    var opensWin = window.showModalDialog(url,window,'dialogWidth:950px;dialogHeight:550px;dialogLeft:100px;dialogTop:50px;center:no;status:0;help:0;edge:sunken;scroll:yes');
+		if(opensWin!=null && opensWin!=""){
+		     window.location=opensWin;
+		}	
+	}else{
+		var title = "填表说明";
+		var lnkUrl = "/res/staticHtml/tbsm/TBSM" + swwsdm + ".html";
+		layer.open({
+			  type: 2,
+			  title: title,
+			  shadeClose: true,
+			  shade: [0.5 , '#8e8efe' , true],
+			  area: ['950px', '90%'],
+			  content: lnkUrl
+		});
+	}
+}
+
+function hlRetValue(temp){
+	var str="tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$HC"+temp+")";
+	var obj=document.all(str);
+    var ret;
+	if(obj == undefined || obj == ""){
+		ret= 0;
+	}else{
+		ret=obj.value;
+		if(ret==""){
+			ret=0;
+		}
+		ret =(parseFloat(ret)).toFixed(2);
+	}
+	return ret;
+}
+
+function hcRetValue(temp1,temp2){
+	var str="tabForm.table.detail1["+temp1+"].double(WZ_SB_QYSDSJD_CB$N"+temp2+")";
+	var obj=document.all(str);
+	var ret;
+	if(obj == undefined || obj == ""){
+		ret= 0;
+	}else{
+		ret=obj.value;
+		if(ret==""){
+			ret=0;
+		}
+		ret =(parseFloat(ret)).toFixed(2);
+	}
+	return ret;
+}
+
+var sqqysdsfbArr = new Array();
+function sqRetValue(temp1,temp2){
+	var ret;
+	if(sqqysdsfbArr[temp1] == undefined || sqqysdsfbArr[temp1] == ""){
+		ret= 0;
+	}else{
+		if(sqqysdsfbArr[temp1][temp2] == undefined || sqqysdsfbArr[temp1][temp2] == ""){
+			ret = 0;
+		}else{
+			ret = sqqysdsfbArr[temp1][temp2];
+		}
+	}
+	return ret;
+}
+/**
+ * 加法
+ * */
+    function add (arg1, arg2) {
+        var r1, r2, m, c;
+        try {
+            r1 = arg1.toString().split(".")[1].length
+        } catch (e) {
+            r1 = 0
+        }
+        try {
+            r2 = arg2.toString().split(".")[1].length
+        } catch (e) {
+            r2 = 0
+        }
+        c = Math.abs(r1 - r2);
+        m = Math.pow(10, Math.max(r1, r2))
+        if (c > 0) {
+            var cm = Math.pow(10, c);
+            if (r1 > r2) {
+                arg1 = Number(arg1.toString().replace(".", ""));
+                arg2 = Number(arg2.toString().replace(".", "")) * cm;
+            } else {
+                arg1 = Number(arg1.toString().replace(".", "")) * cm;
+                arg2 = Number(arg2.toString().replace(".", ""));
+            }
+        } else {
+            arg1 = Number(arg1.toString().replace(".", ""));
+            arg2 = Number(arg2.toString().replace(".", ""));
+        }
+        return ((arg1 + arg2) / m).toFixed(2);
+    }
+
+
+    /**
+     * 减法
+     */
+    function minus (arg1, arg2) {
+        var r1, r2, m, n;
+        try {
+            r1 = arg1.toString().split(".")[1].length
+        } catch (e) {
+            r1 = 0
+        }
+        try {
+            r2 = arg2.toString().split(".")[1].length
+        } catch (e) {
+            r2 = 0
+        }
+        m = Math.pow(10, Math.max(r1, r2));
+        //last modify by deeka
+        //动态控制精度长度
+        n = (r1 >= r2) ? r1 : r2;
+        return (((arg1 * m - arg2 * m) / m).toFixed(n)).toFixed(2);
+    }
+
+
+    /**
+    * 乘法
+    */
+     function Multipy(arg1, arg2) {
+         var m = 0,
+             s1 = arg1.toString(),
+             s2 = arg2.toString();
+         try {
+             m += s1.split(".")[1].length
+         } catch (e) {}
+         try {
+             m += s2.split(".")[1].length
+         } catch (e) {}
+         return (Number(s1.replace(".", "")) * Number(s2.replace(".", "")) / Math.pow(10, m)).toFixed(2);
+     }
+
+
+     /**
+      * 除法
+      */
+     function Divide(arg1, arg2) {
+         var t1 = 0,
+             t2 = 0,
+             r1, r2;
+         try {
+             t1 = arg1.toString().split(".")[1].length
+         } catch (e) {}
+         try {
+             t2 = arg2.toString().split(".")[1].length
+         } catch (e) {}
+         with(Math) {
+             r1 = Number(arg1.toString().replace(".", ""))
+             r2 = Number(arg2.toString().replace(".", ""))
+             return ((r1 / r2) * pow(10, t2 - t1)).toFixed(2);
+         }
+     }	
+function checkdate(f) {
+	if((f['tabid'].value)=='WZZS6001'){
+		var n2=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N2)")[0].value;//国债利息收入免征企业所得税
+		if(n2!=""){
+		if(parseFloat(n2)<0){
+				alert("国债利息收入免征企业所得税本项≥0");
+				return false;
+		}
+		}
+		var n3=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N3)")[0].value;//符合条件的居民企业之间的股息、红利等权益性投资收益免征企业所得税
+		var n4=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N4)")[0].value;//其中：内地居民企业通过沪港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税
+		var n5=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N5)")[0].value;//内地居民企业通过深港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税
+		var s1=add(n4,n5);
+		if(n4!=""){
+		if(parseFloat(n4)<0){
+			alert("其中：内地居民企业通过沪港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		if(n5!=""){
+		if(parseFloat(n5)<0){
+			alert("内地居民企业通过深港通投资且连续持有H股满12个月取得的股息红利所得免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		if(n3!=""){
+		if(parseFloat(n3)<0||parseFloat(n3)<parseFloat(s1)){
+				alert("符合条件的居民企业之间的股息、红利等权益性投资收益免征企业所得税本项≥0，且本项≥本表第4行+第5行。");
+				return false;
+		}
+		}
+		var n6=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N6)")[0].value;//符合条件的非营利组织的收入免征企业所得税
+		if(n6!=""){
+		if(parseFloat(n6)<0){
+			alert("符合条件的非营利组织的收入免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		var n7=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N7)")[0].value;//符合条件的非营利组织（科技企业孵化器）的收入免征企业所得税
+		if(n7!=""){
+		if(parseFloat(n7)<0){
+			alert("符合条件的非营利组织（科技企业孵化器）的收入免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		var n8=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N8)")[0].value;//符合条件的非营利组织（国家大学科技园）的收入免征企业所得税
+		if(n8!=""){
+		if(parseFloat(n8)<0){
+			alert("符合条件的非营利组织（国家大学科技园）的收入免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		var n9=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N9)")[0].value;//中国清洁发展机制基金取得的收入免征企业所得税
+		if(n9!=""){
+		if(parseFloat(n9)<0){
+			alert("中国清洁发展机制基金取得的收入免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		var n10=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N10)")[0].value;//投资者从证券投资基金分配中取得的收入免征企业所得税
+		if(n10!=""){
+		if(parseFloat(n10)<0){
+			alert("投资者从证券投资基金分配中取得的收入免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		var n11=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N11)")[0].value;//取得的地方政府债券利息收入免征企业所得税
+		if(n11!=""){
+		if(parseFloat(n11)<0){
+			alert("取得的地方政府债券利息收入免征企业所得税本项≥0。");
+			return false;
+		}
+		}
+		var n17=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N17)")[0].value;//综合利用资源生产产品取得的收入在计算应纳税所得额时减计收入
+		if(n17!=""){
+		if(parseFloat(n17)<0){
+			alert("综合利用资源生产产品取得的收入在计算应纳税所得额时减计收入本项≥0");
+			return false;
+		}
+		}
+		var n19=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N19)")[0].value;//金融机构取得的涉农贷款利息收入在计算应纳税所得额时减计收入
+		if(n19!=""){
+		if(parseFloat(n19)<0){
+			alert("金融机构取得的涉农贷款利息收入在计算应纳税所得额时减计收入本项≥0");
+			return false;
+		}
+		}
+		var n20=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N20)")[0].value;//保险机构取得的涉农保费收入在计算应纳税所得额时减计收入
+		if(n20!=""){
+		if(parseFloat(n20)<0){
+			alert("保险机构取得的涉农保费收入在计算应纳税所得额时减计收入本项≥0");
+			return false;
+		}
+		}
+		var n21=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N21)")[0].value;//小额贷款公司取得的农户小额贷款利息收入在计算应纳税所得额时减计收入
+		if(n21!=""){
+		if(parseFloat(n21)<0){
+			alert("小额贷款公司取得的农户小额贷款利息收入在计算应纳税所得额时减计收入本项≥0");
+			return false;
+		}
+		}
+		var n22=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N22)")[0].value;//取得铁路债券利息收入减半征收企业所得税
+		if(n22!=""){
+		if(parseFloat(n22)<0){
+			alert("取得铁路债券利息收入减半征收企业所得税本项≥0");
+			return false;
+		}
+		}
+		//自动带出，不可修改，本项=第30+33+34+35+36+37+38+39+40行。
+		//1.当表A200000第3+4-5行－（本表第1+16+24行）＞0时，0≤本项≤表A200000第3+4-5行-（本表第1+16+24行）。
+		//2.当表A200000第3+4-5行－（本表第1+16+24行）≤0时，本项＝0。
+			 var n50=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N50)")[0].value;//表A200000第3+4-5行
+		    var n1=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N1)")[0].value;
+		    var n16=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N16)")[0].value;
+//		    var n24=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N24)")[0].value;
+		    var n29=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N29)")[0].value;
+		    var z1=add(n1,n16);
+		     var z2=add(z1,0);
+		     var z3=minus(n50,z2);
+		     if(n29!=""){
+		     if(parseFloat(z3)>0){			     
+			     if(parseFloat(n29)<0||parseFloat(n29)>parseFloat(z3)){
+			    	 alert("当表A200000第3+4-5行－（本表第1+16行）＞0时，0≤本表第29行≤表A200000第3+4-5行-（本表第1+16行）。");
+			    	 return false;
+				    }		     
+		     }else if(parseFloat(z3)<=0){
+					if(parseFloat(n29)!=0){
+						alert("当表A200000第3+4-5行－（本表第1+16行）≤0时，本表第29行＝0。");
+						return false;
+						}
+			     }
+		     }
+		var n31=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N31)")[0].value;//免税项目
+		if(n31!=""){
+		if(parseFloat(n31)<0){
+			alert("免税项目本项≥0");
+			return false;
+		}
+		}
+		var n32=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N32)")[0].value;//减半征收项目
+		if(n32!=""){
+		if(parseFloat(n32)<0){
+			alert("减半征收项目本项≥0");
+			return false;
+		}
+		}
+		var n33=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N33)")[0].value;//从事国家重点扶持的公共基础设施项目投资经营的所得定期减免企业所得税
+		if(n33!=""){
+		if(parseFloat(n33)<0){
+			alert("从事国家重点扶持的公共基础设施项目投资经营的所得定期减免企业所得税本项≥0");
+			return false;
+		}
+		}
+		var n34=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N34)")[0].value;//从事符合条件的环境保护、节能节水项目的所得定期减免企业所得税
+		if(n34!=""){
+		if(parseFloat(n34)<0){
+			alert("从事符合条件的环境保护、节能节水项目的所得定期减免企业所得税本项≥0");
+			return false;
+		}
+		}
+		var n35=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N35)")[0].value;//符合条件的技术转让所得减免征收企业所得税
+		if(n35!=""){
+		if(n35<0){
+			alert("符合条件的技术转让所得减免征收企业所得税本项≥0");
+			return false;
+		}
+		}
+		var n36=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N36)")[0].value;//实施清洁发展机制项目的所得定期减免企业所得税
+		if(n36!=""){
+		if(parseFloat(n36)<0){
+			alert("实施清洁发展机制项目的所得定期减免企业所得税本项≥0");
+			return false;
+		}
+		}
+		var n37=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N37)")[0].value;//符合条件的节能服务公司实施合同能源管理项目的所得定期减免企业所得税
+		if(n37!=""){
+		if(parseFloat(n37)<0){
+			alert("符合条件的节能服务公司实施合同能源管理项目的所得定期减免企业所得税本项≥0");
+			return false;
+		}
+		}
+		var n38=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N38)")[0].value;//线宽小于130纳米的集成电路项目的所得减免企业所得税
+		if(n38!=""){
+		if(parseFloat(n38)<0){
+			alert("线宽小于130纳米的集成电路项目的所得减免企业所得税本项≥0");
+			return false;
+		}
+		}
+		var n39=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N39)")[0].value;//线宽小于65纳米或投资额超过150亿元的集成电路项目的所得减免企业所得税
+		if(n39!=""){
+		if(parseFloat(n39)<0){
+			alert("线宽小于65纳米或投资额超过150亿元的集成电路项目的所得减免企业所得税本项≥0");
+			return false;
+		}
+		}
+		
+		
+	}
+	if((f['tabid'].value)=='WZZS6002'){
+		var n1=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N1)")[0].value;//
+		var n2=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N2)")[0].value;//
+		var n3=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N3)")[0].value;//
+		var n4=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N4)")[0].value;
+		var n5=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N5)")[0].value;
+		var n6=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N6)")[0].value;
+		var n7=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N7)")[0].value;
+		var n8=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N8)")[0].value;
+		var n9=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N9)")[0].value;
+		var n10=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N10)")[0].value;
+		var n11=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N11)")[0].value;
+		var n12=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N12)")[0].value;
+		var n13=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N13)")[0].value;
+		var n14=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N14)")[0].value;
+		var n15=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N15)")[0].value;
+		var n16=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N16)")[0].value;
+		var n17=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N17)")[0].value;
+		var n18=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N18)")[0].value;
+		var n19=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N19)")[0].value;
+		var n20=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N20)")[0].value;
+		var n21=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N21)")[0].value;
+		var n22=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N22)")[0].value;
+		var n23=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N23)")[0].value;
+		var n24=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N24)")[0].value;
+		var n25=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N25)")[0].value;
+		var n26=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N26)")[0].value;
+		var n27=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N27)")[0].value;
+		var n28=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N28)")[0].value;
+		var n29=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N29)")[0].value;
+		var n30=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N30)")[0].value;	
+		var n31=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N31)")[0].value;//上次申报第2行第1列
+		var n32=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N32)")[0].value;//上次申报第2行第2列
+		var n33=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N33)")[0].value;//上次申报第2行第3列
+		var n34=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N34)")[0].value;//上次申报第2行第4列
+		var n35=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N35)")[0].value;//上次申报第2行第5列
+		var n36=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N36)")[0].value;//上次申报第2行第6列
+		var n37=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N37)")[0].value;//上次申报第3行第1列
+		var n38=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N38)")[0].value;//上次申报第3行第2列
+		var n39=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N39)")[0].value;//上次申报第3行第3列
+		var n40=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N40)")[0].value;//上次申报第3行第4列
+		var n41=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N41)")[0].value;//上次申报第3行第5列
+		var N42=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N42)")[0].value;//
+		 var N45=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N45)")[0].value;//重要行业
+		 var n51=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N51)")[0].value;//上次申报第3行第6列
+		 var n52=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N52)")[0].value;//上次申报第4行第1列
+		 var n53=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N53)")[0].value;//上次申报第4行第2列
+		 var n54=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N54)")[0].value;//上次申报第4行第3列
+		 var n55=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N55)")[0].value;//上次申报第4行第4列
+		 var n56=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N56)")[0].value;//上次申报第4行第5列
+		 var n57=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N57)")[0].value;//上次申报第4行第6列
+		 if(N45=="Y"){
+			 if(n7!=""){
+			 if(parseFloat(n7)<0){
+					alert("您属于重要行业，第2行第1列≥0");
+					return false;
+				}
+			 if(parseFloat(n7)<parseFloat(n31)){
+					alert("第2行第1列必须≥上期申报本表第2行第1列"+n31);
+					return false;
+				}
+			 }
+			 if(n8!=""){
+			 if(parseFloat(n8)<0||parseFloat(n8)>parseFloat(n7)){
+					alert("0≤第2行第2列≤本表第2行第1列");
+					return false;
+				}
+			 if(parseFloat(n8)<parseFloat(n32)){
+					alert("第2行第2列必须≥上期申报本表第2行第2列"+n32);
+					return false;
+				}
+//			 if((n8!=""&&n8!=0)&&(n9!=""&&n9!=0)){
+//					alert("第2行第2列与第2行第3列不能同时有值时");
+//					return false;
+//				}
+			 }
+			 if(n9!=""){
+			 if(parseFloat(n9)<0||parseFloat(n9)>parseFloat(n10)){
+					alert("0≤第2行第3列≤本表第2行第4列");
+					return false;
+				}
+			 if(parseFloat(n9)<parseFloat(n33)){
+					alert("第2行第3列≥上期申报本表第2行第3列"+n33);
+					return false;
+				}
+			 }
+			 if(n10!=""){				
+			if(parseFloat(n10)>0){
+				if(parseFloat(n9)<=0){
+					alert("当第2行第4列＞0时，第2行第3列必须＞0。");
+					return false;
+				}
+					}
+			 if(parseFloat(n10)<0||parseFloat(n7)<parseFloat(n10)){
+					alert("0≤第2行第4列≤本表第2行第1列");
+					return false;
+				}
+			 if(parseFloat(n9)>parseFloat(n10)){
+					alert("第2行第3列≤本表第2行第4列");
+					return false;
+				}
+			 if(parseFloat(n10)<parseFloat(n34)){
+					alert("第2行第4列必须≥上期申报本表第2行第4列"+n34);
+					return false;
+				}
+			 }
+			 if(n11!=""){
+			 if(parseFloat(n11)<parseFloat(n35)){
+					alert("第2行第5列≥上期申报本表第2行第5列"+n35);
+					return false;
+				}
+			 }
+			
+				
+		 } 
+		 if(n12!=""){
+		 if(parseFloat(n12)<parseFloat(n36)){
+				alert("第2行第6列必须≥上期申报本表第2行第6列"+n36);
+				return false;
+			}
+		 }
+		 if(N45=="N"){
+			 if(n13!=""&&n13!=0){			
+			 if(parseFloat(n13)<1000000){
+					alert("第3行第1列≥100万");
+					return false;
+				}
+			 }
+			 if(n13!=""){
+			 if(parseFloat(n13)<parseFloat(n37)){
+					alert("第3行第1列必须≥上期申报本表第3行第1列"+n37);
+					return false;
+				}
+			 }
+			 if(n14!=""){
+			 if(parseFloat(n14)<0||parseFloat(n13)<parseFloat(n14)){
+					alert("0≤第3行第2列≤本表第3行第1列");
+					return false;
+				}
+			 if(parseFloat(n14)<parseFloat(n38)){
+					alert("第3行第2列必须≥上期申报本表第3行第2列"+n38);
+					return false;
+				}
+			 }
+			 if(n15!=""){
+			 if(parseFloat(n15)<0||parseFloat(n16)<parseFloat(n15)){
+					alert("0≤第3行第3列≤本表第3行第4列");
+					return false;
+				}
+			 if(parseFloat(n15)<parseFloat(n39)){
+					alert("第3行第3列必须≥上期申报本表第3行第3列"+n39);
+					return false;
+				}
+			 }
+			 if(n16!=""){
+				 if(parseFloat(n16)>0){
+						if(parseFloat(n15)<=0){
+							alert("当第3行第4列＞0时，第3行第3列必须＞0。");
+							return false;
+						}
+							}
+			 if(parseFloat(n16)<0||parseFloat(n13)<parseFloat(n16)){
+					alert("0≤第3行第4列≤本表第3行第1列");
+					return false;
+				}
+			 if(parseFloat(n15)>parseFloat(n16)){
+					alert("第3行第3列≤本表第3行第4列");
+					return false;
+				}
+			 if(parseFloat(n16)<parseFloat(n40)){
+					alert("第3行第4列必须≥上期申报本表第3行第4列"+n40);
+					return false;
+				}
+			 }
+			 if(n17!=""){
+			 if(parseFloat(n17)<parseFloat(n41)){
+					alert("第3行第5列必须≥上期申报本表第3行第5列"+n41);
+					return false;
+				}
+			 }
+		 }
+		 if(n18!=""){
+		 if(parseFloat(n18)<parseFloat(n51)){
+				alert("第3行第6列必须≥上期申报本表第3行第6列"+n51);
+				return false;
+			}
+		 }
+		 if(n19!=""){
+		 if(parseFloat(n19)<0){
+				alert("第4行第1列≥0");
+				return false;
+			}
+		 if(parseFloat(n19)<parseFloat(n52)){
+				alert("第4行第1列必须≥上期申报本表第4行第1列"+n52);
+				return false;
+			}
+		 }
+		 if(n20!=""){
+		 if(parseFloat(n20)<0){
+				alert("第4行第2列≥0");
+				return false;
+			}
+		 if(parseFloat(n20)>parseFloat(n19)){
+				alert("第4行第2列≤本表第4行第1列");
+				return false;
+			}
+		 if(parseFloat(n20)<parseFloat(n53)){
+				alert("第4行第2列必须≥上期申报本表第4行第2列"+n53);
+				return false;
+			}
+		 }
+		 if(n21!=""){
+		 if(parseFloat(n21)<0){
+				alert("第4行第3列≥0");
+				return false;
+			}
+		 if(parseFloat(n21)>parseFloat(n22)){
+				alert("第4行第3列≤本表第4行第4列");
+				return false;
+			}
+		 if(parseFloat(n21)<parseFloat(n54)){
+				alert("第4行第3列必须≥上期申报本表第4行第3列"+n54);
+				return false;
+			}
+		 }
+		 if(n22!=""){
+			 if(parseFloat(n22)>0){
+					if(parseFloat(n21)<=0){
+						alert("当第4行第4列＞0时，第4行第3列必须＞0。");
+						return false;
+					}
+						}
+		 if(parseFloat(n22)<0){
+				alert("第4行第4列≥0");
+				return false;
+			}
+		 if(parseFloat(n22)!=parseFloat(n19)){
+				alert("本表第4行第1列仅填报本年度新增的符合一次性扣除的固定资产原值，故本表第4行第4列等于本表第1列。");
+				return false;
+			}
+		 if(parseFloat(n22)<parseFloat(n55)){
+				alert("第4行第4列必须≥上期申报本表第4行第4列"+n55);
+				return false;
+			}
+		 if(parseFloat(n21)>parseFloat(n22)){
+				alert("第4行第3列≤本表第4行第4列");
+				return false;
+			}
+		 }
+		 if(n23!=""){
+		 if(parseFloat(n23)<parseFloat(n56)){
+				alert("第4行第5列必须≥上期申报本表第4行第5列"+n56);
+				return false;
+			}
+		 }
+		 if(n24!=""){
+		 if(parseFloat(n24)<parseFloat(n57)){
+				alert("第4行第6列必须≥上期申报本表第4行第6列"+n57);
+				return false;
+			}
+		 }
+			
+		}
+	
+	if((f['tabid'].value)=='WZZS6003'){
+		var n42=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N42)")[0].value;//
+		var n43=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N43)")[0].value;//国家需要重点扶持的高新技术企业减按15%的税率征收企业所得税
+		var n46=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N46)")[0].value;//经济特区和上海浦东新区新设立的高新技术企业在区内取得的所得定期减免企业所得税
+		var n47=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N47)")[0].value;
+		var n48=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N48)")[0].value;
+		var n49=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N49)")[0].value;
+		//2.当第2行或第3行有值时，则第1行、第4行至第29行不能有值，否则保存不通过并给出提示：不能叠加享受减免所得税优惠，请准确选择优惠项目。
+		//3.当第2、3行同时无值时，则第1行、第4行至第29行不能同时有值，否则保存不通过并给出提示：不能叠加享受减免所得税优惠，请准确选择优惠项目。
+		var n1=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N1)")[0].value;//
+		var n2=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N2)")[0].value;//国家需要重点扶持的高新技术企业减按15%的税率征收企业所得税
+		var n3=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N3)")[0].value;//经济特区和上海浦东新区新设立的高新技术企业在区内取得的所得定期减免企业所得税
+		var n4=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N4)")[0].value;
+		var n5=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N5)")[0].value;
+		var n6=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N6)")[0].value;
+		var n7=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N7)")[0].value;
+		var n8=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N8)")[0].value;
+		var n9=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N9)")[0].value;
+		var n10=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N10)")[0].value;
+		var n11=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N11)")[0].value;
+		var n12=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N12)")[0].value;
+		var n13=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N13)")[0].value;
+		var n14=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N14)")[0].value;
+		var n15=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N15)")[0].value;
+		var n16=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N16)")[0].value;
+		var n17=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N17)")[0].value;
+		var n18=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N18)")[0].value;
+		var n19=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N19)")[0].value;
+		var n20=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N20)")[0].value;
+		var n21=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N21)")[0].value;
+		var n22=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N22)")[0].value;
+		var n23=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N23)")[0].value;
+		var n24=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N24)")[0].value;
+		var n25=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N25)")[0].value;
+		var n26=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N26)")[0].value;
+		var n27=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N27)")[0].value;
+		var n28=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N28)")[0].value;
+		var n29=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N29)")[0].value;
+		var n30=document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$N30)")[0].value;	
+	if(n2!=""&&n2!=0){
+		if(n1!=""&&n1!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n4!=""&&n4!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n5!=""&&n5!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n6!=""&&n6!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n7!=""&&n7!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n8!=""&&n8!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n9!=""&&n9!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n10!=""&&n10!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n11!=""&&n11!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n12!=""&&n12!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n13!=""&&n13!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n14!=""&&n14!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n15!=""&&n15!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n16!=""&&n16!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n17!=""&&n17!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n18!=""&&n18!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n19!=""&&n19!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n20!=""&&n20!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n21!=""&&n21!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n22!=""&&n22!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n23!=""&&n23!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n24!=""&&n24!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n25!=""&&n25!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n26!=""&&n26!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n27!=""&&n27!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n28!=""&&n28!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n29!=""&&n29!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+	}
+	if(n3!=""&&n3!=0){
+		if(n1!=""&&n1!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n4!=""&&n4!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n5!=""&&n5!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n6!=""&&n6!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n7!=""&&n7!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n8!=""&&n8!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n9!=""&&n9!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n10!=""&&n10!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n11!=""&&n11!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n12!=""&&n12!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n13!=""&&n13!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n14!=""&&n14!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n15!=""&&n15!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n16!=""&&n16!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n17!=""&&n17!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n18!=""&&n18!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n19!=""&&n19!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n20!=""&&n20!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n21!=""&&n21!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n22!=""&&n22!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n23!=""&&n23!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n24!=""&&n24!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n25!=""&&n25!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n26!=""&&n26!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n27!=""&&n27!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n28!=""&&n28!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+		if(n29!=""&&n29!=0){
+			alert("当第2行或第3行有值时，则第1行、第4行至第29行不能有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+	}
+	//3.当第2、3行同时无值时，则第1行、第4行至第29行不能同时有值，否则保存不通过并给出提示：不能叠加享受减免所得税优惠，请准确选择优惠项目
+	if((n2==""||n2==0)&&(n3==""||n3==0)){
+		var times=0;
+		if(n1!=""&&n1!=0){
+			times++;
+		}
+		if(n4!=""&&n4!=0){
+			times++;
+		}
+		if(n5!=""&&n5!=0){
+			times++;
+		}
+		if(n6!=""&&n6!=0){
+			times++;
+		}
+		if(n7!=""&&n7!=0){
+			times++;
+		}
+		if(n8!=""&&n8!=0){
+			times++;
+		}
+		if(n9!=""&&n9!=0){
+			times++;
+		}
+		if(n10!=""&&n10!=0){
+			times++;
+		}
+		if(n11!=""&&n11!=0){
+			times++;
+		}
+		if(n12!=""&&n12!=0){
+			times++;
+		}
+		if(n13!=""&&n13!=0){
+			times++;
+		}
+		if(n14!=""&&n14!=0){
+			times++;
+		}
+		if(n15!=""&&n15!=0){
+			times++;
+		}
+		if(n16!=""&&n16!=0){
+			times++;
+		}
+		if(n17!=""&&n17!=0){
+			times++;
+		}
+		if(n18!=""&&n18!=0){
+			times++;
+		}
+		if(n19!=""&&n19!=0){
+			times++;
+		}
+		if(n20!=""&&n20!=0){
+			times++;
+		}
+		if(n21!=""&&n21!=0){
+			times++;
+		}
+		if(n22!=""&&n22!=0){
+			times++;
+		}
+		if(n23!=""&&n23!=0){
+			times++;
+		}
+		if(n24!=""&&n24!=0){
+			times++;
+		}
+		if(n25!=""&&n25!=0){
+			times++;
+		}
+		if(n26!=""&&n26!=0){
+			times++;
+		}
+		if(n27!=""&&n27!=0){
+			times++;
+		}
+		if(n28!=""&&n28!=0){
+			times++;
+		}
+		if(n29!=""&&n29!=0){
+			times++;
+		}
+		if(times>1){
+			alert("当第2、3行同时无值时，则第1行、第4行至第29行不能同时有值，不能叠加享受减免所得税优惠，请准确选择优惠项目。");
+			return false;
+		}
+	}
+    //	当0.02＜主表A200000第9行≤100万，且表A200000“小型微利企业”选择“是”，并且本表第2至29行本年累计金额均为0时，本项必录，并且本项=表A200000第9行×20%.
+    // 当0≤主表A200000第9行≤0.02且季度填报信息“小型微利企业”选择“是”时，本行数值为0。
+    // 当100万＜主表A200000第9行≤300万，，同时表A200000按季度填报信息“小型微利企业”选择“是”并且本表第2至29行本年累计金额均为0时，本项必录，本项=表A200000第9行×15%+50000。
+    // 当主表A200000第9行>300万，或季度填报信息“小型微利企业”选择“否”时，本行数值为0。
+    var n49=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N49)")[0].value;//主表A200000第9行
+    var n47=document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_QYSDSJD_ZB$N47)")[0].value;//A200000“小型微利企业”
+	var time=0;
+	if(parseFloat(n2)==0){
+		time++;
+	}
+	if(parseFloat(n3)==0){
+		time++;
+	}
+	if(parseFloat(n4)==0){
+		time++;
+	}
+	if(parseFloat(n5)==0){
+		time++;
+	}
+	if(parseFloat(n6)==0){
+		time++;
+	}
+	if(parseFloat(n7)==0){
+		time++;
+	}
+	if(parseFloat(n8)==0){
+		time++;
+	}
+	if(parseFloat(n9)==0){
+		time++;
+	}
+	if(parseFloat(n10)==0){
+		time++;
+	}
+	if(parseFloat(n11)==0){
+		time++;
+	}
+	if(parseFloat(n12)==0){
+		time++;
+	}
+	if(parseFloat(n13)==0){
+		time++;
+	}
+	if(parseFloat(n14)==0){
+		time++;
+	}
+	if(parseFloat(n15)==0){
+		time++;
+	}
+	if(parseFloat(n16)==0){
+		time++;
+	}
+	if(parseFloat(n17)==0){
+		time++;
+	}
+	if(parseFloat(n18)==0){
+		time++;
+	}
+	if(parseFloat(n19)==0){
+		time++;
+	}
+	if(parseFloat(n20)==0){
+		time++;
+	}
+	if(parseFloat(n21)==0){
+		time++;
+	}
+	if(parseFloat(n22)==0){
+		time++;
+	}
+	if(parseFloat(n23)==0){
+		time++;
+	}
+	if(parseFloat(n24)==0){
+		time++;
+	}
+	if(parseFloat(n25)==0){
+		time++;
+	}
+	if(parseFloat(n26)==0){
+		time++;
+	}
+	if(parseFloat(n27)==0){
+		time++;
+	}
+	if(parseFloat(n28)==0){
+		time++;
+	}
+	if(parseFloat(n29)==0){
+		time++;
+	}
+    if(0.02<parseFloat(n49)&&parseFloat(n49)<=1000000){
+	    if(n47=="Y"){
+			var z1=Multipy(n49,0.2).toFixed(2);
+			if(time==28&&n1==""){			
+					alert("当0.02＜主表A200000第9行≤100万，且表A200000“小型微利企业”选择“是”，并且本表第2至29行本年累计金额均为0时，行次1必录");
+					return false;				
+			}
+			if(time==28&&n1!=""){			
+				if(z1!=n1){
+					alert("当0.02＜主表A200000第9行≤100万，且表A200000“小型微利企业”选择“是”，并且本表第2至29行本年累计金额均为0时，行次1必录，并且本项=表A200000第9行×20%");
+					return false;
+				}				
+			}
+    	}
+    }else if(0<parseFloat(n49)&&parseFloat(n49)<=0.02){
+	    if(n47=="Y"){
+			if(time==28&&n1!=0){			
+					alert("当0＜主表A200000第9行≤0.02，且表A200000“小型微利企业”选择“是”，行次1必录,并且本项=0");
+					return false;				
+			}
+		}
+    }else if(1000000<parseFloat(n49)&&parseFloat(n49)<=3000000){
+	    if(n47=="Y"){
+			var z1=(Multipy(n49,0.15)+50000).toFixed(2);
+			if(time==28&&n1==""){			
+				alert("当100万＜主表A200000第9行≤300万，且表A200000“小型微利企业”选择“是”，并且本表第2至29行本年累计金额均为0时，行次1必录");
+				return false;				
+			}
+			if(time==28&&n1!=""){			
+				if(z1!=n1){
+					alert("当100万＜主表A200000第9行≤300万，且表A200000“小型微利企业”选择“是”，并且本表第2至29行本年累计金额均为0时，行次1必录，并且本项=表A200000第9行×15%+50000");
+					return false;
+				}				
+			}
+    	}
+    }
+    if(parseFloat(n49)>3000000||n47=="N"){
+    	if(n1 != 0){
+			alert("当主表A200000第9行>300万，或季度填报信息“小型微利企业”选择“否”，行次1必录，并且本项=0");
+			return false;
+    	}
+    }
+//1.当A200000第9行＞0时，0≤本项≤表A200000第9行×10%的金额；
+//当本项＞0时，本表第2行/10%+（第3行/12.5%或者第3行/25%）=表A200000第9行，允许误差值±1。
+//2.当主表A200000第9行＞0，附报信息“小型微利企业”选择“否”且“高新技术企业”选择“是”,且表A201030第30行=0时，本表第2行或第3行必须存在至少一行的值大于0。
+//3.当A200000第9行≤0时，本项=0。
+if(n2!=""){
+    if(parseFloat(n49)>0){
+		 var s1= Multipy(n49,0.1);
+		 
+	if(parseFloat(n2)<0||parseFloat(n2)>parseFloat(s1)){
+		alert("当A200000第9行＞0时，0≤第二行≤表A200000第9行×10%的金额");
+		return false;
+		}
+		 
+        }
+	if(parseFloat(n2)>0){
+		var s2=Divide(n2,0.1);
+		var s3=Divide(n3,0.125);
+		var s4=Divide(n3,0.25);
+		var s5=add(s2,s3);
+		var s6=add(s2,s4);
+		var s7=minus(n49,s5);
+		var s8=minus(n49,s6);
+		if(-1<=parseFloat(s7)&&parseFloat(s7)<=1){
+		}else if(-1<=parseFloat(s8)&&parseFloat(s8)<=1){
+		}else{
+			alert("当行次2＞0时，本表第2行/10%+（第3行/12.5%或者第3行/25%）=表A200000第9行，允许误差值±1。");
+			return false;
+		}		
+	}
+	if(parseFloat(n49)>0 && n47=='N' && n46 == 'Y' && parseFloat(n30) == 0){
+		if(parseFloat(n2) <=0 && parseFloat(n3) <=0){
+			alert("当主表A200000第9行＞0，附报信息“小型微利企业”选择“否”且“高新技术企业”选择“是”,且表A201030第30行=0时，本表第2行或第3行必须存在至少一行的值大于0");
+			return false;
+		}
+	}
+	if(parseFloat(n49)<=0){
+		if(parseFloat(n2)!=0){
+			alert("当A200000第9行≤0时，行次2=0");
+			return false;
+		}
+	}
+    }
+	//1.当A200000第11行＞0时，0≤本项≤表A200000第11行的金额；
+	//当本项＞0时，本表第2行/10%+（第3行/12.5%或者第3行/25%）=表A200000第9行，允许误差值±1。
+	//2.当A200000第11行=0时，本项=0。
+	if(n3!=""){
+    if(parseFloat(n48)>0){
+	if(parseFloat(n3)<0||parseFloat(n3)>parseFloat(n48)){
+		alert("当A200000第11行＞0时，0≤第3行≤表A200000第11行的金额");
+		return false;
+		}
+       }
+    if(parseFloat(n3)>0){
+		var s2=Divide(n2,0.1);
+		var s3=Divide(n3,0.125);
+		var s4=Divide(n3,0.25);
+		var s5=add(s2,s3);
+		var s6=add(s2,s4);
+		var s7=minus(n49,s5);
+		var s8=minus(n49,s6);
+		if(-1<=parseFloat(s7)&&parseFloat(s7)<=1){
+		}else if(-1<=parseFloat(s8)&&parseFloat(s8)<=1){
+		}else{
+			alert("当行次3＞0时，本表第2行/10%+（第3行/12.5%或者第3行/25%）=表A200000第9行，允许误差值±1");
+			return false;
+		}		
+	}
+if(parseFloat(n48)==0){
+if(parseFloat(n3)!=0){
+	alert("当A200000第11行=0时，行次3=0");
+	return false;
+}
+}
+	}
+//第5行1.当A200000第11行＞0时，本项=0或表A200000第11行的金额或表A200000第11行×50%的金额；
+//2.当A200000第11行=0时，本项=0。
+if(n5!=""){
+var s1=Multipy(n48,0.5);
+if(parseFloat(n48)>0){
+	if(parseFloat(n5)==0||parseFloat(n5)==parseFloat(n48)||parseFloat(n5)==parseFloat(s1)){
+		
+	}else{
+		alert("第5行当A200000第11行＞0时，第5行=0或表A200000第11行的金额或表A200000第11行×50%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n5)!=0){
+		alert("当A200000第11行=0时，第5行=0");
+		return false;
+		}
+}
+}
+
+//1.当A200000第11行＞0时，本项=0或表A200000第11行的金额或表A200000第11行×50%的金额；
+//2.当A200000第11行=0时，本项=0。（13行的规则）
+if(n13!=""){
+var s1=Multipy(n48,0.5);
+if(parseFloat(n48)>0){
+	if(parseFloat(n13)==0||parseFloat(n13)==parseFloat(n48)||parseFloat(n13)==parseFloat(s1)){
+		
+	}else{
+		alert("第13行当A200000第11行＞0时，第13行=0或表A200000第11行的金额或表A200000第11行×50%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n13)!=0){
+		alert("当A200000第11行=0时，第13行=0");
+		return false;
+		}
+}
+}
+//1.当A200000第9行＞0时，本项=0或表A200000第9行×15%的金额；
+//2.当A200000第9行≤0时，本项=0。（14行的规则） 
+if(n14!=""){
+var s1=Multipy(n49,0.15);
+if(parseFloat(n49)>0){
+	if(parseFloat(n14)==0||parseFloat(n14)==parseFloat(s1)){
+		
+	}else{
+		alert("第14行当A200000第9行＞0时，本项=0或表A200000第9行×15%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)<=0){
+	if(parseFloat(n14)!=0){
+		alert("当A200000第9行≤0时，第14行=0");
+		return false;
+		}
+}
+}
+
+
+//第15行1.当A200000第11行＞0时，本项=0或表A200000第11行的金额或表A200000第11行×50%的金额；
+//2.当A200000第11行=0时，本项=0。
+if(n15!=""){
+var s1=Multipy(n48,0.5);
+if(parseFloat(n48)>0){
+	if(parseFloat(n15)==0||parseFloat(n15)==parseFloat(n48)||parseFloat(n15)==parseFloat(s1)){
+		
+	}else{
+		alert("第15行当A200000第11行＞0时，第15行=0或表A200000第11行的金额或表A200000第11行×50%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n15)!=0){
+		alert("当A200000第11行=0时，第15行=0");
+		return false;
+		}
+}
+}
+//第16行1.当A200000第9行＞0时，本项=0或表A200000第9行×15%的金额；
+//2.当A200000第9行≤0时，本项=0。
+if(n16!=""){
+var s1=Multipy(n49,0.15);
+if(parseFloat(n49)>0){
+	if(parseFloat(n16)==0||parseFloat(n16)==parseFloat(s1)){
+		
+	}else{
+		alert("第16行当A200000第9行＞0时，第16行=0或表A200000第9行×15%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n49)<=0){
+	if(parseFloat(n16)!=0){
+		alert("当A200000第9行≤0时，第16行=0");
+		return false;
+		}
+}
+}
+//第17行1.当A200000第11行＞0时，本项=0或表A200000第11行的金额或表A200000第11行×50%的金额；
+//2.当A200000第11行=0时，本项=0。
+if(n17!=""){
+var s1=Multipy(n48,0.5);
+if(parseFloat(n48)>0){
+	if(parseFloat(n17)==0||parseFloat(n17)==parseFloat(n48)||parseFloat(n17)==parseFloat(s1)){
+		
+	}else{
+		alert("第17行当A200000第11行＞0时，第17行=0或表A200000第11行的金额或表A200000第11行×50%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n17)!=0){
+		alert("当A200000第11行=0时，第17行=0");
+		return false;
+		}
+}
+}
+//第18行1.当A200000第11行＞0时，本项=0或表A200000第11行的金额或表A200000第11行×50%的金额；
+//2.当A200000第11行=0时，本项=0。
+if(n18!=""){
+var s1=Multipy(n48,0.5);
+if(parseFloat(n48)>0){
+	if(parseFloat(n18)==0||parseFloat(n18)==parseFloat(n48)||parseFloat(n18)==parseFloat(s1)){
+		
+	}else{
+		alert("第18行当A200000第11行＞0时，第18行=0或表A200000第11行的金额或表A200000第11行×50%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n18)!=0){
+		alert("当A200000第11行=0时，第18行=0");
+		return false;
+		}
+}
+}
+//第19行1.当A200000第11行＞0时，本项=0或表A200000第11行的金额；
+//2.当A200000第11行=0时，本项=0。
+if(n19!=""){
+if(parseFloat(n48)>0){
+	if(parseFloat(n19)==0||parseFloat(n19)==parseFloat(n48)){
+		
+	}else{
+		alert("第19行当A200000第11行＞0时，第19行=0或表A200000第11行的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n19)!=0){
+		alert("当A200000第11行=0时，第19行=0");
+		return false;
+		}
+}
+}
+
+
+//第20行1.当A200000第11行＞0时，本项=0或表A200000第11行的金额；
+//2.当A200000第11行=0时，本项=0。
+if(n20!=""){
+if(parseFloat(n48)>0){
+	if(parseFloat(n20)==0||parseFloat(n20)==parseFloat(n48)){
+		
+	}else{
+		alert("第20行当A200000第11行＞0时，第20行=0或表A200000第11行的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n48)==0){
+	if(parseFloat(n20)!=0){
+		alert("当A200000第11行=0时，第20行=0");
+		return false;
+		}
+}
+}
+//第21行1.当A200000第9行＞0时，本项=0或表A200000第9行×10%的金额；
+//2.当A200000第9行≤0时，本项=0。
+if(n21!=""){
+var s1=Multipy(n49,0.1);
+if(parseFloat(n49)>0){
+	if(parseFloat(n21)==0||parseFloat(n21)==parseFloat(s1)){
+		
+	}else{
+		alert("第21行当A200000第9行＞0时，第21行=0或表A200000第9行×10%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n49)<=0){
+	if(parseFloat(n21)!=0){
+		alert("当A200000第9行≤0时，第21行=0");
+		return false;
+		}
+}
+}
+
+//A201030减免所得税优惠明细表  第22行   服务贸易创新发展试点地区符合条件的技术先进型服务企业减按15%的税率征收企业所得税    
+ //修改为开,规则为：1.当A200000第9行＞0时，本项=0或表A200000第9行×10%的金额；
+//2.当A200000第9行≤0时，本项=0。
+if(n22!=""){
+var s1=Multipy(n49,0.1);
+if(parseFloat(n49)>0){
+	if(parseFloat(n22)==0||parseFloat(n22)==parseFloat(s1)){
+		
+	}else{
+		alert("第22行当A200000第9行＞0时，本项=0或表A200000第9行×10%的金额");
+		return false;
+		}
+	
+}
+if(parseFloat(n49)<=0){
+	if(parseFloat(n22)!=0){
+		alert("当A200000第9行≤0时，第22行=0");
+		return false;
+		}
+}
+}
+
+
+
+//第30行应≤表A200000第11行本年累计金额。
+if(n30!=""){
+if(parseFloat(n30)>parseFloat(n48)){
+	alert("第30行应≤表A200000第11行本年累计金额。");
+	return false;
+}
+}
+
+
+
+
+    
+	}
+
+
+	if((f['tabid'].value)=='WZZS6004'){
+		var tab = document.getElementById("detailTable");
+		var rows = tab.rows.length-4;
+		for(i=0;i<rows;i++){
+			document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N1)")[0].style.backgroundColor = "";
+			document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N3)")[0].style.backgroundColor = "";
+			document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N6)")[0].style.backgroundColor = "";
+			document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N8)")[0].style.backgroundColor = "";
+			document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N9)")[0].style.backgroundColor = "";
+			document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N10)")[0].style.backgroundColor = "";
+			var n1 = document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N1)")[0].value;
+			var n3 = document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N3)")[0].value;
+			var n4 = document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N4)")[0].value;
+			var n5 = document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N5)")[0].value;
+			var n6 = document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N6)")[0].value;
+			var n8 = document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N8)")[0].value;
+			var n9 = document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N9)")[0].value;
+			var n10 = document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N10)")[0].value;
+			if(n1 == ""){
+				alert("技术成果名称不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N1)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N1)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n3 == ""){
+				alert("技术成果编号不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N3)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N3)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n4 == ""){
+				alert("公允价值不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N4)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N4)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n5 == ""){
+				alert("计税基础不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N5)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N5)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n6 == ""){
+				alert("取得股权时间不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N6)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N6)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n8 == ""){
+				alert("企业名称不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N8)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N8)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n9 == ""){
+				alert("纳税人识别号不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N9)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N9)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(!(n9.length == 15 || n9.length == 18)) {
+				alert("纳税人识别号只能是15位或18位");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N9)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N9)")[0].style.backgroundColor = "red";
+				return false;
+			}
+			if(n10 == ""){
+				alert("主管税务机关不能为空");
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N10)")[0].focus();
+				document.getElementsByName("tabForm.table.detail1["+i+"].string(WZ_SB_QYSDSJD_CB$N10)")[0].style.backgroundColor = "red";
+				return false;
+			}
+		}
+	}
+
+	if((f['tabid'].value)=='WZZS5020'){
+		var SZGDJXH = document.getElementsByName("tabForm.table.tableValue.string(WZ_SB_JMQY_CGWGQYBGB$SZGDJXH)")[0].value;
+		var arr = new Array(20);
+		for(i=0; i<arr.length; i++){
+			if(document.getElementsByName("tabForm.table.detail2["+i+"].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$SFSBH)")[0]){
+				var SFSBH = document.getElementsByName("tabForm.table.detail2["+i+"].string(WZ_SB_JMQY_CGWGQYBGB_ZGJMQK$SFSBH)")[0].value; 
+				if($.trim(SFSBH).length>20){
+		            alert("请输入合法的身份识别号!");
+		            return false;
+				}
+			}
+		}
+		
+		if(SZGDJXH.length>20){
+            alert("请输入合法的所在国纳税识别号!");
+            return false;
+		}
+		
+	}
+	
+	if((f['tabid'].value)=='WZZS6002S'){
+		var arr = new Array(13);
+		//初始化数组
+		for(i=0; i<arr.length; i++){
+			arr[i] = new Array(17);
+			for(j=0; j<arr[i].length; j++){
+				var  n = j+1;
+				arr[i][j] = Expression(document.getElementsByName("tabForm.table.detail1["+i+"].double(WZ_SB_QYSDSJD_CB$N"+n+")")[0].value);
+			}
+		}
+		for(k=0; k<arr.length; k++){
+			if(arr[k][7]>0&&arr[k][8]>0){
+				if((arr[k][9]-arr[k][7]-arr[k][8])!=(arr[k][10]+arr[k][11])){
+					alert("第"+(k+1)+"行，当第8列>0且第9列>0时，第10列-第8类-第9列=第11列+第12列");
+					return false;
+				}
+			}			
+			if(arr[k][12]>0&&arr[k][13]>0){
+				if((arr[k][14]-arr[k][12]-arr[k][13])!=(arr[k][15]+arr[k][16])){
+					alert("第"+(k+1)+"行，当第13列>0且第14列>0时，第15列-第13类-第14列=第16列+第17列");
+					return false;
+				}
+			}
+			if(k==(arr.length-1)){
+				if(arr[k][10]<0){
+					alert("第十三行第11列值不能小于0");return false;
+				}
+				if(arr[k][15]<0){
+					alert("第十三行第16列值不能小于0");return false;
+				}
+			}
+		}
+	}
+	return true;	
+}
+	
+
+
+/**企业所得税录入提交按钮*/
+function formsubmit2(swwsdm,form) {
+	if(verifyTab(form)){
+		if(checkdate(form)){
+			form['view'].value='true';
+			form['serviceName'].value='tab_add';
+		 	form.action='/jsdzsb/qydsdjd/jdservice.do?isCommit=true';
+			layer.load(1,{shade:[0.4 , '#FFF' , true]});
+			form.submit();
+	 	}
+	}
+}
+
+$(function(){ 
+  try {
+	bindSelectAltTxt();
+  } catch(e){}
+});
+
+function bindSelectAltTxt() {
+  var selects = document.getElementsByTagName("select");
+  $.each(selects, function() {
+	  $(this).bind("mouseover", function(e){
+		try {
+			$(this).attr("title",$(this).find(":selected").html());
+		} catch(ex){}
+	  });
+      $(this).children("option").each(function(){
+    	  $(this).attr("title",$(this).text());
+      }); 
+  });
+}
+</script>
+</form>
+		
+
+<div id="_loadIfmContent" style="display:none;"></div>
+<SCRIPT LANGUAGE="JavaScript">
+$(function(){  
+	endIe8Load();
+}); 
+
+function endIe8Load() {
+	try{
+		var _loadIfm = ' <iframe id="_loadIfm" src="" width="1" height="1" style="border: 0px; display:none" frameborder="0" ></iframe>';
+		if (!$("#_loadIfm")[0]) {
+			$("#_loadIfmContent").append(_loadIfm);
+		}
+		$("#_loadIfmContent", window.document).attr("src", "#");
+	}catch(e){}
+}
+</SCRIPT>
+
+	</body>
+     
+
+</html>

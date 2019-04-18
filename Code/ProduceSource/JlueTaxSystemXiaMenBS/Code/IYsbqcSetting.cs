@@ -58,5 +58,9 @@ namespace JlueTaxSystemXiaMenBS.Code
 
         void deleteYhsData(int id, string reportCode, string xh);
 
+        string getBDDMFromTABLE_NAME(string TABLE_NAME);
+
+        Message getMessage(string TABLE_NAME, string TABLE_ACTION);
+
     }
 }

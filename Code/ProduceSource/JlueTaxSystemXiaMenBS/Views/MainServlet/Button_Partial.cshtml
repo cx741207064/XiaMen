@@ -1,0 +1,33 @@
+﻿@using JlueTaxSystemXiaMenBS.Models
+
+@if (Model.ta == TABLE_ACTION.edit)
+{
+    <a name="update" value="2" onclick="javascript:setSave(); frmzcupdate();" style="cursor: pointer;" class="btnclass">
+        暂&nbsp;&nbsp;存
+    </a>
+    @Html.Raw("&nbsp;")
+    <a name="update" value="2" onclick="javascript:setSave(); frmupdate();" style="cursor: pointer;" class="btnclass">
+        保&nbsp;&nbsp;存
+    </a>
+    @Html.Raw("&nbsp;")
+    <a name="delete" value="3" onclick="javascript:setSave(); deletesbb();" style="cursor: pointer;" class="btnclass">
+        作&nbsp;&nbsp;废
+    </a>
+    @Html.Raw("&nbsp;")
+}
+else if (Model.ta == TABLE_ACTION.display)
+{
+}
+else
+{
+    <a name="zc" value="5" onclick="javascript:setSave();setDisable(this,true);if(!frmzc())setDisable(this,false);" style="cursor: pointer;" class="btnclass">
+        暂&nbsp;&nbsp;存
+    </a>@Html.Raw("&nbsp;")
+    <a name="save" value="1" onclick="javascript:setSave();setDisable(this,true);if(!frminsert())setDisable(this,false);" style="cursor: pointer;" class="btnclass">
+        保&nbsp;&nbsp;存
+    </a>@Html.Raw("&nbsp;")
+}
+<a href="./MainServlet?TABLE_NAME=INFORMATION&TABLE_ACTION=display&NSRSBH=91350200MA2Y10EC4K" class="btnclass">
+    退&nbsp;&nbsp;出
+</a>
+&nbsp;

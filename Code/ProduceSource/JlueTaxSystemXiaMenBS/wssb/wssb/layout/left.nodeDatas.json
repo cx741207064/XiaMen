@@ -165,6 +165,94 @@
         "iconCls":""
     },
     {
+        "id":"0",
+        "parentId":"",
+        "name":"2019年小企业会计准则财务报表-第一季",
+        "state":"open",
+        "children":[
+            {
+                "id":"CWXX2016XQYKJZZ_ZCFZB_1",
+                "parentId":"",
+                "name":"小企业会计准则财务报表资产负债表",
+                "state":"open",
+                "children":[
+    
+                ],
+                "attributes":{
+                    "zssb_btn":"N",
+                    "group_issb":"N",
+                    "table_name":"CWXX2016XQYKJZZ_ZCFZB",
+                    "table_isfill":"N",
+                    "cgbz":"",
+                    "table_url":"MainServlet?TABLE_NAME=CWXX2016XQYKJZZ_ZCFZB&TABLE_ACTION=initial&NSRSBH=91350200MA2Y6UGR9M&SSSQ_Q=20190101&SSSQ_Z=20190331"
+                },
+                "checked":false,
+                "iconCls":""
+            },
+            {
+                "id":"CWXX2016XQYKJZZ_LRB_2",
+                "parentId":"",
+                "name":"小企业会计准则财务报表利润表",
+                "state":"open",
+                "children":[
+    
+                ],
+                "attributes":{
+                    "zssb_btn":"N",
+                    "group_issb":"N",
+                    "table_name":"CWXX2016XQYKJZZ_LRB",
+                    "table_isfill":"N",
+                    "cgbz":"",
+                    "table_url":"MainServlet?TABLE_NAME=CWXX2016XQYKJZZ_LRB&TABLE_ACTION=initial&NSRSBH=91350200MA2Y6UGR9M&SSSQ_Q=20190101&SSSQ_Z=20190331"
+                },
+                "checked":false,
+                "iconCls":""
+            },
+            {
+                "id":"CWXX2016XQYKJZZ_CX_3",
+                "parentId":"",
+                "name":"小企业会计准则财务报表信息查询",
+                "state":"open",
+                "children":[
+    
+                ],
+                "attributes":{
+                    "zssb_btn":"N",
+                    "group_issb":"N",
+                    "table_name":"CWXX2016XQYKJZZ_CX",
+                    "table_isfill":"N",
+                    "cgbz":"",
+                    "table_url":"MainServlet?TABLE_NAME=CWXX2016XQYKJZZ_CX&TABLE_ACTION=initial&NSRSBH=91350200MA2Y6UGR9M&SSSQ_Q=20190101&SSSQ_Z=20190331"
+                },
+                "checked":false,
+                "iconCls":""
+            },
+            {
+                "id":"ZSSB_CWXX2016XQYKJZZ_ZCFZB_4",
+                "parentId":"",
+                "name":"申　　报",
+                "state":"open",
+                "children":[
+    
+                ],
+                "attributes":{
+                    "zssb_btn":"Y",
+                    "group_issb":"N",
+                    "table_isfill":"N",
+                    "cgbz":"",
+                    "table_url":"MainServlet?TABLE_NAME=CWXX2016XQYKJZZ_ZCFZB&TABLE_ACTION=submit&NSRSBH=91350200MA2Y6UGR9M&SSSQ_Q=20190101&SSSQ_Z=20190331"
+                },
+                "checked":false,
+                "iconCls":""
+            }
+        ],
+        "attributes":{
+    
+        },
+        "checked":false,
+        "iconCls":""
+    },
+    {
         "id":"997",
         "parentId":"",
         "name":"申报查询",

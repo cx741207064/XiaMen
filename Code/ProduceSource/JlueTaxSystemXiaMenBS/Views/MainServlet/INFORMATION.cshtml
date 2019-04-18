@@ -1,0 +1,335 @@
+﻿@model JlueTaxSystemXiaMenBS.Models.ModelMainServlet
+
+@{
+    ViewBag.Title = "MainServlet_INFORMATION";
+    Layout = null;
+}
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gbk">
+<title>纳税人信息</title>
+<link rel="stylesheet" href="/wssb/wssb/public/style/link.css" type="text/css">
+<script language="javascript"  src="/wssb/wssb/public/js/jquery-1.7.2.min.js"></script>
+<script language="javascript" src="/wssb/wssb/public/js/commonNew.js"></script>
+<script language="javascript"  src="/wssb/wssb/public/js/text.js"></script>
+<script language="javascript"  src="/wssb/wssb/public/js/lhgdialog.min.js"></script>
+
+<style type="text/css">
+#tstitle {background:#5dace0; height:30px; border:1px solid #7e94d2; text-align:left;}
+</style>
+</head>
+<script type="text/javascript">
+    /*
+           根据业务部门《关于调整小规模纳税人增值税申报需求的报告（20180502）.docx》文档需求：
+           纳税人登陆网上申报界面时，对纳税人进行提示“尊敬的纳税人：由于系统问题，请小规模纳税人在网报成功后，携带税控设备到主管税务机关柜台进行解锁。
+           若系统问题解决，将另行通知。不便之处，敬请谅解！”
+            明芳要求以弹窗的形式展示，并且纳税人为小规模纳税人
+    add by zwx20180502
+    */
+	var yqwrdnsr = 'N';
+	var yxZzsXgmnsrSzxx = 'N';
+	var isJzYqSc = 'N';
+	function showPagetips() {
+		if("Y"==yqwrdnsr){
+			if("Y"==isJzYqSc){
+				showWxtxTips3();//季中开始逾期提示
+			}else{
+				showWxtxTips1();
+			}
+		}else{
+			if("Y"==yxZzsXgmnsrSzxx){
+				//showWxtxTips2();
+			}
+		}
+	}
+	
+	function showWxtxTips1() {
+
+		divid= $.dialog({	 
+		lock: true,	
+		title:false,
+		esc: false,  
+		cancel:false,        
+		id:'tipsWxtxForWrdYbnsr',
+		content:"<div id=\"tstitle\" style=\" text-align: center;\"><span style=\"font-size: 16pt; font-family: 仿宋_GB2312; font-weight:bold;\"><font color=\"white\">温馨提示</font></span></b></div>" +
+		"<div style=\" border-radius: 5px; border: 1px solid #eee; background: #fff; repeat; margin: 0px; \">" +
+	    "<table width=\"100%\" align=\"center\"><tr align=\"center\">" +
+		"<td colspan=\"2\"> <br /><br />"+
+		"<div align=\"left\">" +
+	    "<p><span style=\"font-size: 13pt; font-family: 仿宋_GB2312;font-color: red;\">&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"red\">您逾期仍未办理一般纳税人登记，应按销售额依照增值税税率计算应纳税额，不得抵扣进项税额，也不得使用增值税专用发票。因此，您增值税申报应使用一般纳税人申报表！</font><br /></span>" +
+	    "<p >&nbsp;</p></div>" +
+		" </td>"+
+		"</tr> <tr><td align=\"center\">" + 
+	    "<input style=\"width: 160px;\" type=\"button\" value=\"确定\" onclick=\"javascript:closeWxtxTips1Div();\" class=\"cnmBtn\"/>	</td></tr>  </table></td> </tr></table></div>",
+		width:'640px',
+		height:'170px'
+     });
+	}
+
+	function showWxtxTips2() {
+
+		divid1 = $.dialog({	 
+		lock: true,	
+		title:false,
+		esc: false,  
+		cancel:false,        
+		id:'tipsWxtxForXgmnsr',
+		content:"<div id=\"tstitle\" style=\" text-align: center;\"><span style=\"font-size: 16pt; font-family: 仿宋_GB2312; font-weight:bold;\"><font color=\"white\">温馨提示</font></span></b></div>" +
+		"<div style=\" border-radius: 5px; border: 1px solid #eee; background: #fff; repeat; margin: 0px; \">" +
+	    "<table width=\"100%\" align=\"center\"><tr align=\"center\">" +
+		"<td colspan=\"2\"> <br /><br />"+
+		"<div align=\"left\">" +
+	    "<p><span style=\"font-size: 13pt; font-family: 仿宋_GB2312;font-color: red;\">&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"red\">尊敬的纳税人：由于系统问题，请小规模纳税人在网报成功后，携带税控设备到主管税务机关柜台进行解锁。若系统问题解决，将另行通知。不便之处，敬请谅解！</font><br /></span>" +
+	    "<p >&nbsp;</p></div>" +
+		" </td>"+
+		"</tr> <tr><td align=\"center\">" + 
+	    "<input style=\"width: 160px;\" type=\"button\" value=\"确定\" onclick=\"javascript:closeWxtxTips1Div1();\" class=\"cnmBtn\"/>	</td></tr>  </table></td> </tr></table></div>",
+		width:'640px',
+		height:'170px'
+     });
+	}
+
+	function showWxtxTips3() {
+
+		divid3= $.dialog({	 
+		lock: true,	
+		title:false,
+		esc: false,  
+		cancel:false,        
+		id:'tipsWxtxForJzYq',
+		content:"<div id=\"tstitle\" style=\" text-align: center;\"><span style=\"font-size: 16pt; font-family: 仿宋_GB2312; font-weight:bold;\"><font color=\"white\">温馨提示</font></span></b></div>" +
+		"<div style=\" border-radius: 5px; border: 1px solid #eee; background: #fff; repeat; margin: 0px; \">" +
+	    "<table width=\"100%\" align=\"center\"><tr align=\"center\">" +
+		"<td colspan=\"2\"> <br /><br />"+
+		"<div align=\"left\">" +
+	    "<p><span style=\"font-size: 13pt; font-family: 仿宋_GB2312;font-color: red;\">&nbsp;&nbsp;&nbsp;&nbsp;<font color=\"red\">尊敬的纳税人，您属于逾期未登记一般纳税人，且属于按季申报户，为确保您准确申报，请至主管税务机关申报！</font><br /></span>" +
+	    "<p >&nbsp;</p></div>" +
+		" </td>"+
+		"</tr> <tr><td align=\"center\">" + 
+	    "<input style=\"width: 160px;\" type=\"button\" value=\"确定\" onclick=\"javascript:closeWxtxTips1Div3();\" class=\"cnmBtn\"/>	</td></tr>  </table></td> </tr></table></div>",
+		width:'640px',
+		height:'170px'
+     });
+	}
+	
+ 	function closeWxtxTips1Div() {
+ 		divid.close();
+ 		if("Y" == yxZzsXgmnsrSzxx){
+			//showWxtxTips2();
+		}
+	}
+
+ 	function closeWxtxTips1Div1() {
+ 		divid1.close();
+	}
+
+ 	function closeWxtxTips1Div3() {
+ 		divid3.close();
+	}
+</script>
+<body topmargin=0 leftmargin=0 onload="showPagetips();">  
+
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td valign="top" align="center">
+<br>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td colspan="2" ><IMG height=1 src="/wssb/wssb/public/images/spacer.gif" width="100%"></td>
+ </tr>
+  <tr>
+    <td width="5">&nbsp;&nbsp;</td>
+    <td  align="center">
+    	<table height=5 cellspacing=0 cellpadding=0 width="380" border=0>
+        <tbody>
+          <tr>
+            <td height=5><img height=1 src="/wssb/wssb/public/images/spacer.gif" width=1></td>
+          </tr>
+        </tbody>
+      </table>
+      <TABLE height=17 cellSpacing=0 cellPadding=0 width=600 border=0>
+        <TBODY>
+          <TR>
+            <TD width="400" class="title">
+            	<p style="width:120px; background: url(/wssb/wssb/layout/images/icon1.png) center left no-repeat">纳税人信息</p>
+            </TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <TABLE height=17 cellSpacing=0 cellPadding=0 width=600 border=0>
+        <TBODY>
+        <TR>
+          <TD align="center">
+           
+            <TABLE height=200 cellSpacing="0" cellPadding="10px" width="100%" border=0 style="background-color: #FFFFFF;">
+              <TBODY>
+              <TR>
+                <TD rowSpan=2>
+                <table  cellSpacing=0 cellPadding=3 border="0px" width="100%" bordercolor='#ffffff'  bordercolordark='#ffffff' borderColorLight=#cccccc style="line-height: 20px;">
+                <tr>
+                	<td width="100">纳税人识别号：</td>
+                	<td colspan=5>@Model.Nsrxx.NSRSBH</td>
+                </tr>
+                <tr>
+                	<td>纳税人名 &nbsp;称：</td>
+                	<td colspan=5>@Model.Nsrxx.NSRMC</td>
+                </tr>
+                <tr>
+                	<td>法 人 代 &nbsp;表：</td>
+                	<td colspan=5>@Model.Nsrxx.Name</td>
+                </tr>
+                <tr>
+                	<td>主管税务机关：</td>
+                	<td colspan=5>@Model.Nsrxx.ZGDSSWJFJMC</td>
+                </tr>
+                <tr>
+                	<td>登记注册类型：</td>
+                	<td colspan=5>@Model.Nsrxx.DJZCLX</td>
+                </tr>
+                <tr>
+                	<td>地　　　　址：</td>
+                	<td colspan=5>@Model.Nsrxx.SCJYDZ</td>
+                </tr>
+                <tr>
+                	<td>电　　　　话：</td>
+                	<td colspan=5>@Model.Nsrxx.LXDH</td>
+                </tr>
+    
+                <!--
+                <tr>
+                  <td rowspan="0">本月需申报税种</td>
+                  <td width="80">无</td>
+                  <td width="60">本月状态</td>
+                  <td width="50">&nbsp;</td>
+                  <td width="60">税款所属期</td>
+                  <td>&nbsp;</td>
+                </tr>
+                -->
+    
+                <tr>
+                  <td>税务服务热线：</td>
+                  <td colspan=5>12366</td>
+                </tr>
+                
+
+
+            <!-- 《电子税务局建设规范》减税降费工作更新内容  add by yhq 2019-01-21 start -->
+            <tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						尊敬的纳税人，您好！为全面贯彻党中央国务院减税降费决策部署，落实好提高增值税小规模纳税人起征点政策，申报系统会帮助您判断是否可以享受免征增值税政策，在您申报的过程中可能会出现一些提示信息，请您认真阅读，并按照相关指引进行操作，非常感谢您的支持配合！
+					</font>
+				</td>
+			</tr>
+			
+			<!-- 由notes需求添加以下温馨提示  add by zwx20180814 start -->
+            <tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						如需更正最新一期的增值税一般纳税人申报表、非居民企业所得税年度纳税申报表（适用于核定征收企业)、非居民企业所得税季度纳税申报表（适用于据实申报企业）、年度关联业务往来报告表、非居民企业所得税季度纳税申报表（适用于核定征收企业)，可通过【申报缴税】—【申报更正（非居民、关联申报表、增值税一般纳税人）】模块进行网上申报更正。
+					</font>
+				</td>
+			</tr>
+			<!-- 由notes需求添加以下温馨提示  add by zwx20180814 end -->
+
+			<!-- 关于调整增值税一般纳税人网上申报需求的报告2018年4月版需求_20180416 添加温馨提示 add by zhiweiHuang 20180418 start -->
+            <tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						2018年5月征期起，我局增值税一般纳税人网上申报流程‘提交’和‘正式申报’合并为‘正式申报’，且不再通过税控系统远程抄报税环节触发，调整为网上申报系统直接正式申报，请及时关注，避免操作失误！
+					</font>
+				</td>
+			</tr>
+			<!-- 关于调整增值税一般纳税人网上申报需求的报告2018年4月版需求_20180416 添加温馨提示 add by zhiweiHuang 20180418 end -->
+			<!-- 增值税小规模纳税人申报更正温馨提示     by zwx 20180306 start -->
+            <tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						为了进一步方便纳税人，我局推出增值税小规模纳税人网上申报更正模块，支持您对最近一个属期的增值税小规模纳税人申报表进行申报更正，感谢您的配合！
+					</font>
+				</td>
+			</tr>
+			<!-- 增值税小规模纳税人申报更正温馨提示     by zwx 20180306 end -->
+            <!-- 因为一表式集成自动取数，很多纳税人开票都不规范，如有不一样请致电我局咨询热线或至柜台申报     by   wxf   20170927   start -->
+            <tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						为了进一步方便纳税人，我局将优化网上申报系统一般纳税人申报模块，系统根据您开具和认证发票情况，自动归集您申报表部分栏次。请您仔细核对，如不一致请进行修改或至柜台申报，谢谢！
+					</font>
+				</td>
+			</tr>
+			<!-- 因为一表式集成自动取数，很多纳税人开票都不规范，如有不一样请致电我局咨询热线或至柜台申报     by   wxf   20170927   end -->
+			
+            <!-- 根据曾鹏通要求：加两个文件的下载链接      add by zwx20170712 start
+			  <tr>
+                 <td><font color='red'>温馨提示：</font></td>
+                  <td colspan=5>
+                 <a style="color: red;" href="/wssb/wssb/downloads/jdyjnfxs.doc"> 小微新政：季度预缴能否享受？小微企业所得税优惠扩围具体执行口径，请看这里！(点击打开附件)；</a>
+                  <a style="color: red;" href="/wssb/wssb/downloads/kjxzxqyyffy.doc">科技型中小企业研发费用加计扣除十个常见问题(点击打开附件)</a></br>
+                 </td>
+              </tr>
+            <!-- 根据曾鹏通要求：加两个文件的下载链接      add by zwx20170712 end -->
+              
+	
+	
+
+
+			<tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						尊敬的纳税人,具体减免税项目及其对应的减免税性质名称及代码，请登录国家税务总局厦门市税务局网站表证单书模块查询！
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td><font color='red'>温馨提示：</font></td>
+				<td colspan="5">
+					<font color='red'>
+						如您办理了“三证合一”纳税识别号变更，您原纳税识别号上传的海关缴款书相关信息，需使用原纳税识别号查询和打印稽核结果通知书，并且本月需至主管税务机关柜台办理纳税申报事项。
+					</font>
+				</td>
+			</tr>
+	             </table>
+
+                </TD>
+                </TR>
+              </TBODY></TABLE>
+              </TD>
+          	</TR>
+         </TBODY>
+      </TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width=600 border=0>
+        <TBODY>
+        <TR>
+          <TD></TD></TR></TBODY></TABLE>
+	 </td>
+  </tr>
+</table>
+    </td>
+  </tr>
+</table>
+
+
+<script language="javascript">
+
+
+
+//落实税总发[2015]35号业务需求 add by zhiweiHuang 20150324 start
+function alertNoticeMsg()
+{
+	
+}
+//落实税总发[2015]35号业务需求 add by zhiweiHuang 20150324 end
+
+//初始化text.js文件
+  	  $(function(){contentready();});
+</script>
+</BODY>
+</HTML>
