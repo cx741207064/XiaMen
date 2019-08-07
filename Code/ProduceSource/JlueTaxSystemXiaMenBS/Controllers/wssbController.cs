@@ -78,7 +78,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                     }
                     else if (TABLE_NAME == "DZBS_SBCX")
                     {
-                        DZBS_QUERY re_dq = new DZBS_QUERY();
+                        DZBS_SBCX re_dq = new DZBS_SBCX();
                         if (qc.SBZT == set.wsbzt)
                         {
                             return View("MainServlet_SBB_ZZS_YGZ_YBNSR_Message", new ZzsYgzYbnsrPublic { msg = "无符合要求的数据。", TABLE_ACTION = "dispaly" });

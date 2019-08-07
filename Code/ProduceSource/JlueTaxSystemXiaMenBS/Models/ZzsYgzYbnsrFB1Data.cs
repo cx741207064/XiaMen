@@ -8,6 +8,8 @@ namespace JlueTaxSystemXiaMenBS.Models
 {
     public class ZzsYgzYbnsrFB1Data
     {
+        public TABLE_ACTION ta { get; set; }
+
         /// <summary>
         /// 开具增值税发票销售额
         /// </summary>

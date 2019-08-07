@@ -65,6 +65,13 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             return View(ar.ViewName, ar.Model);
         }
 
+        public ViewResult CWXX2016XQYKJZZ(string TABLE_NAME, string TABLE_ACTION)
+        {
+            ViewResult vr = new ViewResult();
+            vr = createViewResult(TABLE_NAME, TABLE_ACTION, vr);
+            return vr;
+        }
+
         public ViewResult CWXX2016XQYKJZZ_ZCFZB(string TABLE_NAME, string TABLE_ACTION)
         {
             ViewResult vr = new ViewResult();
@@ -86,6 +93,36 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             return vr;
         }
 
+        [ChildActionOnly]
+        public System.Web.Mvc.ActionResult CWXX2016XQYKJZZ_HeadPartial(string TABLE_NAME, string TABLE_ACTION)
+        {
+            this.BDDM = set.getBDDMFromTABLE_NAME(TABLE_NAME);
+
+            ModelMainServlet ms = new ModelMainServlet();
+            ms.Nsrxx = set.getNsrxx();
+            ms.GDTXDate = set.getGDTXDate(this.BDDM);
+            return PartialView(ms);
+        }
+
+        [ChildActionOnly]
+        public System.Web.Mvc.ActionResult CWXX2016XQYKJZZ_JS_Partial(string TABLE_NAME, string TABLE_ACTION)
+        {
+            BDDM = set.getBDDMFromTABLE_NAME(TABLE_NAME);
+            if (!string.IsNullOrEmpty(BDDM))
+            {
+                this.qc = set.getUserYSBQC(BDDM);
+            }
+            ModelMainServlet DBData = new ModelMainServlet();
+            if (TABLE_ACTION == "edit" || TABLE_ACTION == "display")
+            {
+                JObject data_jo = (JObject)set.getUserYSBQCReportData(qc.Id, TABLE_NAME, qc.BDDM);
+                DBData = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(data_jo));
+            }
+            DBData.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
+            DBData.TABLE_NAME = TABLE_NAME;
+            return PartialView(DBData);
+        }
+
         public ViewResult INFORMATION(string TABLE_NAME, string TABLE_ACTION)
         {
             ViewResult vr = new ViewResult();
@@ -98,50 +135,38 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         public ViewResult SBB_ZZS_YGZ_YBNSR(string TABLE_NAME, string TABLE_ACTION)
         {
             ViewResult vr = new ViewResult();
-            ZzsYgzYbnsrPublic obj = new ZzsYgzYbnsrPublic();
-            obj.BDDM = this.BDDM;
-            obj.Nsrxx = set.getNsrxx();
-            obj.TABLE_ACTION = TABLE_ACTION;
+            ZzsYgzYbnsrZBData ZBData = new ZzsYgzYbnsrZBData();
 
-            vr = SBB_ZZS_YGZ_YBNSR_Load(obj);
+            vr = SBB_ZZS_YGZ_YBNSR_Load(ZBData);
 
-            vr = createViewResult(TABLE_NAME, TABLE_ACTION, View("", obj));
+            vr = createViewResult(TABLE_NAME, TABLE_ACTION, vr);
             return vr;
         }
 
         public ViewResult SBB_ZZS_YGZ_YBNSR_FB1(string TABLE_NAME, string TABLE_ACTION)
         {
             ViewResult vr = new ViewResult();
-            ZzsYgzYbnsrPublic obj = new ZzsYgzYbnsrPublic();
-            obj.BDDM = this.BDDM;
-            obj.Nsrxx = set.getNsrxx();
-            obj.TABLE_ACTION = TABLE_ACTION;
 
             JObject dataConfig = new JObject();
             ZzsYgzYbnsrFB1Data fb1d = new ZzsYgzYbnsrFB1Data();
             dataConfig = set.getYbnsrzzsDataConfig(fb1d, TABLE_NAME);
             fb1d = JsonConvert.DeserializeObject<ZzsYgzYbnsrFB1Data>(JsonConvert.SerializeObject(dataConfig));
-            obj.FB1Data = fb1d;
+            fb1d.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
 
-            vr = createViewResult(TABLE_NAME, TABLE_ACTION, View("", obj));
+            vr = createViewResult(TABLE_NAME, TABLE_ACTION, View("", fb1d));
             return vr;
         }
 
         public ViewResult SBB_ZZS_YGZ_YBNSR_FB2(string TABLE_NAME, string TABLE_ACTION)
         {
             ViewResult vr = new ViewResult();
-            ZzsYgzYbnsrPublic obj = new ZzsYgzYbnsrPublic();
-            obj.BDDM = this.BDDM;
-            obj.Nsrxx = set.getNsrxx();
-            obj.TABLE_ACTION = TABLE_ACTION;
 
             JObject dataConfig = new JObject();
             ZzsYgzYbnsrFB2Data fb2d = new ZzsYgzYbnsrFB2Data();
             dataConfig = set.getYbnsrzzsDataConfig(fb2d, TABLE_NAME);
             fb2d = JsonConvert.DeserializeObject<ZzsYgzYbnsrFB2Data>(JsonConvert.SerializeObject(dataConfig));
-            obj.FB2Data = fb2d;
 
-            vr = createViewResult(TABLE_NAME, TABLE_ACTION, View("", obj));
+            vr = createViewResult(TABLE_NAME, TABLE_ACTION, View("", fb2d));
             return vr;
         }
 
@@ -189,7 +214,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             ViewResult vr = new ViewResult();
 
             GDTXXiaMenUserYSBQC qc = set.getUserYSBQC("SBB_ZZS_YGZ_YBNSR");
-            DZBS_QUERY re_dq = new DZBS_QUERY();
+            DZBS_SBCX re_dq = new DZBS_SBCX();
             if (qc.SBZT == set.wsbzt)
             {
                 return View("Message", new Message { msg = "无符合要求的数据。", TABLE_ACTION = "dispaly" });
@@ -199,8 +224,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             JObject data_jo = (JObject)set.getUserYSBQCReportData(qc.Id, qc.BDDM, qc.BDDM);
             if (data_jo.HasValues)
             {
-                ZzsYgzYbnsrPublic DBData = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(data_jo));
-                JObject data_json = JsonConvert.DeserializeObject<JObject>(JsonConvert.DeserializeObject<JValue>(DBData.json).Value<string>());
+                ModelMainServlet DBData = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(data_jo));
+                JObject data_json = DBData.json;
                 re_dq.XSE = data_json["YBBYS_1"].ToString();
                 re_dq.YNSE = data_json["YBBYS_24"].ToString();
                 re_dq.YBTSE = data_json["YBBYS_34"].ToString();
@@ -213,19 +238,19 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         [ChildActionOnly]
         public System.Web.Mvc.ActionResult SBB_ZZS_YGZ_YBNSR_JS_Partial(string TABLE_NAME, string TABLE_ACTION)
         {
-            this.BDDM = set.getBDDMFromTABLE_NAME(TABLE_NAME);
+            BDDM = set.getBDDMFromTABLE_NAME(TABLE_NAME);
             if (!string.IsNullOrEmpty(BDDM))
             {
                 this.qc = set.getUserYSBQC(BDDM);
             }
 
-            ZzsYgzYbnsrPublic DBData = new ZzsYgzYbnsrPublic();
+            ModelMainServlet DBData = new ModelMainServlet();
             if (TABLE_ACTION == "edit" || TABLE_ACTION == "display")
             {
                 JObject data_jo = (JObject)set.getUserYSBQCReportData(qc.Id, TABLE_NAME, qc.BDDM);
-                DBData = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(data_jo));
+                DBData = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(data_jo));
             }
-            DBData.TABLE_ACTION = TABLE_ACTION;
+            DBData.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
             DBData.TABLE_NAME = TABLE_NAME;
             return PartialView(DBData);
         }
@@ -249,29 +274,15 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             return PartialView(ms);
         }
 
-        [ChildActionOnly]
-        public System.Web.Mvc.ActionResult CWXX2016XQYKJZZ_JS_Partial(string TABLE_NAME, string TABLE_ACTION)
+        ViewResult SBB_ZZS_YGZ_YBNSR_Load(ZzsYgzYbnsrZBData ZBData)
         {
-            GDTXXiaMenUserYSBQC qc = new GDTXXiaMenUserYSBQC();
-            CWXX2016XQYKJZZ DBData = new CWXX2016XQYKJZZ();
-            if (TABLE_ACTION == "edit" || TABLE_ACTION == "display")
-            {
-                JObject data_jo = (JObject)set.getUserYSBQCReportData(qc.Id, TABLE_NAME, qc.BDDM);
-                DBData = JsonConvert.DeserializeObject<CWXX2016XQYKJZZ>(JsonConvert.SerializeObject(data_jo));
-            }
-            DBData.TABLE_ACTION = TABLE_ACTION;
-            DBData.TABLE_NAME = TABLE_NAME;
-            return PartialView(DBData);
-        }
+            Message m = new Message();
 
-        ViewResult SBB_ZZS_YGZ_YBNSR_Load(ZzsYgzYbnsrPublic re_zd)
-        {
-            ZzsYgzYbnsrZBData ZBData = new ZzsYgzYbnsrZBData();
             JToken jt1 = set.getUserYSBQCReportData(this.qc.Id, "SBB_ZZS_YGZ_YBNSR_FB1", this.BDDM);
             if (jt1.HasValues)
             {
-                ZzsYgzYbnsrPublic zd = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(jt1));
-                JObject jo = JsonConvert.DeserializeObject<JObject>(JsonConvert.DeserializeObject<JValue>(zd.json).Value<string>());
+                ModelMainServlet zd = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(jt1));
+                JObject jo = zd.json;
 
                 decimal vv0 = decimal.Parse(jo["HJ_XSE1"].ToString()) + decimal.Parse(jo["HJ_XSE3"].ToString()) + decimal.Parse(jo["HJ_XSE23"].ToString()) - decimal.Parse(jo["HJ_XSE6"].ToString());
 
@@ -303,15 +314,15 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             }
             else
             {
-                re_zd.msg = "填写“《增值税申报表（一般纳税人适用）》”前，要先填写“《增值税纳税申报表》附列资料（一）”，请确认“《增值税纳税申报表》附列资料（一）”已经填写并保存";
-                return View("MainServlet_SBB_ZZS_YGZ_YBNSR_Message", re_zd);
+                m.msg = "填写“《增值税申报表（一般纳税人适用）》”前，要先填写“《增值税纳税申报表》附列资料（一）”，请确认“《增值税纳税申报表》附列资料（一）”已经填写并保存";
+                return View("Message", m);
             }
 
             JToken jt2 = set.getUserYSBQCReportData(qc.Id, "SBB_ZZS_YGZ_YBNSR_FB2", this.BDDM);
             if (jt2.HasValues)
             {
-                ZzsYgzYbnsrPublic zd = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(jt2));
-                JObject jo = JsonConvert.DeserializeObject<JObject>(JsonConvert.DeserializeObject<JValue>(zd.json).Value<string>());
+                ModelMainServlet zd = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(jt2));
+                JObject jo = zd.json;
 
                 string YBBYS_12 = jo["SBDK_SE_12"].ToString();
                 string YBBYS_14 = jo["JXZC_SE_13"].ToString();
@@ -322,8 +333,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             JToken jt4 = set.getUserYSBQCReportData(qc.Id, "SBB_ZZS_YGZ_YBNSR_FB4", this.BDDM);
             if (jt4.HasValues)
             {
-                ZzsYgzYbnsrPublic zd = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(jt4));
-                JObject jo = JsonConvert.DeserializeObject<JObject>(JsonConvert.DeserializeObject<JValue>(zd.json).Value<string>());
+                ModelMainServlet zd = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(jt4));
+                JObject jo =zd.json;
 
                 decimal YBBYS_28 = decimal.Parse(jo["BQSJDJSE_2"].ToString()) + decimal.Parse(jo["BQSJDJSE_3"].ToString()) + decimal.Parse(jo["BQSJDJSE_4"].ToString()) + decimal.Parse(jo["BQSJDJSE_5"].ToString());
                 ZBData.FJ4_HJ = jo["BQSJDJSE_1"].ToString();
@@ -331,13 +342,12 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             }
             else
             {
-                re_zd.msg = "填写“《增值税申报表（一般纳税人适用）》”前，要先填写“《增值税纳税申报表》附列资料（四）”，请确认“《增值税纳税申报表》附列资料（四）”已经填写并保存";
-                return View("MainServlet_SBB_ZZS_YGZ_YBNSR_Message", re_zd);
+                m.msg = "填写“《增值税申报表（一般纳税人适用）》”前，要先填写“《增值税纳税申报表》附列资料（四）”，请确认“《增值税纳税申报表》附列资料（四）”已经填写并保存";
+                return View("Message", m);
             }
 
             getSBB_ZZS_YGZ_YBNSR_Bnlj(ref ZBData);
-            re_zd.ZBData = ZBData;
-            return View("", re_zd);
+            return View("", ZBData);
         }
 
         void getSBB_ZZS_YGZ_YBNSR_Bnlj(ref ZzsYgzYbnsrZBData ZBData)
@@ -371,12 +381,16 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                     vr = View(vr.ViewName, m);
                     break;
                 case "initial":
-                    vr.ViewName = TABLE_NAME;
+                    if (vr.ViewName != "Message")
+                    {
+                        vr.ViewName = TABLE_NAME;
+                    }
                     break;
                 case "edit":
                     vr.ViewName = TABLE_NAME;
                     break;
                 case "submit":
+                    qc = set.getUserYSBQC(TABLE_NAME);
                     GTXMethod.UpdateYSBQC(qc.Id.ToString(), set.ysbzt);
                     vr.ViewName = TABLE_NAME + "_" + TABLE_ACTION;
                     break;
@@ -390,7 +404,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         void savePublic(NameValueCollection form)
         {
             JObject in_jo = new JObject();
-            ZzsYgzYbnsrPublic in_zd = new ZzsYgzYbnsrPublic();
+            ModelMainServlet in_zd = new ModelMainServlet();
             ZzsYgzYbnsrZBData zbd = new ZzsYgzYbnsrZBData();
             JObject saveData = new JObject();
             string TABLE_NAME = form["TABLE_NAME"];
@@ -409,12 +423,12 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                 zbd.YBBYS_19 = in_jo["YBBYS_19"].ToString();
                 zbd.YBBYS_34 = in_jo["YBBYS_34"].ToString();
             }
-            in_zd.ZBData = zbd;
-            in_zd.json = JsonConvert.SerializeObject(new JValue(JsonConvert.SerializeObject(in_jo)));
-            in_zd.TABLE_ACTION = TABLE_ACTION;
-            saveData = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(in_zd));
+            //in_zd.ZBData = zbd;
+            in_zd.json =in_jo;
+            //in_zd.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
+            //saveData = JsonConvert.DeserializeObject<JObject>(JsonConvert.SerializeObject(in_zd));
 
-            set.saveUserYSBQCReportData(saveData, qc.Id.ToString(), TABLE_NAME, this.BDDM);
+            set.saveUserYSBQCReportData(in_zd, qc.Id.ToString(), TABLE_NAME, this.BDDM);
         }
 
     }

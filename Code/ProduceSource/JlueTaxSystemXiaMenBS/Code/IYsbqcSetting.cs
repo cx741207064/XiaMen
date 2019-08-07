@@ -36,6 +36,8 @@ namespace JlueTaxSystemXiaMenBS.Code
         /// <returns></returns>
         List<GDTXXiaMenUserYSBQC> getWsbUserYSBQC();
 
+        GTXResult saveUserYSBQCReportData(ModelMainServlet ms, string userYsbqcId, string reportCode, string dataKey = "data");
+
         GTXResult saveUserYSBQCReportData(JToken json, string userYsbqcId, string reportCode, string dataKey = "data");
 
         GTXResult saveUserYSBQCReportData(string strJson, string userYsbqcId, string reportCode, string dataKey = "data");

@@ -21,14 +21,26 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         [Route("left.jsp")]
         public System.Web.Mvc.ActionResult left()
         {
-            string zzsdm = "SBB_ZZS_YGZ_YBNSR";
             string str = System.IO.File.ReadAllText(Server.MapPath("left.nodeDatas.json"));
             JArray re_json = JsonConvert.DeserializeObject<JArray>(str);
-            JArray zzs_ja = (JArray)re_json.Where(a => a["name"].ToString() == "增值税").FirstOrDefault().SelectToken("children");
-            GDTXXiaMenUserYSBQC qc = set.getUserYSBQC(zzsdm);
-            foreach (JObject zzs_jo in zzs_ja)
+
+            JToken item_ZZS = re_json.Where(a => a["name"].ToString().IndexOf("增值税") > -1).FirstOrDefault();
+            createNodeDatas("SBB_ZZS_YGZ_YBNSR", ref item_ZZS);
+
+            JToken item_XQYKJZZ = re_json.Where(a => a["name"].ToString().IndexOf("小企业会计准则") > -1).FirstOrDefault();
+            createNodeDatas("CWXX2016XQYKJZZ", ref item_XQYKJZZ);
+
+            ViewBag.nodeDatas = JsonConvert.SerializeObject(re_json, Formatting.Indented);
+            return View();
+        }
+
+        void createNodeDatas(string dm, ref JToken item)
+        {
+            JArray children_ja = (JArray)item.SelectToken("children");
+            GDTXXiaMenUserYSBQC qc = set.getUserYSBQC(dm);
+            foreach (JObject children_jo in children_ja)
             {
-                JObject attributes = (JObject)zzs_jo["attributes"];
+                JObject attributes = (JObject)children_jo["attributes"];
                 if (attributes["zssb_btn"].ToString() == "Y")
                 {
                     if (qc.SBZT == set.ysbzt)
@@ -41,12 +53,12 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                     {
                         attributes["group_issb"] = "N";
                         attributes["table_isfill"] = "N";
-                        attributes["table_url"] = "MainServlet?TABLE_NAME=SBB_ZZS_YGZ_YBNSR&TABLE_ACTION=submit";
+                        attributes["table_url"] = "MainServlet?TABLE_NAME=" + dm + "&TABLE_ACTION=submit";
                     }
                 }
                 else
                 {
-                    JToken jt = set.getUserYSBQCReportData(qc.Id, attributes["table_name"].ToString(), zzsdm);
+                    JToken jt = set.getUserYSBQCReportData(qc.Id, attributes["table_name"].ToString(), dm);
                     if (qc.SBZT == set.ysbzt && jt.HasValues)
                     {
                         attributes["group_issb"] = "Y";
@@ -73,8 +85,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                     }
                 }
             }
-            ViewBag.nodeDatas = JsonConvert.SerializeObject(re_json, Formatting.Indented);
-            return View();
         }
+
 	}
 }

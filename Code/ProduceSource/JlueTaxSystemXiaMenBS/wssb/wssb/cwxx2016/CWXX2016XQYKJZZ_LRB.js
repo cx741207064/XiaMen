@@ -1,4 +1,4 @@
-$(document).ready(function(){
+ï»¿$(document).ready(function(){
     
 	
 });
@@ -43,7 +43,7 @@ function formatValue_SBB()
 }
 
 /**
- * ½«±¾ÆÚ½ğ¶îÉèÖÃµ½±¾ÄêÀÛ¼Æ½ğ¶î
+ * å°†æœ¬æœŸé‡‘é¢è®¾ç½®åˆ°æœ¬å¹´ç´¯è®¡é‡‘é¢
  * @param index
  * @return
  */
@@ -62,10 +62,10 @@ function setValueToBnljje(index)
 }
 
 /**
- * ±¾ÄêÀÛ¼Æ½ğ¶î×Ô¶¯¼ÆËã£¨²ÎÕÕ½ğÈı£©
- * µÚ21ĞĞ= µÚ1ĞĞ - µÚ2ĞĞ - µÚ3ĞĞ - µÚ11ĞĞ - µÚ14ĞĞ - µÚ18ĞĞ + µÚ20ĞĞ
- * µÚ30ĞĞ= µÚ21ĞĞ + µÚ22ĞĞ - µÚ24ĞĞ
- * µÚ32ĞĞ= µÚ30ĞĞ - µÚ31ĞĞ
+ * æœ¬å¹´ç´¯è®¡é‡‘é¢è‡ªåŠ¨è®¡ç®—ï¼ˆå‚ç…§é‡‘ä¸‰ï¼‰
+ * ç¬¬21è¡Œ= ç¬¬1è¡Œ - ç¬¬2è¡Œ - ç¬¬3è¡Œ - ç¬¬11è¡Œ - ç¬¬14è¡Œ - ç¬¬18è¡Œ + ç¬¬20è¡Œ
+ * ç¬¬30è¡Œ= ç¬¬21è¡Œ + ç¬¬22è¡Œ - ç¬¬24è¡Œ
+ * ç¬¬32è¡Œ= ç¬¬30è¡Œ - ç¬¬31è¡Œ
  * @return
  */
 function changeValue_bnljje()
@@ -73,7 +73,7 @@ function changeValue_bnljje()
 	unformatValue_SBB();
 	/////////////////////////////////////////////////
 	
-	//µÚ21ĞĞ= µÚ1ĞĞ - µÚ2ĞĞ - µÚ3ĞĞ - µÚ11ĞĞ - µÚ14ĞĞ - µÚ18ĞĞ + µÚ20ĞĞ
+	//ç¬¬21è¡Œ= ç¬¬1è¡Œ - ç¬¬2è¡Œ - ç¬¬3è¡Œ - ç¬¬11è¡Œ - ç¬¬14è¡Œ - ç¬¬18è¡Œ + ç¬¬20è¡Œ
 	var bnljje_21 = parseFloat($("#inputTable input[name='BNLJJE_1']")[0].value) - parseFloat($("#inputTable input[name='BNLJJE_2']")[0].value) 
 			  - parseFloat($("#inputTable input[name='BNLJJE_3']")[0].value) - parseFloat($("#inputTable input[name='BNLJJE_11']")[0].value)
 			  - parseFloat($("#inputTable input[name='BNLJJE_14']")[0].value) - parseFloat($("#inputTable input[name='BNLJJE_18']")[0].value)
@@ -81,12 +81,12 @@ function changeValue_bnljje()
 	
 	$("#inputTable input[name='BNLJJE_21']")[0].value = bnljje_21;
 	
-	//µÚ30ĞĞ= µÚ21ĞĞ + µÚ22ĞĞ - µÚ24ĞĞ
+	//ç¬¬30è¡Œ= ç¬¬21è¡Œ + ç¬¬22è¡Œ - ç¬¬24è¡Œ
 	var bnljje_30 = bnljje_21 + parseFloat($("#inputTable input[name='BNLJJE_22']")[0].value) - parseFloat($("#inputTable input[name='BNLJJE_24']")[0].value);
 
 	$("#inputTable input[name='BNLJJE_30']")[0].value = bnljje_30;	
 	
-	//µÚ32ĞĞ= µÚ30ĞĞ - µÚ31ĞĞ
+	//ç¬¬32è¡Œ= ç¬¬30è¡Œ - ç¬¬31è¡Œ
 	var bnljje_32 = bnljje_30 - parseFloat($("#inputTable input[name='BNLJJE_31']")[0].value);
 	
 	$("#inputTable input[name='BNLJJE_32']")[0].value = bnljje_32;	
@@ -96,10 +96,10 @@ function changeValue_bnljje()
 }
 
 /**
- * ±¾ÆÚ½ğ¶î×Ô¶¯¼ÆËã£¨²ÎÕÕ½ğÈı£©
- * µÚ21ĞĞ= µÚ1ĞĞ - µÚ2ĞĞ - µÚ3ĞĞ - µÚ11ĞĞ - µÚ14ĞĞ - µÚ18ĞĞ + µÚ20ĞĞ
- * µÚ30ĞĞ= µÚ21ĞĞ + µÚ22ĞĞ - µÚ24ĞĞ
- * µÚ32ĞĞ= µÚ30ĞĞ - µÚ31ĞĞ
+ * æœ¬æœŸé‡‘é¢è‡ªåŠ¨è®¡ç®—ï¼ˆå‚ç…§é‡‘ä¸‰ï¼‰
+ * ç¬¬21è¡Œ= ç¬¬1è¡Œ - ç¬¬2è¡Œ - ç¬¬3è¡Œ - ç¬¬11è¡Œ - ç¬¬14è¡Œ - ç¬¬18è¡Œ + ç¬¬20è¡Œ
+ * ç¬¬30è¡Œ= ç¬¬21è¡Œ + ç¬¬22è¡Œ - ç¬¬24è¡Œ
+ * ç¬¬32è¡Œ= ç¬¬30è¡Œ - ç¬¬31è¡Œ
  * @return
  */
 function changeValue_byje()
@@ -107,7 +107,7 @@ function changeValue_byje()
 	unformatValue_SBB();
 	/////////////////////////////////////////////////
 	
-	//µÚ21ĞĞ= µÚ1ĞĞ - µÚ2ĞĞ - µÚ3ĞĞ - µÚ11ĞĞ - µÚ14ĞĞ - µÚ18ĞĞ + µÚ20ĞĞ
+	//ç¬¬21è¡Œ= ç¬¬1è¡Œ - ç¬¬2è¡Œ - ç¬¬3è¡Œ - ç¬¬11è¡Œ - ç¬¬14è¡Œ - ç¬¬18è¡Œ + ç¬¬20è¡Œ
 	var byje_21 = parseFloat($("#inputTable input[name='BYJE_1']")[0].value) - parseFloat($("#inputTable input[name='BYJE_2']")[0].value) 
 			  - parseFloat($("#inputTable input[name='BYJE_3']")[0].value) - parseFloat($("#inputTable input[name='BYJE_11']")[0].value)
 			  - parseFloat($("#inputTable input[name='BYJE_14']")[0].value) - parseFloat($("#inputTable input[name='BYJE_18']")[0].value)
@@ -115,12 +115,12 @@ function changeValue_byje()
 	
 	$("#inputTable input[name='BYJE_21']")[0].value = byje_21;
 	
-	//µÚ30ĞĞ= µÚ21ĞĞ + µÚ22ĞĞ - µÚ24ĞĞ
+	//ç¬¬30è¡Œ= ç¬¬21è¡Œ + ç¬¬22è¡Œ - ç¬¬24è¡Œ
 	var byje_30 = byje_21 + parseFloat($("#inputTable input[name='BYJE_22']")[0].value) - parseFloat($("#inputTable input[name='BYJE_24']")[0].value);
 
 	$("#inputTable input[name='BYJE_30']")[0].value = byje_30;	
 	
-	//µÚ32ĞĞ= µÚ30ĞĞ - µÚ31ĞĞ
+	//ç¬¬32è¡Œ= ç¬¬30è¡Œ - ç¬¬31è¡Œ
 	var byje_32 = byje_30 - parseFloat($("#inputTable input[name='BYJE_31']")[0].value);
 	
 	$("#inputTable input[name='BYJE_32']")[0].value = byje_32;	
@@ -130,7 +130,7 @@ function changeValue_byje()
 }
 
 /**
- * ¸ù¾İ´«ÈëµÄ²ÎÊı¼ÆËãºÏ¼ÆÖµ(ÏÂ±êÊ×Î²°üº¬)
+ * æ ¹æ®ä¼ å…¥çš„å‚æ•°è®¡ç®—åˆè®¡å€¼(ä¸‹æ ‡é¦–å°¾åŒ…å«)
  */
 function getHjValueByIndex(keyPrefix, startIndex, endIndex)
 {
@@ -146,17 +146,17 @@ function getHjValueByIndex(keyPrefix, startIndex, endIndex)
 
 ///////////////////////////////////////////////////////////////
 /**
- * ²Ù×÷¹¦ÄÜ(²ÎÕÕ½ğÈı)
+ * æ“ä½œåŠŸèƒ½(å‚ç…§é‡‘ä¸‰)
  */
 function checkinput()
 {
 	var result = true;
 	unformatValue_SBB();
 	
-	//µÚ3ĞĞ´óÓÚµÈÓÚµÚ4-10ĞĞµÄºÏ¼ÆÖµ 
+	//ç¬¬3è¡Œå¤§äºç­‰äºç¬¬4-10è¡Œçš„åˆè®¡å€¼ 
 	if(parseFloat($("#inputTable input[name='BNLJJE_3']")[0].value) < parseFloat(getHjValueByIndex("BNLJJE_", 4, 10).toFixed(2)))
 	{
-		alert("µÚ3À¸¡°ÓªÒµË°½ğ¼°¸½¼Ó¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ4À¸ÖÁµÚ10À¸¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬3æ â€œè¥ä¸šç¨é‡‘åŠé™„åŠ â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬4æ è‡³ç¬¬10æ â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
@@ -164,16 +164,16 @@ function checkinput()
 
 	if(parseFloat($("#inputTable input[name='BYJE_3']")[0].value) < parseFloat(getHjValueByIndex("BYJE_", 4, 10).toFixed(2)))
 	{
-		alert("µÚ3À¸¡°ÓªÒµË°½ğ¼°¸½¼Ó¡±µÄ¡°±¾ÆÚ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ4À¸ÖÁµÚ10À¸¡°±¾ÆÚ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬3æ â€œè¥ä¸šç¨é‡‘åŠé™„åŠ â€çš„â€œæœ¬æœŸé‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬4æ è‡³ç¬¬10æ â€œæœ¬æœŸé‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
 	}
 	
-	//µÚ11ĞĞ´óÓÚµÈÓÚµÚ12ĞĞ + µÚ13ĞĞ
+	//ç¬¬11è¡Œå¤§äºç­‰äºç¬¬12è¡Œ + ç¬¬13è¡Œ
 	if(parseFloat($("#inputTable input[name='BNLJJE_11']")[0].value) < parseFloat(getHjValueByIndex("BNLJJE_", 12, 13).toFixed(2)))
 	{
-		alert("µÚ11À¸¡°ÏúÊÛ·ÑÓÃ¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ12À¸ÖÁµÚ13À¸¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬11æ â€œé”€å”®è´¹ç”¨â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬12æ è‡³ç¬¬13æ â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
@@ -181,16 +181,16 @@ function checkinput()
 
 	if(parseFloat($("#inputTable input[name='BYJE_11']")[0].value) < parseFloat(getHjValueByIndex("BYJE_", 12, 13).toFixed(2)))
 	{
-		alert("µÚ11À¸¡°ÏúÊÛ·ÑÓÃ¡±µÄ¡°±¾ÆÚ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ12À¸ÖÁµÚ13À¸¡°±¾ÆÚ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬11æ â€œé”€å”®è´¹ç”¨â€çš„â€œæœ¬æœŸé‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬12æ è‡³ç¬¬13æ â€œæœ¬æœŸé‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
 	}
 	
-	//µÚ14ĞĞ´óÓÚµÈÓÚµÚ15ĞĞ + µÚ16ĞĞ + µÚ17ĞĞ
+	//ç¬¬14è¡Œå¤§äºç­‰äºç¬¬15è¡Œ + ç¬¬16è¡Œ + ç¬¬17è¡Œ
 	if(parseFloat($("#inputTable input[name='BNLJJE_14']")[0].value) < parseFloat(getHjValueByIndex("BNLJJE_", 15, 17).toFixed(2)))
 	{
-		alert("µÚ14À¸¡°¹ÜÀí·ÑÓÃ¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ15À¸ÖÁµÚ17À¸¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬14æ â€œç®¡ç†è´¹ç”¨â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬15æ è‡³ç¬¬17æ â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
@@ -198,18 +198,18 @@ function checkinput()
 
 	if(parseFloat($("#inputTable input[name='BYJE_14']")[0].value) < parseFloat(getHjValueByIndex("BYJE_", 15, 17).toFixed(2)))
 	{
-		alert("µÚ14À¸¡°¹ÜÀí·ÑÓÃ¡±µÄ¡°±¾ÆÚ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ15À¸ÖÁµÚ17À¸¡°±¾ÆÚ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬14æ â€œç®¡ç†è´¹ç”¨â€çš„â€œæœ¬æœŸé‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬15æ è‡³ç¬¬17æ â€œæœ¬æœŸé‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
 	}
 	
-	//½ğÈıÖĞÓĞ17¡¢18À¸µÄĞ£Ñé¹ØÏµ£¬µ«ÓÉÓÚ17¡¢18À¸Ã»ÓĞÂß¼­¹ØÏµ£¬¸ú³ÂÈôĞèÈ·ÈÏÍø±¨²»Ìí¼Ó´ËĞ£Ñé20160826
-	//20160825ÉÏÏßºó£¬²ÎÕÕ½ğÈı18¡¢19À¸Ã»ÓĞÊı¾İĞ£Ñé¹ØÏµ£¬¸ú³ÂÈôĞèÈ·ÈÏ¹Ø±Õ´ËĞ£Ñé20160826
-	//µÚ18ĞĞ´óÓÚµÈÓÚµÚ19ĞĞ
+	//é‡‘ä¸‰ä¸­æœ‰17ã€18æ çš„æ ¡éªŒå…³ç³»ï¼Œä½†ç”±äº17ã€18æ æ²¡æœ‰é€»è¾‘å…³ç³»ï¼Œè·Ÿé™ˆè‹¥éœ€ç¡®è®¤ç½‘æŠ¥ä¸æ·»åŠ æ­¤æ ¡éªŒ20160826
+	//20160825ä¸Šçº¿åï¼Œå‚ç…§é‡‘ä¸‰18ã€19æ æ²¡æœ‰æ•°æ®æ ¡éªŒå…³ç³»ï¼Œè·Ÿé™ˆè‹¥éœ€ç¡®è®¤å…³é—­æ­¤æ ¡éªŒ20160826
+	//ç¬¬18è¡Œå¤§äºç­‰äºç¬¬19è¡Œ
 //	if(parseFloat($("#inputTable input[name='BNLJJE_18']")[0].value) < parseFloat($("#inputTable input[name='BNLJJE_19']")[0].value))
 //	{
-//		alert("µÚ18À¸¡°²ÆÎñ·ÑÓÃ¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ19À¸¡°ÆäÖĞ:ÀûÏ¢·ÑÓÃ(ÊÕÈëÒÔ¨CÌîÁĞ)¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±,ÇëºËÊµ!");
+//		alert("ç¬¬18æ â€œè´¢åŠ¡è´¹ç”¨â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬19æ â€œå…¶ä¸­:åˆ©æ¯è´¹ç”¨(æ”¶å…¥ä»¥â€“å¡«åˆ—)â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€,è¯·æ ¸å®!");
 //		
 //		formatValue_SBB();
 //		return false;
@@ -217,16 +217,16 @@ function checkinput()
 
 //	if(parseFloat($("#inputTable input[name='BYJE_18']")[0].value) < parseFloat($("#inputTable input[name='BYJE_19']")[0].value))
 //	{
-//		alert("µÚ18À¸¡°²ÆÎñ·ÑÓÃ¡±µÄ¡°±¾ÆÚ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ19À¸¡°ÆäÖĞ:ÀûÏ¢·ÑÓÃ(ÊÕÈëÒÔ¨CÌîÁĞ)¡±µÄ¡°±¾ÆÚ½ğ¶î¡±,ÇëºËÊµ!");
+//		alert("ç¬¬18æ â€œè´¢åŠ¡è´¹ç”¨â€çš„â€œæœ¬æœŸé‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬19æ â€œå…¶ä¸­:åˆ©æ¯è´¹ç”¨(æ”¶å…¥ä»¥â€“å¡«åˆ—)â€çš„â€œæœ¬æœŸé‡‘é¢â€,è¯·æ ¸å®!");
 //		
 //		formatValue_SBB();
 //		return false;
 //	}	
 	
-	//µÚ22ĞĞ´óÓÚµÈÓÚµÚ23ĞĞ
+	//ç¬¬22è¡Œå¤§äºç­‰äºç¬¬23è¡Œ
 	if(parseFloat($("#inputTable input[name='BNLJJE_22']")[0].value) < parseFloat($("#inputTable input[name='BNLJJE_23']")[0].value))
 	{
-		alert("µÚ22À¸¡°¼Ó:ÓªÒµÍâÊÕÈë¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ23À¸¡°ÆäÖĞ:Õş¸®²¹Öú¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±,ÇëºËÊµ!");
+		alert("ç¬¬22æ â€œåŠ :è¥ä¸šå¤–æ”¶å…¥â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬23æ â€œå…¶ä¸­:æ”¿åºœè¡¥åŠ©â€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
@@ -234,16 +234,16 @@ function checkinput()
 
 	if(parseFloat($("#inputTable input[name='BYJE_22']")[0].value) < parseFloat($("#inputTable input[name='BYJE_23']")[0].value))
 	{
-		alert("µÚ22À¸¡°¼Ó:ÓªÒµÍâÊÕÈë¡±µÄ¡°±¾ÆÚ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ23À¸¡°ÆäÖĞ:Õş¸®²¹Öú¡±µÄ¡°±¾ÆÚ½ğ¶î¡±,ÇëºËÊµ!");
+		alert("ç¬¬22æ â€œåŠ :è¥ä¸šå¤–æ”¶å…¥â€çš„â€œæœ¬æœŸé‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬23æ â€œå…¶ä¸­:æ”¿åºœè¡¥åŠ©â€çš„â€œæœ¬æœŸé‡‘é¢â€,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
 	}
 	
-	//µÚ24ĞĞ´óÓÚµÈÓÚµÚ25µ½29ĞĞµÄºÏ¼ÆÖµ
+	//ç¬¬24è¡Œå¤§äºç­‰äºç¬¬25åˆ°29è¡Œçš„åˆè®¡å€¼
 	if(parseFloat($("#inputTable input[name='BNLJJE_24']")[0].value) < parseFloat(getHjValueByIndex("BNLJJE_", 25, 29).toFixed(2)))
 	{
-		alert("µÚ24À¸¡°¼õ:ÓªÒµÍâÖ§³ö¡±µÄ¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ25À¸ÖÁµÚ29À¸¡°±¾ÄêÀÛ¼Æ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬24æ â€œå‡:è¥ä¸šå¤–æ”¯å‡ºâ€çš„â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬25æ è‡³ç¬¬29æ â€œæœ¬å¹´ç´¯è®¡é‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;
@@ -251,7 +251,7 @@ function checkinput()
 
 	if(parseFloat($("#inputTable input[name='BYJE_24']")[0].value) < parseFloat(getHjValueByIndex("BYJE_", 25, 29).toFixed(2)))
 	{
-		alert("µÚ24À¸¡°¼õ:ÓªÒµÍâÖ§³ö¡±µÄ¡°±¾ÆÚ½ğ¶î¡±Ğè´óÓÚµÈÓÚµÚ25À¸ÖÁµÚ29À¸¡°±¾ÆÚ½ğ¶î¡±µÄºÏ¼ÆÊı,ÇëºËÊµ!");
+		alert("ç¬¬24æ â€œå‡:è¥ä¸šå¤–æ”¯å‡ºâ€çš„â€œæœ¬æœŸé‡‘é¢â€éœ€å¤§äºç­‰äºç¬¬25æ è‡³ç¬¬29æ â€œæœ¬æœŸé‡‘é¢â€çš„åˆè®¡æ•°,è¯·æ ¸å®!");
 		
 		formatValue_SBB();
 		return false;

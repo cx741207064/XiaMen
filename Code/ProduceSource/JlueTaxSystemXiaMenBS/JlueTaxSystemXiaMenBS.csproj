@@ -595,6 +595,8 @@
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FB4.cshtml" />
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_JMSSBMXB.cshtml" />
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FLZL5.cshtml" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_HeadPartial.cshtml" />
+    <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
     <None Include="wssb\TABLE_NAME.json" />
     <None Include="Views\MainServlet\CWXX2016XQYKJZZ_LRB.cshtml" />
     <Content Include="Views\otp4query\List.cshtml" />
@@ -641,6 +643,8 @@
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB1.commerce.xml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB2.commerce.xml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB1.industry.xml" />
+    <Content Include="wssb\wssb\cwxx2016\CWXX2016XQYKJZZ_LRB.js" />
+    <Content Include="wssb\wssb\cwxx2016\CWXX2016XQYKJZZ_ZCFZB.js" />
     <Content Include="wssb\wssb\layout\center.jsp" />
     <Content Include="wssb\wssb\layout\css\css.css" />
     <Content Include="wssb\wssb\layout\css\overlay.css" />
@@ -698,7 +702,7 @@
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.industry.xml" />
     <Content Include="wssb\wssb\public\jsp\etaxErrPage.jsp" />
     <Content Include="Views\zfsbjl\start.cshtml" />
-    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_ZCFZB_submit.cshtml" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_submit.cshtml" />
     <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_ZCFZB.cshtml" />
     <Content Include="Views\MainServlet\Message.cshtml" />
     <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_JS_Partial.cshtml" />
@@ -747,6 +751,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\CWXX2016XQYKJZZ.cs" />
+    <Compile Include="Models\DZBS_SBCX.cs" />
     <Compile Include="Models\DZBS_QUERY.cs" />
     <Compile Include="Models\ModelMainServlet.cs" />
     <Compile Include="Models\Message.cs" />

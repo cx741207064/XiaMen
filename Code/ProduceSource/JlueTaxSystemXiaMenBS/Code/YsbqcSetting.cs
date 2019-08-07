@@ -102,6 +102,19 @@ namespace JlueTaxSystemXiaMenBS.Code
             }
         }
 
+        public GTXResult saveUserYSBQCReportData(ModelMainServlet ms, string userYsbqcId, string reportCode, string dataKey = "data")
+        {
+            List<GTXNameValue> nameList = new List<GTXNameValue>();
+            GTXNameValue nv = new GTXNameValue();
+            nv.key = dataKey;
+            byte[] bytes = Encoding.Default.GetBytes(JsonConvert.SerializeObject(ms, Newtonsoft.Json.Formatting.None));
+            string _result = HttpUtility.UrlEncode(Convert.ToBase64String(bytes));
+            nv.value = _result;
+            nameList.Add(nv);
+            GTXResult saveresult = GTXMethod.SaveUserReportData(JsonConvert.SerializeObject(nameList), userYsbqcId, reportCode);
+            return saveresult;
+        }
+
         public GTXResult saveUserYSBQCReportData(JToken json, string userYsbqcId, string reportCode, string dataKey = "data")
        {
            List<GTXNameValue> nameList = new List<GTXNameValue>();

@@ -1,4 +1,4 @@
-﻿@model JlueTaxSystemXiaMenBS.Models.CWXX2016XQYKJZZ
+﻿@model JlueTaxSystemXiaMenBS.Models.ModelMainServlet
 
 <script type="text/javascript">
     function showTableData() {
@@ -10,27 +10,21 @@
             }
             else
             {
-                json = Html.Raw("\"{}\"");
+                json = Html.Raw("{}");
             }
             }
-        var obj = eval("(" + @json + ")")
+        var obj = @json;
         var TABLE_NAME = "@Model.TABLE_NAME"
-        if (TABLE_NAME == "SBB_ZZS_YGZ_YBNSR_JMSSBMXB") {
-            addRow(obj)
-        }
-        else {
-            for (var key in obj) {
-                var input = $("input[name=" + key + "]")
-                if (input) {
-                    input.val(obj[key])
-                }
+        for (var key in obj) {
+            var input = $("input[name=" + key + "]")
+            if (input) {
+                input.val(obj[key])
             }
-
         }
     }
 
     function showTableActionDisplay() {
-        var action = "@Model.TABLE_ACTION"
+        var action = "@Model.ta"
         if (action == "display") {
             $("input.money,input.integer").removeClass("money").addClass("input_money_readonly").prop("readonly", true).css("background-color", "rgb(232, 236, 232)").css("border-style", "none")
             $("select").prop("disabled", "disabled")
