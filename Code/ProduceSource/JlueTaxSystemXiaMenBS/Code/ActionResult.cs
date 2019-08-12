@@ -5,7 +5,7 @@ using System.Web;
 
 namespace JlueTaxSystemXiaMenBS.Code
 {
-    public class ActionResult
+    public class ActionResult1
     {
         /// <summary>
         /// 是否返回成功

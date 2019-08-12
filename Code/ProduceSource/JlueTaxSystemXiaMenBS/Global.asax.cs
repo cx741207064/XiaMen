@@ -4,11 +4,12 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
-using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
 using JlueTaxSystemXiaMenBS.Models;
 using JlueTaxSystemXiaMenBS.Code;
+using System.Web.Http.Controllers;
+using System.Text.RegularExpressions;
 
 namespace JlueTaxSystemXiaMenBS
 {
@@ -29,6 +30,11 @@ namespace JlueTaxSystemXiaMenBS
 
             RegisterView();//注册视图访问规则
 
+            GlobalConfiguration.Configuration.Filters.Add(new ActionFilter());
+            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpActionSelector), new ExtentedApiControllerActionSelector());
+            GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpActionInvoker), new ExtendedApiControllerActionInvoker());
+
+            ControllerBuilder.Current.SetControllerFactory(new MyControllerFactory());
         }
 
         public override void Init()
@@ -39,6 +45,10 @@ namespace JlueTaxSystemXiaMenBS
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
+            if (Regex.IsMatch(Request.Url.PathAndQuery, "/cxzx/sbxxcx/query"))
+            {
+                Context.RewritePath("/cxzx/sbxxcx/query");
+            }
         }
 
         void Application_AcquireRequestState(object sender, EventArgs e)
@@ -47,6 +57,7 @@ namespace JlueTaxSystemXiaMenBS
 
         protected void Application_EndRequest(object sender, EventArgs e)
         {
+
         }
 
         protected void RegisterView()

@@ -17,7 +17,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         [AcceptVerbs("post", "get")]
         public HttpResponseMessage checktjts()
         {
-            string str = File.ReadAllText(HttpContext.Current.Server.MapPath("checktjts.json"));
+            string str = File.ReadAllText(HttpRuntime.AppDomainAppPath + ("/common/checktjts.json"));
 
             return new HttpResponseMessage()
             {

@@ -51,7 +51,7 @@
             <td align="left" bgcolor="#CCCCCC"  class="h12_gray"  style="padding-left:20px;" ><div align="center" class="STYLE2">功能说明</div></td>
           </tr>
           <tr>
-            <td align="left"><input name="plsbwjclqicx" type="radio" id="plsbwjclqicx" onclick="showPageNew4('/otp4query/List.do?id=0303','网上申报数据查询')" value="grsdsmx" class="tbpadding"/>
+            <td align="left"><input name="plsbwjclqicx" type="radio" id="plsbwjclqicx" onclick="openTb_url('/cxzx/sbxxcx/manager')" value="grsdsmx" class="tbpadding"/>
               <label id="lbl_plsbwjclqicx" for="plsbwjclqicx">网上申报数据查询</label></td>
             <td width="464" align="left"  class="h12_gray STYLE1"  style="padding-left:20px;" ><p><span class="STYLE1 hintColor">查询网上申报记录（不含个税扣缴软件申报记录）</span></p></td>
           </tr>

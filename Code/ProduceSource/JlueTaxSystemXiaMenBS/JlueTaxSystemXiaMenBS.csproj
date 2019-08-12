@@ -597,6 +597,7 @@
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_FLZL5.cshtml" />
     <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_HeadPartial.cshtml" />
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
+    <Content Include="jsdzsb\qydsdjd\czzsYbnsrCalc.json" />
     <None Include="wssb\TABLE_NAME.json" />
     <None Include="Views\MainServlet\CWXX2016XQYKJZZ_LRB.cshtml" />
     <Content Include="Views\otp4query\List.cshtml" />
@@ -666,7 +667,6 @@
     <Content Include="wssb\wssb\public\images\line4.gif" />
     <Content Include="wssb\wssb\public\images\spacer.gif" />
     <Content Include="wssb\wssb\public\jsp\clearNsrSession.html" />
-    <Content Include="wssb\wssb\public\jsp\wssb.html" />
     <Content Include="wssb\wssb\public\js\changeMenu.js" />
     <Content Include="wssb\wssb\public\js\commonNew.js" />
     <Content Include="wssb\wssb\public\js\configstyle.js" />
@@ -713,25 +713,34 @@
   <ItemGroup>
     <Compile Include="App_Start\AutofacMVCConfig.cs" />
     <Compile Include="App_Start\AutofacWebApiConfig.cs" />
+    <Compile Include="App_Start\MyRoute.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="ChuShiHua.ashx.cs">
       <DependentUpon>ChuShiHua.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Code\ActionFilter.cs" />
     <Compile Include="Code\ActionResult.cs" />
     <Compile Include="Code\Check.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Code\MyReflectedAsyncControllerDescriptor.cs" />
     <Compile Include="Code\CurrentUser.cs" />
+    <Compile Include="Code\ExtendedApiControllerActionInvoker.cs" />
+    <Compile Include="Code\ExtendedReflectedHttpActionDescriptor.cs" />
     <Compile Include="Code\GDTXXiaMenUserYSBQC.cs" />
     <Compile Include="Code\GDTXXiaMenUserYSBQCReportData.cs" />
     <Compile Include="Code\GTXMethod.cs" />
     <Compile Include="Code\GTXNameValue.cs" />
     <Compile Include="Code\GTXResult.cs" />
-    <Compile Include="Code\IYsbqcSetting.cs" />
     <Compile Include="Code\MainServlet.cs" />
     <Compile Include="Code\MyViewEngine.cs" />
-    <Compile Include="Code\YsbqcSetting.cs" />
+    <Compile Include="Code\MyReflectedActionDescriptor.cs" />
+    <Compile Include="Code\MyAsyncControllerActionInvoker.cs" />
+    <Compile Include="Code\MyControllerFactory.cs" />
+    <Compile Include="Code\YsbqcSetting.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Controllers\commonController.cs" />
     <Compile Include="Controllers\cxzxController.cs" />
     <Compile Include="Controllers\dwfwController.cs" />
@@ -747,6 +756,7 @@
     <Compile Include="Controllers\wssb_wssb_public_jspController.cs" />
     <Compile Include="Controllers\yhssbController.cs" />
     <Compile Include="Controllers\zfsbjlController.cs" />
+    <Compile Include="Code\ExtentedApiControllerActionSelector.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -834,17 +844,6 @@
     <Content Include="js\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="js\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="js\libs\layui\font\iconfont.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="res\otp4\css\otp4-base.css%253f" />
-    <Content Include="res\otp4\css\otp4-form.css%253f" />
-    <Content Include="res\otp4\css\otp4-menu.css%253f" />
-    <Content Include="res\otp4\css\otp4-page.css%253f" />
-    <Content Include="res\otp4\css\otp4-panel.css%253f" />
-    <Content Include="res\otp4\css\themes\otp4-form.css%253f" />
-    <Content Include="res\otp4\css\themes\otp4-menu.css%253f" />
-    <Content Include="res\otp4\css\themes\otp4-panel.css%253f" />
-    <Content Include="res\otp4\css\themes\otp4-table.css%253f" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

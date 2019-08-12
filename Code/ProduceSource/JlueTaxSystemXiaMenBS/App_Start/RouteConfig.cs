@@ -13,6 +13,8 @@ namespace JlueTaxSystemXiaMenBS
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.Add(new MyRoute());
+
             routes.MapMvcAttributeRoutes();
 
             routes.MapRoute(

@@ -15,7 +15,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
 {
     public class MainServletController : Controller
     {
-        IYsbqcSetting set { get; set; }
+        YsbqcSetting set { get; set; }
 
         string BDDM { get; set; }
 
@@ -23,12 +23,12 @@ namespace JlueTaxSystemXiaMenBS.Controllers
 
         HttpRequestBase request { get; set; }
 
-        public MainServletController(IYsbqcSetting _is)
+        public MainServletController(YsbqcSetting _is)
         {
             this.set = _is;
         }
 
-        public MainServletController(IYsbqcSetting _is, string DM, GDTXXiaMenUserYSBQC qc, HttpRequestBase req)
+        public MainServletController(YsbqcSetting _is, string DM, GDTXXiaMenUserYSBQC qc, HttpRequestBase req)
         {
             this.set = _is;
             this.BDDM = DM;

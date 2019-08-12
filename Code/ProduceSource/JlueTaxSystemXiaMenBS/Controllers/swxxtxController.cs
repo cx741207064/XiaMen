@@ -16,8 +16,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("swxxtx")]
     public class swxxtxController : ApiController
     {
-        IYsbqcSetting set;
-        public swxxtxController(IYsbqcSetting _is)
+        YsbqcSetting set;
+        public swxxtxController(YsbqcSetting _is)
         {
             this.set = _is;
         }

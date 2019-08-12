@@ -14,8 +14,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("otp4query")]
     public class otp4queryController : Controller
     {
-        IYsbqcSetting set;
-        public otp4queryController(IYsbqcSetting _is)
+        YsbqcSetting set;
+        public otp4queryController(YsbqcSetting _is)
         {
             this.set = _is;
         }

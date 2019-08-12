@@ -9,11 +9,41 @@ using System.Web;
 using System.Xml;
 using JlueTaxSystemXiaMenBS.Models;
 using JlueTaxSystemXiaMenBS.Controllers;
+using System.Web.Mvc;
+using System.Web.SessionState;
+using System.Text.RegularExpressions;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace JlueTaxSystemXiaMenBS.Code
 {
-    public class YsbqcSetting : IYsbqcSetting
+    public class YsbqcSetting
     {
+        HttpRequest request { get { return System.Web.HttpContext.Current.Request; } }
+
+        static HttpSessionState session { get { return System.Web.HttpContext.Current.Session; } }
+
+        string fileName { get; set; }
+
+        string reqPath { get { return AppDomain.CurrentDomain.BaseDirectory + request.Path; } }
+
+        DirectoryInfo Dir { get; set; }
+
+        string JsonStr { get; set; }
+
+        JToken retJtok { get; set; }
+
+        JObject retJobj { get; set; }
+
+        JArray retJarr { get; set; }
+
+        JValue retJval { get; set; }
+
+        string retStr { get; set; }
+
+        ContentResult cr { get; set; }
+
+        XmlDocument xd { get; set; }
+
         public string ysbzt
         {
             get
@@ -424,6 +454,135 @@ namespace JlueTaxSystemXiaMenBS.Code
            m.msg = ta.SelectToken("msg").Value<string>();
 
            return m;
+       }
+
+       public JObject GetJsonObject(List<string> param)
+       {
+           lock (this)
+           {
+               fileName = "";
+               foreach (string p in param)
+               {
+                   fileName += p + ".";
+               }
+               fileName += "json";
+               Dir = Directory.GetParent(reqPath);
+               JsonStr = System.IO.File.ReadAllText(Dir.GetFiles(fileName)[0].FullName);
+               retJobj = JsonConvert.DeserializeObject<JObject>(JsonStr);
+               return retJobj;
+           }
+       }
+
+       public JArray GetJsonArray(List<string> param)
+       {
+           lock (this)
+           {
+               fileName = "";
+               foreach (string p in param)
+               {
+                   fileName += p + ".";
+               }
+               fileName += "json";
+               Dir = Directory.GetParent(reqPath);
+               JsonStr = System.IO.File.ReadAllText(Dir.GetFiles(fileName)[0].FullName);
+               retJarr = JsonConvert.DeserializeObject<JArray>(JsonStr);
+               return retJarr;
+           }
+       }
+
+       public JToken GetJsonValue(List<string> param)
+       {
+           lock (this)
+           {
+               fileName = "";
+               foreach (string p in param)
+               {
+                   fileName += p + ".";
+               }
+               fileName += "json";
+               Dir = Directory.GetParent(reqPath);
+               JsonStr = System.IO.File.ReadAllText(Dir.GetFiles(fileName)[0].FullName);
+               string val = JsonConvert.DeserializeObject<JValue>(JsonStr).Value<string>();
+               bool bl = Regex.IsMatch(val, @"\A[\[\{]");
+               if (!bl)
+               {
+                   retJtok = new JValue(val);
+               }
+               else
+               {
+                   retJtok = JsonConvert.DeserializeObject<JToken>(val);
+                   //retJval = new JValue(JsonConvert.SerializeObject(retJtok));
+               }
+               return retJtok;
+           }
+       }
+
+       public string GetJsonString(List<string> param)
+       {
+           lock (this)
+           {
+               fileName = "";
+               foreach (string p in param)
+               {
+                   if (!string.IsNullOrEmpty(p))
+                   {
+                       fileName += p + ".";
+                   }
+               }
+               fileName += "json";
+               Dir = Directory.GetParent(reqPath);
+               JsonStr = System.IO.File.ReadAllText(Dir.GetFiles(fileName)[0].FullName);
+               JsonTextReader reader = new JsonTextReader(new StringReader(JsonStr));
+               if (reader.TokenType == JsonToken.None)
+               {
+                   retStr = JsonStr;
+               }
+               else
+               {
+                   retJtok = JsonConvert.DeserializeObject<JToken>(JsonStr);
+                   retStr = JsonConvert.SerializeObject(retJtok, Formatting.None);
+               }
+               return retStr;
+           }
+       }
+
+       public ContentResult GetHtml(List<string> param, string fileExtension = "html")
+       {
+           lock (this)
+           {
+               fileName = "";
+               foreach (string p in param)
+               {
+                   fileName += p + ".";
+               }
+               fileName += fileExtension;
+               Dir = Directory.GetParent(reqPath);
+               JsonStr = System.IO.File.ReadAllText(Dir.GetFiles(fileName)[0].FullName);
+               cr = new ContentResult();
+               cr.Content = JsonStr;
+               cr.ContentEncoding = Encoding.UTF8;
+               cr.ContentType = "text/html";
+               return cr;
+           }
+       }
+
+       public JValue GetXmlValue(List<string> param)
+       {
+           lock (this)
+           {
+               fileName = "";
+               foreach (string p in param)
+               {
+                   fileName += p + ".";
+               }
+               fileName += "xml";
+               Dir = Directory.GetParent(reqPath);
+               JsonStr = System.IO.File.ReadAllText(Dir.GetFiles(fileName)[0].FullName);
+               xd = new XmlDocument();
+               xd.LoadXml(JsonConvert.DeserializeObject<JValue>(JsonStr).Value.ToString());
+               retJval = new JValue(xd.InnerXml);
+               return retJval;
+           }
        }
 
     }

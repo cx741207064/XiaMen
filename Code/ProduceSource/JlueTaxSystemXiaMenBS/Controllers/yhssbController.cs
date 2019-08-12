@@ -14,9 +14,9 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("jsdzsb/yhssb")]
     public class yhssbController : Controller
     {
-        IYsbqcSetting set;
+        YsbqcSetting set;
         GDTXXiaMenUserYSBQC qc;
-        public yhssbController(IYsbqcSetting _is)
+        public yhssbController(YsbqcSetting _is)
         {
             this.set = _is;
             qc = set.getUserYSBQC(this.GetType());

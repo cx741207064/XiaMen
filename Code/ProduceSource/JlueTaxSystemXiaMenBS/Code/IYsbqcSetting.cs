@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace JlueTaxSystemXiaMenBS.Code
 {
-    public interface IYsbqcSetting
+    public interface YsbqcSetting
     {
         /// <summary>
         /// 已申报状态

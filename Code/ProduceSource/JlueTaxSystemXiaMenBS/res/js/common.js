@@ -156,3 +156,49 @@ function showPageNew4(url,menu_name){
 function showPageNew5(url,menu_name){
 	window.location.href=url;
 }
+var session_qz_url =window.location.host ;// '${gdsqz_url1}' ;
+
+//无纸化
+function openWzh_url(href1){
+	var tbtc_qz = "" ;
+    if(session_qz_url.indexOf("xiamen.chinatax.gov.cn") != -1){
+    	tbtc_qz = 'https://etax.xiamen.chinatax.gov.cn:9558' ;
+    }else{ 
+    	tbtc_qz = 'http://81.24.23.110:7003' ;
+    }	
+	window.location.href= tbtc_qz+ href1 ; 	
+}
+
+//原国税
+function openYgs_url(href1){
+	var tbtc_qz = "" ;
+    if(session_qz_url.indexOf("xiamen.chinatax.gov.cn") != -1){
+    	tbtc_qz = 'https://etax.xiamen.chinatax.gov.cn:8443' ;
+    }else{ 
+    	tbtc_qz = 'http://81.24.20.138:7001' ;
+    }	
+	showPageNew4(tbtc_qz+ href1,""); 	
+}
+
+//同步域名
+  function openTb_url(href1){
+  	var tbtc_qz = "" ;
+      if(session_qz_url.indexOf("xiamen.chinatax.gov.cn") != -1){
+      	tbtc_qz = 'https://etax.xiamen.chinatax.gov.cn:6011' ;
+      }else{ 
+      	tbtc_qz = '' ;
+      }
+  	window.location.href=tbtc_qz+ href1; 	
+  }
+ 
+  //原国税电子申报域名
+  function openDzsb_url(href1){
+	  	var tbtc_qz = "" ;
+	      if(session_qz_url.indexOf("xiamen.chinatax.gov.cn") != -1){
+	      	tbtc_qz = 'https://etax.xiamen.chinatax.gov.cn:9012' ;
+	      }else{ 
+	      	tbtc_qz = 'http://81.24.21.178:7001' ;
+	      }
+	  	 window.open(tbtc_qz+ href1); 	
+	  }
+

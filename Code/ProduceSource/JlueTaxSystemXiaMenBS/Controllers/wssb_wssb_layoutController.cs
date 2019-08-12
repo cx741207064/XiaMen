@@ -12,8 +12,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("wssb/wssb/layout")]
     public class wssb_wssb_layoutController : Controller
     {
-        IYsbqcSetting set;
-        public wssb_wssb_layoutController(IYsbqcSetting _is)
+        YsbqcSetting set;
+        public wssb_wssb_layoutController(YsbqcSetting _is)
         {
             this.set = _is;
         }

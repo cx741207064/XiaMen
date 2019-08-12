@@ -11,8 +11,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("jsdzsb/zfsbjl")]
     public class zfsbjlController : Controller
     {
-        IYsbqcSetting set;
-        public zfsbjlController(IYsbqcSetting _is)
+        YsbqcSetting set;
+        public zfsbjlController(YsbqcSetting _is)
         {
             this.set = _is;
         }

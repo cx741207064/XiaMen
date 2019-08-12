@@ -18,7 +18,7 @@ namespace JlueTaxSystemXiaMenBS
                 publicmethod p = new publicmethod();
                 string path = System.Web.Configuration.WebConfigurationManager.AppSettings["Practicepath"] + "/APIPractice/VideoManage.asmx/GetByCourseId?CourseId="+System.Web.Configuration.WebConfigurationManager.AppSettings["CourseId"];
                 string resut = p.HttpGetFunction(path);
-                ActionResult ar = JsonConvert.DeserializeObject<ActionResult>(resut);
+                ActionResult1 ar = JsonConvert.DeserializeObject<ActionResult1>(resut);
                 Session["VideoManage"] = ar.Data;
             }
             catch

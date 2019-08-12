@@ -13,8 +13,8 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("cxzx/sbxxcx")]
     public class cxzxController : Controller
     {
-        IYsbqcSetting set;
-        public cxzxController(IYsbqcSetting _is)
+        YsbqcSetting set;
+        public cxzxController(YsbqcSetting _is)
         {
             this.set = _is;
         }

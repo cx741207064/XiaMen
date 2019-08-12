@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -71,6 +72,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         [Route("czzsYbnsrCalc.do")]
         public string czzsYbnsrCalc()
         {
+            StreamReader sr = new StreamReader(Request.InputStream);
             string str = System.IO.File.ReadAllText(Server.MapPath("czzsYbnsrCalc.json"));
             Response.ContentType = "application/json;charset=UTF-8";
             return str;

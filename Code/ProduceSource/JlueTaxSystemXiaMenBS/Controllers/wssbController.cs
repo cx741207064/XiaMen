@@ -16,11 +16,11 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("wssb")]
     public class wssbController : Controller
     {
-        IYsbqcSetting set;
+        YsbqcSetting set;
         GDTXXiaMenUserYSBQC qc;
         ZzsYgzYbnsrPublic DBData;
         string BDDM = "SBB_ZZS_YGZ_YBNSR";
-        public wssbController(IYsbqcSetting _is)
+        public wssbController(YsbqcSetting _is)
         {
             this.set = _is;
             qc = set.getUserYSBQC(BDDM);

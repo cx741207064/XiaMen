@@ -13,10 +13,10 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     [RoutePrefix("jsdzsb/fjssb")]
     public class fjssbController : Controller
     {
-        IYsbqcSetting set;
+        YsbqcSetting set;
         GDTXXiaMenUserYSBQC qc;
         FjsData DBData;
-        public fjssbController(IYsbqcSetting _is)
+        public fjssbController(YsbqcSetting _is)
         {
             this.set = _is;
             qc = set.getUserYSBQC(this.GetType());
