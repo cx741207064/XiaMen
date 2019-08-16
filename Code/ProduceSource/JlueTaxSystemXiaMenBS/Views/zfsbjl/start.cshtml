@@ -1,4 +1,11 @@
-﻿@model JlueTaxSystemXiaMenBS.Models.Nsrxx
+﻿@using JlueTaxSystemXiaMenBS.Models;
+@using JlueTaxSystemXiaMenBS.Code;
+@model SBZFModel
+
+
+
+
+
 
 <!DOCTYPE html>
 <html>
@@ -122,6 +129,13 @@ $(document).ready(function() {
 	</head>
 
 	<body>
+	
+	
+  
+  
+
+		
+
 
 <form action="/dzsb/zfsbjl/tj.do" method="post" id="myForm">
   
@@ -158,9 +172,9 @@ $(document).ready(function() {
       <td><table class="v2table" id="frm_dfsf_head" width="100%"  border="1" cellpadding="0" cellspacing="0" bordercolorlight="#000000" bordercolordark="#FFFFFF">
         <tr >
          <td height="21" width="15%" nowrap="nowrap">纳税人识别号：</td>
-          <td width="35%">@Model.NSRSBH</td>
+          <td width="35%">@Model.Nsrxx.NSRSBH</td>
           <td width="15%" nowrap="nowrap">纳税人名称：</td>
-          <td width="35%" >@Model.NSRMC</td>
+          <td width="35%" >@Model.Nsrxx.NSRMC</td>
           </tr>
         <tr >
           <td height="21" nowrap="nowrap">税款所属期起：</td>
@@ -177,12 +191,12 @@ $(document).ready(function() {
          <tr >
           <td height="21" nowrap="nowrap">申报日期始：</td>
           <td>
-              <input type="text" name="queryVo['sbrqq']" value="2018-03-01" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
+              <input type="text" name="queryVo['sbrqq']" value="@Model.GDTXDate.sbrqq" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
                 <font color="red">*</font>
         </td>
         <td height="21" nowrap="nowrap">申报日期止：</td>
           <td>
-              <input type="text" name="queryVo['sbrqz']" value="2019-03-31" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
+              <input type="text" name="queryVo['sbrqz']" value="@Model.GDTXDate.sbrqz" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" style="width:100px" />
                <font color="red">*</font> 
         </td>
           
@@ -226,11 +240,13 @@ $(document).ready(function() {
 	    		
 		<option value="BDA0610036" >《资源税纳税申报表》</option>
 	    		
-		<option value="BDA0610095" >《文化事业建设费申报表》</option>
+		<option value="BDA0610095" >《文化事业建设费申报表》（营改增前）</option>
 	    		
 		<option value="BDA0610100" >《通用申报表（税及附征税费）》</option>
 	    		
 		<option value="BDA0610108" >《契税纳税申报表》</option>
+	    		
+		<option value="BDA0610128" >《车辆购置税纳税申报表》</option>
 	    		
 		<option value="BDA0610133" >《车船税代收代缴报告表》</option>
 	    		
@@ -538,23 +554,624 @@ $(document).ready(function() {
           </tr>
          
           
-          	<tr >
-	          <td nowrap="nowrap" colspan="10"><div align="center" class="size14">
-	                             当前没有可以作废的申报记录!
-	        
-	            </div></td>
-          
            <input type="hidden" name="queryVo['sbuuid']"  />
           
-           
+          @if(false){
+
+          	<tr >
+	          <td nowrap="nowrap"><div align="center">
+	          
+	                <input name="isChecked" type="radio"  value="254A21BE394C40247F35EE424166D7FF" onclick="radioClick()"/>
+	                <input type="hidden" name="zflist[0]['pzxh']" value="10013519000024610052" />
+	                <input type="hidden" name="zflist[0]['sbuuid']" value="254A21BE394C40247F35EE424166D7FF" />
+	                <input type="hidden" name="zflist[0]['sbfsdm']" value="32" />
+	                <input type="hidden" name="zflist[0]['zsxmdm']" value="39900" />
+	                <input type="hidden" name="zflist[0]['djxh']" value="10113502010000054370" />
+	                 <input type="hidden" name="zflist[0]['yzpzzldm']" value="BDA0610100" />
+	                  <input type="hidden" name="zflist[0]['sbrq']" value="2019-08-09" />
+	                   <input type="hidden" name="zflist[0]['skssqq']" value="2019-07-01" />
+	                   <input type="hidden" name="zflist[0]['skssqz']" value="2019-07-31" />
+	                   <input type="hidden" name="zflist[0]['ybtse']" value="0" />
+	          
+	        
+	            </div></td>
+	          <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
 
 
 
  
 
+
+《通用申报表（税及附征税费）》
+	           &nbsp;
+	          
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
  
-<script language='javascript' type='text/javascript'>
-alert('当前没有可以作废的申报记录!')</script>
+
+
+其他收入
+	           &nbsp;
+	           
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+工会筹备金
+	           &nbsp;
+	           
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-08-09
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-01
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-31
+	         
+	          
+	          </td>
+	          <td nowrap="nowrap" style="color:Maroon"><div align="right">
+	          0
+	          
+	          
+	          </div></td>
+	          <td nowrap="nowrap">
+	          &nbsp;10013519000024610052&nbsp;
+	           
+	           
+	          </td>
+	          <!--
+	           <td nowrap="nowrap">
+	           
+	            <a href="#" onclick="ckmx('BDA0610100','10013519000024610052','2019-07-01','2019-07-31')">查看明细</a>
+	           
+	           
+	          </td> 
+	           -->
+	         
+	          
+	           
+	        </tr>
+          
+          	<tr >
+	          <td nowrap="nowrap"><div align="center">
+	          
+	                <input name="isChecked" type="radio"  value="D5D832343012191C39110CD8C5508B8D" onclick="radioClick()"/>
+	                <input type="hidden" name="zflist[1]['pzxh']" value="10013519000024622573" />
+	                <input type="hidden" name="zflist[1]['sbuuid']" value="D5D832343012191C39110CD8C5508B8D" />
+	                <input type="hidden" name="zflist[1]['sbfsdm']" value="32" />
+	                <input type="hidden" name="zflist[1]['zsxmdm']" value="30218" />
+	                <input type="hidden" name="zflist[1]['djxh']" value="10113502010000054370" />
+	                 <input type="hidden" name="zflist[1]['yzpzzldm']" value="BDA0610100" />
+	                  <input type="hidden" name="zflist[1]['sbrq']" value="2019-08-09" />
+	                   <input type="hidden" name="zflist[1]['skssqq']" value="2018-01-01" />
+	                   <input type="hidden" name="zflist[1]['skssqz']" value="2018-12-31" />
+	                   <input type="hidden" name="zflist[1]['ybtse']" value="0" />
+	          
+	        
+	            </div></td>
+	          <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+《通用申报表（税及附征税费）》
+	           &nbsp;
+	          
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+残疾人就业保障金
+	           &nbsp;
+	           
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+残疾人就业保障金
+	           &nbsp;
+	           
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-08-09
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2018-01-01
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2018-12-31
+	         
+	          
+	          </td>
+	          <td nowrap="nowrap" style="color:Maroon"><div align="right">
+	          0
+	          
+	          
+	          </div></td>
+	          <td nowrap="nowrap">
+	          &nbsp;10013519000024622573&nbsp;
+	           
+	           
+	          </td>
+	          <!--
+	           <td nowrap="nowrap">
+	           
+	            <a href="#" onclick="ckmx('BDA0610100','10013519000024622573','2018-01-01','2018-12-31')">查看明细</a>
+	           
+	           
+	          </td> 
+	           -->
+	         
+	          
+	           
+	        </tr>
+          
+          	<tr >
+	          <td nowrap="nowrap"><div align="center">
+	          
+	                <input name="isChecked" type="radio"  value="BAD1AA74E69443719DE0BB4790EE9A75" onclick="radioClick()"/>
+	                <input type="hidden" name="zflist[2]['pzxh']" value="10013519000023992021" />
+	                <input type="hidden" name="zflist[2]['sbuuid']" value="BAD1AA74E69443719DE0BB4790EE9A75" />
+	                <input type="hidden" name="zflist[2]['sbfsdm']" value="32" />
+	                <input type="hidden" name="zflist[2]['zsxmdm']" value="30203" />
+	                <input type="hidden" name="zflist[2]['djxh']" value="10113502010000054370" />
+	                 <input type="hidden" name="zflist[2]['yzpzzldm']" value="BDA0610678" />
+	                  <input type="hidden" name="zflist[2]['sbrq']" value="2019-08-06" />
+	                   <input type="hidden" name="zflist[2]['skssqq']" value="2019-07-01" />
+	                   <input type="hidden" name="zflist[2]['skssqz']" value="2019-07-31" />
+	                   <input type="hidden" name="zflist[2]['ybtse']" value="0" />
+	          
+	        
+	            </div></td>
+	          <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+《城建税、教育费附加、地方教育附加税（费）申报表》
+	           &nbsp;
+	          
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+教育费附加
+	           &nbsp;
+	           
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+增值税教育费附加
+	           &nbsp;
+	           
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-08-06
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-01
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-31
+	         
+	          
+	          </td>
+	          <td nowrap="nowrap" style="color:Maroon"><div align="right">
+	          0
+	          
+	          
+	          </div></td>
+	          <td nowrap="nowrap">
+	          &nbsp;10013519000023992021&nbsp;
+	           
+	           
+	          </td>
+	          <!--
+	           <td nowrap="nowrap">
+	           
+	            <a href="#" onclick="ckmx('BDA0610678','10013519000023992021','2019-07-01','2019-07-31')">查看明细</a>
+	           
+	           
+	          </td> 
+	           -->
+	         
+	          
+	           
+	        </tr>
+          
+          	<tr >
+	          <td nowrap="nowrap"><div align="center">
+	          
+	        
+	            </div></td>
+	          <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+《城建税、教育费附加、地方教育附加税（费）申报表》
+	           &nbsp;
+	          
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+地方教育附加
+	           &nbsp;
+	           
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+增值税地方教育附加
+	           &nbsp;
+	           
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-08-06
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-01
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-31
+	         
+	          
+	          </td>
+	          <td nowrap="nowrap" style="color:Maroon"><div align="right">
+	          0
+	          
+	          
+	          </div></td>
+	          <td nowrap="nowrap">
+	          &nbsp;10013519000023992021&nbsp;
+	           
+	           
+	          </td>
+	          <!--
+	           <td nowrap="nowrap">
+	           
+	           
+	          </td> 
+	           -->
+	         
+	          
+	           
+	        </tr>
+          
+          	<tr >
+	          <td nowrap="nowrap"><div align="center">
+	          
+	        
+	            </div></td>
+	          <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+《城建税、教育费附加、地方教育附加税（费）申报表》
+	           &nbsp;
+	          
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+城市维护建设税
+	           &nbsp;
+	           
+	          </td>
+	           <td nowrap="nowrap">
+	           
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+市区（增值税附征）
+	           &nbsp;
+	           
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-08-06
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-01
+	          
+	          
+	          </td>
+	          <td nowrap="nowrap">
+	          2019-07-31
+	         
+	          
+	          </td>
+	          <td nowrap="nowrap" style="color:Maroon"><div align="right">
+	          0
+	          
+	          
+	          </div></td>
+	          <td nowrap="nowrap">
+	          &nbsp;10013519000023992021&nbsp;
+	           
+	           
+	          </td>
+	          <!--
+	           <td nowrap="nowrap">
+	           
+	           
+	          </td> 
+	           -->
+	         
+	          
+	           
+	        </tr>
+          
+          }
+                     
+          @foreach(GDTXUserYSBQC item in Model.qclist){
+              <tr >
+	          <td nowrap="nowrap"><div align="center">
+	          
+	                <input name="isChecked" type="radio"  value="@item.Id" onclick="radioClick()"/>
+	                <input type="hidden" name="zflist[2]['pzxh']" value="10013519000023992021" />
+                                   <input type="hidden" name="zflist[2]['sbuuid']" value="@item.Id" />
+	                <input type="hidden" name="zflist[2]['sbfsdm']" value="32" />
+	                <input type="hidden" name="zflist[2]['zsxmdm']" value="30203" />
+	                <input type="hidden" name="zflist[2]['djxh']" value="10113502010000054370" />
+	                 <input type="hidden" name="zflist[2]['yzpzzldm']" value="BDA0610678" />
+	                  <input type="hidden" name="zflist[2]['sbrq']" value="2019-08-06" />
+	                   <input type="hidden" name="zflist[2]['skssqq']" value="2019-07-01" />
+	                   <input type="hidden" name="zflist[2]['skssqz']" value="2019-07-31" />
+	                   <input type="hidden" name="zflist[2]['ybtse']" value="0" />
+	          
+	            </div></td>
+	          <td nowrap="nowrap">
+@item.TaskName
+	           &nbsp;
+	          </td>
+	           <td nowrap="nowrap">
+@item.ZSXM
+	           &nbsp;
+	          </td>
+	           <td nowrap="nowrap">
+@item.ZSXM
+	           &nbsp;
+	          </td>
+	          <td nowrap="nowrap">
+	          @item.HappenDate
+	          </td>
+	          <td nowrap="nowrap">
+	          @item.SKSSQQ
+	          </td>
+	          <td nowrap="nowrap">
+	          @item.SKSSQZ
+	          </td>
+	          <td nowrap="nowrap" style="color:Maroon"><div align="right">
+	          @item.SBSE
+	          </div></td>
+	          <td nowrap="nowrap">
+	          </td>
+	        </tr>
+          }
+
+
+ 
+
+ 
 
       </table>
 	  </table>
@@ -645,7 +1262,7 @@ alert('当前没有可以作废的申报记录!')</script>
      	    					 
              	    		}else{
                  	         var msg=data.msg;
-                 	         var sName = "jsjkltApp_31_8011";
+                 	         var sName = "jsjkltApp_37_8011";
                      		 if (sName != null && sName != "") {
                      		 	msg = msg + "(" + sName + ")";
                      		 }

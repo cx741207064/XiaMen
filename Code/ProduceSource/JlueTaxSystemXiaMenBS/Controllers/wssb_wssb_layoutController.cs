@@ -37,7 +37,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         void createNodeDatas(string dm, ref JToken item)
         {
             JArray children_ja = (JArray)item.SelectToken("children");
-            GDTXXiaMenUserYSBQC qc = set.getUserYSBQC(dm);
+            GDTXUserYSBQC qc = set.getUserYSBQC(dm);
             foreach (JObject children_jo in children_ja)
             {
                 JObject attributes = (JObject)children_jo["attributes"];

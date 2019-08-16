@@ -10,6 +10,7 @@ using JlueTaxSystemXiaMenBS.Models;
 using JlueTaxSystemXiaMenBS.Code;
 using System.Web.Http.Controllers;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json.Linq;
 
 namespace JlueTaxSystemXiaMenBS
 {
@@ -27,6 +28,8 @@ namespace JlueTaxSystemXiaMenBS
 
             ModelBinders.Binders.Add(typeof(YhsData), new MyCustomModelBinder());
             ModelBinders.Binders.Add(typeof(FjsData), new MyCustomModelBinder());
+            ModelBinders.Binders.Add(typeof(QysdsCommit), new MyModelBinder());
+            ModelBinders.Binders.Add(typeof(QysdsZb), new MyModelBinder());
 
             RegisterView();//注册视图访问规则
 

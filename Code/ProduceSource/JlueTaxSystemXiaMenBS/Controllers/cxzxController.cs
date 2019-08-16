@@ -34,16 +34,16 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             JArray rows = new JArray();
             int i = 0;
             JObject re_json = JsonConvert.DeserializeObject<JObject>(str);
-            List<GDTXXiaMenUserYSBQC> listqc = set.getYsbUserYSBQC();
+            List<GDTXUserYSBQC> listqc = set.getYsbUserYSBQC();
             string zsxm = Request.Form["query.zsxm"];
             if (zsxm != "")
             {
                 listqc = listqc.Where(a => a.zsxmDm == zsxm).ToList();
             }
-            List<GDTXXiaMenUserYSBQC> liqc = listqc.Where(a => a.BDDM == "YHSSB").ToList();
+            List<GDTXUserYSBQC> liqc = listqc.Where(a => a.BDDM == "YHSSB").ToList();
             if (liqc.Count > 0)
             {
-                GDTXXiaMenUserYSBQC item = liqc[0];
+                GDTXUserYSBQC item = liqc[0];
                 JArray data_json = (JArray)set.getUserYSBQCReportData(item.Id, item.BDDM);
                 foreach (JObject data_jo in data_json)
                 {
@@ -66,7 +66,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             liqc = listqc.Where(a => a.BDDM == "FJSSB").ToList();
             if (liqc.Count > 0)
             {
-                GDTXXiaMenUserYSBQC item = liqc[0];
+                GDTXUserYSBQC item = liqc[0];
                 JObject jo = new JObject();
                 JObject data_json = (JObject)set.getUserYSBQCReportData(item.Id, item.BDDM);
                 FjsData fd = JsonConvert.DeserializeObject<FjsData>(JsonConvert.SerializeObject(data_json));
@@ -101,11 +101,11 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             liqc = listqc.Where(a => a.BDDM == "SBB_ZZS_YGZ_YBNSR").ToList();
             if (liqc.Count > 0)
             {
-                GDTXXiaMenUserYSBQC item = liqc[0];
+                GDTXUserYSBQC item = liqc[0];
                 JObject jo = new JObject();
                 JObject data_json = (JObject)set.getUserYSBQCReportData(item.Id, item.BDDM, item.BDDM);
-                ZzsYgzYbnsrPublic zp = JsonConvert.DeserializeObject<ZzsYgzYbnsrPublic>(JsonConvert.SerializeObject(data_json));
-                ZzsYgzYbnsrZBData d = zp.ZBData;
+                ModelMainServlet zp = JsonConvert.DeserializeObject<ModelMainServlet>(JsonConvert.SerializeObject(data_json));
+                ZzsYgzYbnsrZBData d = JsonConvert.DeserializeObject<ZzsYgzYbnsrZBData>(JsonConvert.SerializeObject(zp.json));
 
                 jo.Add("zspmmc", "商业(17%、16%)");
                 jo.Add("skssqz", item.SKSSQZ);
@@ -126,6 +126,27 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                 jo2["ynse"] = "0";
 
                 rows.Add(jo2);
+                i++;
+            }
+
+            liqc = listqc.Where(a => a.BDDM == QysdsTable.QYSDS.ToString()).ToList();
+            if (liqc.Count > 0)
+            {
+                GDTXUserYSBQC item = liqc[0];
+                JObject jo = new JObject();
+                JObject data_json = (JObject)set.getUserYSBQCReportData(item.Id, item.BDDM);
+                QysdsZb zb = JsonConvert.DeserializeObject<QysdsZb>(JsonConvert.SerializeObject(data_json));
+
+                jo.Add("zspmmc", "应纳税所得额");
+                jo.Add("skssqz", item.SKSSQZ);
+                jo.Add("ybtse", zb.LJ_YBTSDSE_TZQ);
+                jo.Add("rn", i.ToString());
+                jo.Add("row_id", i.ToString());
+                jo.Add("skssqq", item.SKSSQQ);
+                jo.Add("zsxmmc", item.ZSXM);
+                jo.Add("ysx", zb.LJ_LRZE);
+                jo.Add("ynse", zb.LJ_YNSDSE);
+                rows.Add(jo);
                 i++;
             }
 

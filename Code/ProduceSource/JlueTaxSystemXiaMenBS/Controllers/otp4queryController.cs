@@ -85,15 +85,15 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             int i = 1;
             string str = System.IO.File.ReadAllText(Server.MapPath("query.json"));
             JObject re_json = JsonConvert.DeserializeObject<JObject>(str);
-            List<GDTXXiaMenUserYSBQC> listqc = set.getYsbUserYSBQC();
+            List<GDTXUserYSBQC> listqc = set.getYsbUserYSBQC();
             if (zsxmdm != "")
             {
                 listqc = listqc.Where(a => a.zsxmDm == zsxmdm).ToList();
             }
-            List<GDTXXiaMenUserYSBQC> liqc = listqc.Where(a => a.BDDM == "YHSSB").ToList();
+            List<GDTXUserYSBQC> liqc = listqc.Where(a => a.BDDM == "YHSSB").ToList();
             if (liqc.Count > 0)
             {
-                GDTXXiaMenUserYSBQC item = liqc[0];
+                GDTXUserYSBQC item = liqc[0];
                 JArray data_json = (JArray)set.getUserYSBQCReportData(item.Id, item.BDDM);
                 data_json = data_json == null ? new JArray() : data_json;
                 foreach (JObject data_jo in data_json)
@@ -119,7 +119,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             liqc = listqc.Where(a => a.BDDM == "FJSSB").ToList();
             if (liqc.Count > 0)
             {
-                GDTXXiaMenUserYSBQC item = liqc[0];
+                GDTXUserYSBQC item = liqc[0];
                 JObject jo = new JObject();
                 JObject data_json = (JObject)set.getUserYSBQCReportData(item.Id, item.BDDM);
                 jo["skssqq"] = item.SKSSQQ;

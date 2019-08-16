@@ -42,9 +42,20 @@ namespace JlueTaxSystemXiaMenBS.Models
         /// </summary>
         public string skssqz { get; set; }
 
+        /// <summary>
+        /// 税款所属年代
+        /// </summary>
         public string skssNd { get; set; }
 
+        /// <summary>
+        /// 税款所属月份
+        /// </summary>
         public string skssYf { get; set; }
+
+        /// <summary>
+        /// 税款所属季度
+        /// </summary>
+        public string skssJd { get; set; }
 
         /// <summary>
         /// 填表日期

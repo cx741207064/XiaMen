@@ -8,7 +8,7 @@ namespace JlueTaxSystemXiaMenBS.Code
     /// <summary>
     /// 学员英申报清册信息
     /// </summary>
-    public class GDTXXiaMenUserYSBQC
+    public class GDTXUserYSBQC
     {
 
         /// <summary>

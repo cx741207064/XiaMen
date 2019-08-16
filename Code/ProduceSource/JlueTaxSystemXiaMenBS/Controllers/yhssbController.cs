@@ -15,7 +15,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     public class yhssbController : Controller
     {
         YsbqcSetting set;
-        GDTXXiaMenUserYSBQC qc;
+        GDTXUserYSBQC qc;
         public yhssbController(YsbqcSetting _is)
         {
             this.set = _is;

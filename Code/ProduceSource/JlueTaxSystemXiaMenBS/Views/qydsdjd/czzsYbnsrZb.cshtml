@@ -1,4 +1,5 @@
-
+﻿@using JlueTaxSystemXiaMenBS.Models;
+@model QysdsModel
 
 
 
@@ -157,7 +158,8 @@ $(document).keydown(function(e){
 
 	<body>
 	
-	
+        @{Html.RenderPartial("_PartialQysds");}
+
   
   
 
@@ -171,7 +173,7 @@ $(document).keydown(function(e){
 <input type="hidden" name="sbbVO['ZSXM_DM']" id="sbbVO['ZSXM_DM']" value="10104" />
 <input type="hidden" name="sbbVO['ZSPM_DM']" id="sbbVO['ZSPM_DM']" value="101040001" />
 <input type="hidden" name="sbbVO['RDPZUUID']" id="sbbVO['RDPZUUID']" value="7AD70ECBAACDB1EF92990080175F0DF8" />
-<input type="hidden" name="sbbVO['SBUUID']" id="sbbVO['SBUUID']" value="72988cab70f14f28bdfa6ba54ec15050" />
+<input type="hidden" name="sbbVO['SBUUID']" id="sbbVO['SBUUID']" value="" />
 <input type="hidden" name="sbbVO['HZHBNSQYLB_DM']" id="sbbVO['HZHBNSQYLB_DM']" value="10" />
 <input type="hidden" name="sbbVO['QYSDS_SBFS']" id="sbbVO['QYSDS_SBFS']" value="10" />
 <input type="hidden" name="sbbVO['KDQZYLX']" id="sbbVO['KDQZYLX']" value="0" />
@@ -218,51 +220,18 @@ $(document).keydown(function(e){
             <TABLE borderColorDark="#ffffff" borderColorLight="#000000" border="1" cellSpacing="0" cellPadding="0" width="100%">
               <TR class="blue">
                 <TD width="15%" height=21 noWrap>税务登记代码</TD>
-                <TD width="35%">91350200MA2Y6UGR9M</TD>
+                <TD width="35%">@Model.Nsrxx.NSRSBH</TD>
                 <TD width="15%" height=21 noWrap>纳税人名称：</TD>
-                <TD width="35%">厦门动听资产管理有限公司</TD>
+                <TD width="35%">@Model.Nsrxx.NSRMC</TD>
               </TR>
               <TR class=blue>
                 <TD noWrap>征收品目、项目</TD>
                 <TD>
-           		  
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-企业所得税-
-                  
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-应纳税所得额
+企业所得税-应纳税所得额
                 </TD>
                 <TD>税款所属期：</TD>
                 <TD>
-                 2019 年&nbsp;第 1 季度
+                 @Model.GDTXDate.skssNd 年&nbsp;第 @Model.GDTXDate.skssJd 季度
                 </TD>
               </TR>
               <TR class=blue>
@@ -293,28 +262,28 @@ $(document).keydown(function(e){
                 <td align="center">1</td>
                 <td class="hint"  colspan="2"> 营业收入</td>
                 <td>
-					<input type="text" name="sbbVO['LJ_XSYYJE']" id="sbbVO['LJ_XSYYJE']" value="0" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
+					<input type="text" name="sbbVO['LJ_XSYYJE']" id="sbbVO['LJ_XSYYJE']" value="" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
 				</td>
               </tr>
               <tr>
                 <td align="center">2</td>
                 <td class="hint"  colspan="2"> 营业成本 </td>
                 <td>
-					<input type="text" name="sbbVO['LJ_YYCB']" id="sbbVO['LJ_YYCB']" value="0" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
+					<input type="text" name="sbbVO['LJ_YYCB']" id="sbbVO['LJ_YYCB']" value="" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
 				</td>
               </tr>
               <tr>
                 <td align="center">3</td>
                 <td class="hint"  colspan="2"> 利润总额 </td>
                 <td>
-					<input type="text" name="sbbVO['LJ_LRZE_TZQ']" id="sbbVO['LJ_LRZE_TZQ']" value="1000000" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
+					<input type="text" name="sbbVO['LJ_LRZE_TZQ']" id="sbbVO['LJ_LRZE_TZQ']" value="" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
 				</td>
               </tr>
               <tr>
                 <td align="center">4</td>
                 <td  colspan="2"> 加：特定业务计算的应纳税所得额 </td>
                 <td>
-					<input type="text" name="sbbVO['LJ_TDYWJSYNSSDE']" id="sbbVO['LJ_TDYWJSYNSSDE']" value="0" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
+					<input type="text" name="sbbVO['LJ_TDYWJSYNSSDE']" id="sbbVO['LJ_TDYWJSYNSSDE']" value="" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
 				</td>
               </tr>
               <tr>
@@ -322,7 +291,7 @@ $(document).keydown(function(e){
                 <td  colspan="2"> &nbsp;&nbsp;&nbsp;&nbsp;减：不征税收入 </td>
                 <td>
                 	
-                		<input type="text" name="sbbVO['LJ_BZSSR']" id="sbbVO['LJ_BZSSR']" value="0" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
+                		<input type="text" name="sbbVO['LJ_BZSSR']" id="sbbVO['LJ_BZSSR']" value="" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onLJ_LRZEChange();"/>
                 	
                 </td>
               </tr>
@@ -330,7 +299,7 @@ $(document).keydown(function(e){
                 <td align="center">6</td>
                 <td  colspan="2"> &nbsp;&nbsp;&nbsp;&nbsp;减:免税收入、减计收入、所得减免等优惠金额（请填附表1） </td>
                 <td>
-					<input type="text" name="sbbVO['LJ_MSSRJSSRSDJMDYHJE']" id="sbbVO['LJ_MSSRJSSRSDJMDYHJE']" value="20000" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return show2(event);" readonly="true"/>
+					<input type="text" name="sbbVO['LJ_MSSRJSSRSDJMDYHJE']" id="sbbVO['LJ_MSSRJSSRSDJMDYHJE']" value="0" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return show2(event);" readonly="true"/>
 				</td>
               </tr>
               <tr>
@@ -358,7 +327,7 @@ $(document).keydown(function(e){
                 </td>
                 <td>
 			  		
-			  			<input type="text" name="sbbVO['LJ_LRZE']" id="sbbVO['LJ_LRZE']" value="1000000" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return onLJ_LRZEChange();"  readonly="true"/>
+			  			<input type="text" name="sbbVO['LJ_LRZE']" id="sbbVO['LJ_LRZE']" value="" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return onLJ_LRZEChange();"  readonly="true"/>
 			  		
 			  		
 				</td>
@@ -375,14 +344,14 @@ $(document).keydown(function(e){
                 <td align="center">11</td>
                 <td colspan="2"> 应纳所得税额（9×10） </td>
                 <td>
-					<input type="text" name="sbbVO['LJ_YNSDSE']" id="sbbVO['LJ_YNSDSE']" value="250000" class="noBorder" size="20" money="Y" readonly="true"  readonly="true"/>
+					<input type="text" name="sbbVO['LJ_YNSDSE']" id="sbbVO['LJ_YNSDSE']" value="" class="noBorder" size="20" money="Y" readonly="true"  readonly="true"/>
 				</td>
               </tr>
                <tr>
                 <td align="center">12</td>
                 <td   colspan="2"> 减:减免所得税额（请填附表3）</td>
                 <td>
-					<input type="text" name="sbbVO['LJ_JMSDSE']" id="sbbVO['LJ_JMSDSE']" value="200000" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return onLJ_LRZEChange();"  readonly="true"/>
+					<input type="text" name="sbbVO['LJ_JMSDSE']" id="sbbVO['LJ_JMSDSE']" value="0" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return onLJ_LRZEChange();"  readonly="true"/>
 				</td>
               </tr>
                <tr>
@@ -409,7 +378,7 @@ $(document).keydown(function(e){
                 </td>
                 <td>
                 	
-                		<input type="text" name="sbbVO['LJ_YBTSDSE_TZQ']" id="sbbVO['LJ_YBTSDSE_TZQ']" value="250000" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return onLJ_LRZEChange2();" readonly="true"/>
+                		<input type="text" name="sbbVO['LJ_YBTSDSE_TZQ']" id="sbbVO['LJ_YBTSDSE_TZQ']" value="" class="noBorder" size="20" money="Y" datatype="float" precision="2" maxlength="20" onblur="return onLJ_LRZEChange2();" readonly="true"/>
                 	
                 	
 				</td>
@@ -420,7 +389,7 @@ $(document).keydown(function(e){
                 	
                 		
                 		
-	                		<input type="hidden" name="sbbVO['SFXWQY_BZ']" id="sbbVO['SFXWQY_BZ']" value="Y"/>
+	                		<input type="hidden" name="sbbVO['SFXWQY_BZ']" id="sbbVO['SFXWQY_BZ']" value=""/>
 							
 
 
@@ -452,7 +421,7 @@ $(document).keydown(function(e){
 	    		
 		<option value="N" >否</option>
 	    		
-		<option value="Y" selected>是</option>
+		<option value="Y" >是</option>
 	
 </select>
 
@@ -487,7 +456,7 @@ $(document).keydown(function(e){
 >
 			
 	    		
-		<option value="N" selected>否</option>
+		<option value="N" >否</option>
 	    		
 		<option value="Y" >是</option>
 	
@@ -558,7 +527,7 @@ $(document).keydown(function(e){
 >
 			
 	    		
-		<option value="N" selected>否</option>
+		<option value="N" >否</option>
 	    		
 		<option value="Y" >是</option>
 	
@@ -593,7 +562,7 @@ $(document).keydown(function(e){
 >
 			
 	    		
-		<option value="N" selected>否</option>
+		<option value="N" >否</option>
 	    		
 		<option value="Y" >是</option>
 	
@@ -603,10 +572,10 @@ $(document).keydown(function(e){
               </tr>
               <tr>
                 <td colspan="4" class="hint"> 
-					季初从业人数：<input type="text" name="sbbVO['JCCYRS']" id="sbbVO['JCCYRS']" value="1" class="line" size="20" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onCYRSAndZCZEChange('1');"/>
-					季末从业人数：<input type="text" name="sbbVO['JMCYRS']" id="sbbVO['JMCYRS']" value="1" class="line" size="20" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onCYRSAndZCZEChange('2');"/>
+					季初从业人数：<input type="text" name="sbbVO['JCCYRS']" id="sbbVO['JCCYRS']" value="0.0" class="line" size="20" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onCYRSAndZCZEChange('1');"/>
+					季末从业人数：<input type="text" name="sbbVO['JMCYRS']" id="sbbVO['JMCYRS']" value="" class="line" size="20" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onCYRSAndZCZEChange('2');"/>
 					季初资产总额（万元）：<input type="text" name="sbbVO['JCZZZE']" id="sbbVO['JCZZZE']" value="0" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';"onblur="return onCYRSAndZCZEChange('3');"/>
-					季末资产总额（万元）：<input type="text" name="sbbVO['JMZZZE']" id="sbbVO['JMZZZE']" value="0" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onCYRSAndZCZEChange('4');"/>
+					季末资产总额（万元）：<input type="text" name="sbbVO['JMZZZE']" id="sbbVO['JMZZZE']" value="" class="line" size="20" money="Y" datatype="float" precision="2" maxlength="20" onfocus="if(this.value==0)this.value='';" onblur="return onCYRSAndZCZEChange('4');"/>
                 </td>
               </tr>
               <tr>
@@ -985,9 +954,9 @@ function onDeclareClick(){
 	DWRUtil.focusByIds("sbbVO['LJ_JMSDSE']");
 	return false;
   }
-	if(parseFloat(param.LJ_TDYWYJSDSE) != toFixedNum(0,2)){
+	if(parseFloat(param.LJ_TDYWYJSDSE) != toFixedNum(0.0,2)){
 		alert("如需填报本表第14行，请携带相关缴税凭证到办税大厅柜台申报。");
-		DWRUtil.setValue("sbbVO['LJ_TDYWYJSDSE']", add_Qfw(toFixedNum(0,2)));
+		DWRUtil.setValue("sbbVO['LJ_TDYWYJSDSE']", add_Qfw(toFixedNum(0.0,2)));
 		DWRUtil.focusByIds("sbbVO['LJ_TDYWYJSDSE']");
 		return false;
 	}
@@ -1051,7 +1020,7 @@ function onDeclareClick(){
 $(function(){ 
 	layer.alert("尊敬的纳税人，从2018年第二季度起，企业所得税季度预缴纳税申报表(A类)，仅填报<font color='red'>本年累计数</font>，请准确填报。<br/>提示：仅下划横线栏次可以填报");
 	
-	if('72988cab70f14f28bdfa6ba54ec15050'!=''){
+	if(''!=''){
 		onLJ_LRZEChange(true);
 	}
 	

@@ -17,7 +17,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     public class wssbController : Controller
     {
         YsbqcSetting set;
-        GDTXXiaMenUserYSBQC qc;
+        GDTXUserYSBQC qc;
         ZzsYgzYbnsrPublic DBData;
         string BDDM = "SBB_ZZS_YGZ_YBNSR";
         public wssbController(YsbqcSetting _is)

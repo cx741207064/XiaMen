@@ -58,8 +58,25 @@ namespace JlueTaxSystemXiaMenBS.Models
         public string IDCardNum { get; set; }
 
         /// <summary>
-        /// 所有相关日期
+        /// 纳税人类型
         /// </summary>
+        public int TaxPayerType { get; set; }
+
+        /// <summary>
+        /// 行业类型
+        /// </summary>
+        public int BusinessType { get; set; }
+
+        /// <summary>
+        /// 纳税人类型名称
+        /// </summary>
+        public string TaxPayerTypeName { get; set; }
+
+        /// <summary>
+        /// 行业类型名称
+        /// </summary>
+        public string BusinessTypeName { get; set; }
+
         public GDTXDate GDTXDate { get; set; }
 
     }

@@ -1,0 +1,49 @@
+﻿@using JlueTaxSystemXiaMenBS.Models
+@model QysdsModel
+
+<script>
+    function loadData() {
+        var trs
+        var json =@Html.Raw(Model.json);
+        var detailTable = document.getElementById("detailTable")
+        if (detailTable) {
+            trs = detailTable.getElementsByTagName("tr")
+        }
+        var tabId = '@Model.tabId'
+        var view = @Model.view
+        if (view) {
+            if (tabId == "@QysdsTable.ZS6002") {
+                for (var i = 3; i < trs.length; i++) {
+                    var tds = trs[i].getElementsByTagName("td")
+                    for (var j = 2; j < tds.length; j++) {
+                        tds[j].innerHTML = json["N" + ((i - 3) * 6 + j - 1)]
+                    }
+                }
+            }
+            else {
+                for (var i = 1; i < trs.length; i++) {
+                    trs[i].getElementsByTagName("td")[2].innerHTML = json["N" + i]
+                }
+            }
+        }
+        else {
+            if (tabId == "QYSDS") {
+                for (var p in json) {//遍历json对象的每个key/value对,p为key
+                    document.getElementById("sbbVO['" + p + "']").value = json[p]
+                }
+                document.getElementById("_SFXWQY_BZ").value = json["SFXWQY_BZ"]
+            }
+            else {
+                for (var p in json) {
+                    var inputs = document.getElementsByName("tabForm.table.tableValue.double(WZ_SB_QYSDSJD_ZB$" + p + ")")
+                    if (inputs.length > 0) {
+                        inputs[0].value = json[p]
+                    }
+                }
+            }
+        }
+    }
+    $(function () {
+        loadData()
+    })
+</script>

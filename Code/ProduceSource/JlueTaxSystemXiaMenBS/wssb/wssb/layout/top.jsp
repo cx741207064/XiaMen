@@ -106,8 +106,8 @@
 		 </div>
 		 		 
 		 <div id="lb"> 
-			<a href="/wssb/wssb/downloads/wssblcjyczsc.zip">下载帮助文档</a><br/>
-			<a href="/wssb/wssb/downloads/ythsbjsczsm.zip">一体化申报操作说明</a>
+			<a href="javascript:void(0)">下载帮助文档</a><br/>
+			<a href="javascript:void(0)">一体化申报操作说明</a>
 		 </div>
  		 
 		<div class="clear"></div>

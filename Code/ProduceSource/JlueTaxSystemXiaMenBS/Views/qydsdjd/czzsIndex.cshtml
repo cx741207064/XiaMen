@@ -1,5 +1,5 @@
-
-
+﻿@using JlueTaxSystemXiaMenBS.Models;
+@model Model
 
 
 
@@ -212,11 +212,11 @@ $(document).keydown(function(e){
             <td style="padding-left:20px;" ><table class="v2_table" width="100%" cellspacing="0" cellpadding="0" style=" margin-bottom:6px;">
               <tr>
                 <td width="100" align="left">纳税人识别号：</td>
-                <td align="left"  style="padding-left:20px;" >91350200MA2Y6UGR9M</td>
+                <td align="left"  style="padding-left:20px;" >@Model.Nsrxx.NSRSBH</td>
               </tr>
               <tr>
                 <td align="left">纳税人名称：</td>
-                <td align="left"  style="padding-left:20px;" >厦门动听资产管理有限公司</td>
+                <td align="left"  style="padding-left:20px;" >@Model.Nsrxx.NSRMC</td>
               </tr>
             </table></td>
             </tr>
@@ -235,8 +235,8 @@ $(document).keydown(function(e){
                   <td align="left"  style="padding-left:20px;" >
                   	<input type="hidden" name="sbbVO['SKSSQQ']" id="sbbVO['SKSSQQ']" value="2019-01-01"/>
                   	<input type="hidden" name="sbbVO['SKSSQZ']" id="sbbVO['SKSSQZ']" value="2019-03-31"/>
-                  	<input type="text" name="skssqq" id="skssqq" value="2019" maxlength="4" size="4" style="height: 24px;line-height: 24px;"/>年
-                  	第<input type="text" name="skssqz" id="skssqz" value="1" maxlength="1" size="2" style="height: 24px;line-height: 24px;"/>季度
+                      <input type="text" name="skssqq" id="skssqq" value="@Model.GDTXDate.skssNd" maxlength="4" size="4" style="height: 24px;line-height: 24px;" />年
+                  	第<input type="text" name="skssqz" id="skssqz" value="@Model.GDTXDate.skssJd" maxlength="1" size="2" style="height: 24px;line-height: 24px;" />季度
                   </td>
                 </tr>
             </table>

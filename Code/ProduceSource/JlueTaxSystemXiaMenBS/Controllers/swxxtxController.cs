@@ -39,12 +39,12 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             string str = File.ReadAllText(HttpContext.Current.Server.MapPath("getWddb.json"));
             JObject re_json = JsonConvert.DeserializeObject<JObject>(str);
 
-            List<GDTXXiaMenUserYSBQC> listqc = set.getWsbUserYSBQC();
+            List<GDTXUserYSBQC> listqc = set.getWsbUserYSBQC();
 
             JArray gs_WSBZSXMGRID = new JArray();
             JArray ds_WSBZSXMGRID = new JArray();
 
-            foreach (GDTXXiaMenUserYSBQC qc in listqc)
+            foreach (GDTXUserYSBQC qc in listqc)
             {
                 JObject it = new JObject();
                 it["ZSXM_DM"] = "";
@@ -75,7 +75,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
                         ds_WSBZSXMGRID.Add(it3);
                         break;
                     default:
-                        it["ZSXMMC"] = qc.TaskName;
+                        it["ZSXMMC"] = qc.ZSXM;
                         gs_WSBZSXMGRID.Add(it);
                         break;
                 }

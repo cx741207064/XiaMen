@@ -13,6 +13,7 @@ using System.Web.Mvc;
 using System.Web.SessionState;
 using System.Text.RegularExpressions;
 using Formatting = Newtonsoft.Json.Formatting;
+using System.Reflection;
 
 namespace JlueTaxSystemXiaMenBS.Code
 {
@@ -58,14 +59,24 @@ namespace JlueTaxSystemXiaMenBS.Code
             set { }
         }
 
-        public GDTXXiaMenUserYSBQC getUserYSBQC(Type controller)
+        public const string functionNotOpen = "FunctionNotOpen";
+
+        public const string SBJG = "SBJG";
+
+        public GDTXUserYSBQC getUserYSBQC(BDDM BDDM)
+        {
+            string s = BDDM.ToString();
+            return getUserYSBQC(s);
+        }
+
+        public GDTXUserYSBQC getUserYSBQC(Type controller)
        {
            string s = controller.Name;
            s = s.Substring(0, s.IndexOf("Controller"));
-           GTXResult resultq = GTXMethod.GetXiaMenYSBQC();
+           GTXResult resultq = GTXMethod.GetUserYSBQC();
            if (resultq.IsSuccess)
            {
-               List<GDTXXiaMenUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQC>>(resultq.Data.ToString());
+               List<GDTXUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXUserYSBQC>>(resultq.Data.ToString());
 
                ysbqclist = ysbqclist.Where(a => a.BDDM.ToUpper() == s.ToUpper()).ToList();
                return ysbqclist[0];
@@ -77,7 +88,7 @@ namespace JlueTaxSystemXiaMenBS.Code
            }
        }
 
-        public GDTXXiaMenUserYSBQC getUserYSBQC(string dm)
+        public GDTXUserYSBQC getUserYSBQC(string dm)
        {
            string s = dm.ToUpper();
            switch (s)
@@ -86,10 +97,10 @@ namespace JlueTaxSystemXiaMenBS.Code
                    s = "YBNSRZZS";
                    break;
            }
-           GTXResult resultq = GTXMethod.GetXiaMenYSBQC();
+           GTXResult resultq = GTXMethod.GetUserYSBQC();
            if (resultq.IsSuccess)
            {
-               List<GDTXXiaMenUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQC>>(resultq.Data.ToString());
+               List<GDTXUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXUserYSBQC>>(resultq.Data.ToString());
 
                ysbqclist = ysbqclist.Where(a => a.BDDM.ToUpper() == s).ToList();
                return ysbqclist[0];
@@ -100,12 +111,12 @@ namespace JlueTaxSystemXiaMenBS.Code
            }
        }
 
-        public List<GDTXXiaMenUserYSBQC> getYsbUserYSBQC()
+        public List<GDTXUserYSBQC> getYsbUserYSBQC()
        {
-           GTXResult resultq = GTXMethod.GetXiaMenYSBQC();
+           GTXResult resultq = GTXMethod.GetUserYSBQC();
            if (resultq.IsSuccess)
            {
-               List<GDTXXiaMenUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQC>>(resultq.Data.ToString());
+               List<GDTXUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXUserYSBQC>>(resultq.Data.ToString());
 
                ysbqclist = ysbqclist.Where(a => a.SBZT == "已申报").ToList();
                return ysbqclist;
@@ -116,12 +127,12 @@ namespace JlueTaxSystemXiaMenBS.Code
            }
        }
 
-        public List<GDTXXiaMenUserYSBQC> getWsbUserYSBQC()
+        public List<GDTXUserYSBQC> getWsbUserYSBQC()
         {
-            GTXResult resultq = GTXMethod.GetXiaMenYSBQC();
+            GTXResult resultq = GTXMethod.GetUserYSBQC();
             if (resultq.IsSuccess)
             {
-                List<GDTXXiaMenUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQC>>(resultq.Data.ToString());
+                List<GDTXUserYSBQC> ysbqclist = JsonConvert.DeserializeObject<List<GDTXUserYSBQC>>(resultq.Data.ToString());
 
                 ysbqclist = ysbqclist.Where(a => a.SBZT == "未申报").ToList();
                 return ysbqclist;
@@ -158,45 +169,15 @@ namespace JlueTaxSystemXiaMenBS.Code
            return saveresult;
        }
 
-        public GTXResult saveUserYSBQCReportData(string strJson, string userYsbqcId, string reportCode, string dataKey = "data")
-       {
-           List<GTXNameValue> nameList = new List<GTXNameValue>();
-           GTXNameValue nv = new GTXNameValue();
-           nv.key = dataKey;
-           byte[] bytes = Encoding.Default.GetBytes(strJson);
-           string _result = HttpUtility.UrlEncode(Convert.ToBase64String(bytes));
-           nv.value = _result;
-           nameList.Add(nv);
-           GTXResult saveresult = GTXMethod.SaveUserReportData(JsonConvert.SerializeObject(nameList), userYsbqcId, reportCode);
-           return saveresult;
-       }
-
-        public string getUserYSBQCReportData_String(int id, string reportCode, string dataKey = "data")
-       {
-           string re_str = "";
-           GTXResult gr = GTXMethod.GetUserReportData(id.ToString(), reportCode);
-           if (gr.IsSuccess)
-           {
-               List<GDTXXiaMenUserYSBQCReportData> dataList = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQCReportData>>(gr.Data.ToString());
-               if (dataList.Count > 0)
-               {
-                   byte[] outputb = Convert.FromBase64String(dataList[0].DataValue);
-                   string dataValue = Encoding.Default.GetString(outputb);
-                   re_str = dataValue;
-               }
-           }
-           return re_str;
-       }
-
        public JToken getUserYSBQCReportData(int id, string reportCode, string dataKey = "data")
        {
            GTXResult gr = GTXMethod.GetUserReportData(id.ToString(), reportCode);
            if (gr.IsSuccess)
            {
-               List<GDTXXiaMenUserYSBQCReportData> dataList = JsonConvert.DeserializeObject<List<GDTXXiaMenUserYSBQCReportData>>(gr.Data.ToString());
+               List<GDTXUserYSBQCReportData> dataList = JsonConvert.DeserializeObject<List<GDTXUserYSBQCReportData>>(gr.Data.ToString());
                if (dataList.Count > 0)
                {
-                   GDTXXiaMenUserYSBQCReportData data = dataList.Where(a => a.DataKey == dataKey).FirstOrDefault();
+                   GDTXUserYSBQCReportData data = dataList.Where(a => a.DataKey == dataKey).FirstOrDefault();
                    byte[] outputb = Convert.FromBase64String(data.DataValue);
                    string dataValue = Encoding.Default.GetString(outputb);
                    JToken re_json = JsonConvert.DeserializeObject<JToken>(dataValue);
@@ -279,7 +260,7 @@ namespace JlueTaxSystemXiaMenBS.Code
        public GDTXDate getGDTXDate(Type type)
        {
            GDTXDate gd = new GDTXDate();
-           GDTXXiaMenUserYSBQC qc = getUserYSBQC(type);
+           GDTXUserYSBQC qc = getUserYSBQC(type);
            gd.sbrqq = qc.HappenDate.Substring(0, 8) + "01";
            gd.sbrqz = qc.SBQX;
            gd.sbNd = qc.HappenDate.Substring(0, 4);
@@ -294,7 +275,7 @@ namespace JlueTaxSystemXiaMenBS.Code
        public GDTXDate getGDTXDate(string dm)
        {
            GDTXDate gd = new GDTXDate();
-           GDTXXiaMenUserYSBQC qc = getUserYSBQC(dm);
+           GDTXUserYSBQC qc = getUserYSBQC(dm);
            gd.sbrqq = qc.HappenDate.Substring(0, 8) + "01";
            gd.sbrqz = qc.SBQX;
            gd.sbNd = qc.HappenDate.Substring(0, 4);
@@ -583,6 +564,37 @@ namespace JlueTaxSystemXiaMenBS.Code
                retJval = new JValue(xd.InnerXml);
                return retJval;
            }
+       }
+
+       public static SessionModel getSession()
+       {
+           if (session.Count == 0)
+           {
+               //return null;
+               throw new Exception("session为空");
+           }
+           SessionModel sm = new SessionModel();
+           foreach (PropertyInfo pi in sm.GetType().GetProperties())
+           {
+               pi.SetValue(sm, session[pi.Name]);
+           }
+           return sm;
+       }
+
+       public JObject getInputStream()
+       {
+           StreamReader sr = new StreamReader(System.Web.HttpContext.Current.Request.InputStream);
+           JObject jo = JsonConvert.DeserializeObject<JObject>(sr.ReadToEnd());
+           return jo;
+       }
+
+       public ContentResult JsonResult(JToken input)
+       {
+           ContentResult cr = new ContentResult();
+           cr.Content = JsonConvert.SerializeObject(input);
+           cr.ContentEncoding = Encoding.UTF8;
+           cr.ContentType = "application/json";
+           return cr;
        }
 
     }

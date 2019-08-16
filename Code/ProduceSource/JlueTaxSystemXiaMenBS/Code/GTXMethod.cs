@@ -1,7 +1,9 @@
-﻿using Newtonsoft.Json;
+﻿using JlueTaxSystemXiaMenBS.Models;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Web;
@@ -11,6 +13,12 @@ namespace JlueTaxSystemXiaMenBS.Code
 {
     public class GTXMethod
     {
+        static SessionModel sm { get { return YsbqcSetting.getSession(); } }
+
+        static string PracticePath { get { return ConfigurationManager.AppSettings["Practicepath"]; } }
+
+        static string TikuPath { get { return ConfigurationManager.AppSettings["tikupath"]; } }
+
         /// <summary>
         /// 获取企业联系人
         /// </summary>
@@ -39,6 +47,16 @@ namespace JlueTaxSystemXiaMenBS.Code
             return JsonConvert.DeserializeObject<GTXResult>(json);
         }
 
+        public static GTXResult GetCompanyDetail()
+        {
+            string companyId = sm.companyId;
+            string path = PracticePath;
+            publicmethod p = new publicmethod();
+            string fullpath = path + "/APIPractice/Company.asmx/GetDetailByCompanyId?CompanyId=" + companyId;
+            string json = p.Get(fullpath);
+            return JsonConvert.DeserializeObject<GTXResult>(json);
+        }
+
         /// <summary>
         /// 获取学员题目信息
         /// </summary>
@@ -60,7 +78,7 @@ namespace JlueTaxSystemXiaMenBS.Code
         /// 获取厦门国税的的应申报清册记录
         /// </summary>
         /// <returns></returns>
-        public static GTXResult GetXiaMenYSBQC()
+        public static GTXResult GetUserYSBQC()
         {
             string userid = CurrentUser.GetInstance().GetCurrentUserId;
             string questionId = CurrentUser.GetInstance().GetCurrentQuestionId;

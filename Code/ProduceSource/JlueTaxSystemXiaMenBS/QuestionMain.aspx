@@ -181,22 +181,6 @@
                         });
                     }
                     else {
-                        $.ajax({
-                            url: "ChuShiHua.ashx?Method=Clear&ClassId=" + ClassId + "&userId=" + userId + "&sortid=" + sortid + "&t=" + Math.random(),
-                            type: "GET",
-                            dataType: "text",
-                            async: false,
-                            success: function (result) {
-                                debugger;
-                                var na = JSON.parse(result);
-                                if (na.IsSuccess) {
-                                    location.reload();
-                                }
-                                else {
-
-                                }
-                            }
-                        });
                     }
                 }
             });
@@ -320,22 +304,6 @@
                         </table>
                     </div>
                 </li>
-                <%--<li class="ksmc-sj5">
-                    <div class="ksmc-sj1-title">
-                        <table class="fulltable">
-                            <tbody>
-                                <tr>
-                                    <td class="td1">业务一</td>
-                                    <td class="td2">申报类</td>
-                                    <td class="td3">苏州超容电子客户有限公司3月份的增值税申报</td>
-                                    <th class="td5"><a>国税</a><a>地税</a></th>
-                                    <th class="td6"><a onclick="togglearea('oper1',this)">国税</a><a onclick="togglearea('oper1',this)">地税</a></th>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="oper1" style="display: none" class="oper_area"><a class="radius box-shadow ksmc-sj1-tanchuti">下载材料</a><a class="radius box-shadow ksmc-sj1-tanchuti" href="portal/index.aspx?userid=FFF7ECC98F6B40E396B6E330301B5D2C&username=测试人员&classid=9&courseid=3&sortid=5&questionId=158" target="_blank" onclick="closearea('1');">开始练习</a><span id="st1" class="ksmc-cssecond">未做</span></div>
-                </li>--%>
             </ul>
         </div>
     </div>

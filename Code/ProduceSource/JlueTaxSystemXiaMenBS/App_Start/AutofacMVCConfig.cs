@@ -15,6 +15,9 @@ namespace JlueTaxSystemXiaMenBS
         {
             var builder = new ContainerBuilder();
             builder.RegisterType(typeof(YsbqcSetting)).As(typeof(YsbqcSetting));
+            builder.RegisterType(typeof(Service)).As(typeof(Service));
+            builder.RegisterType(typeof(Repository)).As(typeof(Repository));
+
             builder.RegisterControllers(typeof(Global).Assembly);//注册所有的Controller
             var container = builder.Build();
             DependencyResolver.SetResolver(new AutofacDependencyResolver(container));

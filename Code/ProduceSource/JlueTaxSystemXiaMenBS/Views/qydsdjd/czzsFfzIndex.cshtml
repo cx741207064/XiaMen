@@ -1,9 +1,15 @@
-
-
-
-
-
-
+﻿@using JlueTaxSystemXiaMenBS.Models;
+@model QysdsModel
+@functions{
+    public bool HasValues(QysdsTable tab)
+    {
+        bool bl = bool.Parse(Model.tableState.SelectToken(tab.ToString() + ".HasValues").ToString());
+        return bl;
+    }
+    }
+@{
+    bool hidden=false;
+}
 
 <!DOCTYPE html>
 <html>
@@ -174,16 +180,16 @@ $(document).keydown(function(e){
 		
 <form action="/jsdzsb/qydsdjd/czzsFfzIndex.do" method="post" id="initForm">
 <input type="hidden" name="errAction" value="/jsdzsb/qydsdjd/czzsIndex.do" />
-<input type="hidden" name="skssqq" id="skssqq" value="2019" />
-<input type="hidden" name="skssqz" id="skssqz" value="1" />
+<input type="hidden" name="skssqq" id="skssqq" value="2019-01-01" />
+<input type="hidden" name="skssqz" id="skssqz" value="2019-03-31" />
 <input type="hidden" name="sbbVO['SKSSQQ']" id="sbbVO['SKSSQQ']" value="2019-01-01" />
 <input type="hidden" name="sbbVO['SKSSQZ']" id="sbbVO['SKSSQZ']" value="2019-03-31" />
 <input type="hidden" name="sbbVO['ZSXM_DM']" id="sbbVO['ZSXM_DM']" value="10104" />
 <input type="hidden" name="sbbVO['ZSPM_DM']" id="sbbVO['ZSPM_DM']" value="101040001" />
 <input type="hidden" name="sbbVO['RDPZUUID']" id="sbbVO['RDPZUUID']" value="7AD70ECBAACDB1EF92990080175F0DF8" />
-<input type="hidden" name="sbbVO['SFXWQY_BZ']" id="sbbVO['SFXWQY_BZ']" value="" />
-<input type="hidden" name="sbbVO['SBUUID']" id="sbbVO['SBUUID']" value="" />
-<input type="hidden" name="sbbVO['FIRSTINIT']" id="sbbVO['FIRSTINIT']" value="true" />
+<input type="hidden" name="sbbVO['SFXWQY_BZ']" id="sbbVO['SFXWQY_BZ']" value="Y" />
+<input type="hidden" name="sbbVO['SBUUID']" id="sbbVO['SBUUID']" value="27bb5da8abc34e2fbadb22f090b320fd" />
+<input type="hidden" name="sbbVO['FIRSTINIT']" id="sbbVO['FIRSTINIT']" value="false" />
 
 <div>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -217,52 +223,18 @@ $(document).keydown(function(e){
    	  <TABLE class="v2table" borderColorDark="#ffffff" borderColorLight="#000000" border="1" cellSpacing="0" cellPadding="0" width="100%">
          <TR class="blue">
            <TD width="15%" height=21 noWrap>纳税人识别号</TD>
-           <TD width="35%">91350200MA2Y6UGR9M</TD>
+           <TD width="35%">@Model.Nsrxx.NSRSBH</TD>
            <TD width="15%" height=21 noWrap>纳税人名称</TD>
-           <TD width="35%">厦门动听资产管理有限公司</TD>
+           <TD width="35%">@Model.Nsrxx.NSRMC</TD>
          </TR>
          <TR class=blue>
            <TD><span>征收品目、项目</span></TD>
            <TD>
-           	
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-企业所得税-
-           	
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-应纳税所得额
+企业所得税-应纳税所得额
            </TD>
            <TD><span>税款所属期：</span></TD>
            <TD>
-           
-                 2019 年&nbsp;第 1 季度
+                 @Model.GDTXDate.skssNd 年&nbsp;第 @Model.GDTXDate.skssJd 季度
             </TD>
           </TR>
    	  </TABLE>
@@ -277,107 +249,108 @@ $(document).keydown(function(e){
 		  <td>
 		  	《A200000  中华人民共和国企业所得税月（季）度预缴纳税申报表（A类）》&nbsp;
 		  </td>
+           @if (HasValues(QysdsTable.QYSDS))
+           {
+          <td>
+			&nbsp己填报
+		  </td>
+		  <td>
+					<a href="#" onclick="ybqy('@QysdsTable.QYSDS');" >修改</a>&nbsp;&nbsp;
+					<a href="#" onclick="sc('@QysdsTable.QYSDS');" >删除</a>
+		  </td>
+           }
+           else { 
 		  <td>
 			&nbsp未填报
-			
 		  </td>
 		  <td>
-			
-				
-					
-						
-							<a href="#" onclick="ybqy('');" >进入填报</a>
-						
-						
-					
-				
-				
-			
-			
-			
+					<a href="#" onclick="ybqy('');" >进入填报</a>&nbsp;&nbsp;
 		  </td>
+           }
 	   </tr>
 	   
 	   <tr>
 		  <td>
 		  	A201010免税收入、减计收入、所得减免等优惠明细表（A201010）&nbsp;
 		  </td>
+@if (HasValues(QysdsTable.ZS6001))
+{ 
 		  <td>
-			
-			&nbsp己填报
+			&nbsp已填报
 		  </td>
 		  <td>
-			
-			
-				
-				
-					<a href="#" onclick="viewRecord('modify','ZS6001','007977227');">修改</a>&nbsp;&nbsp;
-					<a href="#" onclick="viewRecord('delete','ZS6001','007977227');">删除</a>
-				
-			
-			
+          <a href="#" onclick="viewRecord('modify', 'ZS6001', '008017001');">修改</a>&nbsp;&nbsp;
+          <a href="#" onclick="viewRecord('delete', 'ZS6001', '008017001');">删除</a>
 		  </td>
+}
+else {
+    	  <td>
+			&nbsp未填报
+		  </td>
+		  <td>
+					<a href="#" onclick="addRecord('ZS6001');">进入填报</a>
+		  </td>
+}
 	   </tr>
 	   
 	   <tr>
 		  <td>
 		  	A201020固定资产加速折旧(扣除)优惠明细表（A201020）&nbsp;
 		  </td>
+@if (HasValues(QysdsTable.ZS6002))
+{ 
 		  <td>
-			
-			&nbsp己填报
+			&nbsp已填报
 		  </td>
 		  <td>
-			
-			
-				
-				
-					<a href="#" onclick="viewRecord('modify','ZS6002','007977286');">修改</a>&nbsp;&nbsp;
-					<a href="#" onclick="viewRecord('delete','ZS6002','007977286');">删除</a>
-				
-			
-			
+          <a href="#" onclick="viewRecord('modify', 'ZS6002', '008017001');">修改</a>&nbsp;&nbsp;
+          <a href="#" onclick="viewRecord('delete', 'ZS6002', '008017001');">删除</a>
 		  </td>
+}
+else { 
+          <td>
+			&nbsp未填报
+		  </td>
+		  <td>
+					<a href="#" onclick="addRecord('ZS6002');">进入填报</a>
+		  </td>
+}
 	   </tr>
 	   
 	   <tr>
 		  <td>
 		  	A201030减免所得税优惠明细表（A201030）&nbsp;
 		  </td>
+@if (HasValues(QysdsTable.ZS6003))
+{ 
 		  <td>
-			
 			&nbsp己填报
 		  </td>
 		  <td>
-			
-			
-				
-				
-					<a href="#" onclick="viewRecord('modify','ZS6003','007977140');">修改</a>&nbsp;&nbsp;
-					<a href="#" onclick="viewRecord('delete','ZS6003','007977140');">删除</a>
-				
-			
-			
+					<a href="#" onclick="viewRecord('modify','ZS6003','008017001');">修改</a>&nbsp;&nbsp;
+					<a href="#" onclick="viewRecord('delete','ZS6003','008017001');">删除</a>
 		  </td>
+}
+else { 
+    		  <td>
+			&nbsp未填报
+		  </td>
+		  <td>
+          <a href="#" onclick="addRecord('ZS6003');">进入填报</a>
+		  </td>
+}
 	   </tr>
 	   
+           @if (hidden) {
 	   <tr>
 		  <td>
 		  	技术成果投资入股企业所得税递延纳税备案表&nbsp;
 		  </td>
 		  <td>
 			&nbsp未填报
-			
 		  </td>
 		  <td>
-			
-				
-				
 					<a href="#" onclick="addRecord('ZS6004');">进入填报</a>
-				
-			
-			
-			
 		  </td>
 	   </tr>
 	   
@@ -387,20 +360,12 @@ $(document).keydown(function(e){
 		  </td>
 		  <td>
 			&nbsp未填报
-			
 		  </td>
 		  <td>
-			
-				
-				
 					<a href="#" onclick="addRecord('ZS5020');">进入填报</a>
-				
-			
-			
-			
 		  </td>
 	   </tr>
-	   
+           }
 	   
 	   <tr>
 		  <td colspan='3' align="center">
@@ -463,7 +428,7 @@ $(function(){
 	}
 }) 
 $(function(){
-	if(true){
+	if(false){
 		if(true && !false){
 			var url="/res/staticHtml/tbsm/TBSMYJXWQY.html";
 			if(window.showModalDialog){
@@ -569,11 +534,11 @@ function viewRecord(type,tabid,wsbh){
 		if(type=="modify"){
 			url="/jsdzsb/qydsdjd/jdservice.do?b_service=true&serviceName=tab_init&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=false";
 		}else if(type=="view"){
-			 url="/jsdzsb/qydsdjd/jdservice.do?b_service=true&serviceName=tab_init&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=true";
+			url="/jsdzsb/qydsdjd/jdservice.do?b_service=true&serviceName=tab_init&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=true";
 		}else if(type=="delete"){
-			 url="/jsdzsb/qydsdjd/jdservice.do?b_delete=true&serviceName=tab_del&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=true";
+			url="/jsdzsb/qydsdjd/jdservice.do?b_delete=true&serviceName=tab_del&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=true";
 		}else{
-			 url="/jsdzsb/qydsdjd/jdservice.do?b_service=true&serviceName=tab_del&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=true";
+			url="/jsdzsb/qydsdjd/jdservice.do?b_service=true&serviceName=tab_del&context.tabId=WZ"+tabid+"&context.tabPKVO.string(" + tabName + "$WSBH)=" + wsbh + "&context.tabPKVO.string(" + tabName + "$WSLX_DM)=0&view=true";
 		}
 		layer.load(1,{shade:[0.4 , '#000000' , true]});
 		window.location.href = url;

@@ -8,7 +8,7 @@ namespace JlueTaxSystemXiaMenBS.Code
     /// <summary>
     /// 山东省国税的学员填写的报表数据
     /// </summary>
-    public partial class GDTXXiaMenUserYSBQCReportData
+    public partial class GDTXUserYSBQCReportData
     {
 
         /// <summary>

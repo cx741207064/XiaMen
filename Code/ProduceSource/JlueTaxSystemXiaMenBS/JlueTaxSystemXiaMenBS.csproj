@@ -293,6 +293,7 @@
     <Content Include="res\jsdzsb\css.css" />
     <Content Include="res\jsdzsb\dzsbsy\dzsbsy.css" />
     <Content Include="res\jsdzsb\jsdzsb_common.js" />
+    <Content Include="res\jsdzsb\qysds_jd_util.js" />
     <Content Include="res\js\common.js" />
     <Content Include="res\js\common\ajaxrequest.js" />
     <Content Include="res\js\common\collections.js" />
@@ -308,10 +309,13 @@
     <Content Include="res\js\opener.js" />
     <Content Include="res\js\otp4-app-config.js" />
     <Content Include="res\js\otp4-input-ext.js" />
+    <Content Include="res\js\tab\common_funcs.js" />
+    <Content Include="res\js\tab\tab.js" />
     <Content Include="res\js\wssb\wssb_common.js" />
     <Content Include="res\js\wssb\wssb_grsds.js" />
     <Content Include="res\js\wssb\wssb_nssb.js" />
     <Content Include="res\js\wssb\wssb_qysds.js" />
+    <Content Include="res\js\wssp\wssp.js" />
     <Content Include="res\lhpt\images\add.png" />
     <Content Include="res\lhpt\images\subtract.png" />
     <Content Include="res\menu\css\index.css" />
@@ -509,6 +513,14 @@
     <Content Include="res\otp4\templates\paging.htm" />
     <Content Include="res\plugin\simpletable\simpletable.css" />
     <Content Include="res\plugin\simpletable\simpletable.js" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZS5020.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZS6001.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZS6002.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZS6003.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZS6004.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZS6005.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMWZZSQYSDSZBA.html" />
+    <Content Include="res\staticHtml\tbsm\TBSMYJXWQY.html" />
     <Content Include="res\wsbs\css\global.css" />
     <Content Include="res\wsbs\css\step.css" />
     <Content Include="res\wsbs\css\swdj_style.css" />
@@ -519,6 +531,7 @@
     <Content Include="tnsfwHome\index.bszx_03.bszx_03.html" />
     <Content Include="tnsfwHome\index.bszx_03.bszx_0301.html" />
     <Content Include="tnsfwHome\index.bszx_03.bszx_0304.html" />
+    <Content Include="tnsfwHome\index.bszx_03.bszx_0307.html" />
     <Content Include="VideoManage\css\QuestionMain.css" />
     <Content Include="VideoManage\css\VideoIndex.css" />
     <Content Include="VideoManage\image\bc.png" />
@@ -598,9 +611,29 @@
     <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_HeadPartial.cshtml" />
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_submit.cshtml" />
     <Content Include="jsdzsb\qydsdjd\czzsYbnsrCalc.json" />
-    <None Include="wssb\TABLE_NAME.json" />
-    <None Include="Views\MainServlet\CWXX2016XQYKJZZ_LRB.cshtml" />
+    <Content Include="Views\qydsdjd\czzsFfzIndex.cshtml" />
+    <Content Include="Views\qydsdjd\czzsIndex.cshtml" />
+    <Content Include="Views\qydsdjd\czzsYbnsrZb.cshtml" />
+    <Content Include="Views\Shared\_PartialQysds.cshtml" />
+    <Content Include="Views\Shared\SBJG.cshtml" />
+    <Content Include="jsdzsb\qydsdjd\czzsFfzZgDel.json" />
+    <Content Include="jsdzsb\qydsdjd\czzsYbnsrCheck.json" />
+    <Content Include="Views\jsdzsb\dzsbsy\qysds.jsp" />
     <Content Include="Views\otp4query\List.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS5020.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS5020.view.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS6001.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS6001.view.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS6002.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\qydsdjd\jdservice.ZS6002.view.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Views\qydsdjd\jdservice.ZS6003.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS6003.view.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS6004.cshtml" />
+    <Content Include="Views\qydsdjd\jdservice.ZS6004.view.cshtml" />
     <Content Include="Views\Shared\CFSB.cshtml" />
     <Content Include="Views\Shared\FunctionNotOpen.cshtml">
       <SubType>Code</SubType>
@@ -689,6 +722,7 @@
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_FLZL5.js" />
     <Content Include="wssb\wssb\zzsybnsr_ygz\SBB_ZZS_YGZ_YBNSR_JMSSBMXB.js" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR_FB2.industry.xml" />
+    <Content Include="dwfw\commonAjaxTjxz.json" />
     <None Include="Properties\PublishProfiles\IIS.pubxml" />
     <Content Include="wssb\SBB_ZZS_YGZ_YBNSR.Message.xml">
       <SubType>Designer</SubType>
@@ -709,6 +743,13 @@
     <Content Include="Views\MainServlet\INFORMATION.cshtml" />
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR.cshtml" />
     <Content Include="Views\MainServlet\SBB_ZZS_YGZ_YBNSR_HeadPartial.cshtml" />
+    <Content Include="wssb\TABLE_NAME.json" />
+    <Content Include="Views\MainServlet\CWXX2016XQYKJZZ_LRB.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="tnsfwHome\queryCurLocal.bszx_0307.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_030702.json" />
+    <Content Include="tnsfwHome\queryCurLocal.bszx_0303.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacMVCConfig.cs" />
@@ -721,6 +762,7 @@
     </Compile>
     <Compile Include="Code\ActionFilter.cs" />
     <Compile Include="Code\ActionResult.cs" />
+    <Compile Include="Code\BDDM.cs" />
     <Compile Include="Code\Check.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -728,8 +770,8 @@
     <Compile Include="Code\CurrentUser.cs" />
     <Compile Include="Code\ExtendedApiControllerActionInvoker.cs" />
     <Compile Include="Code\ExtendedReflectedHttpActionDescriptor.cs" />
-    <Compile Include="Code\GDTXXiaMenUserYSBQC.cs" />
-    <Compile Include="Code\GDTXXiaMenUserYSBQCReportData.cs" />
+    <Compile Include="Code\GDTXUserYSBQC.cs" />
+    <Compile Include="Code\GDTXUserYSBQCReportData.cs" />
     <Compile Include="Code\GTXMethod.cs" />
     <Compile Include="Code\GTXNameValue.cs" />
     <Compile Include="Code\GTXResult.cs" />
@@ -738,6 +780,9 @@
     <Compile Include="Code\MyReflectedActionDescriptor.cs" />
     <Compile Include="Code\MyAsyncControllerActionInvoker.cs" />
     <Compile Include="Code\MyControllerFactory.cs" />
+    <Compile Include="Code\Repository.cs" />
+    <Compile Include="Code\SBZT.cs" />
+    <Compile Include="Code\Service.cs" />
     <Compile Include="Code\YsbqcSetting.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -763,13 +808,21 @@
     <Compile Include="Models\CWXX2016XQYKJZZ.cs" />
     <Compile Include="Models\DZBS_SBCX.cs" />
     <Compile Include="Models\DZBS_QUERY.cs" />
+    <Compile Include="Models\Model.cs" />
     <Compile Include="Models\ModelMainServlet.cs" />
     <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\MyModelBinder.cs" />
     <Compile Include="Models\OP.cs" />
     <Compile Include="Models\GDTXDate.cs" />
     <Compile Include="Models\MyCustomModelBinder.cs" />
     <Compile Include="Models\Nsrxx.cs" />
     <Compile Include="Models\FjsData.cs" />
+    <Compile Include="Models\QysdsModel.cs" />
+    <Compile Include="Models\QysdsTable.cs" />
+    <Compile Include="Models\QysdsZb.cs" />
+    <Compile Include="Models\QysdsCommit.cs" />
+    <Compile Include="Models\SBZFModel.cs" />
+    <Compile Include="Models\SessionModel.cs" />
     <Compile Include="Models\TABLE_ACTION.cs" />
     <Compile Include="Models\YhsData.cs" />
     <Compile Include="Models\ZzsYgzYbnsrFB1Data.cs" />
@@ -827,7 +880,6 @@
     <Folder Include="jsdzsb\zfsbjl\" />
     <Folder Include="Views\dwfw\" />
     <Folder Include="Views\Home\" />
-    <Folder Include="Views\qydsdjd\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ChuShiHua.ashx" />

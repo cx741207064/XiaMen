@@ -19,7 +19,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
 
         string BDDM { get; set; }
 
-        GDTXXiaMenUserYSBQC qc { get; set; }
+        GDTXUserYSBQC qc { get; set; }
 
         HttpRequestBase request { get; set; }
 
@@ -28,7 +28,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             this.set = _is;
         }
 
-        public MainServletController(YsbqcSetting _is, string DM, GDTXXiaMenUserYSBQC qc, HttpRequestBase req)
+        public MainServletController(YsbqcSetting _is, string DM, GDTXUserYSBQC qc, HttpRequestBase req)
         {
             this.set = _is;
             this.BDDM = DM;
@@ -213,7 +213,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
         {
             ViewResult vr = new ViewResult();
 
-            GDTXXiaMenUserYSBQC qc = set.getUserYSBQC("SBB_ZZS_YGZ_YBNSR");
+            GDTXUserYSBQC qc = set.getUserYSBQC("SBB_ZZS_YGZ_YBNSR");
             DZBS_SBCX re_dq = new DZBS_SBCX();
             if (qc.SBZT == set.wsbzt)
             {

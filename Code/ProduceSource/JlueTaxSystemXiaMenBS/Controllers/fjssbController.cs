@@ -14,7 +14,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
     public class fjssbController : Controller
     {
         YsbqcSetting set;
-        GDTXXiaMenUserYSBQC qc;
+        GDTXUserYSBQC qc;
         FjsData DBData;
         public fjssbController(YsbqcSetting _is)
         {
