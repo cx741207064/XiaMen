@@ -115,6 +115,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\bulma.css" />
     <Content Include="css\H-ui.css" />
     <Content Include="css\ksindex.css" />
     <Content Include="css\QMstyle.css" />
@@ -750,6 +751,7 @@
     <Content Include="tnsfwHome\queryCurLocal.bszx_0307.json" />
     <Content Include="tnsfwHome\queryCurLocal.bszx_030702.json" />
     <Content Include="tnsfwHome\queryCurLocal.bszx_0303.json" />
+    <Content Include="Views\Shared\Error.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\AutofacMVCConfig.cs" />
@@ -760,12 +762,14 @@
     <Compile Include="ChuShiHua.ashx.cs">
       <DependentUpon>ChuShiHua.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Code\ActionFilter.cs" />
+    <Compile Include="Code\APIActionFilter.cs" />
     <Compile Include="Code\ActionResult.cs" />
     <Compile Include="Code\BDDM.cs" />
     <Compile Include="Code\Check.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Code\ExceptionFilter.cs" />
+    <Compile Include="Code\MVCActionFilter.cs" />
     <Compile Include="Code\MyReflectedAsyncControllerDescriptor.cs" />
     <Compile Include="Code\CurrentUser.cs" />
     <Compile Include="Code\ExtendedApiControllerActionInvoker.cs" />
@@ -775,7 +779,6 @@
     <Compile Include="Code\GTXMethod.cs" />
     <Compile Include="Code\GTXNameValue.cs" />
     <Compile Include="Code\GTXResult.cs" />
-    <Compile Include="Code\MainServlet.cs" />
     <Compile Include="Code\MyViewEngine.cs" />
     <Compile Include="Code\MyReflectedActionDescriptor.cs" />
     <Compile Include="Code\MyAsyncControllerActionInvoker.cs" />
@@ -808,6 +811,7 @@
     <Compile Include="Models\CWXX2016XQYKJZZ.cs" />
     <Compile Include="Models\DZBS_SBCX.cs" />
     <Compile Include="Models\DZBS_QUERY.cs" />
+    <Compile Include="Models\ErrorModel.cs" />
     <Compile Include="Models\Model.cs" />
     <Compile Include="Models\ModelMainServlet.cs" />
     <Compile Include="Models\Message.cs" />

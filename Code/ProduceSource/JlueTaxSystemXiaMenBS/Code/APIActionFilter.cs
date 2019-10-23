@@ -11,15 +11,8 @@ using System.Web.Http;
 
 namespace JlueTaxSystemXiaMenBS.Code
 {
-    public class ActionFilter : ActionFilterAttribute
+    public class APIActionFilter : ActionFilterAttribute
     {
-        // 摘要: 
-        //     在调用操作方法之后发生。
-        //
-        // 参数: 
-        //   actionExecutedContext:
-        //     操作执行的上下文。
-        public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext) { }
         //
         // 摘要: 
         //     在调用操作方法之前发生。
@@ -31,6 +24,17 @@ namespace JlueTaxSystemXiaMenBS.Code
         {
             ServicesContainer sc = GlobalConfiguration.Configuration.Services;
             ServicesContainer sc1 = actionContext.ControllerContext.Configuration.Services;
+        }
+
+        // 摘要: 
+        //     在调用操作方法之后发生。
+        //
+        // 参数: 
+        //   actionExecutedContext:
+        //     操作执行的上下文。
+        public override void OnActionExecuted(HttpActionExecutedContext actionExecutedContext)
+        {
+
         }
 
     }

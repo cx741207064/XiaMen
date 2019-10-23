@@ -113,7 +113,7 @@ function changevalue1(){
 	//第2列赋值
 	if(isZpComReadOnly != "true"){
 		if (parseFloat($("input[name='KJZZSFP_XSE1']").val()) != parseFloat($("input[name='KJZZSFP_XSE1']").attr("originValue"))){
-			var sum1 =parseFloat($("input[name='KJZZSFP_XSE1']").val()) * 16 / 100;
+			var sum1 =parseFloat($("input[name='KJZZSFP_XSE1']").val()) * 13 / 100;
 			$("input[name='KJZZSFP_XXSE1']").val(sum1.toFixed(2));
 			$("input[name='KJZZSFP_XSE1']").attr("originValue",$("input[name='KJZZSFP_XSE1']").val());
 		}
@@ -127,20 +127,20 @@ function changevalue1(){
 	//第4列赋值
 	if(isPtComReadOnly != "true"){
 		if (parseFloat($("input[name='KJQTFP_XSE1']").val()) != parseFloat($("input[name='KJQTFP_XSE1']").attr("originValue"))){
-			var sum3 =parseFloat($("input[name='KJQTFP_XSE1']").val()) * 16 / 100;
+			var sum3 =parseFloat($("input[name='KJQTFP_XSE1']").val()) * 13 / 100;
 			$("input[name='KJQTFP_XXSE1']").val(sum3.toFixed(2));
 			$("input[name='KJQTFP_XSE1']").attr("originValue",$("input[name='KJQTFP_XSE1']").val());
 		}
 	}
 	//第6列赋值
 	if (parseFloat($("input[name='WKJFP_XSE1']").val()) != parseFloat($("input[name='WKJFP_XSE1']").attr("originValue"))){
-		var sum5 =parseFloat($("input[name='WKJFP_XSE1']").val()) * 16 / 100;
+		var sum5 =parseFloat($("input[name='WKJFP_XSE1']").val()) * 13 / 100;
 		$("input[name='WKJFP_XXSE1']").val(sum5.toFixed(2));
 		$("input[name='WKJFP_XSE1']").attr("originValue",$("input[name='WKJFP_XSE1']").val());
 	}
 	//第8列赋值
 	if (parseFloat($("input[name='NSJCTZ_XSE1']").val()) != parseFloat($("input[name='NSJCTZ_XSE1']").attr("originValue"))){
-		var sum7 =parseFloat($("input[name='NSJCTZ_XSE1']").val()) * 16 / 100;
+		var sum7 =parseFloat($("input[name='NSJCTZ_XSE1']").val()) * 13 / 100;
 		$("input[name='NSJCTZ_XXSE1']").val(sum7.toFixed(2));
 		$("input[name='NSJCTZ_XSE1']").attr("originValue",$("input[name='NSJCTZ_XSE1']").val());
 	}
@@ -182,7 +182,7 @@ function changevalue2(){
 	//第2列赋值
 	if(isZpComReadOnly != "true"){
 		if (parseFloat($("#KJZZSFP_XSE2").val()) != parseFloat($("#KJZZSFP_XSE2").attr("originValue"))){
-			var sum1 =parseFloat($("#KJZZSFP_XSE2").val()) * 16 / 100;
+			var sum1 =parseFloat($("#KJZZSFP_XSE2").val()) * 13 / 100;
 			$("#KJZZSFP_XXSE2").val(sum1.toFixed(2));
 			$("#KJZZSFP_XSE2").attr("originValue",$("#KJZZSFP_XSE2").val());
 		}
@@ -196,20 +196,20 @@ function changevalue2(){
 	//第4列赋值
 	if(isPtComReadOnly != "true"){
 		if (parseFloat($("input[name='KJQTFP_XSE2']").val()) != parseFloat($("input[name='KJQTFP_XSE2']").attr("originValue"))){
-			var sum3 =parseFloat($("input[name='KJQTFP_XSE2']").val()) * 16 / 100;
+			var sum3 =parseFloat($("input[name='KJQTFP_XSE2']").val()) * 13 / 100;
 			$("input[name='KJQTFP_XXSE2']").val(sum3.toFixed(2));
 			$("input[name='KJQTFP_XSE2']").attr("originValue",$("input[name='KJQTFP_XSE2']").val());
 		}
 	}
 	//第6列赋值
 	if (parseFloat($("input[name='WKJFP_XSE2']").val()) != parseFloat($("input[name='WKJFP_XSE2']").attr("originValue"))){
-		var sum5 =parseFloat($("input[name='WKJFP_XSE2']").val()) * 16 / 100;
+		var sum5 =parseFloat($("input[name='WKJFP_XSE2']").val()) * 13 / 100;
 		$("input[name='WKJFP_XXSE2']").val(sum5.toFixed(2));
 		$("input[name='WKJFP_XSE2']").attr("originValue",$("input[name='WKJFP_XSE2']").val());
 	}
 	//第8列赋值
 	if (parseFloat($("input[name='NSJCTZ_XSE2']").val()) != parseFloat($("input[name='NSJCTZ_XSE2']").attr("originValue"))){
-		var sum7 =parseFloat($("input[name='NSJCTZ_XSE2']").val()) * 16 / 100;
+		var sum7 =parseFloat($("input[name='NSJCTZ_XSE2']").val()) * 13 / 100;
 		$("input[name='NSJCTZ_XXSE2']").val(sum7.toFixed(2));
 		$("input[name='NSJCTZ_XSE2']").attr("originValue",$("input[name='NSJCTZ_XSE2']").val());
 	}
@@ -229,7 +229,7 @@ function changevalue2(){
 	var sum13 = sum11 - parseFloat($("#YNSFWKCXMBQSJKCJE2").val()); 
 	$("#KCH_XSE2").val(sum13.toFixed(2));
 	//计算第2行第14列的值
-	var sum14 = parseFloat(sum13.toFixed(2)) / 116 * 16;
+	var sum14 = parseFloat(sum13.toFixed(2)) / 113 * 13;
 	
 	//《2018年5月版第2次修改》，小曾要求，当第12列为0时，14列等于10列，否则14列按照之前的计算   by   wxf    20180524
 	var sum12 = parseFloat($("#YNSFWKCXMBQSJKCJE2").val()); 
@@ -259,7 +259,7 @@ function changevalue3(){
 	//第2列赋值
 	if(isZpComReadOnly != "true"){
 		if (parseFloat($("#KJZZSFP_XSE3").val()) != parseFloat($("#KJZZSFP_XSE3").attr("originValue"))){
-			var sum1 =parseFloat($("#KJZZSFP_XSE3").val()) * 13 / 100;
+			var sum1 =parseFloat($("#KJZZSFP_XSE3").val()) * 9 / 100;
 			$("#KJZZSFP_XXSE3").val(sum1.toFixed(2));
 			$("#KJZZSFP_XSE3").attr("originValue",$("#KJZZSFP_XSE3").val());
 		}
@@ -273,20 +273,20 @@ function changevalue3(){
 	//第4列赋值
 	if(isPtComReadOnly != "true"){
 		if (parseFloat($("input[name='KJQTFP_XSE3']").val()) != parseFloat($("input[name='KJQTFP_XSE3']").attr("originValue"))){
-			var sum3 =parseFloat($("input[name='KJQTFP_XSE3']").val()) * 13 / 100;
+			var sum3 =parseFloat($("input[name='KJQTFP_XSE3']").val()) * 9 / 100;
 			$("input[name='KJQTFP_XXSE3']").val(sum3.toFixed(2));
 			$("input[name='KJQTFP_XSE3']").attr("originValue",$("input[name='KJQTFP_XSE3']").val());
 		}
 	}
 	//第6列赋值
 	if (parseFloat($("input[name='WKJFP_XSE3']").val()) != parseFloat($("input[name='WKJFP_XSE3']").attr("originValue"))){
-		var sum5 =parseFloat($("input[name='WKJFP_XSE3']").val()) * 13 / 100;
+		var sum5 =parseFloat($("input[name='WKJFP_XSE3']").val()) * 9 / 100;
 		$("input[name='WKJFP_XXSE3']").val(sum5.toFixed(2));
 		$("input[name='WKJFP_XSE3']").attr("originValue",$("input[name='WKJFP_XSE3']").val());
 	}
 	//第8列赋值
 	if (parseFloat($("input[name='NSJCTZ_XSE3']").val()) != parseFloat($("input[name='NSJCTZ_XSE3']").attr("originValue"))){
-		var sum7 =parseFloat($("input[name='NSJCTZ_XSE3']").val()) * 13 / 100;
+		var sum7 =parseFloat($("input[name='NSJCTZ_XSE3']").val()) * 9 / 100;
 		$("input[name='NSJCTZ_XXSE3']").val(sum7.toFixed(2));
 		$("input[name='NSJCTZ_XSE3']").attr("originValue",$("input[name='NSJCTZ_XSE3']").val());
 	}
@@ -319,7 +319,7 @@ function changevalue23(){
 	//第2列赋值
 	if(isZpComReadOnly != "true"){
 		if (parseFloat($("#KJZZSFP_XSE23").val()) != parseFloat($("#KJZZSFP_XSE23").attr("originValue"))){
-			var sum1 =parseFloat($("#KJZZSFP_XSE23").val()) * 10 / 100;
+			var sum1 =parseFloat($("#KJZZSFP_XSE23").val()) * 9 / 100;
 			$("#KJZZSFP_XXSE23").val(sum1.toFixed(2));
 			$("#KJZZSFP_XSE23").attr("originValue",$("#KJZZSFP_XSE23").val());
 		}
@@ -333,20 +333,20 @@ function changevalue23(){
 	//第4列赋值
 	if(isPtComReadOnly != "true"){
 		if (parseFloat($("input[name='KJQTFP_XSE23']").val()) != parseFloat($("input[name='KJQTFP_XSE23']").attr("originValue"))){
-			var sum3 =parseFloat($("input[name='KJQTFP_XSE23']").val()) * 10 / 100;
+			var sum3 =parseFloat($("input[name='KJQTFP_XSE23']").val()) * 9 / 100;
 			$("input[name='KJQTFP_XXSE23']").val(sum3.toFixed(2));
 			$("input[name='KJQTFP_XSE23']").attr("originValue",$("input[name='KJQTFP_XSE23']").val());
 		}
 	}
 	//第6列赋值
 	if (parseFloat($("input[name='WKJFP_XSE23']").val()) != parseFloat($("input[name='WKJFP_XSE23']").attr("originValue"))){
-		var sum5 =parseFloat($("input[name='WKJFP_XSE23']").val()) * 10 / 100;
+		var sum5 =parseFloat($("input[name='WKJFP_XSE23']").val()) * 9 / 100;
 		$("input[name='WKJFP_XXSE23']").val(sum5.toFixed(2));
 		$("input[name='WKJFP_XSE23']").attr("originValue",$("input[name='WKJFP_XSE23']").val());
 	}
 	//第8列赋值
 	if (parseFloat($("input[name='NSJCTZ_XSE23']").val()) != parseFloat($("input[name='NSJCTZ_XSE23']").attr("originValue"))){
-		var sum7 =parseFloat($("input[name='NSJCTZ_XSE23']").val()) * 10 / 100;
+		var sum7 =parseFloat($("input[name='NSJCTZ_XSE23']").val()) * 9 / 100;
 		$("input[name='NSJCTZ_XXSE23']").val(sum7.toFixed(2));
 		$("input[name='NSJCTZ_XSE23']").attr("originValue",$("input[name='NSJCTZ_XSE23']").val());
 	}
@@ -378,7 +378,7 @@ function changevalue4(){
 	//第2列赋值
 	if(isZpComReadOnly != "true"){
 		if (parseFloat($("#KJZZSFP_XSE4").val()) != parseFloat($("#KJZZSFP_XSE4").attr("originValue"))){
-			var sum1 =parseFloat($("#KJZZSFP_XSE4").val()) * 10 / 100;
+			var sum1 =parseFloat($("#KJZZSFP_XSE4").val()) * 9 / 100;
 			$("#KJZZSFP_XXSE4").val(sum1.toFixed(2));
 			$("#KJZZSFP_XSE4").attr("originValue",$("#KJZZSFP_XSE4").val());
 		}
@@ -392,20 +392,20 @@ function changevalue4(){
 	//第4列赋值
 	if(isPtComReadOnly != "true"){
 		if (parseFloat($("input[name='KJQTFP_XSE4']").val()) != parseFloat($("input[name='KJQTFP_XSE4']").attr("originValue"))){
-			var sum3 =parseFloat($("input[name='KJQTFP_XSE4']").val()) * 10 / 100;
+			var sum3 =parseFloat($("input[name='KJQTFP_XSE4']").val()) * 9 / 100;
 			$("input[name='KJQTFP_XXSE4']").val(sum3.toFixed(2));
 			$("input[name='KJQTFP_XSE4']").attr("originValue",$("input[name='KJQTFP_XSE4']").val());
 		}
 	}
 	//第6列赋值
 	if (parseFloat($("input[name='WKJFP_XSE4']").val()) != parseFloat($("input[name='WKJFP_XSE4']").attr("originValue"))){
-		var sum5 =parseFloat($("input[name='WKJFP_XSE4']").val()) * 10 / 100;
+		var sum5 =parseFloat($("input[name='WKJFP_XSE4']").val()) * 9 / 100;
 		$("input[name='WKJFP_XXSE4']").val(sum5.toFixed(2));
 		$("input[name='WKJFP_XSE4']").attr("originValue",$("input[name='WKJFP_XSE4']").val());
 	}
 	//第8列赋值
 	if (parseFloat($("input[name='NSJCTZ_XSE4']").val()) != parseFloat($("input[name='NSJCTZ_XSE4']").attr("originValue"))){
-		var sum7 =parseFloat($("input[name='NSJCTZ_XSE4']").val()) * 10 / 100;
+		var sum7 =parseFloat($("input[name='NSJCTZ_XSE4']").val()) * 9 / 100;
 		$("input[name='NSJCTZ_XXSE4']").val(sum7.toFixed(2));
 		$("input[name='NSJCTZ_XSE4']").attr("originValue",$("input[name='NSJCTZ_XSE4']").val());
 	}
@@ -425,7 +425,7 @@ function changevalue4(){
 	var sum13 =sum11 - parseFloat($("#YNSFWKCXMBQSJKCJE4").val());
 	$("#KCH_XSE4").val(sum13.toFixed(2));
 	//计算第4b行第14列的值
-	var sum14 = parseFloat(sum13.toFixed(2)) / 110 * 10;
+	var sum14 = parseFloat(sum13.toFixed(2)) / 109 * 9;
 	
 	//《2018年5月版第2次修改》，小曾要求，当第12列为0时，14列等于10列，否则14列按照之前的计算   by   wxf    20180524
 	var sum12 = parseFloat($("#YNSFWKCXMBQSJKCJE4").val()); 

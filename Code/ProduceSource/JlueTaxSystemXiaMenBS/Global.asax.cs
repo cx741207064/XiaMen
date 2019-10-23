@@ -33,7 +33,10 @@ namespace JlueTaxSystemXiaMenBS
 
             RegisterView();//注册视图访问规则
 
-            GlobalConfiguration.Configuration.Filters.Add(new ActionFilter());
+            GlobalFilters.Filters.Add(new MVCActionFilter());
+            GlobalFilters.Filters.Add(new ExceptionFilter());
+
+            GlobalConfiguration.Configuration.Filters.Add(new APIActionFilter());
             GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpActionSelector), new ExtentedApiControllerActionSelector());
             GlobalConfiguration.Configuration.Services.Replace(typeof(IHttpActionInvoker), new ExtendedApiControllerActionInvoker());
 

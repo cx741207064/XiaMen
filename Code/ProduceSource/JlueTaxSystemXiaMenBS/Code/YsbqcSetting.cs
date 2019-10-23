@@ -571,7 +571,7 @@ namespace JlueTaxSystemXiaMenBS.Code
            if (session.Count == 0)
            {
                //return null;
-               throw new Exception("session为空");
+               throw new Exception("session为空，请重新进入模拟报税系统！");
            }
            SessionModel sm = new SessionModel();
            foreach (PropertyInfo pi in sm.GetType().GetProperties())

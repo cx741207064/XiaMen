@@ -151,7 +151,7 @@ namespace JlueTaxSystemXiaMenBS.Controllers
             ZzsYgzYbnsrFB1Data fb1d = new ZzsYgzYbnsrFB1Data();
             dataConfig = set.getYbnsrzzsDataConfig(fb1d, TABLE_NAME);
             fb1d = JsonConvert.DeserializeObject<ZzsYgzYbnsrFB1Data>(JsonConvert.SerializeObject(dataConfig));
-            fb1d.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
+            //fb1d.ta = (TABLE_ACTION)Enum.Parse(typeof(TABLE_ACTION), TABLE_ACTION);
 
             vr = createViewResult(TABLE_NAME, TABLE_ACTION, View("", fb1d));
             return vr;

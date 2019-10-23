@@ -92,57 +92,27 @@ namespace JlueTaxSystemXiaMenBS.Code
         //     操作结果对象。
         protected override ActionResult CreateActionResult(ControllerContext controllerContext, ActionDescriptor actionDescriptor, object actionReturnValue)
         {
+            var AcceptTypes = controllerContext.HttpContext.Request.AcceptTypes;
+            if (AcceptTypes[0] == "text/html")
+            {
+                YsbqcSetting.getSession();
+            }
             return base.CreateActionResult(controllerContext, actionDescriptor, actionReturnValue);
         }
 
+        //
         // 摘要: 
-        //     使用指定控制器上下文、操作名称、回调方法和状态来调用异步操作方法。
+        //     使用指定的控制器上下文来调用指定的操作结果。
         //
         // 参数: 
         //   controllerContext:
         //     控制器上下文。
         //
-        //   actionName:
-        //     操作的名称。
-        //
-        //   callback:
-        //     回调方法。
-        //
-        //   state:
-        //     包含回调方法要使用的信息的对象。此参数可以为 null。
-        //
-        // 返回结果: 
-        //     一个包含异步操作结果的对象。
-        public override IAsyncResult BeginInvokeAction(ControllerContext controllerContext, string actionName, AsyncCallback callback, object state)
+        //   actionResult:
+        //     操作结果。
+        protected override void InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
         {
-            return base.BeginInvokeAction(controllerContext, actionName, callback, state);
-        }
-
-        //
-        // 摘要: 
-        //     使用指定控制器上下文、操作描述符、参数、回调方法和状态来调用异步操作方法。
-        //
-        // 参数: 
-        //   controllerContext:
-        //     控制器上下文。
-        //
-        //   actionDescriptor:
-        //     操作描述符。
-        //
-        //   parameters:
-        //     异步操作方法的参数。
-        //
-        //   callback:
-        //     回调方法。
-        //
-        //   state:
-        //     包含回调方法要使用的信息的对象。此参数可以为 null。
-        //
-        // 返回结果: 
-        //     一个包含异步操作结果的对象。
-        protected override IAsyncResult BeginInvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary<string, object> parameters, AsyncCallback callback, object state)
-        {
-            return base.BeginInvokeActionMethod(controllerContext, actionDescriptor, parameters, callback, state);
+            base.InvokeActionResult(controllerContext, actionResult);
         }
 
         //
